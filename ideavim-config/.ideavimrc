@@ -1,0 +1,301 @@
+" ideaplugins->ideaVim.ideaVim-EasyMotion.ideaVimExtension,Whick-Key
+" ================================================================================================
+" = Extensions =====================================
+" ================================================================================================
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+
+" ================================================================================================
+" = Basic settings =====================================
+" ================================================================================================
+" 启动easymotion
+set easymotion
+" 设置ctrl-d和ctrl-u的行数
+set scroll=5
+" 启动vim-surround插件
+set surround
+" 通过插件在每次回到normal模式的时候自动切换到英文输入法
+set keep-english-in-normal
+" 配置ideavim的insert模式下的复制和粘贴
+set clipboard+=unnamed
+set clipboard+=ideaput
+" 设置ideavim和idea之间的书签通用，但是通用的A-Z标签
+set ideamarks
+
+" 开启语法高亮功能
+syntax enable
+" 允许用指定语法高亮配色方案替换默认方案
+syntax on
+" 模式搜索实时预览,增量搜索
+set incsearch
+" 设置搜索高亮
+set hlsearch
+" 忽略大小写
+set ignorecase
+set scrolloff=30
+set history=200
+" 显示光标当前位置
+set ruler
+" 高亮显示当前行/列
+set cursorline
+
+set number
+set relativenumber
+
+set incsearch
+set hlsearch
+
+" 设置tab键和自动缩进
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+
+" ================================================================================================
+" = No Leader Keymaps =====================================
+" ================================================================================================
+
+"快速选择一个单词
+noremap <space> viw
+
+
+"上一个方法
+nmap mu <action>(MethodUp)
+"下一个方法
+nmap md <action>(MethodDown)
+
+" go to somewhere (g in normal mode for goto somewhere)
+" 下一个error
+nmap ge <action>(GotoNextError)
+nmap gb <action>(JumpToLastChange)
+nmap gr <action>(RecentFiles)
+nmap gd <action>(GotoDeclaration)
+nmap gs <action>(GotoSuperMethod)
+nmap gi <action>(GotoImplementation)
+nmap gu <action>(ShowUsages)
+nmap gh <action>(Back)
+nmap gl <action>(Forward)
+
+" 上一个 tab
+nmap H :action PreviousTab<CR>
+" 下一个 tab
+nmap L :action NextTab<CR>
+
+
+" paste之后不会把yank的内容替换掉
+vmap p "_dp
+
+" ================================================================================================
+" = Plugins =====================================
+" ================================================================================================
+"普通模式强制以英文模式
+set keep-english-in-normal-and-restore-in-insert
+
+
+" ================================================================================================
+" = Leader Keymaps =====================================
+" ================================================================================================
+" leaderkey
+let mapleader=","
+
+" ================================================================================================
+" ⭐️⭐️⭐️ Which-Key ⭐️⭐️⭐️
+" ================================================================================================
+set which-key
+set notimeout
+
+
+
+
+" a add ⭐️
+" 新建类
+let g:WhichKeyDesc_Add = "<leader>a Add"
+let g:WhichKeyDesc_add_NewClass = "<leader>ac NewClass"
+nnoremap <leader>ac :action NewClass<CR>
+" 新建文件 (嘻嘻,啥都可以直接用快捷键建立,一个字爽)
+let g:WhichKeyDesc_add_NewElement = "<leader>ae NewElement"
+nnoremap <leader>ae :action NewElement<CR>
+
+
+" c code ⭐️
+let g:WhichKeyDesc_code = "<leader>c Code"
+" 将当前行给注释掉
+let g:WhichKeyDesc_code_CommentByLineComment = "<leader>cc CommentByLineComment"
+nnoremap <Leader>cc :action CommentByLineComment<CR>
+" 打开General菜单
+let g:WhichKeyDesc_code_actionGenerate = "<leader>ca actionGenerate"
+nnoremap <Leader>ca :action Generate<CR>
+" 代码环绕(快速添加if 或者while)
+let g:WhichKeyDesc_code_SurroundWith = "<leader>cs SurroundWith"
+nnoremap <leader>cs :action SurroundWith<CR>
+" 复制class 引用
+let g:WhichKeyDesc_code_CopyReference = "<leader>ce CopyReference"
+nnoremap <Leader>ce :action CopyReference<CR>
+" 重命名 变量、类名
+let g:WhichKeyDesc_code_RenameElement = "<leader>cr RenameElement"
+nnoremap <Leader>cr :action RenameElement<CR>
+" 重命名 文件
+let g:WhichKeyDesc_code_RenameFile = "<leader>cf RenameFile"
+nnoremap <Leader>cf :action RenameFile<CR>
+
+
+
+" f: Find ⭐️
+let g:WhichKeyDesc_Find = "<leader>f Find"
+let g:WhichKeyDesc_Find_FindFile = "<leader>ff FindFile"
+nmap <leader>ff <action>(GotoFile)
+" FindInPath
+let g:WhichKeyDesc_Find_FindText = "<leader>ft FindInPath"
+nmap <leader>ft <action>(FindInPath)
+" GotoAction
+let g:WhichKeyDesc_Find_Commands = "<leader>fa GotoAction"
+nmap <leader>fa <action>(GotoAction)
+" FindFileLocation
+let g:WhichKeyDesc_Find_FindFileLocation = "<leader>fl FindFileLocation"
+nmap <leader>fl <action>(SelectInProjectView)
+" GotoSymbol
+let g:WhichKeyDesc_Find_FindFileLocation = "<leader>fs GotoSymbol"
+nmap <leader>fs <action>(GotoSymbol)
+" GotoClass
+let g:WhichKeyDesc_Find_GotoClass = "<leader>fc GotoClass"
+nmap <leader>fc <action>(GotoClass)
+
+
+
+" g: Git ⭐️
+let g:WhichKeyDesc_Git = "<leader>g Git"
+" 回滚
+let g:WhichKeyDesc_Git_RollbackHunk = "<leader>gr RollbackHunk"
+nmap <leader>gr :action Vcs.RollbackChangedLines<CR>
+nnoremap <leader>gc :action Git.CompareWithBranch<CR>
+" 显示git菜单
+let g:WhichKeyDesc_Git_Git.Menu = "<leader>gm Git.Menu"
+nnoremap <leader>gm :action Git.Menu<CR>
+
+
+" i: Insert ⭐️
+let g:WhichKeyDesc_Insert = "<leader>i Insert"
+" InsertSemicolon
+let g:WhichKeyDesc_Insert_InsertSemicolon = "<leader>ix InsertSemicolon"
+nmap <leader>ix A;<ESC>
+" nmap <leader>ix A;<ESC>o 
+
+
+" j: jump ️⭐️
+let g:WhichKeyDesc_jump = "<leader>j Jump"
+" 跳转到实体类
+let g:WhichKeyDesc_jump_GotoClass = "<leader>jc GotoClass"
+nnoremap <Leader>jc :action GotoClass<CR>
+" 跳转到声明
+let g:WhichKeyDesc_jump_GotoDeclaration = "<leader>jd GotoDeclaration"
+nnoremap <Leader>jd :action GotoDeclaration<CR>
+" 跳到实现类
+let g:WhichKeyDesc_jump_GotoImplementation = "<leader>ji GotoImplementation"
+nnoremap <Leader>ji :action GotoImplementation<CR>
+" 跳转父类
+let g:WhichKeyDesc_jump_GotoSuperMethod = "<leader>js GotoSuperMethod"
+nnoremap js mm`m:action GotoSuperMethod<CR>
+
+
+" n: No ⭐️
+let g:WhichKeyDesc_No = "<leader>n No"
+let g:WhichKeyDesc_No_Highlight = "<leader>nl NoHighlight"
+nmap <leader>nl :nohlsearch<CR>
+
+
+" r: Run/Re ⭐️
+let g:WhichKeyDesc_RunOrRe = "<leader>r RunOrRe"
+" run
+let g:WhichKeyDesc_RunOrRe_Run = "<leader>rr Run"
+nnoremap <Leader>rr :action Run<CR>
+" 重运行
+let g:WhichKeyDesc_RunOrRe_ReRun = "<leader>rn ReRun"
+nnoremap <Leader>rn :action Rerun<CR>
+" debug
+let g:WhichKeyDesc_RunOrRe_Debug = "<leader>rd Debug"
+nnoremap <Leader>rd :action Debug<CR>
+
+
+" s: Show ⭐️
+let g:WhichKeyDesc_Show = "<leader>s Show"
+let g:WhichKeyDesc_Show_FileStructure = "<leader>ss ShowFileStructure"
+nmap <leader>ss <action>(FileStructurePopup)
+let g:WhichKeyDesc_Show_Bookmarks = "<leader>sb ShowBookmarks"
+nmap <leader>sb <action>(ShowBookmarks)
+" 显示当前文件路径
+let g:WhichKeyDesc_Show_ShowFilePath = "<leader>sp ShowFilePath"
+nnoremap <Leader>sp :action ShowFilePath<CR>
+" 相当于鼠标右键
+let g:WhichKeyDesc_Show_ShowPopupMenu = "<leader>sh ShowPopupMenu"
+nnoremap <leader>sh :action ShowPopupMenu<CR>
+" 展示类继承关系
+let g:WhichKeyDesc_Show_TypeHierarchy = "<leader>st TypeHierarchy"
+nnoremap <Leader>st :action TypeHierarchy<CR>
+
+
+" w: Window ⭐️
+let g:WhichKeyDesc_Windows = "<leader>w Windows"
+" 分屏光标跳上面
+let g:WhichKeyDesc_Windows_CursorJump = "<leader>ww Cursor jump"
+nnoremap <Leader>ww <C-W>w
+" 上下分屏
+let g:WhichKeyDesc_Windows_SplitScreenUpAndDown = "<leader>wd SplitScreenUpAndDown"
+nnoremap <Leader>wd <C-W>s
+" 横向分屏
+let g:WhichKeyDesc_Windows_SplitScreenLeftAndRight = "<leader>wr SplitScreenLeftAndRight"
+nnoremap <Leader>wr <C-W>v
+" 窗口最大化
+let g:WhichKeyDesc_Windows_HideAllWindows = "<leader>wa HideAllWindows"
+nmap <leader>wa <action>(HideAllWindows)
+" 删除所有分屏
+let g:WhichKeyDesc_Windows_UnsplitAll = "<leader>ws UnsplitAll"
+nmap <leader>ws <action>(UnsplitAll)
+" 关闭当前窗口
+let g:WhichKeyDesc_Windows_CloseBuffer = "<leader>wc CloseBuffer"
+nmap <leader>wc :q!<CR>
+" 在项目目录中定位改文件
+let g:WhichKeyDesc_Windows_SelectInProjectView = "<leader>wz SelectInProjectView"
+nmap <leader>wz <action>(SelectInProjectView)
+" ToggleExplorer
+let g:WhichKeyDesc_Windows_ToggleExplorerOrExtract = "<leader>wg ToggleExplorer"
+nmap <leader>wg <action>(ActivateProjectToolWindow)
+" 改变视图
+let g:WhichKeyDesc_Windows_ChangeView = "<leader>we ChangeView"
+nmap <leader>we <action>(ChangeView)
+" OpenedProject
+let g:WhichKeyDesc_Windows_OpenProjectWindows = "<leader>wp OpenProjectWindows"
+nmap <leader>wp <action>(OpenProjectWindows)
+"打开Terminal
+let g:WhichKeyDesc_Windows_ActivateTerminalToolWindow = "<leader>wt OpenTerminal"
+nnoremap <Leader>wt Vy<CR>:action ActivateTerminalToolWindow<CR>
+" 进入 ideavimrc
+let g:WhichKeyDesc_Windows_ideavimrc = "<leader>we ideavimrc"
+nnoremap <leader>we :e ~/.ideavimrc<CR>
+" 重加载 ideavimrc 配置
+let g:WhichKeyDesc_Windows_ReloadVimRc = "<leader>wl ReloadVimRc"
+nnoremap <leader>wl :action IdeaVim.ReloadVimRc.reload<CR>
+
+
+" z: zip(fold) ⭐️
+let g:WhichKeyDesc_Zip = "<leader>z Zip"
+let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo unZipAll"
+nmap <leader>zo <action>(ExpandAllRegions)
+let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc ZipAll"
+nmap <leader>zc <action>(CollapseAllRegions)
+
+
+" d: del ⭐️
+let g:WhichKeyDesc_Del = "<leader>d del"
+" 删除当前文件 (快速删除)
+let g:WhichKeyDesc_del_SafeDelete = "<leader>dt SafeDelete"
+nnoremap <leader>dt :action SafeDelete<CR>
+
+
+" p: Breakpoint⭐️
+let g:WhichKeyDesc_point = "<leader>p point"
+" 打断点
+let g:WhichKeyDesc_point_ToggleLineBreakpoint = "<leader>pb ToggleLineBreakpoint"
+nnoremap <Leader>pb :action ToggleLineBreakpoint<CR>
+" 查看所有断点
+let g:WhichKeyDesc_point_ViewBreakpoints = "<leader>pr ViewBreakpoints"
+nnoremap <Leader>pr :action ViewBreakpoints<CR>
