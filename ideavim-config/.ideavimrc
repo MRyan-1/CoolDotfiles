@@ -60,9 +60,9 @@ noremap <space> viw
 
 
 "上一个方法
-nmap mu <action>(MethodUp)
+nmap gu <action>(MethodUp)
 "下一个方法
-nmap md <action>(MethodDown)
+nmap gd <action>(MethodDown)
 
 " go to somewhere (g in normal mode for goto somewhere)
 " 下一个error
@@ -72,7 +72,7 @@ nmap gr <action>(RecentFiles)
 nmap gd <action>(GotoDeclaration)
 nmap gs <action>(GotoSuperMethod)
 nmap gi <action>(GotoImplementation)
-nmap gu <action>(ShowUsages)
+nmap ga <action>(ShowUsages)
 nmap gh <action>(Back)
 nmap gl <action>(Forward)
 
