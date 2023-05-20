@@ -140,6 +140,7 @@ nnoremap <Leader>cf :action RenameFile<CR>
 
 
 " e: Explorer ⭐️
+let g:WhichKeyDesc_Explorer = "<leader>e Explorer"
 " extract method/function
 nmap <leader>em <action>(ExtractMethod)
 " extract constant
@@ -251,12 +252,21 @@ nmap <leader>si <action>(ParameterInfo)
 " ShowTabbedFileHistory
 let g:WhichKeyDesc_Show_ShowTabbedFileHistory = "<leader>sy ShowTabbedFileHistory"
 nmap <leader>sy <action>(Vcs.ShowTabbedFileHistory)
+" 查看所有断点
+let g:WhichKeyDesc_point_ViewBreakpoints = "<leader>sr ViewBreakpoints"
+nnoremap <Leader>sr :action ViewBreakpoints<CR>
 
 
 " t Toggle ⭐️
 let g:WhichKeyDesc_Toggle = "<leader>t Toggle"
 let g:WhichKeyDesc_Toggle_ToggleBookmark = "<leader>ta ToggleBookmark"
 nnoremap <Leader>ta :action ToggleBookmark<CR>
+" 打断点
+let g:WhichKeyDesc_point_ToggleLineBreakpoint = "<leader>tb ToggleLineBreakpoint"
+nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
+
+
+
 
 " w: Window ⭐️
 let g:WhichKeyDesc_Windows = "<leader>w Windows"
@@ -315,12 +325,3 @@ let g:WhichKeyDesc_Del = "<leader>d del"
 let g:WhichKeyDesc_del_SafeDelete = "<leader>dt SafeDelete"
 nnoremap <leader>dt :action SafeDelete<CR>
 
-
-" p: Breakpoint⭐️
-let g:WhichKeyDesc_point = "<leader>p point"
-" 打断点
-let g:WhichKeyDesc_point_ToggleLineBreakpoint = "<leader>pb ToggleLineBreakpoint"
-nnoremap <Leader>pb :action ToggleLineBreakpoint<CR>
-" 查看所有断点
-let g:WhichKeyDesc_point_ViewBreakpoints = "<leader>pr ViewBreakpoints"
-nnoremap <Leader>pr :action ViewBreakpoints<CR>
