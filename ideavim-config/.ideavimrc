@@ -194,7 +194,7 @@ let g:WhichKeyDesc_jump_GotoImplementation = "<leader>ji GotoImplementation"
 nnoremap <Leader>ji :action GotoImplementation<CR>
 " 跳转父类
 let g:WhichKeyDesc_jump_GotoSuperMethod = "<leader>js GotoSuperMethod"
-nnoremap js mm`m:action GotoSuperMethod<CR>
+nnoremap <Leader>js mm`m:action GotoSuperMethod<CR>
 
 
 " n: No ⭐️
