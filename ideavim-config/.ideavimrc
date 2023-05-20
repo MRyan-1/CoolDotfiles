@@ -139,6 +139,17 @@ let g:WhichKeyDesc_code_RenameFile = "<leader>cf RenameFile"
 nnoremap <Leader>cf :action RenameFile<CR>
 
 
+" e: Explorer ⭐️
+" extract method/function
+nmap <leader>em <action>(ExtractMethod)
+" extract constant
+nmap <leader>ec <action>(IntroduceConstant)
+" extract field
+nmap <leader>ef <action>(IntroduceField)
+" extract variable
+nmap <leader>ev <action>(IntroduceVariable)
+
+
 
 " f: Find ⭐️
 let g:WhichKeyDesc_Find = "<leader>f Find"
@@ -231,7 +242,18 @@ nnoremap <leader>sh :action ShowPopupMenu<CR>
 " 展示类继承关系
 let g:WhichKeyDesc_Show_TypeHierarchy = "<leader>st TypeHierarchy"
 nnoremap <Leader>st :action TypeHierarchy<CR>
+" ShowParameterInfo
+let g:WhichKeyDesc_Show_ParameterInfo = "<leader>si ShowParameterInfo"
+nmap <leader>si <action>(ParameterInfo)
+" ShowTabbedFileHistory
+let g:WhichKeyDesc_Show_ShowTabbedFileHistory = "<leader>sy ShowTabbedFileHistory"
+nmap <leader>sy <action>(Vcs.ShowTabbedFileHistory)
 
+
+" t Toggle ⭐️
+let g:WhichKeyDesc_Toggle = "<leader>t Toggle"
+let g:WhichKeyDesc_Toggle_ToggleBookmark = "<leader>ta ToggleBookmark"
+nnoremap <Leader>ta :action ToggleBookmark<CR>
 
 " w: Window ⭐️
 let g:WhichKeyDesc_Windows = "<leader>w Windows"
@@ -257,7 +279,7 @@ nmap <leader>wc :q!<CR>
 let g:WhichKeyDesc_Windows_SelectInProjectView = "<leader>wz SelectInProjectView"
 nmap <leader>wz <action>(SelectInProjectView)
 " ToggleExplorer
-let g:WhichKeyDesc_Windows_ToggleExplorerOrExtract = "<leader>wg ToggleExplorer"
+let g:WhichKeyDesc_Windows_ActivateProjectToolWindow = "<leader>wg ToggleExplorer"
 nmap <leader>wg <action>(ActivateProjectToolWindow)
 " 改变视图
 let g:WhichKeyDesc_Windows_ChangeView = "<leader>we ChangeView"
