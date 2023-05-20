@@ -178,10 +178,13 @@ let g:WhichKeyDesc_Git = "<leader>g Git"
 " 回滚
 let g:WhichKeyDesc_Git_RollbackHunk = "<leader>gr RollbackHunk"
 nmap <leader>gr :action Vcs.RollbackChangedLines<CR>
-nnoremap <leader>gc :action Git.CompareWithBranch<CR>
 " 显示git菜单
 let g:WhichKeyDesc_Git_Git.Menu = "<leader>gm Git.Menu"
 nnoremap <leader>gm :action Git.Menu<CR>
+" CompareWithBranch
+let g:WhichKeyDesc_Git_Git.CompareWithBranch  = "<leader>gb Git.CompareWithBranch "
+nnoremap <leader>gb :action Git.CompareWithBranch <CR>
+
 
 
 " i: Insert ⭐️
