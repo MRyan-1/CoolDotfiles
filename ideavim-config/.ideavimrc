@@ -223,12 +223,21 @@ let g:WhichKeyDesc_RunOrRe = "<leader>r RunOrRe"
 " run
 let g:WhichKeyDesc_RunOrRe_Run = "<leader>rr Run"
 nnoremap <Leader>rr :action Run<CR>
+" RunClass
+let g:WhichKeyDesc_RunOrRe_RunClass = "<leader>rc RunClass"
+nnoremap <Space>rc :action RunClass<CR>
 " 重运行
 let g:WhichKeyDesc_RunOrRe_ReRun = "<leader>rn ReRun"
 nnoremap <Leader>rn :action Rerun<CR>
 " debug
 let g:WhichKeyDesc_RunOrRe_Debug = "<leader>rd Debug"
 nnoremap <Leader>rd :action Debug<CR>
+" ChooseRunConfiguration
+let g:WhichKeyDesc_RunOrRe_ChooseRunConfiguration = "<leader>ri ChooseRunConfiguration"
+nnoremap <leader>rc :action ChooseRunConfiguration<CR>
+" ChooseDebugConfiguration
+let g:WhichKeyDesc_RunOrRe_ChooseDebugConfiguration = "<leader>ro ChooseDebugConfiguration"
+nnoremap <leader>ro :action ChooseDebugConfiguration<CR>
 
 
 " s: Show ⭐️
