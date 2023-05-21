@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/oh-my-zsh/oh-my-zsh/custom/plugins/zsh-autosuggestions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/oh-my-zsh/oh-my-zsh/custom/plugins/zsh-syntax-highlighting" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/oh-my-zsh/oh-my-zsh/custom/themes/powerlevel10k" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/oh-my-zsh/oh-my-zsh/plugins/zsh-autosuggestions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/oh-my-zsh/oh-my-zsh/plugins/zsh-syntax-highlighting" vcs="Git" />
+  </component>
+</project>
