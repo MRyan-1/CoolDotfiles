@@ -193,22 +193,6 @@ nmap <leader>ix A;<ESC>
 " nmap <leader>ix A;<ESC>o 
 
 
-" j: jump ️⭐️
-let g:WhichKeyDesc_jump = "<leader>j Jump"
-" 跳转到实体类
-let g:WhichKeyDesc_jump_GotoClass = "<leader>jc GotoClass"
-nnoremap <Leader>jc :action GotoClass<CR>
-" 跳转到声明
-let g:WhichKeyDesc_jump_GotoDeclaration = "<leader>jd GotoDeclaration"
-nnoremap <Leader>jd :action GotoDeclaration<CR>
-" 跳到实现类
-let g:WhichKeyDesc_jump_GotoImplementation = "<leader>ji GotoImplementation"
-nnoremap <Leader>ji :action GotoImplementation<CR>
-" 跳转父类
-let g:WhichKeyDesc_jump_GotoSuperMethod = "<leader>js GotoSuperMethod"
-nnoremap <Leader>js mm`m:action GotoSuperMethod<CR>
-
-
 " n: No ⭐️
 let g:WhichKeyDesc_No = "<leader>n No"
 let g:WhichKeyDesc_No_Highlight = "<leader>nl NoHighlight"
