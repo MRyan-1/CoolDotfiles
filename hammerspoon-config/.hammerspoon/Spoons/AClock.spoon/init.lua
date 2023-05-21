@@ -38,14 +38,14 @@ function obj:toggleShow()
         self.canvas:hide()
     else
         local mainScreen = hs.screen.mainScreen()
-        local mainRes = mainScreen:fullFrame()
+        local cres = mainScreen:fullFrame()
         self.canvas:frame({
-            x = (mainRes.w-800)/2,
-            y = (mainRes.h-300)/2,
-            w = 800,
-            h = 300
+            x = cres.x + cres.w / 5,
+            y = cres.y + cres.h / 3,
+            w = cres.w / 5 * 3,
+            h = cres.h / 5 * 3
         })
-        self.canvas[1].text = os.date(" %A\n🗓️  %B  %d  %Y\n🕐  %I:%M:%S  %p")
+        self.canvas[1].text = os.date("   %A\n🗓️  %B  %d  %Y\n🕐  %I:%M:%S  %p")
         self.canvas:show()
         self.timer = hs.timer.doAfter(4, function()
             self.canvas:hide()
