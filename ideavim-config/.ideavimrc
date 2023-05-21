@@ -162,9 +162,6 @@ nmap <leader>ft <action>(FindInPath)
 " GotoAction
 let g:WhichKeyDesc_Find_Commands = "<leader>fa GotoAction"
 nmap <leader>fa <action>(GotoAction)
-" FindFileLocation
-let g:WhichKeyDesc_Find_FindFileLocation = "<leader>fl FindFileLocation"
-nmap <leader>fl <action>(SelectInProjectView)
 " GotoSymbol
 let g:WhichKeyDesc_Find_FindFileLocation = "<leader>fs GotoSymbol"
 nmap <leader>fs <action>(GotoSymbol)
@@ -246,7 +243,7 @@ let g:WhichKeyDesc_Show_FileStructure = "<leader>ss ShowFileStructure"
 nmap <leader>ss <action>(FileStructurePopup)
 let g:WhichKeyDesc_Show_Bookmarks = "<leader>sb ShowBookmarks"
 nmap <leader>sb <action>(ShowBookmarks)
-" 显示当前文件路径
+" 示当前文件路径
 let g:WhichKeyDesc_Show_ShowFilePath = "<leader>sp ShowFilePath"
 nnoremap <Leader>sp :action ShowFilePath<CR>
 " 相当于鼠标右键
@@ -304,8 +301,8 @@ nmap <leader>wz <action>(SelectInProjectView)
 let g:WhichKeyDesc_Windows_ActivateProjectToolWindow = "<leader>wg ToggleExplorer"
 nmap <leader>wg <action>(ActivateProjectToolWindow)
 " 改变视图
-let g:WhichKeyDesc_Windows_ChangeView = "<leader>we ChangeView"
-nmap <leader>we <action>(ChangeView)
+let g:WhichKeyDesc_Windows_ChangeView = "<leader>wv ChangeView"
+nmap <leader>wv <action>(ChangeView)
 " OpenedProject
 let g:WhichKeyDesc_Windows_OpenProjectWindows = "<leader>wp OpenProjectWindows"
 nmap <leader>wp <action>(OpenProjectWindows)
