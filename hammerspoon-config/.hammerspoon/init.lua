@@ -32,6 +32,17 @@ else
     end
 end
 
+
+----------------------------------------------------------------------------------------------------
+-- 重新加载配置
+----------------------------------------------------------------------------------------------------
+hsreload_keys = hsreload_keys or {{"cmd", "shift", "ctrl"}, "R"}
+if string.len(hsreload_keys[2]) > 0 then
+    hs.hotkey.bind(hsreload_keys[1], hsreload_keys[2], "重新加载配置!", function() hs.reload() end)
+    hs.alert.show("配置文件已经重新加载！ ")
+end
+
+
 ----------------------------------------------------------------------------------------------------
 ---------------------------------------- Spoons 加载项 ----------------------------------------------
 ----------------------------------------------------------------------------------------------------
@@ -43,7 +54,7 @@ hs.loadSpoon("ModalMgr")
 if not hspoon_list then
     hspoon_list = {
         "WinWin", -- 窗口管理
-        "AClock", -- 一个钟
+        "AClock" -- 一个钟
     }
 end
 
@@ -150,15 +161,6 @@ if string.len(hsconsole_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hsconsole_keys[1], hsconsole_keys[2], "打开 Hammerspoon 控制台", function() hs.toggleConsole() end)
 end
 
-
-----------------------------------------------------------------------------------------------------
--- 重新加载配置
-----------------------------------------------------------------------------------------------------
-hsreload_keys = hsreload_keys or {{"cmd", "shift", "ctrl"}, "R"}
-if string.len(hsreload_keys[2]) > 0 then
-    hs.hotkey.bind(hsreload_keys[1], hsreload_keys[2], "重新加载配置!", function() hs.reload() end)
-    hs.alert.show("配置文件已经重新加载！ ")
-end
 
 
 ----------------------------------------------------------------------------------------------------
