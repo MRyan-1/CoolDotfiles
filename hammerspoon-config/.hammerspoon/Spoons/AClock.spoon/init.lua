@@ -45,7 +45,7 @@ function obj:toggleShow()
             w = 800,
             h = 300
         })
-        self.canvas[1].text = os.date("%A\n🗓️ %B %d %Y\n🕐 %I:%M:%S %p")
+        self.canvas[1].text = os.date(" %A\n🗓️  %B  %d  %Y\n🕐  %I:%M:%S  %p")
         self.canvas:show()
         self.timer = hs.timer.doAfter(4, function()
             self.canvas:hide()

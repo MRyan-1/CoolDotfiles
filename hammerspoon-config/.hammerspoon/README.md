@@ -7,10 +7,8 @@
 brew cask install hammerspoon
 ```
 
-将配置文件克隆到本地根目录。
-```
-git clone https://gitee.com/Ryan_ma/hammerspoon-config.git ~/.hammerspoon
-```
+将.hammerspoon目录下的配置文件克隆到本地.hammerspoon目录下。
+
 **重新加载配置文件即可生效**。
 
 如果提示：already exists and is not an empty directory.
@@ -28,13 +26,10 @@ cd ~/.hammerspoon && git pull
 
 ## 功能实现：
 
-**注：所有模式按 `esc` 和 `q` 退出。**
-
-### 帮助面板
-按下快捷键 `shift` + `option` + `/` 显示帮助面板查看各个模式快捷键。再按下对应快捷键切换模式。
-
-
 ### 窗口管理模式
+
+**注：按 `esc` 和 `q` 退出。**
+
 按下前缀键 `Option` + `R` 进入窗口管理模式：
 
 * 使用 `h、j、k、l` 移动为上下左右的半屏
@@ -53,13 +48,29 @@ cd ~/.hammerspoon && git pull
 * 使用 `t` 将光标移至所在窗口的中心位置 
 * 使用 `X` 三分之一居中分屏 
 
-注：如设置程序坞自动隐藏请修改  `/Users/zuorn/.hammerspoon/Spoons/WinWin.spoon/init.lua.bak` 为`init.lua`
+
+
+### 锁屏
+
+按下 `Option` + `l` 锁定屏幕。
 
 
 
-### AClock - 显示当前时间
+### 显示当前时间
 
 按下 `Option` + `t` 显示当前时间。
+
+
+
+### 配置重载
+
+按下 `control` + `command` + `shift` + `r` hammerspoon 配置重载。
+
+​	
+
+### 打开hammerspoon控制台
+
+按下 `Option` + `z` 打开hammerspoon控制台。
 
 
 
