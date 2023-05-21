@@ -50,6 +50,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" paste之后不会把yank的内容替换掉
+vmap p "_dp
+
 
 " ================================================================================================
 " = No Leader Keymaps =====================================
@@ -64,26 +67,25 @@ nmap gu <action>(MethodUp)
 "下一个方法
 nmap gd <action>(MethodDown)
 
+
 " go to somewhere (g in normal mode for goto somewhere)
 " 下一个error
-nmap gn <action>(GotoNextError)
-nmap gb <action>(JumpToLastChange)
+nmap ge <action>(GotoNextError)
+nmap gl <action>(JumpToLastChange)
+nmap gn <action>(JumpToNextChange)
 nmap gr <action>(RecentFiles)
 nmap gd <action>(GotoDeclaration)
 nmap gs <action>(GotoSuperMethod)
 nmap gi <action>(GotoImplementation)
-nmap ga <action>(ShowUsages)
-nmap gh <action>(Back)
-nmap gl <action>(Forward)
+nmap gu <action>(ShowUsages)
+nmap gb <action>(Back)
+nmap gf <action>(Forward)
+
 
 " 上一个 tab
 nmap H :action PreviousTab<CR>
 " 下一个 tab
 nmap L :action NextTab<CR>
-
-
-" paste之后不会把yank的内容替换掉
-vmap p "_dp
 
 " ================================================================================================
 " = Plugins =====================================
@@ -103,8 +105,6 @@ let mapleader=","
 " ================================================================================================
 set which-key
 set notimeout
-
-
 
 
 " a add ⭐️
@@ -307,6 +307,7 @@ let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo unZipAll"
 nmap <leader>zo <action>(ExpandAllRegions)
 let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc ZipAll"
 nmap <leader>zc <action>(CollapseAllRegions)
+
 
 
 " d: del ⭐️
