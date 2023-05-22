@@ -70,7 +70,7 @@ nmap gd <action>(MethodDown)
 
 " go to somewhere (g in normal mode for goto somewhere)
 " 下一个error
-nmap ge <action>(GotoNextError)
+nmap go <action>(GotoNextError)
 nmap gl <action>(JumpToLastChange)
 nmap gn <action>(JumpToNextChange)
 nmap gr <action>(RecentFiles)
