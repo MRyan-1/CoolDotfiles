@@ -181,8 +181,10 @@ let g:WhichKeyDesc_Git_Git.Menu = "<leader>gm Git.Menu"
 nnoremap <leader>gm :action Git.Menu<CR>
 " CompareWithBranch
 let g:WhichKeyDesc_Git_Git.CompareWithBranch  = "<leader>gb Git.CompareWithBranch "
-nnoremap <leader>gb :action Git.CompareWithBranch <CR>
-
+nnoremap <leader>gb :action Git.CompareWithBranch<CR>
+" gitPull
+let g:WhichKeyDesc_Git_Git.Pull  = "<leader>gb Git.Pull "
+nnoremap <leader>gp :action Git.Pull<CR>
 
 
 " i: Insert ⭐️
