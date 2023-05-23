@@ -185,7 +185,9 @@ nnoremap <leader>gb :action Git.CompareWithBranch<CR>
 " gitPull
 let g:WhichKeyDesc_Git_Git.Pull  = "<leader>gb Git.Pull "
 nnoremap <leader>gp :action Git.Pull<CR>
-
+" Annotate
+let g:WhichKeyDesc_Git_Git.Annotate  = "<leader>ga Git.Annotate "
+nnoremap <leader>ga :action Annotate<CR>
 
 " i: Insert ⭐️
 let g:WhichKeyDesc_Insert = "<leader>i Insert"
