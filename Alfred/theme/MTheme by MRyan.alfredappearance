@@ -44,11 +44,11 @@
       "color" : "#333434E5",
       "paddingHorizontal" : 6,
       "width" : 567,
-      "borderPadding" : 2,
+      "borderPadding" : 0,
       "borderColor" : "#DEDEDE00",
-      "blur" : 14,
-      "roundness" : 23,
-      "paddingVertical" : 8
+      "blur" : 0,
+      "roundness" : 13,
+      "paddingVertical" : 10
     },
     "credit" : "MRyan",
     "separator" : {
