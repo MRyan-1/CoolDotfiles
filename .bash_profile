@@ -4,3 +4,4 @@ export PATH=$PATH:$MAVEN_HOME/bin
 . "$HOME/.cargo/env"
 alias typora="open -a typora"
 alias libreoffice="open -a libreoffice"
+alias iina="open -a IINA"
