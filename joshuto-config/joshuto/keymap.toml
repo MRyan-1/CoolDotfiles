@@ -130,14 +130,18 @@ keymap = [
 	{ keys = [ "g", "D" ],		command = "cd ~/Desktop" },
 	{ keys = [ "g", "e" ],		command = "cd /etc" },
 	{ keys = [ "g", "h" ],		command = "cd ~/" },
-	
+
 	{ keys = [ "g", "c", "e" ],		command = "cd ~/enviroment" },
 	{ keys = [ "g", "c", "l" ],		command = "cd ~/learnSpace" },
 	{ keys = [ "g", "c", "p" ],		command = "cd ~/ProgramData" },
-	{ keys = [ "g", "c", "t" ],		command = "cd ~/ProgramData/tcgw" },
+
 	{ keys = [ "g", "c", "w" ],		command = "cd ~/ProgramData/wormhole" },
 	{ keys = [ "g", "c", "d" ],		command = "cd ~/ProgramData/CoolDotfiles" },
 	{ keys = [ "g", "c", "g" ],		command = "cd ~/learnSpace/geektime" },
+
+	{ keys = [ "g", "t", "t" ],		command = "cd ~/ProgramData/tcgw" },
+	{ keys = [ "g", "t", "g" ],		command = "cd ~/ProgramData/tcgw/gitlab" },
+
 
 	{ keys = [ "g", "f", "f" ],		command = "cd ~/.config" },
 	{ keys = [ "g", "f", "n" ],		command = "cd ~/.config/nvim" },
