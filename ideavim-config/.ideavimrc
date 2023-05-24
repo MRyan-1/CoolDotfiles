@@ -256,9 +256,11 @@ let g:WhichKeyDesc_Toggle = "<leader>t Toggle"
 let g:WhichKeyDesc_Toggle_ToggleBookmark = "<leader>ta ToggleBookmark"
 nnoremap <Leader>ta :action ToggleBookmark<CR>
 " 打断点
-let g:WhichKeyDesc_point_ToggleLineBreakpoint = "<leader>tb ToggleLineBreakpoint"
+let g:WhichKeyDesc_Toggle_ToggleLineBreakpoint = "<leader>tb ToggleLineBreakpoint"
 nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
-
+" ArthasWatch
+let g:WhichKeyDesc_Toggle_ArthasWatch = "<leader>tw ArthasWatch"
+nnoremap <Leader>tw :action ArthasWatch<CR>
 
 
 
@@ -303,6 +305,10 @@ nnoremap <leader>we :e ~/.ideavimrc<CR>
 " 重加载 ideavimrc 配置
 let g:WhichKeyDesc_Windows_ReloadVimRc = "<leader>wl ReloadVimRc"
 nnoremap <leader>wl :action IdeaVim.ReloadVimRc.reload<CR>
+" RecentProjectListGroup
+let g:WhichKeyDesc_Windows_RecentProjectListGroup = "<leader>wg RecentProjectListGroup"
+nnoremap <leader>wg :action RecentProjectListGroup<CR>
+
 
 
 " z: zip(fold) ⭐️
