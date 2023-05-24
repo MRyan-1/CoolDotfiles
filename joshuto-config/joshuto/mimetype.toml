@@ -52,9 +52,11 @@ ppm.inherit	= "image_default"
 webp.inherit	= "image_default"
 
 svg.app_list	= [
+	{ command = "open -a preview" },
 	{ command = "inkview", fork = true, silent = true },
 	{ command = "inkscape", fork = true, silent = true } ]
 tiff.app_list	= [
+	{ command = "open -a preview" },
 	{ command = "qimgv", fork = true, silent = true },
 	{ command = "krita", fork = true, silent = true } ]
 
@@ -66,6 +68,7 @@ mp3.inherit	= "audio_default"
 ogg.inherit	= "audio_default"
 webm.inherit	= "audio_default"
 webm.app_list = [
+	{ command = "open -a IINA", confirm_exit = true },
 	{ command = "mpv", args = [ "--mute", "on", "--" ], fork = true, silent = true },
 	{ command = "qimgv", args = [ "--" ], fork = true, silent = true } ]
 
@@ -132,27 +135,35 @@ yml.inherit	= "text_default"
 
 # archive formats
 7z.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "7z", args = [ "x" ], confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 bz2.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "tar", args = [ "-xvjf" ], confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 gz.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "tar", args = [ "-xvzf" ], confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 tar.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "tar", args = [ "-xvf" ], confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 tgz.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "tar", args = [ "-xvzf" ], confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 rar.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "unrar", args = [ "x" ], confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 xz.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "tar", args = [ "-xvJf" ], confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 zip.app_list	= [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "unzip", confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 
@@ -164,12 +175,11 @@ deb.app_list	= [
 
 # misc formats
 aup.app_list	= [
+	{ command = "open -a IINA", confirm_exit = true },
 	{ command = "audacity", fork = true, silent = true } ]
 
 m3u.app_list	= [
-	{ command = "micro" },
-	{ command = "mpv" },
-	{ command = "gedit", fork = true, silent = true },
+	{ command = "open -a IINA", confirm_exit = true },
 	{ command = "bat", confirm_exit = true } ]
 
 odt.inherit	= "libreoffice_default"
@@ -204,6 +214,7 @@ torrent.app_list = [
 
 [mimetype.application.subtype.zip]
 app_list = [
+	{ command = "open -a keka", confirm_exit = true },
 	{ command = "unzip", confirm_exit = true },
 	{ command = "file-roller", fork = true, silent = true } ]
 
