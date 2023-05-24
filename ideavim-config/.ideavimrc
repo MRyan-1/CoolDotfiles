@@ -63,16 +63,16 @@ noremap <space> viw
 
 
 "上一个方法
-nmap gu <action>(MethodUp)
+nmap gp <action>(MethodUp)
 "下一个方法
-nmap gd <action>(MethodDown)
+nmap gn <action>(MethodDown)
 
 
 " go to somewhere (g in normal mode for goto somewhere)
 " 下一个error
 nmap go <action>(GotoNextError)
 nmap gl <action>(JumpToLastChange)
-nmap gn <action>(JumpToNextChange)
+nmap gc <action>(JumpToNextChange)
 nmap gr <action>(RecentFiles)
 nmap gd <action>(GotoDeclaration)
 nmap gs <action>(GotoSuperMethod)
@@ -188,6 +188,7 @@ nnoremap <leader>gp :action Git.Pull<CR>
 " Annotate
 let g:WhichKeyDesc_Git_Git.Annotate  = "<leader>ga Git.Annotate "
 nnoremap <leader>ga :action Annotate<CR>
+
 
 " i: Insert ⭐️
 let g:WhichKeyDesc_Insert = "<leader>i Insert"
@@ -308,6 +309,9 @@ nnoremap <leader>wl :action IdeaVim.ReloadVimRc.reload<CR>
 " RecentProjectListGroup
 let g:WhichKeyDesc_Windows_RecentProjectListGroup = "<leader>wg RecentProjectListGroup"
 nnoremap <leader>wg :action RecentProjectListGroup<CR>
+" CloseProject
+let g:WhichKeyDesc_Windows_CloseProject = "<leader>wt CloseProject"
+nnoremap <leader>wt :action CloseProject<CR>
 
 
 
