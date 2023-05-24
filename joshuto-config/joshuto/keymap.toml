@@ -46,8 +46,8 @@ keymap = [
 	{ keys = [ "ctrl+e" ], 		command = "cursor_move_page_down 0.5" },
 
 	# vim-like keybindings
-	{ keys = [ "e" ],		command = "cursor_move_down" },
-	{ keys = [ "u" ],		command = "cursor_move_up" },
+	{ keys = [ "j" ],		command = "cursor_move_down" },
+	{ keys = [ "k" ],		command = "cursor_move_up" },
 	{ keys = [ "E" ],		command = "cursor_move_down 5" },
 	{ keys = [ "U" ],		command = "cursor_move_up 5" },
 	{ keys = [ "n" ],		command = "cd .." },
