@@ -18,9 +18,7 @@ video_default	= [
 ]
 
 text_default	= [
-	{ command = "nvim" },
-	{ command = "nano" },
-	{ command = "gedit", fork = true, silent = true },
+	{ command = "code" },
 	{ command = "bat", args = [ "--paging=always" ] },
 ]
 
@@ -176,8 +174,7 @@ kdenlive.app_list = [
 ]
 
 tex.app_list	= [
-	{ command = "micro" },
-	{ command = "gedit", fork = true, silent = true },
+	{ command = "code" },
 	{ command = "bat", confirm_exit = true },
 	{ command = "pdflatex" } ]
 
