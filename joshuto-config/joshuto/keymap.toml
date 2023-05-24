@@ -132,7 +132,7 @@ keymap = [
 	{ keys = [ "g", "e" ],		command = "cd /etc" },
 	{ keys = [ "g", "h" ],		command = "cd ~/" },
 
-	{ keys = [ "g", "f", "e" ],		command = "cd ~/enviroment" },
+	{ keys = [ "g", "f", "e" ],		command = "cd ~/environment" },
 	{ keys = [ "g", "f", "l" ],		command = "cd ~/learnSpace" },
 	{ keys = [ "g", "f", "g" ],		command = "cd ~/learnSpace/geektime/doc" },
 	{ keys = [ "g", "f", "t" ],		command = "cd ~/ProgramData/CodeFarmersTurn" },

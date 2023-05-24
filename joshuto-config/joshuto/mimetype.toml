@@ -25,6 +25,7 @@ video_default	= [
 
 text_default	= [
 	{ command = "code" },
+    { command = "open -a typora" },		
 	{ command = "bat", args = [ "--paging=always" ] },
 ]
 
@@ -217,3 +218,8 @@ inherit = "text_default"
 # video/*
 [mimetype.video]
 inherit = "video_default"
+
+
+# md/*
+[mimetype.md]
+inherit = "md_default"
