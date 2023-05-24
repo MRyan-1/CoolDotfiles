@@ -9,6 +9,7 @@ md_default =[
 ]
 
 image_default	= [
+	{ command = "open -a preview" },
 	{ command = "qimgv", args = [ "--" ], fork = true, silent = true },
 	{ command = "krita", args = [ "--" ], fork = true, silent = true },
 	{ command = "exiftool", confirm_exit = true },
