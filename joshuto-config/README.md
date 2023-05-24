@@ -7,3 +7,7 @@
 1. 安装rust
 2. 安装joshuto
 3. 将配置目录joshuto放入 /.config/ 下
+
+
+
+快捷命令： keymap.toml 映射

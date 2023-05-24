@@ -15,11 +15,11 @@ keymap = [
 	{ keys = [ "t", "i" ],		command = "tab_switch 1" },
 	{ keys = [ "t", "n" ],		command = "tab_switch -1" },
 
-	{ keys = [ "ctrl+1" ],		command = "tab_switch_index 1" },
-	{ keys = [ "ctrl+2" ],		command = "tab_switch_index 2" },
-	{ keys = [ "ctrl+3" ],		command = "tab_switch_index 3" },
-	{ keys = [ "ctrl+4" ],		command = "tab_switch_index 4" },
-	{ keys = [ "ctrl+5" ],		command = "tab_switch_index 5" },
+	{ keys = [ "alt+1" ],		command = "tab_switch_index 1" },
+	{ keys = [ "alt+2" ],		command = "tab_switch_index 2" },
+	{ keys = [ "alt+3" ],		command = "tab_switch_index 3" },
+	{ keys = [ "alt+4" ],		command = "tab_switch_index 4" },
+	{ keys = [ "alt+5" ],		command = "tab_switch_index 5" },
 
 	{ keys = [ "1" ],		command = "numbered_command 1" },
 	{ keys = [ "2" ],		command = "numbered_command 2" },
@@ -135,8 +135,8 @@ keymap = [
 	{ keys = [ "g", "c", "l" ],		command = "cd ~/learnSpace" },
 	{ keys = [ "g", "c", "p" ],		command = "cd ~/ProgramData" },
 
-	{ keys = [ "g", "c", "w" ],		command = "cd ~/ProgramData/wormhole" },
-	{ keys = [ "g", "c", "d" ],		command = "cd ~/ProgramData/CoolDotfiles" },
+	{ keys = [ "g", "c", "w" ],		command = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/wormhole" },
+	{ keys = [ "g", "c", "d" ],		command = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/CoolDotfiles" },
 	{ keys = [ "g", "c", "g" ],		command = "cd ~/learnSpace/geektime" },
 
 	{ keys = [ "g", "t", "t" ],		command = "cd ~/ProgramData/tcgw" },
@@ -147,7 +147,6 @@ keymap = [
 	{ keys = [ "g", "f", "n" ],		command = "cd ~/.config/nvim" },
 	{ keys = [ "g", "f", "z" ],		command = "cd ~/.config/zsh" },
 	{ keys = [ "g", "f", "j" ],		command = "cd ~/.config/joshuto" },
-	{ keys = [ "g", "f", "l" ],		command = "cd ~/.config/jesseduffield/lazygit" },
 	{ keys = [ "?" ],		command = "help" }
 ]
 
