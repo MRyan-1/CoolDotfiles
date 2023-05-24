@@ -11,6 +11,10 @@ image_default	= [
 	{ command = "swappy", args = [ "-f" ], fork = true },
 ]
 
+md_default =[
+   { command = "typora" },	
+]
+
 video_default	= [
 	{ command = "mpv", args = [ "--" ] , fork = true, silent = true },
 	{ command = "mediainfo", confirm_exit = true },
@@ -190,6 +194,10 @@ inherit = "video_default"
 # text/*
 [mimetype.text]
 inherit = "text_default"
+
+# md/*
+[mimetype.md]
+inherit = "md_default"
 
 # text/*
 [mimetype.video]
