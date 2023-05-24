@@ -145,8 +145,6 @@ keymap = [
 
 
 	{ keys = [ "g", "f", "f" ],		command = "cd ~/.config" },
-	{ keys = [ "g", "f", "n" ],		command = "cd ~/.config/nvim" },
-	{ keys = [ "g", "f", "z" ],		command = "cd ~/.config/zsh" },
 	{ keys = [ "g", "f", "j" ],		command = "cd ~/.config/joshuto" },
 	{ keys = [ "?" ],		command = "help" }
 ]
