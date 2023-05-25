@@ -48,8 +48,8 @@ keymap = [
 	# vim-like keybindings
 	{ keys = [ "j" ],		command = "cursor_move_down" },
 	{ keys = [ "k" ],		command = "cursor_move_up" },
-	{ keys = [ "E" ],		command = "cursor_move_down 5" },
-	{ keys = [ "U" ],		command = "cursor_move_up 5" },
+	{ keys = [ "J" ],		command = "cursor_move_down 5" },
+	{ keys = [ "K" ],		command = "cursor_move_up 5" },
 	{ keys = [ "n" ],		command = "cd .." },
 	{ keys = [ "h" ],		command = "cd -" },
 	{ keys = [ "i" ],		command = "open" },
