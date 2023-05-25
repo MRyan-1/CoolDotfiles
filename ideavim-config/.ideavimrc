@@ -308,8 +308,8 @@ nnoremap <leader>we :e ~/.ideavimrc<CR>
 let g:WhichKeyDesc_Windows_RecentProjectListGroup = "<leader>wg RecentProjectListGroup"
 nnoremap <leader>wg :action RecentProjectListGroup<CR>
 " CloseProject
-let g:WhichKeyDesc_Windows_CloseProject = "<leader>wz CloseProject"
-nnoremap <leader>wz :action CloseProject<CR>
+let g:WhichKeyDesc_Windows_CloseProject = "<leader>wx CloseProject"
+nnoremap <leader>wx :action CloseProject<CR>
 
 
 
