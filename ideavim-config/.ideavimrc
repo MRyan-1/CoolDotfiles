@@ -189,7 +189,6 @@ nnoremap <leader>gp :action Git.Pull<CR>
 let g:WhichKeyDesc_Git_Git.Annotate  = "<leader>ga Git.Annotate "
 nnoremap <leader>ga :action Annotate<CR>
 
-
 " i: Insert ⭐️
 let g:WhichKeyDesc_Insert = "<leader>i Insert"
 " InsertSemicolon
@@ -224,7 +223,9 @@ nnoremap <leader>rc :action ChooseRunConfiguration<CR>
 " ChooseDebugConfiguration
 let g:WhichKeyDesc_RunOrRe_ChooseDebugConfiguration = "<leader>ro ChooseDebugConfiguration"
 nnoremap <leader>ro :action ChooseDebugConfiguration<CR>
-
+" 重加载 ideavimrc 配置
+let g:WhichKeyDesc_RunOrRe_ReloadVimRc = "<leader>rl ReloadVimRc"
+nnoremap <leader>rl :action IdeaVim.ReloadVimRc.reload<CR>
 
 " s: Show ⭐️
 let g:WhichKeyDesc_Show = "<leader>s Show"
@@ -303,15 +304,12 @@ nnoremap <Leader>wt Vy<CR>:action ActivateTerminalToolWindow<CR>
 " 进入 ideavimrc
 let g:WhichKeyDesc_Windows_ideavimrc = "<leader>we ideavimrc"
 nnoremap <leader>we :e ~/.ideavimrc<CR>
-" 重加载 ideavimrc 配置
-let g:WhichKeyDesc_Windows_ReloadVimRc = "<leader>wl ReloadVimRc"
-nnoremap <leader>wl :action IdeaVim.ReloadVimRc.reload<CR>
 " RecentProjectListGroup
 let g:WhichKeyDesc_Windows_RecentProjectListGroup = "<leader>wg RecentProjectListGroup"
 nnoremap <leader>wg :action RecentProjectListGroup<CR>
 " CloseProject
-let g:WhichKeyDesc_Windows_CloseProject = "<leader>wt CloseProject"
-nnoremap <leader>wt :action CloseProject<CR>
+let g:WhichKeyDesc_Windows_CloseProject = "<leader>wz CloseProject"
+nnoremap <leader>wz :action CloseProject<CR>
 
 
 

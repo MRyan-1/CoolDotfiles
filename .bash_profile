@@ -2,6 +2,10 @@ export JAVA_HOME=/Users/ryan/Library/Java/JavaVirtualMachines/tcjdk/Contents/Hom
 export MAVEN_HOME=/Users/ryan/environment/apache-maven-3.6.3
 export PATH=$PATH:$MAVEN_HOME/bin
 . "$HOME/.cargo/env"
+alias o="open -a"
 alias typora="open -a typora"
+alias ot="open -a typora"
 alias libreoffice="open -a libreoffice"
+alias ol="open -a libreoffice"
+alias oi="open -a IINA"
 alias iina="open -a IINA"
