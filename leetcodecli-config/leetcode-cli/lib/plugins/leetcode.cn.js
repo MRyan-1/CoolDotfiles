@@ -1,10 +1,12 @@
 'use strict'
 var request = require('request');
+
 var config = require('../config');
 var h = require('../helper');
 var log = require('../log');
 var Plugin = require('../plugin');
 var session = require('../session');
+
 //
 // [Usage]
 //
@@ -12,6 +14,7 @@ var session = require('../session');
 //
 var plugin = new Plugin(15, 'leetcode.cn', '2018.11.25',
     'Plugin to talk with leetcode-cn APIs.');
+
 plugin.init = function() {
   config.app = 'leetcode.cn';
   config.sys.urls.base            = 'https://leetcode-cn.com';
@@ -71,7 +74,7 @@ plugin.getProblems = function(cb) {
       if (e) return cb(e);
 
       problems.forEach(function(problem) {
-        const title = titles[problem.id];
+        const title = titles[problem.fid];
         if (title)
           problem.name = title;
       });
@@ -94,7 +97,9 @@ plugin.getProblemsTitle = function(cb) {
       'query getQuestionTranslation($lang: String) {',
       '  translations: allAppliedQuestionTranslations(lang: $lang) {',
       '    title',
-      '    questionId',
+      '    question {',
+      '      questionId',
+      '    }',
       '  }',
       '}',
       ''
@@ -111,7 +116,7 @@ plugin.getProblemsTitle = function(cb) {
 
     const titles = [];
     body.data.translations.forEach(function(x) {
-      titles[x.questionId] = x.title;
+      titles[x.question.questionId] = x.title;
     });
 
     return cb(null, titles);
