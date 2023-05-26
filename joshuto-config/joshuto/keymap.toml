@@ -127,11 +127,9 @@ keymap = [
 	{ keys = [ "m", "M" ],		command = "linemode sizemtime" },
 
 	{ keys = [ "g", "r" ],		command = "cd /" },
+	{ keys = [ "g", "h" ],		command = "cd ~/" },
 	{ keys = [ "g", "d" ],		command = "cd ~/Downloads" },
 	{ keys = [ "g", "D" ],		command = "cd ~/Desktop" },
-	{ keys = [ "g", "e" ],		command = "cd /etc" },
-	{ keys = [ "g", "o" ],		command = "cd /opt" },
-	{ keys = [ "g", "h" ],		command = "cd ~/" },
 
 	{ keys = [ "g", "f", "e" ],		command = "cd ~/environment" },
 	{ keys = [ "g", "f", "l" ],		command = "cd ~/learnSpace" },
@@ -149,7 +147,10 @@ keymap = [
 
 
 	{ keys = [ "g", "c", "f" ],		command = "cd ~/.config" },
+	{ keys = [ "g", "c", "n" ],		command = "cd ~/.nvm" },
 	{ keys = [ "g", "c", "j" ],		command = "cd ~/.config/joshuto" },
+	{ keys = [ "g", "c", "e" ],		command = "cd /etc" },
+	{ keys = [ "g", "c", "o" ],		command = "cd /opt" },
 	{ keys = [ "?" ],		command = "help" }
 ]
 
