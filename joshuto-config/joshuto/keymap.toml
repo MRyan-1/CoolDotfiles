@@ -141,7 +141,8 @@ keymap = [
 	{ keys = [ "g", "f", "s" ],		command = "cd ~/ProgramData/CodeFarmersTurn/Analysis" },
 	{ keys = [ "g", "f", "w" ],		command = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/wormhole" },
 	{ keys = [ "g", "f", "d" ],		command = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/CoolDotfiles" },
-
+	{ keys = [ "g", "f", "c" ],		command = "cd ~/Library/Mobile Documents/com~apple~CloudDocs" },
+	
 
 	{ keys = [ "g", "t", "t" ],		command = "cd ~/ProgramData/tcgw" },
 	{ keys = [ "g", "t", "g" ],		command = "cd ~/ProgramData/tcgw/gitlab" },
