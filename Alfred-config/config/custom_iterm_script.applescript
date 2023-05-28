@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>application</key>
-	<integer>1</integer>
-	<key>custom</key>
-	<string>-- For the latest version:
+-- For the latest version:
 -- https://github.com/vitorgalvao/custom-alfred-iterm-scripts
 
 -- Set this property to true to always open in a new window
@@ -85,6 +78,4 @@ on alfred_script(query)
 
     delay 0.01
   end repeat
-end alfred_script</string>
-</dict>
-</plist>
+end alfred_script
