@@ -67,6 +67,8 @@
         "configuration" : {
           "knobs" : {
             "path" : "path",
+            "minwidth" : 0,
+            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
@@ -74,15 +76,13 @@
               "Alpha Component" : 1,
               "Green Component" : 0.63
             },
-            "base: compression resistance" : 1,
-            "minwidth" : 0,
             "base: priority" : 5,
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
-            "remove empty components" : false,
             "auto-rainbow style" : 0,
-            "algorithm" : 0
+            "algorithm" : 0,
+            "remove empty components" : false
           }
         }
       },
@@ -407,7 +407,7 @@
     "Blue Component" : 0.3333333432674408
   },
   "Ambiguous Double Width" : false,
-  "Background Image Mode" : 0,
+  "Background Image Mode" : 2,
   "Cursor Type" : 2,
   "Ansi 0 Color" : {
     "Green Component" : 0,
