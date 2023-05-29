@@ -29,6 +29,10 @@ libreoffice_default	= [
 	{ command = "open -a libreoffice", fork = true, silent = true },
 ]
 
+keynote_default = [
+	{ command = "open -a keynote", fork = true, silent = true },
+]
+
 [extension]
 ## image formats
 avif.inherit	= "image_default"
@@ -182,8 +186,8 @@ doc.inherit	= "libreoffice_default"
 docx.inherit	= "libreoffice_default"
 xls.inherit	= "libreoffice_default"
 xlsx.inherit	= "libreoffice_default"
-ppt.inherit	= "libreoffice_default"
-pptx.inherit	= "libreoffice_default"
+ppt.inherit	= "keynote_default"
+pptx.inherit	= "keynote_default"
 
 pdf.inherit	= "reader_default"
 
