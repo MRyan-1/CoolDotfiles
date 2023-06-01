@@ -150,6 +150,7 @@ keymap = [
 	{ keys = [ "g", "c", "n" ],		command = "cd ~/.nvm" },
 	{ keys = [ "g", "c", "j" ],		command = "cd ~/.config/joshuto" },
 	{ keys = [ "g", "c", "e" ],		command = "cd /etc" },
+	{ keys = [ "g", "c", "m" ],		command = "cd /.m2" },
 	{ keys = [ "g", "c", "o" ],		command = "cd /opt" },
 	{ keys = [ "?" ],		command = "help" }
 ]
