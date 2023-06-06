@@ -317,8 +317,8 @@ nnoremap <leader>wg :action RecentProjectListGroup<CR>
 let g:WhichKeyDesc_Windows_CloseProject = "<leader>wx CloseProject"
 nnoremap <leader>wx :action CloseProject<CR>
 " 激活maven窗口
-let g:WhichKeyDesc_Windows_CloseProject = "<leader>wv ActivateMavenProjectsToolWindow"
-nnoremap <Leader>wv :action ActivateMavenProjectsToolWindow<CR>
+let g:WhichKeyDesc_Windows_CloseProject = "<leader>wm ActivateMavenProjectsToolWindow"
+nnoremap <Leader>wm :action ActivateMavenProjectsToolWindow<CR>
 
 
 " z: zip(fold) ⭐️
