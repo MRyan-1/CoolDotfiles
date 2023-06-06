@@ -66,6 +66,10 @@ noremap <space> viw
 nmap gp <action>(MethodUp)
 "下一个方法
 nmap gn <action>(MethodDown)
+" Move half page faster (上下翻页)
+nmap gj <C-d>
+nmap gk <C-u>
+
 
 
 " go to somewhere (g in normal mode for goto somewhere)
@@ -168,7 +172,9 @@ nmap <leader>fs <action>(GotoSymbol)
 " GotoClass
 let g:WhichKeyDesc_Find_GotoClass = "<leader>fc GotoClass"
 nmap <leader>fc <action>(GotoClass)
-
+" 相当于IDEA的两次shift按钮
+let g:WhichKeyDesc_Find_SearchEverywhere = "<leader>fe SearchEverywhere"
+nnoremap <Leader>fe :action SearchEverywhere<CR>
 
 
 " g: Git ⭐️
@@ -310,7 +316,9 @@ nnoremap <leader>wg :action RecentProjectListGroup<CR>
 " CloseProject
 let g:WhichKeyDesc_Windows_CloseProject = "<leader>wx CloseProject"
 nnoremap <leader>wx :action CloseProject<CR>
-
+" 激活maven窗口
+let g:WhichKeyDesc_Windows_CloseProject = "<leader>wv ActivateMavenProjectsToolWindow"
+nnoremap <Leader>wv :action ActivateMavenProjectsToolWindow<CR>
 
 
 " z: zip(fold) ⭐️
