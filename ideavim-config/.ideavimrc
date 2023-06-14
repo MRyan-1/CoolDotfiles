@@ -203,6 +203,10 @@ nnoremap <leader>gh :action LocalHistory.ShowHistory<CR>
 " Git.Branches
 let g:WhichKeyDesc_Git.Branches = "<leader>ge Git.Branches"
 nnoremap <leader>ge :action Git.Branches<CR>
+" Git.Merge
+let g:WhichKeyDesc_Git.Merge = "<leader>gg Git.Merge"
+nnoremap <leader>gg :action Git.Merge<CR>
+
 
 
 
