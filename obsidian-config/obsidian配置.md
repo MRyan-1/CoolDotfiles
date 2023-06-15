@@ -34,6 +34,9 @@
 `<command-shift-方向键上>` 与上一行互换
 `<command-shift-方向键下>` 与下一行互换
 
+`<command-delete>` 删除当前文件
+
+
 
 ## 插件
 
