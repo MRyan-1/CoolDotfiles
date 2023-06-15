@@ -57,7 +57,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c0f3f24ead45e8bd",
@@ -132,6 +133,7 @@
   },
   "active": "9144dcbb0f2f2885",
   "lastOpenFiles": [
+    "未命名.md",
     "Learning Database/Tutorial/白话法律42讲/15 | 受贿原来这么“容易”.md",
     "Learning Database/Tutorial/白话法律42讲/13 | 抄袭、盗图为什么做不得？.md",
     "Learning Database/Tutorial/白话法律42讲/11 | 期权的“前世今生”.md",
@@ -142,7 +144,6 @@
     "Learning Database/Tutorial/白话法律42讲/05 | 创业未捷老板跑，社保工资哪里讨？.md",
     "Learning Database/Tutorial/白话法律42讲/04 “老周，我想知道” | 律师就在你身边（四）.md",
     "Learning Database/Tutorial/白话法律42讲/01 “老周，我想知道” | 常见法律认知盲区（一）.md",
-    "未命名.md",
     "Learning Database/Company/Mine/Pasted image 20230615203834.png",
     "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
     "Learning Database/Company/Other/分库分表及DTS技术培训.pdf",

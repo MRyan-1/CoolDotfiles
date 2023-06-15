@@ -3,5 +3,7 @@
   "darlal-switcher-plus",
   "obsidian-vimrc-support",
   "obsidian-advanced-slides",
-  "keyboard-analyzer"
+  "keyboard-analyzer",
+  "obsidian-auto-link-title",
+  "cm-editor-syntax-highlight-obsidian"
 ]
