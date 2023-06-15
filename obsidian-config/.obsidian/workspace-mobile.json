@@ -1,0 +1,131 @@
+{
+  "main": {
+    "id": "56b961a7a50bea8f",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6c9f8107393eaa2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fbb5b339323d0d66",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "07f5d3d1c5ad2ec6",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "081359e0d4620e4e",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "8808aae5b5d1bea8",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "d772e7117f64ad53",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "e8578c9b61de258b",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "7172b2e6310cbe93",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "ab1a01422d255f47",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "4b25c7af03a82a5c",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "5bba396e2a5ad7d3",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "command-palette:打开命令面板": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false
+    }
+  },
+  "active": "fbb5b339323d0d66",
+  "lastOpenFiles": [
+    "Learning Database/Tutorial/10x程序员工作法/12 | 测试也是程序员的事吗？.md",
+    "Learning Database/Tutorial/编译原理之美/01 | 理解代码：编译器的前端技术.md",
+    "Tutorial/编译原理实战课/01 | 编译的全过程都悄悄做了哪些事情？.md"
+  ]
+}

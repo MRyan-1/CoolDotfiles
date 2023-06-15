@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "73cbb29dc840c30e",
+    "type": "split",
+    "children": [
+      {
+        "id": "434bbe44800a8921",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16f93822ffb18a9d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a8039ac340da11fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf6943e84f11079b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8a892473b609f1e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "33d5ab23537fed24",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "c0f3f24ead45e8bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "850daffe4d7eee17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d53a6f7c3acbf46",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9005fe491cbe7a2c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4f93a70fc08de028",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md"
+              }
+            }
+          },
+          {
+            "id": "7dda113c93c3461f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "16f93822ffb18a9d",
+  "lastOpenFiles": [
+    "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
+    "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
+    "Learning Database/Tutorial/程序员的数据基础课/media/d9/3d/d99f094c432638924f8665a178162c3d.jpg",
+    "Learning Database/Tutorial/程序员的数据基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
+    "Tutorial/成为AI产品经理/01 | 行业视角：产品经理眼中的人工智能.md",
+    "Tutorial/许式伟的架构课/开篇词 | 怎样成长为优秀的软件架构师？.md",
+    "未命名.canvas",
+    "Tutorial/编译原理之美/01 | 理解代码：编译器的前端技术.md",
+    "Tutorial/数据结构与算法之美/08 | 栈：如何实现浏览器的前进和后退功能？.md",
+    "Tutorial/爱上跑步/01 跑两步就喘了，是不是我不适合跑步.pdf",
+    "Tutorial/白话法律42讲/02 “老周，我想知道” | 律师就在你身边（二）.md",
+    "Learning materials/阿里社区分享的用面试官的思维写简历.pdf",
+    "Tutorial/ETCD实战课/开篇词｜为什么你要学习etcd?.md",
+    "[02 “老周，我想知道”.md",
+    "Tutorial/白话法律42讲/01 “老周，我想知道” | 常见法律认知盲区（一）.md",
+    "未命名.md",
+    "Learning materials/《开启支付之门》第三版-陈天宇宙著.pdf",
+    "Tutorial/编译原理实战课/02 | 词法分析：用两种方式构造有限自动机.md",
+    "Tutorial/编译原理实战课/01 | 编译的全过程都悄悄做了哪些事情？.md",
+    "Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
+    "Learning materials",
+    "未命名文件夹",
+    "tutorial/096 人人都用得上的写作课【完结】 IINA /01｜写作前戏：如何让阅读真正帮到写作？.mp3",
+    "tutorial/095 爱上跑步【完结】/01 跑两步就喘了，是不是我不适合跑步.pdf",
+    "课程/iOS开发高手课/media/f9/fe/f97dda3b49351f74747dd74128a0ddfe.png",
+    "课程/iOS开发高手课/media/f9/2b/f9d371fe15b45db8a6eddbab3fc2962b.png",
+    "课程/iOS开发高手课/media/ff/fb/ff12f684d74be1b901e2dede5b5ab5fb.png",
+    "课程/iOS开发高手课/media/cd/b2/cdf512c900bac905b21d28202386b8b2.png",
+    "课程/iOS开发高手课/media/fa/a4/fa8980b42e736a3bbbb3fd4cfa5d48a4.png",
+    "课程/iOS开发高手课/media/f6/a2/f6764743beca921cb5dac4644ca092a2.png",
+    "课程/iOS开发高手课/media/f6/2a/f60391e3109494b411cef7d936b4792a.png",
+    "课程/iOS开发高手课/media/f5/27/f5ee90aa0183a4bcc688980bd625eb27.jpg",
+    "课程/iOS开发高手课/media/ec/1f/ec339916b408ae3c86a5ee237ae3dc1f.png",
+    "课程/iOS开发高手课/media/f9/fe",
+    "课程/iOS开发高手课/media/f9/2b",
+    "课程/iOS开发高手课/media/ff/fb",
+    "课程/iOS开发高手课/22 | 细说 iOS 响应式框架变迁，哪些思想可以为我所用？.md",
+    "课程/iOS开发高手课/33 | iOS 系统内核 XNU：App 如何加载？.md",
+    "课程/iOS开发高手课/20 | iOS开发的最佳学习路径是什么？.md",
+    "课程/iOS开发高手课/08 | 如何利用 Clang 为 App 提质？.md",
+    "课程/iOS开发高手课/42 | iOS原生、大前端和Flutter分别是怎么渲染的？.md",
+    "课程/iOS开发高手课/15 | 日志监控：怎样获取 App 中的全量日志？.md",
+    "课程/iOS开发高手课/07 | Clang、Infer 和 OCLint ，我们应该使用谁来做静态分析？.md",
+    "课程/iOS开发高手课/16 | 性能监控：衡量 App 质量的那把尺.md",
+    "课程/iOS开发高手课/32 | 热点问题答疑（三）.md",
+    "课程/iOS开发高手课/19 | 热点问题答疑（二）：基础模块问题答疑.md",
+    "课程/iOS开发高手课/结课测试 | 这些iOS的开发知识你都掌握了吗？.md"
+  ]
+}
