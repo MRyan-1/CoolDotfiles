@@ -40,13 +40,15 @@
 
 ## 插件
 
-Footnote Shortcut plugin 文件内跳转
+Footnote Shortcut  文件内跳转
 - `<command-m>` Footnote Shortcut: Insert Navigate Named Footnote
 
-Quick switcher++ plugin 文件内跳转
+Quick switcher++ 文件内跳转
 - `<command-ctrl-f>` 跳转到header 关闭除了show header的其他show
 
-Advanced Slides plugin 达到PPT展示效果
+Advanced Slides 达到PPT展示效果
 - `<command-option-r>` Advanced Slides: Reload Slide Preview
 - `<command-r>` Advanced Slides: Show Slide Preview
 
+Keyboard Analyzer 键盘快捷键图 
+- `<command-shift-k>` Open keyboard shortcuts view

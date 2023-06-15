@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "434bbe44800a8921",
+        "id": "926f659b7477d47c",
         "type": "tabs",
         "children": [
           {
-            "id": "16f93822ffb18a9d",
+            "id": "9144dcbb0f2f2885",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -62,8 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c0f3f24ead45e8bd",
@@ -79,7 +73,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,9 +94,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md"
-              }
+              "state": {}
             }
           },
           {
@@ -112,7 +103,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,13 +126,29 @@
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "16f93822ffb18a9d",
+  "active": "9144dcbb0f2f2885",
   "lastOpenFiles": [
-    "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
+    "Learning Database/Tutorial/白话法律42讲/15 | 受贿原来这么“容易”.md",
+    "Learning Database/Tutorial/白话法律42讲/13 | 抄袭、盗图为什么做不得？.md",
+    "Learning Database/Tutorial/白话法律42讲/11 | 期权的“前世今生”.md",
+    "Learning Database/Tutorial/白话法律42讲/10 | 又见猝死！工“殇”究竟是不是工伤？.md",
+    "Learning Database/Tutorial/白话法律42讲/03 “老周，我想知道” | 律师就在你身边（三）.md",
+    "Learning Database/Tutorial/白话法律42讲/09 | 致创业：谁动了我的股权？.md",
+    "Learning Database/Tutorial/白话法律42讲/06 | 保密还是“卖身”，霸王条款怎么看？.md",
+    "Learning Database/Tutorial/白话法律42讲/05 | 创业未捷老板跑，社保工资哪里讨？.md",
+    "Learning Database/Tutorial/白话法律42讲/04 “老周，我想知道” | 律师就在你身边（四）.md",
+    "Learning Database/Tutorial/白话法律42讲/01 “老周，我想知道” | 常见法律认知盲区（一）.md",
+    "未命名.md",
+    "Learning Database/Company/Mine/Pasted image 20230615203834.png",
     "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
+    "Learning Database/Company/Other/分库分表及DTS技术培训.pdf",
+    "Learning Database/Tutorial/10x程序员工作法/02 | 以终为始：如何让你的努力不白费？.md",
+    "Learning Database/Company/高频交易热点技术难题的解决之道.pptx",
+    "Learning Database/Company",
     "Learning Database/Tutorial/程序员的数据基础课/media/d9/3d/d99f094c432638924f8665a178162c3d.jpg",
     "Learning Database/Tutorial/程序员的数据基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
     "Tutorial/成为AI产品经理/01 | 行业视角：产品经理眼中的人工智能.md",
@@ -156,7 +162,6 @@
     "Tutorial/ETCD实战课/开篇词｜为什么你要学习etcd?.md",
     "[02 “老周，我想知道”.md",
     "Tutorial/白话法律42讲/01 “老周，我想知道” | 常见法律认知盲区（一）.md",
-    "未命名.md",
     "Learning materials/《开启支付之门》第三版-陈天宇宙著.pdf",
     "Tutorial/编译原理实战课/02 | 词法分析：用两种方式构造有限自动机.md",
     "Tutorial/编译原理实战课/01 | 编译的全过程都悄悄做了哪些事情？.md",
@@ -173,20 +178,6 @@
     "课程/iOS开发高手课/media/f6/a2/f6764743beca921cb5dac4644ca092a2.png",
     "课程/iOS开发高手课/media/f6/2a/f60391e3109494b411cef7d936b4792a.png",
     "课程/iOS开发高手课/media/f5/27/f5ee90aa0183a4bcc688980bd625eb27.jpg",
-    "课程/iOS开发高手课/media/ec/1f/ec339916b408ae3c86a5ee237ae3dc1f.png",
-    "课程/iOS开发高手课/media/f9/fe",
-    "课程/iOS开发高手课/media/f9/2b",
-    "课程/iOS开发高手课/media/ff/fb",
-    "课程/iOS开发高手课/22 | 细说 iOS 响应式框架变迁，哪些思想可以为我所用？.md",
-    "课程/iOS开发高手课/33 | iOS 系统内核 XNU：App 如何加载？.md",
-    "课程/iOS开发高手课/20 | iOS开发的最佳学习路径是什么？.md",
-    "课程/iOS开发高手课/08 | 如何利用 Clang 为 App 提质？.md",
-    "课程/iOS开发高手课/42 | iOS原生、大前端和Flutter分别是怎么渲染的？.md",
-    "课程/iOS开发高手课/15 | 日志监控：怎样获取 App 中的全量日志？.md",
-    "课程/iOS开发高手课/07 | Clang、Infer 和 OCLint ，我们应该使用谁来做静态分析？.md",
-    "课程/iOS开发高手课/16 | 性能监控：衡量 App 质量的那把尺.md",
-    "课程/iOS开发高手课/32 | 热点问题答疑（三）.md",
-    "课程/iOS开发高手课/19 | 热点问题答疑（二）：基础模块问题答疑.md",
-    "课程/iOS开发高手课/结课测试 | 这些iOS的开发知识你都掌握了吗？.md"
+    "课程/iOS开发高手课/22 | 细说 iOS 响应式框架变迁，哪些思想可以为我所用？.md"
   ]
 }

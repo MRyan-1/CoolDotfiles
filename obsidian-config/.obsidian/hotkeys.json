@@ -64,8 +64,8 @@
   "editor:focus-right": [
     {
       "modifiers": [
-        "Ctrl",
-        "Mod"
+        "Mod",
+        "Ctrl"
       ],
       "key": "R"
     }
@@ -73,8 +73,8 @@
   "editor:focus-left": [
     {
       "modifiers": [
-        "Ctrl",
-        "Mod"
+        "Mod",
+        "Ctrl"
       ],
       "key": "L"
     }
@@ -90,8 +90,8 @@
   "darlal-switcher-plus:switcher-plus:open-symbols-active": [
     {
       "modifiers": [
-        "Ctrl",
-        "Mod"
+        "Mod",
+        "Ctrl"
       ],
       "key": "F"
     }
@@ -128,6 +128,40 @@
         "Shift"
       ],
       "key": "ArrowDown"
+    }
+  ],
+  "obsidian-advanced-slides:reload-advanced-slides-preview": [
+    {
+      "modifiers": [
+        "Mod",
+        "Alt"
+      ],
+      "key": "R"
+    }
+  ],
+  "obsidian-advanced-slides:open-advanced-slides-preview": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
+    }
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Delete"
+    }
+  ],
+  "keyboard-analyzer:show-shortcuts-analyzer-view": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "K"
     }
   ]
 }

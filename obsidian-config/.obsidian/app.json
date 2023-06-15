@@ -1,5 +1,6 @@
 {
   "vimMode": true,
   "promptDelete": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Learning Database/Company/Mine"
 }
