@@ -1,7 +1,8 @@
 ## 命令
 
 `<command-p>` 命令面板
-
+`<command-BackSpace>` 折盤/展开左侧边栏
+`<option-BackSpace>` 折盤/展开右侧边栏
 
 
 ## 文件间跳转
