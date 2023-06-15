@@ -35,11 +35,15 @@
 `<command-shift-方向键下>` 与下一行互换
 
 
-## 文件内跳转
+## 插件
 
-Footnote Shortcut plugin
+Footnote Shortcut plugin 文件内跳转
 - `<command-m>` Footnote Shortcut: Insert Navigate Named Footnote
 
-Quick switcher++ plugin
+Quick switcher++ plugin 文件内跳转
 - `<command-ctrl-f>` 跳转到header 关闭除了show header的其他show
+
+Advanced Slides plugin 达到PPT展示效果
+- `<command-option-r>` Advanced Slides: Reload Slide Preview
+- `<command-r>` Advanced Slides: Show Slide Preview
 
