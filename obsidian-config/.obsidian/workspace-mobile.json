@@ -1,67 +1,24 @@
 {
   "main": {
-    "id": "56b961a7a50bea8f",
+    "id": "3e3a18a1570987e5",
     "type": "split",
     "children": [
       {
-        "id": "c6c9f8107393eaa2",
+        "id": "b36d62511fd80fb3",
         "type": "tabs",
         "children": [
           {
-            "id": "fbb5b339323d0d66",
+            "id": "701603769442cda3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
+                "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
-            },
-            "group": "e3867504031b791d"
-          }
-        ]
-      },
-      {
-        "id": "6c8d2ba94a6f6644",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2f7da9a52f99ff74",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1,
-                  "close": true
-                }
-              }
-            },
-            "group": "e3867504031b791d"
+            }
           }
         ]
       }
@@ -69,11 +26,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "07f5d3d1c5ad2ec6",
+    "id": "5aa7b23f2d215440",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "081359e0d4620e4e",
+        "id": "4fd7a5ae58837a18",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -83,7 +40,7 @@
         }
       },
       {
-        "id": "8808aae5b5d1bea8",
+        "id": "17d546f38cadc174",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -98,7 +55,7 @@
         }
       },
       {
-        "id": "d772e7117f64ad53",
+        "id": "5d56ef95c147f066",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -109,7 +66,7 @@
         }
       },
       {
-        "id": "e8578c9b61de258b",
+        "id": "3a9e56e8d9165574",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -120,16 +77,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "7172b2e6310cbe93",
+    "id": "31f4124598417097",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "ab1a01422d255f47",
+        "id": "e46b04225b76250d",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
+            "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -141,24 +98,24 @@
         }
       },
       {
-        "id": "4b25c7af03a82a5c",
+        "id": "b9ffbeb241d25bf6",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md",
+            "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "5bba396e2a5ad7d3",
+        "id": "e1658b2328dab0e3",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "Learning Database/Tutorial/10x程序员工作法/01 | 10x程序员是如何思考的？.md"
+            "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md"
           }
         }
       }
@@ -174,10 +131,53 @@
       "darlal-switcher-plus:Open Symbols for the active editor": false
     }
   },
-  "active": "081359e0d4620e4e",
+  "active": "701603769442cda3",
   "lastOpenFiles": [
-    "Learning Database/Tutorial/10x程序员工作法/12 | 测试也是程序员的事吗？.md",
-    "Learning Database/Tutorial/编译原理之美/01 | 理解代码：编译器的前端技术.md",
-    "Tutorial/编译原理实战课/01 | 编译的全过程都悄悄做了哪些事情？.md"
+    "Learning Database/Tutorial/SQL必知必会/08丨什么是SQL的聚集函数，如何利用它们汇总表的数据？.md",
+    "Learning Database/Tutorial/SQL必知必会/07丨什么是SQL函数？为什么使用SQL函数可能会带来问题？.md",
+    "Learning Database/Tutorial/SQL必知必会/06丨数据过滤：SQL数据过滤都有哪些方法？.md",
+    "Learning Database/Tutorial/SQL必知必会/05丨检索数据：你还在SELECT * 么？.md",
+    "Learning Database/Tutorial/大厂晋升指南/30 | 四线复盘法：怎么避免成为背锅侠？.md",
+    "Learning Database/Tutorial/大厂晋升指南/28 | 4D总结法：怎么展示你的工作亮点？.md",
+    "Learning Database/Tutorial/大厂晋升指南/29 | 金字塔汇报法：怎么汇报才能让领导认可你的成果？.md",
+    "Learning Database/Tutorial/大厂晋升指南/27 | 5S问题处理法：怎么应对问题才能转危为机？.md",
+    "Learning Database/Tutorial/大厂晋升指南/26 | 5W根因分析法：怎么找准问题源头才能治标又治本？.md",
+    "Learning Database/Tutorial/大厂晋升指南/25 | PDCA执行法：怎么推动落地才能“步步为赢”？.md",
+    "Learning Database/Tutorial/大厂晋升指南/24 | 3C方案设计法：怎么让你的方案有理有据？.md",
+    "Learning Database/Tutorial/大厂晋升指南/17 | 海绵学习法：怎么找到你的10000小时？.md",
+    "Learning Database/Tutorial/大厂晋升指南/16 | 导学：你应该掌握哪些学习方法？.md",
+    "Learning Database/Tutorial/大厂晋升指南/14 | PPT讲解：怎么讲才能让评委印象深刻？.md",
+    "Learning Database/Tutorial/大厂晋升指南/13 | PPT写作：怎么写才能展现自己真正的实力？.md",
+    "Learning Database/Tutorial/大厂晋升指南/12 | PPT框架：标准的晋升PPT长什么样子？.md",
+    "Learning Database/Tutorial/大厂晋升指南/09 |  P7提升攻略：怎么成为让人信服的“团队专家”？.md",
+    "Learning Database/Tutorial/大厂晋升指南/08 | P6提升攻略：怎么成为独立自主的“项目能手”？.md",
+    "Learning Database/Tutorial/大厂晋升指南/07 | P5提升攻略：怎么快速从学生转变为“打工人”？.md",
+    "Learning Database/Tutorial/大厂晋升指南/06 | 职级档次：你现在应该具备的核心能力是什么？.md",
+    "Learning Database/Tutorial/大厂晋升指南/05 | COMD能力模型：怎么把抽象的能力要求具体化？.md",
+    "Learning Database/Tutorial/大厂晋升指南/04 | 晋升逻辑：别人怎么判断你有没有达到晋升要求？.md",
+    "Learning Database/Tutorial/大厂晋升指南/03 | 晋升原则：什么样的人更容易晋升？.md",
+    "Learning Database/Tutorial/摄影入门课/03 | 光圈与景深：拍照片可以不对焦？.md",
+    "media/02/f9/02f4e777265a24e2a9a3f20d1192c7f9.gif.md",
+    "media",
+    "media/02",
+    "media/02/f9",
+    "Learning Database/Tutorial/摄影入门课/01 | 影像时代的视觉语言（上）：是什么推动了摄影的发展？.md",
+    "Learning Database/Tutorial/爱上跑步/02 视频1.mp4",
+    "Learning Database/Company/Mine/1_马文博月度复盘.pptx",
+    "Learning Database/Company/Mine/马文博实习述职.pptx",
+    "Learning Database/Company/Mine/二维码登录的秘密.pptx",
+    "Learning Database/Company/Mine/马文博成长复盘案例.docx",
+    "Learning Database/Company/Other/Flink分享.pdf",
+    "Learning Database/Company/Other/NAT内网穿透.pptx",
+    "Learning Database/Tutorial/研发效率破局之道/media/25/37/2581e07273218b464b463cf3243a3c37.png",
+    "Learning Database/Tutorial/研发效率破局之道/media/47/37/47474d86ceb15eabbf6e6b8a0866a537.png",
+    "Learning Database/Tutorial/研发效率破局之道/media/71/91/71b4dba396681ffcec08e912edb7b691.png",
+    "Learning Database/Tutorial/研发效率破局之道/media/71/b4/71de442222209adc9b9c86813da264b4.png",
+    "Learning Database/Tutorial/研发效率破局之道/media/8c/3f/8c06ec475f9e03b170c878f9ad64733f.png",
+    "Learning Database/Tutorial/研发效率破局之道/media/8c/88/8cf8ad75bd83c536898c816971c2c788.jpg",
+    "Learning Database/Tutorial/研发效率破局之道/media/1b/58/1bcd320829837a41bb513978b3432a58.png",
+    "Learning Database/Tutorial/研发效率破局之道/media/46/80/4649bffbfd17cb90d217a25d0382f980.jpg",
+    "Learning Database/Tutorial/研发效率破局之道/media/46/ee/4621ad994d6a424b0ca33648a6b1d7ee.jpg",
+    "Learning Database/Tutorial/研发效率破局之道/media/cb/92/cb7d9a0bb21f0b740f6eee812f582392.png"
   ]
 }

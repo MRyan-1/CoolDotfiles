@@ -2,5 +2,6 @@
   "vimMode": true,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "Learning Database/Company/Mine"
+  "attachmentFolderPath": "Learning Database/Company/Mine",
+  "showUnsupportedFiles": true
 }
