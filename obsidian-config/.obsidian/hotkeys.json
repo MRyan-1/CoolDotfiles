@@ -64,19 +64,10 @@
   "editor:focus-right": [
     {
       "modifiers": [
-        "Mod",
-        "Ctrl"
+        "Ctrl",
+        "Mod"
       ],
-      "key": "R"
-    }
-  ],
-  "editor:focus-left": [
-    {
-      "modifiers": [
-        "Mod",
-        "Ctrl"
-      ],
-      "key": "L"
+      "key": "ArrowRight"
     }
   ],
   "obsidian-footnotes:insert-named-footnote": [
@@ -189,6 +180,26 @@
         "Shift"
       ],
       "key": "J"
+    }
+  ],
+  "easy-typing-obsidian:easy-typing-format-switch": [],
+  "easy-typing-obsidian:easy-typing-paste-without-format": [],
+  "easy-typing-obsidian:easy-typing-format-article": [
+    {
+      "modifiers": [
+        "Mod",
+        "Ctrl"
+      ],
+      "key": "L"
+    }
+  ],
+  "editor:focus-left": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "ArrowLeft"
     }
   ]
 }

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cfc17ce0288c7bdf",
+        "id": "c7d6eccaf3117a8d",
         "type": "tabs",
         "children": [
           {
-            "id": "3a6eb19a102e2ca2",
+            "id": "d891e6a93530bd57",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -130,8 +130,19 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "c8a892473b609f1e",
+  "active": "d891e6a93530bd57",
   "lastOpenFiles": [
+    "Learning Database/Tutorial/基于人因的用户体验设计课/04 | 重新认识视觉（上）：色彩有重量吗？.md",
+    "Learning Database/Tutorial/基于人因的用户体验设计课/03 | 重新认识感觉：眼见不一定为实.md",
+    "Learning Database/Tutorial/基于人因的用户体验设计课/02 | 怎样做到为用户而设计？.md",
+    "Learning Database/Tutorial/基于人因的用户体验设计课/01 | 什么是用户体验设计？.md",
+    "Learning Database/Tutorial/系统性能调优必知必会/01 | CPU缓存：怎样写代码能够让CPU执行得更快？.md",
+    "Learning Database/Tutorial/消息队列高手课/02 | 该如何选择消息队列？.md",
+    "Learning Database/Tutorial/消息队列高手课/21 | Kafka Consumer源码分析：消息消费的实现过程.md",
+    "Learning Database/Tutorial/消息队列高手课/13 | 传输协议：应用程序之间对话的语言.md",
+    "Learning Database/Tutorial/消息队列高手课/09 | 学习开源代码该如何入手？.md",
+    "Learning Database/Tutorial/消息队列高手课/01 | 为什么需要消息队列？.md",
+    "Learning Database/Tutorial/消息队列高手课/25 | RocketMQ与Kafka中如何实现事务？.md",
     "Learning Database/Tutorial/Android开发高手课/01 | 崩溃优化（上）：关于“崩溃”那些事儿.md",
     "Learning Database/Tutorial/爱上跑步/01 跑两步就喘了，是不是我不适合跑步.pdf",
     "Learning Database/Tutorial/大厂晋升指南/30 | 四线复盘法：怎么避免成为背锅侠？.md",
@@ -148,17 +159,6 @@
     "Learning Database/Tutorial/大厂晋升指南/18 | 三段分解法：怎么利用10000小时成为大牛？.md",
     "Learning Database/Tutorial/大厂晋升指南/13 | PPT写作：怎么写才能展现自己真正的实力？.md",
     "Learning Database/Tutorial/大厂晋升指南/14 | PPT讲解：怎么讲才能让评委印象深刻？.md",
-    "Learning Database/Tutorial/大厂晋升指南/15 | 答辩技巧：回答评委提问有哪些技巧？.md",
-    "Learning Database/Tutorial/大厂晋升指南/08 | P6提升攻略：怎么成为独立自主的“项目能手”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/27 | 5S问题处理法：怎么应对问题才能转危为机？.md",
-    "Learning Database/Tutorial/大厂晋升指南/26 | 5W根因分析法：怎么找准问题源头才能治标又治本？.md",
-    "Learning Database/Tutorial/大厂晋升指南/25 | PDCA执行法：怎么推动落地才能“步步为赢”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/24 | 3C方案设计法：怎么让你的方案有理有据？.md",
-    "Learning Database/Tutorial/大厂晋升指南/07 | P5提升攻略：怎么快速从学生转变为“打工人”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/06 | 职级档次：你现在应该具备的核心能力是什么？.md",
-    "Learning Database/Tutorial/大厂晋升指南/05 | COMD能力模型：怎么把抽象的能力要求具体化？.md",
-    "Learning Database/Tutorial/大厂晋升指南/04 | 晋升逻辑：别人怎么判断你有没有达到晋升要求？.md",
-    "Learning Database/Tutorial/大厂晋升指南/03 | 晋升原则：什么样的人更容易晋升？.md",
     "Learning Database/Company/Mine/Pasted image 20230615203834.png",
     "Learning Database/Company/Other/分库分表及DTS技术培训.pdf",
     "Learning Database/Company/高频交易热点技术难题的解决之道.pptx",
