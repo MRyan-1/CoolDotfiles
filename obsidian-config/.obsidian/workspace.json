@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "c7d6eccaf3117a8d",
+        "id": "2303c7c95cf841db",
         "type": "tabs",
         "children": [
           {
-            "id": "d891e6a93530bd57",
+            "id": "0caa18205c6c8063",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -57,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 415.5
+    "width": 415.5,
+    "collapsed": true
   },
   "right": {
     "id": "c0f3f24ead45e8bd",
@@ -73,6 +79,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -94,7 +101,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md"
+              }
             }
           },
           {
@@ -103,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +120,16 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6a9d7bbbec13538",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -130,35 +150,40 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "d891e6a93530bd57",
+  "active": "0caa18205c6c8063",
   "lastOpenFiles": [
-    "Learning Database/Tutorial/基于人因的用户体验设计课/04 | 重新认识视觉（上）：色彩有重量吗？.md",
-    "Learning Database/Tutorial/基于人因的用户体验设计课/03 | 重新认识感觉：眼见不一定为实.md",
-    "Learning Database/Tutorial/基于人因的用户体验设计课/02 | 怎样做到为用户而设计？.md",
-    "Learning Database/Tutorial/基于人因的用户体验设计课/01 | 什么是用户体验设计？.md",
-    "Learning Database/Tutorial/系统性能调优必知必会/01 | CPU缓存：怎样写代码能够让CPU执行得更快？.md",
-    "Learning Database/Tutorial/消息队列高手课/02 | 该如何选择消息队列？.md",
-    "Learning Database/Tutorial/消息队列高手课/21 | Kafka Consumer源码分析：消息消费的实现过程.md",
+    "Learning Database/Tutorial/数据结构与算法之美/04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度.md",
+    "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/01 | 为什么要学习数据结构和算法？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/02 | 如何抓住重点，系统高效地学习数据结构与算法？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/《数据结构与算法之美》学习指导手册.md",
+    "Learning Database/Tutorial/ETCD实战课/01 | etcd的前世今生：为什么Kubernetes使用etcd？.md",
+    "Learning Database/Tutorial/ETCD实战课/02 | 基础架构：etcd一个读请求是如何执行的？.md",
+    "Learning Database/Tutorial/ETCD实战课/08 | Watch：如何高效获取数据变化通知？.md",
+    "Learning Database/Tutorial/ETCD实战课/09 | 事务：如何安全地实现多key操作？.md",
+    "Learning Database/Tutorial/ETCD实战课/media/1c/cc/1c065788051c6eaaee965575a04109cc.png",
+    "Learning Database/Tutorial/ETCD实战课/开篇词｜为什么你要学习etcd?.md",
+    "Learning Database/Tutorial/ETCD实战课/16 | 性能及稳定性（上）：如何优化及扩展etcd性能？.md",
+    "Learning Database/Tutorial/ETCD实战课/12 | 一致性：为什么基于Raft实现的etcd还会出现数据不一致？.md",
+    "Learning Database/Tutorial/ETCD实战课/04 | Raft协议：etcd如何实现高可用、数据强一致的？.md",
+    "Learning Database/Tutorial/ETCD实战课/07 | MVCC：如何实现多版本并发控制？.md",
+    "Learning Database/Tutorial/ETCD实战课/03 | 基础架构：etcd一个写请求是如何执行的？.md",
+    "Learning Database/Tutorial/ETCD实战课/06 | 租约：如何检测你的客户端存活？.md",
+    "Learning Database/Tutorial/ETCD实战课/05 | 鉴权：如何保护你的数据安全？.md",
+    "Learning Database/Tutorial/ETCD实战课/media/5f/6d/5f1bf807db06233ed51d142917798b6d.png",
+    "Learning Database/Tutorial/ETCD实战课/media/88/d1/881db1b7d05dc40771e9737f3117f5d1.png",
+    "Learning Database/Tutorial/ETCD实战课/media/cd/f0/cde3f155f51bfd3d7fd78fe8e7ac9bf0.png",
+    "Learning Database/Tutorial/ETCD实战课/media/d0/0e/d0af3537c0eef89b499a82693da23f0e.png",
+    "Learning Database/Tutorial/消息队列高手课/16 | 缓存策略：如何使用缓存来减少磁盘IO？.md",
+    "Learning Database/Tutorial/消息队列高手课/20 | RocketMQ Producer源码分析：消息生产的实现过程.md",
+    "Learning Database/Tutorial/消息队列高手课/19 | 数据压缩：时间换空间的游戏.md",
+    "Learning Database/Tutorial/消息队列高手课/18 | 如何用硬件同步原语（CAS）替代锁？.md",
+    "Learning Database/Tutorial/消息队列高手课/17 | 如何正确使用锁保护共享数据，协调异步线程？.md",
+    "Learning Database/Tutorial/消息队列高手课/15 | Kafka如何实现高性能IO？.md",
+    "Learning Database/Tutorial/消息队列高手课/10 | 如何使用异步设计提升系统性能？.md",
+    "Learning Database/Tutorial/消息队列高手课/11 | 如何实现高性能的异步网络传输？.md",
     "Learning Database/Tutorial/消息队列高手课/13 | 传输协议：应用程序之间对话的语言.md",
-    "Learning Database/Tutorial/消息队列高手课/09 | 学习开源代码该如何入手？.md",
-    "Learning Database/Tutorial/消息队列高手课/01 | 为什么需要消息队列？.md",
-    "Learning Database/Tutorial/消息队列高手课/25 | RocketMQ与Kafka中如何实现事务？.md",
-    "Learning Database/Tutorial/Android开发高手课/01 | 崩溃优化（上）：关于“崩溃”那些事儿.md",
     "Learning Database/Tutorial/爱上跑步/01 跑两步就喘了，是不是我不适合跑步.pdf",
-    "Learning Database/Tutorial/大厂晋升指南/30 | 四线复盘法：怎么避免成为背锅侠？.md",
-    "Learning Database/Tutorial/大厂晋升指南/开篇词 | 重新理解晋升.md",
-    "Learning Database/Tutorial/大厂晋升指南/加餐一 | 晋升等级：不同的职级体系如何对标？.md",
-    "Learning Database/Tutorial/大厂晋升指南/加餐二 | 提名词：怎么夸自己才最加分？.md",
-    "Learning Database/Tutorial/大厂晋升指南/放学别走 | 如何画好领域分层图？.md",
-    "Learning Database/Tutorial/大厂晋升指南/34 | 宝洁战略模型：P8+P9怎么看懂业务战略？.md",
-    "Learning Database/Tutorial/大厂晋升指南/21 | 导学：你应该掌握哪些做事方法？.md",
-    "Learning Database/Tutorial/大厂晋升指南/22 | OKR的优势：为什么要用OKR来取代KPI做团队规划？.md",
-    "Learning Database/Tutorial/大厂晋升指南/23 | OKR规划法：Team Leader 怎么做团队规划？.md",
-    "Learning Database/Tutorial/大厂晋升指南/28 | 4D总结法：怎么展示你的工作亮点？.md",
-    "Learning Database/Tutorial/大厂晋升指南/20 | Play & Teach：怎么摆脱“从入门到忘记”的学习困境？.md",
-    "Learning Database/Tutorial/大厂晋升指南/18 | 三段分解法：怎么利用10000小时成为大牛？.md",
-    "Learning Database/Tutorial/大厂晋升指南/13 | PPT写作：怎么写才能展现自己真正的实力？.md",
-    "Learning Database/Tutorial/大厂晋升指南/14 | PPT讲解：怎么讲才能让评委印象深刻？.md",
     "Learning Database/Company/Mine/Pasted image 20230615203834.png",
     "Learning Database/Company/Other/分库分表及DTS技术培训.pdf",
     "Learning Database/Company/高频交易热点技术难题的解决之道.pptx",
@@ -173,11 +198,6 @@
     "tutorial/096 人人都用得上的写作课【完结】 IINA /01｜写作前戏：如何让阅读真正帮到写作？.mp3",
     "课程/iOS开发高手课/media/f9/fe/f97dda3b49351f74747dd74128a0ddfe.png",
     "课程/iOS开发高手课/media/f9/2b/f9d371fe15b45db8a6eddbab3fc2962b.png",
-    "课程/iOS开发高手课/media/ff/fb/ff12f684d74be1b901e2dede5b5ab5fb.png",
-    "课程/iOS开发高手课/media/cd/b2/cdf512c900bac905b21d28202386b8b2.png",
-    "课程/iOS开发高手课/media/fa/a4/fa8980b42e736a3bbbb3fd4cfa5d48a4.png",
-    "课程/iOS开发高手课/media/f6/a2/f6764743beca921cb5dac4644ca092a2.png",
-    "课程/iOS开发高手课/media/f6/2a/f60391e3109494b411cef7d936b4792a.png",
-    "课程/iOS开发高手课/media/f5/27/f5ee90aa0183a4bcc688980bd625eb27.jpg"
+    "课程/iOS开发高手课/media/ff/fb/ff12f684d74be1b901e2dede5b5ab5fb.png"
   ]
 }

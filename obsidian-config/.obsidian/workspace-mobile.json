@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b36d62511fd80fb3",
+        "id": "5080c1eab67c73da",
         "type": "tabs",
         "children": [
           {
-            "id": "701603769442cda3",
+            "id": "2f5e37caf92a8841",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
+                "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
+            "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
+            "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +115,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md"
+            "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md"
           }
         }
       }
@@ -131,8 +131,17 @@
       "darlal-switcher-plus:Open Symbols for the active editor": false
     }
   },
-  "active": "701603769442cda3",
+  "active": "4fd7a5ae58837a18",
   "lastOpenFiles": [
+    "Learning Database/Tutorial/ETCD实战课/06 | 租约：如何检测你的客户端存活？.md",
+    "Learning Database/Tutorial/ETCD实战课/08 | Watch：如何高效获取数据变化通知？.md",
+    "Learning Database/Tutorial/ETCD实战课/07 | MVCC：如何实现多版本并发控制？.md",
+    "Learning Database/Tutorial/ETCD实战课/02 | 基础架构：etcd一个读请求是如何执行的？.md",
+    "Learning Database/Company/Other/陈驰 评审.pptx",
+    "Learning Database/Company/Other/汇报材料-任亚健-20230728V2.pptx",
+    "media/02/f9/02f4e777265a24e2a9a3f20d1192c7f9.gif.md",
+    "Learning Database/Tutorial/ETCD实战课/01 | etcd的前世今生：为什么Kubernetes使用etcd？.md",
+    "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
     "Learning Database/Tutorial/SQL必知必会/08丨什么是SQL的聚集函数，如何利用它们汇总表的数据？.md",
     "Learning Database/Tutorial/SQL必知必会/07丨什么是SQL函数？为什么使用SQL函数可能会带来问题？.md",
     "Learning Database/Tutorial/SQL必知必会/06丨数据过滤：SQL数据过滤都有哪些方法？.md",
@@ -152,23 +161,14 @@
     "Learning Database/Tutorial/大厂晋升指南/09 |  P7提升攻略：怎么成为让人信服的“团队专家”？.md",
     "Learning Database/Tutorial/大厂晋升指南/08 | P6提升攻略：怎么成为独立自主的“项目能手”？.md",
     "Learning Database/Tutorial/大厂晋升指南/07 | P5提升攻略：怎么快速从学生转变为“打工人”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/06 | 职级档次：你现在应该具备的核心能力是什么？.md",
-    "Learning Database/Tutorial/大厂晋升指南/05 | COMD能力模型：怎么把抽象的能力要求具体化？.md",
-    "Learning Database/Tutorial/大厂晋升指南/04 | 晋升逻辑：别人怎么判断你有没有达到晋升要求？.md",
-    "Learning Database/Tutorial/大厂晋升指南/03 | 晋升原则：什么样的人更容易晋升？.md",
-    "Learning Database/Tutorial/摄影入门课/03 | 光圈与景深：拍照片可以不对焦？.md",
-    "media/02/f9/02f4e777265a24e2a9a3f20d1192c7f9.gif.md",
     "media",
     "media/02",
     "media/02/f9",
-    "Learning Database/Tutorial/摄影入门课/01 | 影像时代的视觉语言（上）：是什么推动了摄影的发展？.md",
     "Learning Database/Tutorial/爱上跑步/02 视频1.mp4",
     "Learning Database/Company/Mine/1_马文博月度复盘.pptx",
     "Learning Database/Company/Mine/马文博实习述职.pptx",
     "Learning Database/Company/Mine/二维码登录的秘密.pptx",
     "Learning Database/Company/Mine/马文博成长复盘案例.docx",
-    "Learning Database/Company/Other/Flink分享.pdf",
-    "Learning Database/Company/Other/NAT内网穿透.pptx",
     "Learning Database/Tutorial/研发效率破局之道/media/25/37/2581e07273218b464b463cf3243a3c37.png",
     "Learning Database/Tutorial/研发效率破局之道/media/47/37/47474d86ceb15eabbf6e6b8a0866a537.png",
     "Learning Database/Tutorial/研发效率破局之道/media/71/91/71b4dba396681ffcec08e912edb7b691.png",

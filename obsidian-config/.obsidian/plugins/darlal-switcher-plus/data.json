@@ -95,14 +95,14 @@
         "id": "Heading",
         "mode": 4,
         "label": "headings",
-        "isActive": false,
+        "isActive": true,
         "isAvailable": true
       },
       {
         "id": "Tag",
         "mode": 4,
         "label": "tags",
-        "isActive": false,
+        "isActive": true,
         "isAvailable": true
       },
       {

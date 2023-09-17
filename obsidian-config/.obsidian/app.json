@@ -1,9 +1,10 @@
 {
   "vimMode": true,
-  "promptDelete": false,
+  "promptDelete": true,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "Learning Database/Company/Mine",
   "showUnsupportedFiles": true,
   "showLineNumber": true,
-  "showFrontmatter": true
+  "showFrontmatter": true,
+  "livePreview": true
 }

@@ -94,6 +94,7 @@ ActivateTODOToolWindow
 ActivateToolWindowActions
 ActivateTranslation.WordbookToolWindow
 ActivateTypeScriptToolWindow
+ActivateVcsChangesToolWindow                       <M-3>
 ActivateVersionControlToolWindow                   <M-9>
 ActivateVisualGCToolWindow
 ActiveToolwindowGroup
@@ -270,6 +271,9 @@ arthas-ChangesViewPopupMenu
 arthas-plugin
 arthas-plugin-other
 arthas-plugin-other-ChangesViewPopupMenu
+arthas-plugin-Spring Properties Priority
+arthas-plugin-spring-context
+arthas-plugin-Static Method Field
 ArthasAsyncProfilerCommandAction
 ArthasClassloaderCommandAction
 ArthasClassLoaderLoadClassCommandAction
@@ -309,6 +313,7 @@ ArthasTrace
 ArthasTraceMultipleCommand
 ArthasVmOptionCommandAction
 ArthasVmtoolCommandAction
+ArthasVmtoolSetFieldCommandAction
 ArthasWatch
 ArthasWatchOgnlSpringContextInvokeMethodAction
 AssociateWithFileType
@@ -1734,7 +1739,7 @@ Generify
 GetJoinLinkAction
 Git.Add                                            <M-A-A>
 Git.Branch
-Git.Branches
+Git.Branches                                       <M-A-S-L>
 Git.Branches.List
 Git.Branches.Popup.Settings
 Git.Branches.Popup.SpeedSearch
@@ -1808,7 +1813,7 @@ Git.Reword.Commit                                  <F2> <S-F6>
 Git.SelectInGitLog
 Git.Show.Stage
 Git.Show.Stash
-Git.ShowBranches
+Git.ShowBranches                                   <M-A-S-L>
 Git.Squash.Commits
 Git.Squash.Into.Commit
 Git.Stage.AcceptTheirs
@@ -2865,6 +2870,7 @@ MybatisCodeHelper.checkConnection
 MybatisCodeHelper.LearnMore
 MybatisCodeHelper.offlineActivation
 MybatisCodeHelper.unBind
+MybatisCodeHelperPro.ConvertSqlToMybatis
 MybatisCodeHelperPro.ExtractSql                    <M-A-C>
 MybatisCodeHelperPro.GenerateAllColumnLike
 MybatisCodeHelperPro.GenerateAllColumnSql
@@ -3694,7 +3700,7 @@ ShowProcessWindow
 ShowProjectStructureSettings
 ShowRecentFindUsagesGroup
 ShowRecentTests
-ShowReformatFileDialog                             <M-A-S-L>
+ShowReformatFileDialog
 ShowRegistry
 ShowSearchHistory                                  <A-Down>
 ShowSettings                                       <M-,>
