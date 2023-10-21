@@ -170,7 +170,7 @@
     "Red Component" : 0,
     "Blue Component" : 0
   },
-  "Transparency" : 0.50999002659574477,
+  "Transparency" : 0,
   "Tab Color (Dark)" : {
     "Red Component" : 0.254791259765625,
     "Color Space" : "sRGB",
@@ -427,7 +427,7 @@
   },
   "Command" : "",
   "Minimum Contrast (Light)" : 0.78007624337668591,
-  "Blend" : 0.35383973052536233,
+  "Blend" : 0.35761124320652171,
   "Character Encoding" : 4,
   "Minimum Contrast" : 0.78007624337668591,
   "Cursor Boost (Light)" : 0,
