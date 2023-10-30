@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
+                "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -72,6 +72,16 @@
           "type": "bookmarks",
           "state": {}
         }
+      },
+      {
+        "id": "c1bde62c367bc0b2",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency"
+          }
+        }
       }
     ],
     "currentTab": 0
@@ -86,7 +96,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
+            "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +113,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
+            "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +125,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md"
+            "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md"
           }
         }
       }
@@ -131,8 +141,28 @@
       "darlal-switcher-plus:Open Symbols for the active editor": false
     }
   },
-  "active": "4fd7a5ae58837a18",
+  "active": "2f5e37caf92a8841",
   "lastOpenFiles": [
+    "Learning Database/Tutorial/数据结构与算法之美/37 | 贪心算法：如何用贪心算法实现Huffman压缩编码？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/36 | AC自动机：如何用多模式串匹配实现敏感词过滤功能？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/31 | 深度和广度优先搜索：如何找出社交网络中的三度好友关系？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/29 | 堆的应用：如何快速获取到Top 10最热门的搜索关键词？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/28 | 堆和堆排序：为什么说堆排序没有快速排序快？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/27 | 递归树：如何借助树来求解递归算法的时间复杂度？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/25 | 红黑树（上）：为什么工程中都用红黑树这种二叉树？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/24 | 二叉树基础（下）：有了如此高效的散列表，为什么还需要二叉树？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/23 | 二叉树基础（上）：什么样的二叉树适合用数组来存储？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/19 | 散列表（中）：如何打造一个工业级水平的散列表？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/18 | 散列表（上）：Word文档中的单词拼写检查功能是如何实现的？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/17 | 跳表：为什么Redis一定要用跳表来实现有序集合？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/16 | 二分查找（下）：如何快速定位IP对应的省份地址？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/15 | 二分查找（上）：如何用最省内存的方式实现快速查找功能？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/10 |  递归：如何用三行代码找到“最终推荐人”？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/09 | 队列：队列在线程池等有限资源池中的应用.md",
+    "Learning Database/Tutorial/数据结构与算法之美/06 | 链表（上）：如何实现LRU缓存淘汰算法?.md",
+    "Learning Database/Tutorial/数据结构与算法之美/05 | 数组：为什么很多编程语言中数组都从0开始编号？.md",
+    "Learning Database/Tutorial/数据结构与算法之美/04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度.md",
+    "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
     "Learning Database/Tutorial/ETCD实战课/06 | 租约：如何检测你的客户端存活？.md",
     "Learning Database/Tutorial/ETCD实战课/08 | Watch：如何高效获取数据变化通知？.md",
     "Learning Database/Tutorial/ETCD实战课/07 | MVCC：如何实现多版本并发控制？.md",
@@ -141,26 +171,6 @@
     "Learning Database/Company/Other/汇报材料-任亚健-20230728V2.pptx",
     "media/02/f9/02f4e777265a24e2a9a3f20d1192c7f9.gif.md",
     "Learning Database/Tutorial/ETCD实战课/01 | etcd的前世今生：为什么Kubernetes使用etcd？.md",
-    "Learning Database/Tutorial/SQL必知必会/09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？.md",
-    "Learning Database/Tutorial/SQL必知必会/08丨什么是SQL的聚集函数，如何利用它们汇总表的数据？.md",
-    "Learning Database/Tutorial/SQL必知必会/07丨什么是SQL函数？为什么使用SQL函数可能会带来问题？.md",
-    "Learning Database/Tutorial/SQL必知必会/06丨数据过滤：SQL数据过滤都有哪些方法？.md",
-    "Learning Database/Tutorial/SQL必知必会/05丨检索数据：你还在SELECT * 么？.md",
-    "Learning Database/Tutorial/大厂晋升指南/30 | 四线复盘法：怎么避免成为背锅侠？.md",
-    "Learning Database/Tutorial/大厂晋升指南/28 | 4D总结法：怎么展示你的工作亮点？.md",
-    "Learning Database/Tutorial/大厂晋升指南/29 | 金字塔汇报法：怎么汇报才能让领导认可你的成果？.md",
-    "Learning Database/Tutorial/大厂晋升指南/27 | 5S问题处理法：怎么应对问题才能转危为机？.md",
-    "Learning Database/Tutorial/大厂晋升指南/26 | 5W根因分析法：怎么找准问题源头才能治标又治本？.md",
-    "Learning Database/Tutorial/大厂晋升指南/25 | PDCA执行法：怎么推动落地才能“步步为赢”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/24 | 3C方案设计法：怎么让你的方案有理有据？.md",
-    "Learning Database/Tutorial/大厂晋升指南/17 | 海绵学习法：怎么找到你的10000小时？.md",
-    "Learning Database/Tutorial/大厂晋升指南/16 | 导学：你应该掌握哪些学习方法？.md",
-    "Learning Database/Tutorial/大厂晋升指南/14 | PPT讲解：怎么讲才能让评委印象深刻？.md",
-    "Learning Database/Tutorial/大厂晋升指南/13 | PPT写作：怎么写才能展现自己真正的实力？.md",
-    "Learning Database/Tutorial/大厂晋升指南/12 | PPT框架：标准的晋升PPT长什么样子？.md",
-    "Learning Database/Tutorial/大厂晋升指南/09 |  P7提升攻略：怎么成为让人信服的“团队专家”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/08 | P6提升攻略：怎么成为独立自主的“项目能手”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/07 | P5提升攻略：怎么快速从学生转变为“打工人”？.md",
     "media",
     "media/02",
     "media/02/f9",

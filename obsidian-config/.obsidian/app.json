@@ -6,5 +6,6 @@
   "showUnsupportedFiles": true,
   "showLineNumber": true,
   "showFrontmatter": true,
-  "livePreview": true
+  "livePreview": true,
+  "defaultViewMode": "source"
 }

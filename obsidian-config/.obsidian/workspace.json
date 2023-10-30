@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2303c7c95cf841db",
+        "id": "03b7c4a59449a522",
         "type": "tabs",
         "children": [
           {
-            "id": "0caa18205c6c8063",
+            "id": "2838bf58ddce3616",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -49,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "拜占庭容错",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,7 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 415.5,
+    "width": 430.50390243530273,
     "collapsed": true
   },
   "right": {
@@ -79,7 +74,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,9 +95,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md"
-              }
+              "state": {}
             }
           },
           {
@@ -112,7 +104,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,62 +133,61 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false
     }
   },
-  "active": "0caa18205c6c8063",
+  "active": "2838bf58ddce3616",
   "lastOpenFiles": [
-    "Learning Database/Tutorial/数据结构与算法之美/04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度.md",
-    "Learning Database/Tutorial/数据结构与算法之美/03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？.md",
-    "Learning Database/Tutorial/数据结构与算法之美/01 | 为什么要学习数据结构和算法？.md",
-    "Learning Database/Tutorial/数据结构与算法之美/02 | 如何抓住重点，系统高效地学习数据结构与算法？.md",
-    "Learning Database/Tutorial/数据结构与算法之美/《数据结构与算法之美》学习指导手册.md",
-    "Learning Database/Tutorial/ETCD实战课/01 | etcd的前世今生：为什么Kubernetes使用etcd？.md",
-    "Learning Database/Tutorial/ETCD实战课/02 | 基础架构：etcd一个读请求是如何执行的？.md",
-    "Learning Database/Tutorial/ETCD实战课/08 | Watch：如何高效获取数据变化通知？.md",
-    "Learning Database/Tutorial/ETCD实战课/09 | 事务：如何安全地实现多key操作？.md",
-    "Learning Database/Tutorial/ETCD实战课/media/1c/cc/1c065788051c6eaaee965575a04109cc.png",
-    "Learning Database/Tutorial/ETCD实战课/开篇词｜为什么你要学习etcd?.md",
-    "Learning Database/Tutorial/ETCD实战课/16 | 性能及稳定性（上）：如何优化及扩展etcd性能？.md",
-    "Learning Database/Tutorial/ETCD实战课/12 | 一致性：为什么基于Raft实现的etcd还会出现数据不一致？.md",
-    "Learning Database/Tutorial/ETCD实战课/04 | Raft协议：etcd如何实现高可用、数据强一致的？.md",
-    "Learning Database/Tutorial/ETCD实战课/07 | MVCC：如何实现多版本并发控制？.md",
-    "Learning Database/Tutorial/ETCD实战课/03 | 基础架构：etcd一个写请求是如何执行的？.md",
-    "Learning Database/Tutorial/ETCD实战课/06 | 租约：如何检测你的客户端存活？.md",
-    "Learning Database/Tutorial/ETCD实战课/05 | 鉴权：如何保护你的数据安全？.md",
-    "Learning Database/Tutorial/ETCD实战课/media/5f/6d/5f1bf807db06233ed51d142917798b6d.png",
-    "Learning Database/Tutorial/ETCD实战课/media/88/d1/881db1b7d05dc40771e9737f3117f5d1.png",
-    "Learning Database/Tutorial/ETCD实战课/media/cd/f0/cde3f155f51bfd3d7fd78fe8e7ac9bf0.png",
-    "Learning Database/Tutorial/ETCD实战课/media/d0/0e/d0af3537c0eef89b499a82693da23f0e.png",
-    "Learning Database/Tutorial/消息队列高手课/16 | 缓存策略：如何使用缓存来减少磁盘IO？.md",
-    "Learning Database/Tutorial/消息队列高手课/20 | RocketMQ Producer源码分析：消息生产的实现过程.md",
-    "Learning Database/Tutorial/消息队列高手课/19 | 数据压缩：时间换空间的游戏.md",
-    "Learning Database/Tutorial/消息队列高手课/18 | 如何用硬件同步原语（CAS）替代锁？.md",
-    "Learning Database/Tutorial/消息队列高手课/17 | 如何正确使用锁保护共享数据，协调异步线程？.md",
-    "Learning Database/Tutorial/消息队列高手课/15 | Kafka如何实现高性能IO？.md",
-    "Learning Database/Tutorial/消息队列高手课/10 | 如何使用异步设计提升系统性能？.md",
-    "Learning Database/Tutorial/消息队列高手课/11 | 如何实现高性能的异步网络传输？.md",
-    "Learning Database/Tutorial/消息队列高手课/13 | 传输协议：应用程序之间对话的语言.md",
-    "Learning Database/Tutorial/爱上跑步/01 跑两步就喘了，是不是我不适合跑步.pdf",
-    "Learning Database/Company/Mine/Pasted image 20230615203834.png",
-    "Learning Database/Company/Other/分库分表及DTS技术培训.pdf",
-    "Learning Database/Company/高频交易热点技术难题的解决之道.pptx",
-    "Learning Database/Company",
-    "Learning Database/Tutorial/程序员的数据基础课/media/d9/3d/d99f094c432638924f8665a178162c3d.jpg",
-    "未命名.canvas",
-    "Tutorial/爱上跑步/01 跑两步就喘了，是不是我不适合跑步.pdf",
-    "Learning materials/阿里社区分享的用面试官的思维写简历.pdf",
-    "Learning materials/《开启支付之门》第三版-陈天宇宙著.pdf",
-    "Learning materials",
-    "未命名文件夹",
-    "tutorial/096 人人都用得上的写作课【完结】 IINA /01｜写作前戏：如何让阅读真正帮到写作？.mp3",
-    "课程/iOS开发高手课/media/f9/fe/f97dda3b49351f74747dd74128a0ddfe.png",
-    "课程/iOS开发高手课/media/f9/2b/f9d371fe15b45db8a6eddbab3fc2962b.png",
-    "课程/iOS开发高手课/media/ff/fb/ff12f684d74be1b901e2dede5b5ab5fb.png"
+    "Learning Database/Tutorial/从0开始学架构/23 | 想成为架构师，你必须掌握的CAP细节.md",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/11 | 分布式调度架构之单体调度：物质文明、精神文明一手抓.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/开篇词 | 四纵四横，带你透彻理解分布式技术.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/结束语 | 为什么说提升职业竞争力要从尊重、诚实开始？.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/26 | 分布式数据复制技术：分身有术.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/30 | 分布式高可用之故障隔离：当断不断，反受其乱.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/29 | 分布式高可靠之流量控制：大禹治水，在疏不在堵.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/28 | 分布式高可靠之负载均衡：不患寡，而患不均.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/15 | 分布式计算模式之MR：一门同流合污的艺术.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/特别放送 | 分布式下的一致性杂谈.pdf",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐  | 拜占庭将军问题：如何基于签名消息实现作战计划的一致性？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/16 | InfluxDB企业版一致性实现剖析：他山之石，可以攻玉.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/学习路径 | 分布式协议与算法你应该这么学.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/12/13/122bdf34957c6277352ea51c43552213.png",
+    "Learning Database/Tutorial/分布式协议与算法实战/结束语 | 静下心来，享受技术的乐趣.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/20 | 基于Raft的分布式KV系统开发实战（二）：如何实现代码？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/19 | 基于Raft的分布式KV系统开发实战（一）：如何设计架构？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/17  | Hashicorp Raft（一）：如何跨过理论和代码之间的鸿沟？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（三）：如何处理读写请求？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（二）：如何从故障中恢复？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（一）：主节点崩溃了，怎么办？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/15 | ZAB协议：如何实现操作的顺序性？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/14 | PoW算法：有办法黑比特币吗？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/13 | PBFT算法：有人作恶，如何达成共识？.md",
+    "Learning Database/Tutorial/左耳听风/081-81程序员练级攻略分布式架构入门.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/01 | 拜占庭将军问题：有叛徒的情况下，如何才能达成共识？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | PBFT算法：如何替换作恶的领导者？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/12 | Quorum NWR算法：想要灵活地自定义一致性，没问题！.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/11 | Gossip协议：流言蜚语，原来也可以实现一致性.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/10 | 一致哈希算法：如何分群，突破集群的“领导者”限制？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/09 | Raft算法（三）：如何解决成员变更的问题？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/4a/27/4a00b7e1b89922cd9f785c6f153aca27.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/5f/b8/5fe7c8d90857737d7314263eae2166b8.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/08 | Raft算法（二）：如何复制日志？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/07 | Raft算法（一）：如何选举领导者？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/99/6d/9932935b415e37c2ca758ab99b34f66d.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/03 | ACID理论：CAP的酸，追求一致性.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/06 | Paxos算法（二）：Multi-Paxos不是一个算法，而是统称.md",
+    "media/7e/2c",
+    "Learning Database/Tutorial/从0开始学架构/media/51/1e/512e0154b67af3ede568667940a2a61e.png",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/67/48/67aa4a0e56dcc8ad34bf1b0232f12748.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/a6/65/a61a426bccbe27e48ca75db909ae8265.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/b2/a4/b27f4ff771fa8e9b671f5864c96d9aa4.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/9b/c2/9bf9c133ad815219791f87799bee5cc2.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/89/51/890b9890584a4f17306da88fedea3451.jpg",
+    "未命名.canvas"
   ]
 }
