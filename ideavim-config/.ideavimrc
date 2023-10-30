@@ -112,47 +112,55 @@ set notimeout
 
 
 " a add ⭐️
+let g:WhichKeyDesc_Add = "<leader>a add"
 " 新建类
-let g:WhichKeyDesc_Add = "<leader>a Add"
-let g:WhichKeyDesc_add_NewClass = "<leader>ac NewClass"
+let g:WhichKeyDesc_add_NewClass = "<leader>ac 新建类"
 nnoremap <leader>ac :action NewClass<CR>
 " 新建文件 (嘻嘻,啥都可以直接用快捷键建立,一个字爽)
-let g:WhichKeyDesc_add_NewElement = "<leader>ae NewElement"
+let g:WhichKeyDesc_add_NewElement = "<leader>ae 新建文件"
 nnoremap <leader>ae :action NewElement<CR>
+
 
 
 " c code ⭐️
 let g:WhichKeyDesc_code = "<leader>c Code"
 " 将当前行给注释掉
-let g:WhichKeyDesc_code_CommentByLineComment = "<leader>cc CommentByLineComment"
+let g:WhichKeyDesc_code_CommentByLineComment = "<leader>cc 当前行注释"
 nnoremap <Leader>cc :action CommentByLineComment<CR>
 " 打开General菜单
-let g:WhichKeyDesc_code_actionGenerate = "<leader>ca actionGenerate"
+let g:WhichKeyDesc_code_actionGenerate = "<leader>ca 打开General菜单"
 nnoremap <Leader>ca :action Generate<CR>
 " 代码环绕(快速添加if 或者while)
-let g:WhichKeyDesc_code_SurroundWith = "<leader>cs SurroundWith"
+let g:WhichKeyDesc_code_SurroundWith = "<leader>cs 代码环绕(快速添加if 或者while)"
 nnoremap <leader>cs :action SurroundWith<CR>
-" 复制class 引用
-let g:WhichKeyDesc_code_CopyReference = "<leader>ce CopyReference"
+" 复制class引用
+let g:WhichKeyDesc_code_CopyReference = "<leader>ce 复制class引用"
 nnoremap <Leader>ce :action CopyReference<CR>
 " 重命名 变量、类名
-let g:WhichKeyDesc_code_RenameElement = "<leader>cr RenameElement"
+let g:WhichKeyDesc_code_RenameElement = "<leader>cr 重命名 变量、类名"
 nnoremap <Leader>cr :action RenameElement<CR>
 " 重命名 文件
-let g:WhichKeyDesc_code_RenameFile = "<leader>cf RenameFile"
+let g:WhichKeyDesc_code_RenameFile = "<leader>cf 重命名文件"
 nnoremap <Leader>cf :action RenameFile<CR>
+
+
 
 
 " e: Explorer ⭐️
 let g:WhichKeyDesc_Explorer = "<leader>e Explorer"
-" extract method/function
+" 提取方法
+let g:WhichKeyDesc_code_ExtractMethod = "<leader>em 提取方法"
 nmap <leader>em <action>(ExtractMethod)
-" extract constant
+" 提取常量
+let g:WhichKeyDesc_code_IntroduceConstant = "<leader>ec 提取常量"
 nmap <leader>ec <action>(IntroduceConstant)
-" extract field
+" 提取字段
+let g:WhichKeyDesc_code_IntroduceField = "<leader>ef 提取字段"
 nmap <leader>ef <action>(IntroduceField)
-" extract variable
+" 提取变量
+let g:WhichKeyDesc_code_IntroduceVariable = "<leader>ev 提取变量"
 nmap <leader>ev <action>(IntroduceVariable)
+
 
 
 
@@ -177,36 +185,37 @@ let g:WhichKeyDesc_Find_SearchEverywhere = "<leader>fe SearchEverywhere"
 nnoremap <Leader>fe :action SearchEverywhere<CR>
 
 
+
+
 " g: Git ⭐️
 let g:WhichKeyDesc_Git = "<leader>g Git"
 " 回滚
-let g:WhichKeyDesc_Git_RollbackHunk = "<leader>gr RollbackHunk"
+let g:WhichKeyDesc_Git_RollbackHunk = "<leader>gr 回滚"
 nmap <leader>gr :action Vcs.RollbackChangedLines<CR>
 " 显示git菜单
-let g:WhichKeyDesc_Git_Git.Menu = "<leader>gm Git.Menu"
+let g:WhichKeyDesc_Git_Git.Menu = "<leader>gm 显示git菜单"
 nnoremap <leader>gm :action Git.Menu<CR>
 " CompareWithBranch
-let g:WhichKeyDesc_Git_Git.CompareWithBranch  = "<leader>gb Git.CompareWithBranch "
+let g:WhichKeyDesc_Git_Git.CompareWithBranch  = "<leader>gb 和其它分支对比"
 nnoremap <leader>gb :action Git.CompareWithBranch<CR>
 " gitPull
-let g:WhichKeyDesc_Git_Git.Pull  = "<leader>gb Git.Pull "
+let g:WhichKeyDesc_Git_Git.Pull  = "<leader>gb Pull"
 nnoremap <leader>gp :action Git.Pull<CR>
 " Annotate
-let g:WhichKeyDesc_Git_Git.Annotate  = "<leader>ga Git.Annotate "
+let g:WhichKeyDesc_Git_Git.Annotate  = "<leader>ga Annotate"
 nnoremap <leader>ga :action Annotate<CR>
-" CreateNewBranch
-let g:WhichKeyDesc_Git.CreateNewBranch  = "<leader>gn Git.CreateNewBranch"
+" 新建分支
+let g:WhichKeyDesc_Git.CreateNewBranch  = "<leader>gn 新建分支"
 nnoremap <leader>gn :action Git.CreateNewBranch<CR>
-" LocalHistory.History
-let g:WhichKeyDesc_Git.LocalHistory.History  = "<leader>gh LocalHistory.History"
-nnoremap <leader>gh :action LocalHistory.ShowHistory<CR>
-" Git.Branches
-let g:WhichKeyDesc_Git.Branches = "<leader>ge Git.Branches"
+" 展示分支列表
+let g:WhichKeyDesc_Git.Branches = "<leader>ge 展示分支列表"
 nnoremap <leader>ge :action Git.Branches<CR>
 " Git.Merge
-let g:WhichKeyDesc_Git.Merge = "<leader>gg Git.Merge"
+let g:WhichKeyDesc_Git.Merge = "<leader>gg Merge"
 nnoremap <leader>gg :action Git.Merge<CR>
-
+" ShowTabbedFileHistory
+let g:WhichKeyDesc_Git_ShowTabbedFileHistory = "<leader>gy 当前文件Git历史"
+nmap <leader>gy <action>(Vcs.ShowTabbedFileHistory)
 
 
 
@@ -218,10 +227,12 @@ nmap <leader>ix A;<ESC>
 " nmap <leader>ix A;<ESC>o 
 
 
+
 " n: No ⭐️
 let g:WhichKeyDesc_No = "<leader>n No"
 let g:WhichKeyDesc_No_Highlight = "<leader>nl NoHighlight"
 nmap <leader>nl :nohlsearch<CR>
+
 
 
 " r: Run/Re ⭐️
@@ -245,102 +256,112 @@ nnoremap <leader>rc :action ChooseRunConfiguration<CR>
 let g:WhichKeyDesc_RunOrRe_ChooseDebugConfiguration = "<leader>ro ChooseDebugConfiguration"
 nnoremap <leader>ro :action ChooseDebugConfiguration<CR>
 " 重加载 ideavimrc 配置
-let g:WhichKeyDesc_RunOrRe_ReloadVimRc = "<leader>rl ReloadVimRc"
+let g:WhichKeyDesc_RunOrRe_ReloadVimRc = "<leader>rl 重载ideavimrc配置"
 nnoremap <leader>rl :action IdeaVim.ReloadVimRc.reload<CR>
+
+
 
 " s: Show ⭐️
 let g:WhichKeyDesc_Show = "<leader>s Show"
-let g:WhichKeyDesc_Show_FileStructure = "<leader>ss ShowFileStructure"
+" 展示类结构
+let g:WhichKeyDesc_Show_FileStructure = "<leader>ss 展示类结构"
 nmap <leader>ss <action>(FileStructurePopup)
-let g:WhichKeyDesc_Show_Bookmarks = "<leader>sb ShowBookmarks"
+" 展示书签
+let g:WhichKeyDesc_Show_Bookmarks = "<leader>sb 展示书签"
 nmap <leader>sb <action>(ShowBookmarks)
-" 示当前文件路径
-let g:WhichKeyDesc_Show_ShowFilePath = "<leader>sp ShowFilePath"
+" 展示当前文件路径
+let g:WhichKeyDesc_Show_ShowFilePath = "<leader>sp 展示当前文件路径"
 nnoremap <Leader>sp :action ShowFilePath<CR>
 " 相当于鼠标右键
-let g:WhichKeyDesc_Show_ShowPopupMenu = "<leader>sh ShowPopupMenu"
+let g:WhichKeyDesc_Show_ShowPopupMenu = "<leader>sh 鼠标右键"
 nnoremap <leader>sh :action ShowPopupMenu<CR>
 " 展示类继承关系
-let g:WhichKeyDesc_Show_TypeHierarchy = "<leader>st TypeHierarchy"
+let g:WhichKeyDesc_Show_TypeHierarchy = "<leader>st 展示类继承关系"
 nnoremap <Leader>st :action TypeHierarchy<CR>
 " ShowParameterInfo
-let g:WhichKeyDesc_Show_ParameterInfo = "<leader>si ShowParameterInfo"
+let g:WhichKeyDesc_Show_ParameterInfo = "<leader>si 展示参数信息"
 nmap <leader>si <action>(ParameterInfo)
-" ShowTabbedFileHistory
-let g:WhichKeyDesc_Show_ShowTabbedFileHistory = "<leader>sy ShowTabbedFileHistory"
-nmap <leader>sy <action>(Vcs.ShowTabbedFileHistory)
+" LocalHistory.History
+let g:WhichKeyDesc_Show_LocalHistory.History  = "<leader>sh 当前文件本地历史"
+nnoremap <leader>sh :action LocalHistory.ShowHistory<CR>
 " 查看所有断点
-let g:WhichKeyDesc_point_ViewBreakpoints = "<leader>sr ViewBreakpoints"
+let g:WhichKeyDesc_point_ViewBreakpoints = "<leader>sr 查看所有断点"
 nnoremap <Leader>sr :action ViewBreakpoints<CR>
+" Markdown.Layout.EditorAndPreview
+let g:WhichKeyDesc_Markdown.Layout.EditorAndPreview = "<leader>sm Markdown.EditorAndPreview"
+nmap <leader>sm <action>(Markdown.Layout.EditorAndPreview)
+" Markdown.Layout.PreviewOnly
+let g:WhichKeyDesc_Markdown.Layout.PreviewOnly = "<leader>sv Markdown PreviewOnly"
+nmap <leader>sv <action>(Markdown.Layout.PreviewOnly)
+" Markdown.Layout.EditorOnly
+let g:WhichKeyDesc_Markdown.Layout.EditorAndPreview = "<leader>sw Markdown EditorOnly"
+nmap <leader>sw <action>(Markdown.Layout.EditorOnly)
+
 
 
 " t Toggle ⭐️
 let g:WhichKeyDesc_Toggle = "<leader>t Toggle"
-let g:WhichKeyDesc_Toggle_ToggleBookmark = "<leader>ta ToggleBookmark"
+let g:WhichKeyDesc_Toggle_ToggleBookmark = "<leader>ta 标记书签"
 nnoremap <Leader>ta :action ToggleBookmark<CR>
 " 打断点
-let g:WhichKeyDesc_Toggle_ToggleLineBreakpoint = "<leader>tb ToggleLineBreakpoint"
+let g:WhichKeyDesc_Toggle_ToggleLineBreakpoint = "<leader>tb 标记断点"
 nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
 " ArthasWatch
-let g:WhichKeyDesc_Toggle_ArthasWatch = "<leader>tw ArthasWatch"
+let g:WhichKeyDesc_Toggle_ArthasWatch = "<leader>tw Arthas Watch"
 nnoremap <Leader>tw :action ArthasWatch<CR>
+
 
 
 
 " w: Window ⭐️
 let g:WhichKeyDesc_Windows = "<leader>w Windows"
 " 分屏光标跳上面
-let g:WhichKeyDesc_Windows_CursorJump = "<leader>ww Cursor jump"
+let g:WhichKeyDesc_Windows_CursorJump = "<leader>ww 光标跳转"
 nnoremap <Leader>ww <C-W>w
 " 上下分屏
-let g:WhichKeyDesc_Windows_SplitScreenUpAndDown = "<leader>wd SplitScreenUpAndDown"
+let g:WhichKeyDesc_Windows_SplitScreenUpAndDown = "<leader>wd 上下分屏"
 nnoremap <Leader>wd <C-W>s
 " 横向分屏
-let g:WhichKeyDesc_Windows_SplitScreenLeftAndRight = "<leader>wr SplitScreenLeftAndRight"
+let g:WhichKeyDesc_Windows_SplitScreenLeftAndRight = "<leader>wr 横向分屏"
 nnoremap <Leader>wr <C-W>v
 " 窗口最大化
-let g:WhichKeyDesc_Windows_HideAllWindows = "<leader>wa HideAllWindows"
+let g:WhichKeyDesc_Windows_HideAllWindows = "<leader>wa 窗口最大化"
 nmap <leader>wa <action>(HideAllWindows)
 " 删除所有分屏
-let g:WhichKeyDesc_Windows_UnsplitAll = "<leader>ws UnsplitAll"
+let g:WhichKeyDesc_Windows_UnsplitAll = "<leader>ws 删除所有分屏"
 nmap <leader>ws <action>(UnsplitAll)
 " 关闭当前窗口
-let g:WhichKeyDesc_Windows_CloseBuffer = "<leader>wc CloseBuffer"
+let g:WhichKeyDesc_Windows_CloseBuffer = "<leader>wc 关闭当前窗口"
 nmap <leader>wc :q!<CR>
 " 在项目目录中定位改文件
-let g:WhichKeyDesc_Windows_SelectInProjectView = "<leader>wz SelectInProjectView"
+let g:WhichKeyDesc_Windows_SelectInProjectView = "<leader>wz 在项目目录中定位改文件"
 nmap <leader>wz <action>(SelectInProjectView)
-" ToggleExplorer
-let g:WhichKeyDesc_Windows_ActivateProjectToolWindow = "<leader>wg ToggleExplorer"
-nmap <leader>wg <action>(ActivateProjectToolWindow)
 " 改变视图
-let g:WhichKeyDesc_Windows_ChangeView = "<leader>wv ChangeView"
+let g:WhichKeyDesc_Windows_ChangeView = "<leader>wv 改变视图"
 nmap <leader>wv <action>(ChangeView)
-" OpenedProject
-let g:WhichKeyDesc_Windows_OpenProjectWindows = "<leader>wp OpenProjectWindows"
+" 当前已打开项目列表
+let g:WhichKeyDesc_Windows_OpenProjectWindows = "<leader>wp 当前已打开项目列表"
 nmap <leader>wp <action>(OpenProjectWindows)
 "打开Terminal
-let g:WhichKeyDesc_Windows_ActivateTerminalToolWindow = "<leader>wt OpenTerminal"
+let g:WhichKeyDesc_Windows_ActivateTerminalToolWindow = "<leader>wt 打开Terminal"
 nnoremap <Leader>wt Vy<CR>:action ActivateTerminalToolWindow<CR>
 " 进入 ideavimrc
-let g:WhichKeyDesc_Windows_ideavimrc = "<leader>we ideavimrc"
+let g:WhichKeyDesc_Windows_ideavimrc = "<leader>we 打开ideavimrc"
 nnoremap <leader>we :e ~/.ideavimrc<CR>
-" RecentProjectListGroup
-let g:WhichKeyDesc_Windows_RecentProjectListGroup = "<leader>wg RecentProjectListGroup"
+" 展示最近打开项目列表
+let g:WhichKeyDesc_Windows_RecentProjectListGroup = "<leader>wg 展示最近打开项目列表"
 nnoremap <leader>wg :action RecentProjectListGroup<CR>
-" CloseProject
-let g:WhichKeyDesc_Windows_CloseProject = "<leader>wx CloseProject"
+" 关闭当前项目
+let g:WhichKeyDesc_Windows_CloseProject = "<leader>wx 关闭当前项目"
 nnoremap <leader>wx :action CloseProject<CR>
-" 激活maven窗口
-let g:WhichKeyDesc_Windows_ActivateMavenProjectsToolWindow = "<leader>wm ActivateMavenProjectsToolWindow"
-nnoremap <Leader>wm :action ActivateMavenProjectsToolWindow<CR>
+
 
 
 " z: zip(fold) ⭐️
 let g:WhichKeyDesc_Zip = "<leader>z Zip"
-let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo unZipAll"
+let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo 解压缩所有方法"
 nmap <leader>zo <action>(ExpandAllRegions)
-let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc ZipAll"
+let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc 压缩所有方法"
 nmap <leader>zc <action>(CollapseAllRegions)
 
 
@@ -348,6 +369,30 @@ nmap <leader>zc <action>(CollapseAllRegions)
 " d: del ⭐️
 let g:WhichKeyDesc_Del = "<leader>d del"
 " 删除当前文件 (快速删除)
-let g:WhichKeyDesc_del_SafeDelete = "<leader>dt SafeDelete"
+let g:WhichKeyDesc_del_SafeDelete = "<leader>dt 删除当前文件"
 nnoremap <leader>dt :action SafeDelete<CR>
+
+
+
+" l: leetcode ⭐️
+let g:WhichKeyDesc_lt = "<leader>l leetcode"
+" 执行代码
+let g:WhichKeyDesc_lr_RunCodeAction = "<leader>lr 执行代码"
+nmap <leader>lr <action>(leetcode.RunCodeAction)
+" 运行测试案例
+let g:WhichKeyDesc_lt_TestcaseAction = "<leader>lt 运行测试案例"
+nmap <leader>lt <action>(leetcode.TestcaseAction)
+" 提交代码
+let g:WhichKeyDesc_lb_SubmitAction = "<leader>lb 提交代码"
+nmap <leader>lb <action>(leetcode.SubmitAction)
+" OpenContentAction
+let g:WhichKeyDesc_lc_OpenContentAction = "<leader>lc 展示题目"
+nmap <leader>lc <action>(leetcode.editor.OpenContentAction)
+" OpenContentAction
+let g:WhichKeyDesc_ls_OpenSolutionAction = "<leader>ls 展示题解"
+nmap <leader>ls <action>(leetcode.editor.OpenSolutionAction)
+" menu
+let g:WhichKeyDesc_lm_OpenSolutionAction = "<leader>lm 打开菜单"
+nmap <leader>lm <action>(leetcode.editor.menu)
+
 
