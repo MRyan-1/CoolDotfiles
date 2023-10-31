@@ -114,10 +114,10 @@ set notimeout
 " a add ⭐️
 let g:WhichKeyDesc_Add = "<leader>a add"
 " 新建类
-let g:WhichKeyDesc_add_NewClass = "<leader>ac 新建类"
+let g:WhichKeyDesc_Add_NewClass = "<leader>ac 新建类"
 nnoremap <leader>ac :action NewClass<CR>
 " 新建文件 (嘻嘻,啥都可以直接用快捷键建立,一个字爽)
-let g:WhichKeyDesc_add_NewElement = "<leader>ae 新建文件"
+let g:WhichKeyDesc_Add_NewElement = "<leader>ae 新建文件"
 nnoremap <leader>ae :action NewElement<CR>
 
 
@@ -149,16 +149,16 @@ nnoremap <Leader>cf :action RenameFile<CR>
 " e: Explorer ⭐️
 let g:WhichKeyDesc_Explorer = "<leader>e Explorer"
 " 提取方法
-let g:WhichKeyDesc_code_ExtractMethod = "<leader>em 提取方法"
+let g:WhichKeyDesc_Explorer_ExtractMethod = "<leader>em 提取方法"
 nmap <leader>em <action>(ExtractMethod)
 " 提取常量
-let g:WhichKeyDesc_code_IntroduceConstant = "<leader>ec 提取常量"
+let g:WhichKeyDesc_Explorer_IntroduceConstant = "<leader>ec 提取常量"
 nmap <leader>ec <action>(IntroduceConstant)
 " 提取字段
-let g:WhichKeyDesc_code_IntroduceField = "<leader>ef 提取字段"
+let g:WhichKeyDesc_Explorer_IntroduceField = "<leader>ef 提取字段"
 nmap <leader>ef <action>(IntroduceField)
 " 提取变量
-let g:WhichKeyDesc_code_IntroduceVariable = "<leader>ev 提取变量"
+let g:WhichKeyDesc_Explorer_IntroduceVariable = "<leader>ev 提取变量"
 nmap <leader>ev <action>(IntroduceVariable)
 
 
@@ -193,25 +193,25 @@ let g:WhichKeyDesc_Git = "<leader>g Git"
 let g:WhichKeyDesc_Git_RollbackHunk = "<leader>gr 回滚"
 nmap <leader>gr :action Vcs.RollbackChangedLines<CR>
 " 显示git菜单
-let g:WhichKeyDesc_Git_Git.Menu = "<leader>gm 显示git菜单"
+let g:WhichKeyDesc_Git_Menu = "<leader>gm 显示git菜单"
 nnoremap <leader>gm :action Git.Menu<CR>
 " CompareWithBranch
-let g:WhichKeyDesc_Git_Git.CompareWithBranch  = "<leader>gb 和其它分支对比"
+let g:WhichKeyDesc_Git_CompareWithBranch  = "<leader>gb 和其它分支对比"
 nnoremap <leader>gb :action Git.CompareWithBranch<CR>
 " gitPull
-let g:WhichKeyDesc_Git_Git.Pull  = "<leader>gb Pull"
+let g:WhichKeyDesc_Git_Pull  = "<leader>gb 拉取代码Pull"
 nnoremap <leader>gp :action Git.Pull<CR>
 " Annotate
-let g:WhichKeyDesc_Git_Git.Annotate  = "<leader>ga Annotate"
+let g:WhichKeyDesc_Git_Annotate  = "<leader>ga 类变更注释"
 nnoremap <leader>ga :action Annotate<CR>
 " 新建分支
-let g:WhichKeyDesc_Git.CreateNewBranch  = "<leader>gn 新建分支"
+let g:WhichKeyDesc_Git_CreateNewBranch  = "<leader>gn 新建分支"
 nnoremap <leader>gn :action Git.CreateNewBranch<CR>
 " 展示分支列表
-let g:WhichKeyDesc_Git.Branches = "<leader>ge 展示分支列表"
+let g:WhichKeyDesc_Git_Branches = "<leader>ge 展示分支列表"
 nnoremap <leader>ge :action Git.Branches<CR>
 " Git.Merge
-let g:WhichKeyDesc_Git.Merge = "<leader>gg Merge"
+let g:WhichKeyDesc_Git_Merge = "<leader>gg 分支合并Merge"
 nnoremap <leader>gg :action Git.Merge<CR>
 " ShowTabbedFileHistory
 let g:WhichKeyDesc_Git_ShowTabbedFileHistory = "<leader>gy 当前文件Git历史"
@@ -222,7 +222,7 @@ nmap <leader>gy <action>(Vcs.ShowTabbedFileHistory)
 " i: Insert ⭐️
 let g:WhichKeyDesc_Insert = "<leader>i Insert"
 " InsertSemicolon
-let g:WhichKeyDesc_Insert_InsertSemicolon = "<leader>ix InsertSemicolon"
+let g:WhichKeyDesc_Insert_InsertSemicolon = "<leader>ix 结尾插入;"
 nmap <leader>ix A;<ESC>
 " nmap <leader>ix A;<ESC>o 
 
@@ -230,7 +230,7 @@ nmap <leader>ix A;<ESC>
 
 " n: No ⭐️
 let g:WhichKeyDesc_No = "<leader>n No"
-let g:WhichKeyDesc_No_Highlight = "<leader>nl NoHighlight"
+let g:WhichKeyDesc_No_Highlight = "<leader>nl 去除高亮"
 nmap <leader>nl :nohlsearch<CR>
 
 
@@ -282,19 +282,19 @@ nnoremap <Leader>st :action TypeHierarchy<CR>
 let g:WhichKeyDesc_Show_ParameterInfo = "<leader>si 展示参数信息"
 nmap <leader>si <action>(ParameterInfo)
 " LocalHistory.History
-let g:WhichKeyDesc_Show_LocalHistory.History  = "<leader>sh 当前文件本地历史"
+let g:WhichKeyDesc_Show_LocalHistory_History  = "<leader>sh 当前文件本地历史"
 nnoremap <leader>sh :action LocalHistory.ShowHistory<CR>
 " 查看所有断点
-let g:WhichKeyDesc_point_ViewBreakpoints = "<leader>sr 查看所有断点"
+let g:WhichKeyDesc_Show_point_ViewBreakpoints = "<leader>sr 查看所有断点"
 nnoremap <Leader>sr :action ViewBreakpoints<CR>
 " Markdown.Layout.EditorAndPreview
-let g:WhichKeyDesc_Markdown.Layout.EditorAndPreview = "<leader>sm Markdown.EditorAndPreview"
+let g:WhichKeyDesc_Show_Markdown_Layout_EditorAndPreview = "<leader>sm Markdown.EditorAndPreview"
 nmap <leader>sm <action>(Markdown.Layout.EditorAndPreview)
 " Markdown.Layout.PreviewOnly
-let g:WhichKeyDesc_Markdown.Layout.PreviewOnly = "<leader>sv Markdown PreviewOnly"
+let g:WhichKeyDesc_Show_Markdown_Layout_PreviewOnly = "<leader>sv Markdown切换到视图模式"
 nmap <leader>sv <action>(Markdown.Layout.PreviewOnly)
 " Markdown.Layout.EditorOnly
-let g:WhichKeyDesc_Markdown.Layout.EditorAndPreview = "<leader>sw Markdown EditorOnly"
+let g:WhichKeyDesc_Show_Markdown_Layout_EditorAndPreview = "<leader>sw Markdown切换到编辑模式"
 nmap <leader>sw <action>(Markdown.Layout.EditorOnly)
 
 
@@ -369,30 +369,30 @@ nmap <leader>zc <action>(CollapseAllRegions)
 " d: del ⭐️
 let g:WhichKeyDesc_Del = "<leader>d del"
 " 删除当前文件 (快速删除)
-let g:WhichKeyDesc_del_SafeDelete = "<leader>dt 删除当前文件"
+let g:WhichKeyDesc_Del_SafeDelete = "<leader>dt 删除当前文件"
 nnoremap <leader>dt :action SafeDelete<CR>
 
 
 
 " l: leetcode ⭐️
-let g:WhichKeyDesc_lt = "<leader>l leetcode"
+let g:WhichKeyDesc_Lt = "<leader>l leetcode"
 " 执行代码
-let g:WhichKeyDesc_lr_RunCodeAction = "<leader>lr 执行代码"
+let g:WhichKeyDesc_Lt_RunCodeAction = "<leader>lr 执行代码"
 nmap <leader>lr <action>(leetcode.RunCodeAction)
 " 运行测试案例
-let g:WhichKeyDesc_lt_TestcaseAction = "<leader>lt 运行测试案例"
+let g:WhichKeyDesc_Lt_TestcaseAction = "<leader>lt 运行测试案例"
 nmap <leader>lt <action>(leetcode.TestcaseAction)
 " 提交代码
-let g:WhichKeyDesc_lb_SubmitAction = "<leader>lb 提交代码"
+let g:WhichKeyDesc_Lt_SubmitAction = "<leader>lb 提交代码"
 nmap <leader>lb <action>(leetcode.SubmitAction)
 " OpenContentAction
-let g:WhichKeyDesc_lc_OpenContentAction = "<leader>lc 展示题目"
+let g:WhichKeyDesc_Lt_OpenContentAction = "<leader>lc 展示题目"
 nmap <leader>lc <action>(leetcode.editor.OpenContentAction)
 " OpenContentAction
-let g:WhichKeyDesc_ls_OpenSolutionAction = "<leader>ls 展示题解"
+let g:WhichKeyDesc_Lt_OpenSolutionAction = "<leader>ls 展示题解"
 nmap <leader>ls <action>(leetcode.editor.OpenSolutionAction)
 " menu
-let g:WhichKeyDesc_lm_OpenSolutionAction = "<leader>lm 打开菜单"
+let g:WhichKeyDesc_Lt_OpenSolutionAction = "<leader>lm 打开菜单"
 nmap <leader>lm <action>(leetcode.editor.menu)
 
 
