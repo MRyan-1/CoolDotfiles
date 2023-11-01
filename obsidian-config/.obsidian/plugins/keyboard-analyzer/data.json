@@ -1,0 +1,15 @@
+{
+  "showStatusBarItem": true,
+  "filterSettings": {
+    "FeaturedFirst": false,
+    "StrictSearch": false,
+    "HighlightCustom": false,
+    "HighlightDuplicates": false,
+    "DisplayWOhotkeys": false,
+    "DisplayIDs": false
+  },
+  "featuredCommandIDs": [
+    "easy-typing-obsidian:easy-typing-format-article",
+    "file-explorer:reveal-active-file"
+  ]
+}

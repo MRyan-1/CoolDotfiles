@@ -1,0 +1,193 @@
+{
+  "main": {
+    "id": "73cbb29dc840c30e",
+    "type": "split",
+    "children": [
+      {
+        "id": "03b7c4a59449a522",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2838bf58ddce3616",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a8039ac340da11fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf6943e84f11079b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8a892473b609f1e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "33d5ab23537fed24",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "拜占庭容错",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 430.50390243530273,
+    "collapsed": true
+  },
+  "right": {
+    "id": "c0f3f24ead45e8bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "850daffe4d7eee17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d53a6f7c3acbf46",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9005fe491cbe7a2c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4f93a70fc08de028",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "7dda113c93c3461f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6a9d7bbbec13538",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false
+    }
+  },
+  "active": "2838bf58ddce3616",
+  "lastOpenFiles": [
+    "Learning Database/Tutorial/从0开始学架构/23 | 想成为架构师，你必须掌握的CAP细节.md",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/11 | 分布式调度架构之单体调度：物质文明、精神文明一手抓.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/开篇词 | 四纵四横，带你透彻理解分布式技术.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/结束语 | 为什么说提升职业竞争力要从尊重、诚实开始？.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/26 | 分布式数据复制技术：分身有术.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/30 | 分布式高可用之故障隔离：当断不断，反受其乱.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/29 | 分布式高可靠之流量控制：大禹治水，在疏不在堵.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/28 | 分布式高可靠之负载均衡：不患寡，而患不均.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/15 | 分布式计算模式之MR：一门同流合污的艺术.pdf",
+    "Learning Database/Tutorial/分布式技术原理与算法解析/特别放送 | 分布式下的一致性杂谈.pdf",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐  | 拜占庭将军问题：如何基于签名消息实现作战计划的一致性？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/16 | InfluxDB企业版一致性实现剖析：他山之石，可以攻玉.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/学习路径 | 分布式协议与算法你应该这么学.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/12/13/122bdf34957c6277352ea51c43552213.png",
+    "Learning Database/Tutorial/分布式协议与算法实战/结束语 | 静下心来，享受技术的乐趣.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/20 | 基于Raft的分布式KV系统开发实战（二）：如何实现代码？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/19 | 基于Raft的分布式KV系统开发实战（一）：如何设计架构？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/17  | Hashicorp Raft（一）：如何跨过理论和代码之间的鸿沟？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（三）：如何处理读写请求？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（二）：如何从故障中恢复？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（一）：主节点崩溃了，怎么办？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/15 | ZAB协议：如何实现操作的顺序性？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/14 | PoW算法：有办法黑比特币吗？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/13 | PBFT算法：有人作恶，如何达成共识？.md",
+    "Learning Database/Tutorial/左耳听风/081-81程序员练级攻略分布式架构入门.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/01 | 拜占庭将军问题：有叛徒的情况下，如何才能达成共识？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | PBFT算法：如何替换作恶的领导者？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/12 | Quorum NWR算法：想要灵活地自定义一致性，没问题！.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/11 | Gossip协议：流言蜚语，原来也可以实现一致性.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/10 | 一致哈希算法：如何分群，突破集群的“领导者”限制？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/09 | Raft算法（三）：如何解决成员变更的问题？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/4a/27/4a00b7e1b89922cd9f785c6f153aca27.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/5f/b8/5fe7c8d90857737d7314263eae2166b8.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/08 | Raft算法（二）：如何复制日志？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/07 | Raft算法（一）：如何选举领导者？.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/99/6d/9932935b415e37c2ca758ab99b34f66d.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/03 | ACID理论：CAP的酸，追求一致性.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/06 | Paxos算法（二）：Multi-Paxos不是一个算法，而是统称.md",
+    "media/7e/2c",
+    "Learning Database/Tutorial/从0开始学架构/media/51/1e/512e0154b67af3ede568667940a2a61e.png",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/67/48/67aa4a0e56dcc8ad34bf1b0232f12748.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/a6/65/a61a426bccbe27e48ca75db909ae8265.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/b2/a4/b27f4ff771fa8e9b671f5864c96d9aa4.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/9b/c2/9bf9c133ad815219791f87799bee5cc2.jpg",
+    "Learning Database/Tutorial/分布式协议与算法实战/media/89/51/890b9890584a4f17306da88fedea3451.jpg",
+    "未命名.canvas"
+  ]
+}
