@@ -83,6 +83,18 @@
   
   
   
+  ### 根据APP自动切换输入法
+  
+  
+  
+  ### 快捷调节音量
+  
+  
+  
+  ### 电脑锁屏时，自动断开连接的蓝牙耳机
+  
+  
+  
   ## 参考：
   
   1. [Hammerspoon Spoons](https://www.hammerspoon.org/Spoons/)
