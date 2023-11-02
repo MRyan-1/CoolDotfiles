@@ -5,7 +5,14 @@ hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
+-- 鼠标选取区域打开Iterm模块
+local yourPath = '/Users/ryan/.hammerspoon/BradensPoon/'
+package.path = yourPath .. '?.lua;' .. package.path;
+require('init')
+
+-- 输入法切换模块
 ime_switcher = require("ime_switcher")
+-- 锁屏自动断开蓝牙耳机模块
 headphone = require("headphone")
 
 ----------------------------------------------------------------------------------------------------

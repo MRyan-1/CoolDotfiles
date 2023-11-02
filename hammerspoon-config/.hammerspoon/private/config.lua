@@ -33,3 +33,7 @@ ime_switcher.app2Ime = {{'/Applications/iTerm.app', 'English'}, {'/Applications/
                         {'/Applications/Lark.app', 'Chinese'}, {'/Applications/wechatwebdevtools.app', 'English'}}
 -- 没有在app2IM中指定切换的APP的默认输入法语言
 ime_switcher.excludingDefaultIme = 'English'
+
+-- 划定区域打开APP的名称
+-- 目前已知支持iTerm和Calculator
+dragAppName = 'iTerm'

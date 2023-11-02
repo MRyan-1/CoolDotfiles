@@ -95,8 +95,14 @@
   
   
   
+  ### 鼠标选中打开Iterm
+  
+  
+  
   ## 参考：
   
   1. [Hammerspoon Spoons](https://www.hammerspoon.org/Spoons/)
   
   2. [awesome-hammerspoon](https://github.com/ashfinal/awesome-hammerspoon)
+  
+  3. [BradensPoon](https://github.com/Braden1996/BradensPoon)

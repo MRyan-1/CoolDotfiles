@@ -33,10 +33,10 @@ function ime_switcher.updateFocusAppInputMethod()
                 found = true
                 if expectedIme == 'English' then
                     ime_switcher.English()
-                    print("切换英文 appPath:" .. appPath)
+                    -- print("切换英文 appPath:" .. appPath)
                 else
                     ime_switcher.Chinese()
-                    print("切换中文 appPath:" .. appPath)
+                    -- print("切换中文 appPath:" .. appPath)
                 end
                 break
             end
@@ -51,10 +51,10 @@ end
 function ime_switcher.switch(excludingDefaultIme)
     if excludingDefaultIme == 'English' then
         ime_switcher.English()
-        print("默认切换英文")
+        -- print("默认切换英文")
     elseif excludingDefaultIme == 'Chinese' then
         ime_switcher.Chinese()
-        print("默认切换中文")
+        -- print("默认切换中文")
     end
 end
 
