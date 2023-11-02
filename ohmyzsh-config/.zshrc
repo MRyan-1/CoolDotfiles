@@ -49,6 +49,10 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 
 
 source /Users/ryan/.config/broot/launcher/bash/br
+export HOMEBREW_GITHUB_API_TOKEN=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
+export HOMEBREW_GITHUB_API_TOKEN=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
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/nvm.sh PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
