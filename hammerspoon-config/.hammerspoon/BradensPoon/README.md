@@ -35,10 +35,6 @@ require('init')
 8. Replace the value of yourPath (e.g. `/Users/braden/Development/Rice/BradensPoon/`) with your directory path, as obtained in step 7. (Don't forget the trailing `/`!)
 9. Reload your Hammerspoon config.Ω
 
-ctrl+shift+鼠标滑动选中区域，松开即可
-
-
-
 ## 👨🏼‍💻 Development
 Interested in fixing up some bugs, or developing awesome new features? Here are a few notes to help get you started:
 
