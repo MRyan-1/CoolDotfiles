@@ -12,10 +12,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
 git
+vi-mode
 zsh-syntax-highlighting
 zsh-autosuggestions
 zsh-navigation-tools
 zsh-interactive-cd
+zsh-syntax-highlighting
  )
 
 
