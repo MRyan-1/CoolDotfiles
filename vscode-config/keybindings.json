@@ -1,0 +1,130 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    {
+        "command": "projectManager.listGitProjects#sideBarGit",
+        "key": "cmd+o"
+    },
+    {
+        "command": "expand_region",
+        "key": "ctrl+=",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "undo_expand_region",
+        "key": "ctrl+-",
+        "when": "editorTextFocus && editorHasSelection"
+    },
+    {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+e"
+    },
+    {
+        "command": "workbench.files.action.focusFilesExplorer",
+        "key": "ctrl+e",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "explorer.newFile",
+        "key": "a",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "renameFile",
+        "key": "r",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "filesExplorer.copy",
+        "key": "c",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "filesExplorer.paste",
+        "key": "p",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "deleteFile",
+        "key": "d",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "key": "ctrl+n",
+        "when": "editorFocus"
+    },
+    {
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "key": "ctrl+n",
+        "when": "editorFocus"
+    },
+    {
+        "command": "-workbench.action.files.save",
+        "key": "cmd+s"
+    },
+    {
+        "command": "saveAll",
+        "key": "cmd+s"
+    },
+    {
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "key": "cmd+d",
+        "when": "editorFocus"
+    },
+    {
+        "command": "-extension.vim_cmd+d",
+        "key": "cmd+d",
+        "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+    },
+    {
+        "command": "workbench.action.splitEditor",
+        "key": "cmd+d"
+    },
+    {
+        "command": "-workbench.action.splitEditor",
+        "key": "cmd+\\"
+    },
+    {
+        "command": "turboConsoleLog.displayLogMessage",
+        "key": "cmd+i"
+    },
+    {
+        "command": "-turboConsoleLog.displayLogMessage",
+        "key": "ctrl+alt+l"
+    },
+    {
+        "command": "-undo",
+        "key": "cmd+z"
+    },
+    {
+        "command": "-interactiveEditor.unstash",
+        "key": "cmd+z",
+        "when": "interactiveEditorHasStashedSession && !editorReadonly"
+    },
+    {
+        "command": "workbench.action.toggleZenMode",
+        "key": "cmd+z"
+    },
+    {
+        "command": "-workbench.action.toggleZenMode",
+        "key": "cmd+k z"
+    },
+    {
+        "command": "-editor.action.selectAll",
+        "key": "cmd+a"
+    },
+    {
+        "command": "editor.action.selectAll",
+        "key": "cmd+a"
+    },
+    {
+        "command": "workbench.action.terminal.toggleTerminal",
+        "key": "ctrl+\\",
+        "when": "terminal.active"
+    },
+    {
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "key": "ctrl+`",
+        "when": "terminal.active"
+    }
+]
