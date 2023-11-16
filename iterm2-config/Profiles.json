@@ -45,16 +45,16 @@
           "knobs" : {
             "path" : "path",
             "maxwidth" : 1.7976931348623157e+308,
-            "base: priority" : 5,
-            "minwidth" : 0,
-            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
               "Blue Component" : 0.63,
               "Alpha Component" : 1,
               "Green Component" : 0.63
-            }
+            },
+            "minwidth" : 0,
+            "base: priority" : 5,
+            "base: compression resistance" : 1
           },
           "layout advanced configuration dictionary value" : {
             "algorithm" : 0,
@@ -173,7 +173,7 @@
     "Blue Component" : 0,
     "Red Component" : 0
   },
-  "Transparency" : 0.46057180851063834,
+  "Transparency" : 0.053000332446808539,
   "Tab Color (Dark)" : {
     "Red Component" : 0.254791259765625,
     "Color Space" : "sRGB",
@@ -308,7 +308,7 @@
     "Red Component" : 0.73333334922790527
   },
   "Prevent Opening in a Tab" : false,
-  "Title Components" : 452,
+  "Title Components" : 36,
   "Ansi 9 Color (Dark)" : {
     "Green Component" : 0.3333333432674408,
     "Blue Component" : 0.3333333432674408,
@@ -356,7 +356,7 @@
     "Red Component" : 1
   },
   "Brighten Bold Text (Dark)" : true,
-  "Name" : "MRyan",
+  "Name" : "Akali",
   "Space" : 0,
   "Ansi 11 Color (Dark)" : {
     "Green Component" : 1,
@@ -368,7 +368,7 @@
     "Blue Component" : 1,
     "Red Component" : 0.3333333432674408
   },
-  "Blur Radius" : 25.075623337765958,
+  "Blur Radius" : 4.9647273936170215,
   "Rows" : 50,
   "Background Color (Light)" : {
     "Red Component" : 0,
@@ -431,7 +431,7 @@
   },
   "Command" : "jos",
   "Minimum Contrast (Light)" : 0.78007624337668591,
-  "Blend" : 0.36992045969202897,
+  "Blend" : 0.27994678442028992,
   "Character Encoding" : 4,
   "Minimum Contrast" : 0.78007624337668591,
   "Cursor Boost (Light)" : 0,

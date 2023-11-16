@@ -198,9 +198,6 @@ nnoremap <leader>gm :action Git.Menu<CR>
 " CompareWithBranch
 let g:WhichKeyDesc_Git_CompareWithBranch  = "<leader>gb 和其它分支对比"
 nnoremap <leader>gb :action Git.CompareWithBranch<CR>
-" gitPull
-let g:WhichKeyDesc_Git_Pull  = "<leader>gb 拉取代码Pull"
-nnoremap <leader>gp :action Git.Pull<CR>
 " Annotate
 let g:WhichKeyDesc_Git_Annotate  = "<leader>ga 类变更注释"
 nnoremap <leader>ga :action Annotate<CR>
@@ -216,6 +213,9 @@ nnoremap <leader>gg :action Git.Merge<CR>
 " ShowTabbedFileHistory
 let g:WhichKeyDesc_Git_ShowTabbedFileHistory = "<leader>gy 当前文件Git历史"
 nmap <leader>gy <action>(Vcs.ShowTabbedFileHistory)
+" gitPull
+let g:WhichKeyDesc_Git_Pull  = "<leader>gp 拉取远程代码"
+nnoremap <leader>gp :action Git.Pull<CR>
 
 
 
