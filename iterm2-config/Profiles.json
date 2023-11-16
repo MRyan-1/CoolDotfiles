@@ -173,7 +173,7 @@
     "Blue Component" : 0,
     "Red Component" : 0
   },
-  "Transparency" : 0.49241190159574472,
+  "Transparency" : 0.46057180851063834,
   "Tab Color (Dark)" : {
     "Red Component" : 0.254791259765625,
     "Color Space" : "sRGB",
@@ -368,7 +368,7 @@
     "Blue Component" : 1,
     "Red Component" : 0.3333333432674408
   },
-  "Blur Radius" : 17.708967752659575,
+  "Blur Radius" : 25.075623337765958,
   "Rows" : 50,
   "Background Color (Light)" : {
     "Red Component" : 0,
@@ -431,7 +431,7 @@
   },
   "Command" : "jos",
   "Minimum Contrast (Light)" : 0.78007624337668591,
-  "Blend" : 0.38942312047101446,
+  "Blend" : 0.36992045969202897,
   "Character Encoding" : 4,
   "Minimum Contrast" : 0.78007624337668591,
   "Cursor Boost (Light)" : 0,
@@ -450,7 +450,7 @@
     "Blue Component" : 0.73333334922790527,
     "Red Component" : 0.73333334922790527
   },
-  "Window Type" : 0,
+  "Window Type" : 12,
   "Icon" : 1,
   "Brighten Bold Text" : true,
   "Background Image Location" : "\/Users\/ryan\/Pictures\/wallhaven-jxdj9p.jpg",
@@ -773,7 +773,7 @@
   "Use Separate Colors for Light and Dark Mode" : false,
   "Draw Powerline Glyphs" : false,
   "Custom Tab Title" : "New Shell",
-  "Subtitle" : "WormholeStack",
+  "Subtitle" : "",
   "Ansi 3 Color" : {
     "Green Component" : 0.73333334922790527,
     "Blue Component" : 0,
