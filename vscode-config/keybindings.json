@@ -1,130 +1,259 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
-    {
-        "command": "projectManager.listGitProjects#sideBarGit",
-        "key": "cmd+o"
-    },
-    {
-        "command": "expand_region",
-        "key": "ctrl+=",
-        "when": "editorTextFocus"
-    },
-    {
-        "command": "undo_expand_region",
-        "key": "ctrl+-",
-        "when": "editorTextFocus && editorHasSelection"
-    },
-    {
-        "command": "workbench.action.toggleSidebarVisibility",
-        "key": "ctrl+e"
-    },
-    {
-        "command": "workbench.files.action.focusFilesExplorer",
-        "key": "ctrl+e",
-        "when": "editorTextFocus"
-    },
-    {
-        "command": "explorer.newFile",
-        "key": "a",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "command": "renameFile",
-        "key": "r",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "command": "filesExplorer.copy",
-        "key": "c",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "command": "filesExplorer.paste",
-        "key": "p",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "command": "deleteFile",
-        "key": "d",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "key": "ctrl+n",
-        "when": "editorFocus"
-    },
-    {
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "key": "ctrl+n",
-        "when": "editorFocus"
-    },
-    {
-        "command": "-workbench.action.files.save",
-        "key": "cmd+s"
-    },
-    {
-        "command": "saveAll",
-        "key": "cmd+s"
-    },
-    {
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "key": "cmd+d",
-        "when": "editorFocus"
-    },
-    {
-        "command": "-extension.vim_cmd+d",
-        "key": "cmd+d",
-        "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
-    },
-    {
-        "command": "workbench.action.splitEditor",
-        "key": "cmd+d"
-    },
-    {
-        "command": "-workbench.action.splitEditor",
-        "key": "cmd+\\"
-    },
-    {
-        "command": "turboConsoleLog.displayLogMessage",
-        "key": "cmd+i"
-    },
-    {
-        "command": "-turboConsoleLog.displayLogMessage",
-        "key": "ctrl+alt+l"
-    },
-    {
-        "command": "-undo",
-        "key": "cmd+z"
-    },
-    {
-        "command": "-interactiveEditor.unstash",
-        "key": "cmd+z",
-        "when": "interactiveEditorHasStashedSession && !editorReadonly"
-    },
-    {
-        "command": "workbench.action.toggleZenMode",
-        "key": "cmd+z"
-    },
-    {
-        "command": "-workbench.action.toggleZenMode",
-        "key": "cmd+k z"
-    },
-    {
-        "command": "-editor.action.selectAll",
-        "key": "cmd+a"
-    },
-    {
-        "command": "editor.action.selectAll",
-        "key": "cmd+a"
-    },
-    {
-        "command": "workbench.action.terminal.toggleTerminal",
-        "key": "ctrl+\\",
-        "when": "terminal.active"
-    },
-    {
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "key": "ctrl+`",
-        "when": "terminal.active"
-    }
+  {
+    "command": "projectManager.listGitProjects#sideBarGit",
+    "key": "cmd+o"
+  },
+  {
+    "command": "expand_region",
+    "key": "ctrl+w",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "command": "undo_expand_region",
+    "key": "ctrl+shift+w",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+e",
+    "when": "editorTextFocus"
+  },
+  // 重命名
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 新建文件
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 新建文件夹
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 删除
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 复制
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 剪切
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 粘贴
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 打开文件
+  {
+    "key": "o",
+    "command": "explorer.openAndPassFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  // 在新标签组打开文件
+  {
+    "key": "shift+o",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  // 全局搜索后，在输入框按回车，即可聚焦到搜索结果列表
+  {
+    "key": "enter",
+    "command": "search.action.focusSearchList",
+    "when": "inSearchEditor && inputBoxFocus && hasSearchResult || inputBoxFocus && searchViewletVisible && hasSearchResult"
+  },
+  // 在搜索结果列表，只需按 esc，就可回到搜索输入框
+  {
+    "key": "escape",
+    "command": "workbench.action.findInFiles",
+    "when": "searchViewletVisible && hasSearchResult && searchViewletFocus"
+  },
+  // 在搜索输入框，只需按 esc，就可回到编辑器
+  {
+    "key": "escape",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "inSearchEditor && inputBoxFocus|| inputBoxFocus && searchViewletVisible"
+  },
+  // 在文件浏览界面，只需按 esc，就可回到编辑器
+  {
+    "key": "escape",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // 缩小
+  {
+    "key": "ctrl+left",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  // 扩大
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "key": "ctrl+n",
+    "when": "editorFocus"
+  },
+  {
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "key": "ctrl+n",
+    "when": "editorFocus"
+  },
+  {
+    "command": "-workbench.action.files.save",
+    "key": "cmd+s"
+  },
+  {
+    "command": "saveAll",
+    "key": "cmd+s"
+  },
+  {
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "key": "cmd+d",
+    "when": "editorFocus"
+  },
+  {
+    "command": "-extension.vim_cmd+d",
+    "key": "cmd+d",
+    "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+  },
+  {
+    "command": "workbench.action.splitEditor",
+    "key": "cmd+d"
+  },
+  {
+    "command": "-workbench.action.splitEditor",
+    "key": "cmd+\\"
+  },
+  {
+    "command": "turboConsoleLog.displayLogMessage",
+    "key": "cmd+i"
+  },
+  {
+    "command": "-turboConsoleLog.displayLogMessage",
+    "key": "ctrl+alt+l"
+  },
+  {
+    "command": "workbench.action.toggleZenMode",
+    "key": "cmd+-"
+  },
+  {
+    "command": "-editor.action.selectAll",
+    "key": "cmd+a"
+  },
+  {
+    "command": "editor.action.selectAll",
+    "key": "cmd+a"
+  },
+  {
+    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "ctrl+\\",
+    "when": "terminal.active"
+  },
+  {
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "key": "ctrl+`",
+    "when": "terminal.active"
+  },
+  // 刷新文件浏览器
+  {
+    "key": "shift+r",
+    "command": "workbench.files.action.refreshFilesExplorer",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "editor.action.inlineSuggest.undo",
+    "when": "canUndoInlineSuggestion && !editorReadonly"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-editor.action.inlineSuggest.undo",
+    "when": "canUndoInlineSuggestion && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  }
 ]
