@@ -1,30 +1,81 @@
 {
+    "files.associations": {
+      "*.vue": "vue",
+      "*.wpy": "vue",
+      "*.wxml": "html",
+      "*.wxss": "css"
+    },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[prisma]": {
-        "editor.defaultFormatter": "Prisma.prisma"
+      "editor.defaultFormatter": "Prisma.prisma"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.codeActionsOnSave": {
-        "source.addMissingImports": true,
-        "source.organizeImports": true
+      "source.addMissingImports": true,
+      "source.organizeImports": true
+    },
+    "terminal.integrated.shellArgs.windows": [
+      "/K chcp 65001 >nul"
+    ],
+    "terminal.integrated.fontFamily": "Lucida Console",
+    // 失去焦点后自动保存
+    "files.autoSave": "onFocusChange",
+    // 值设置为true时，每次保存的时候自动格式化；
+    "editor.formatOnSave": false,
+    // 每120行就显示一条线
+    "editor.rulers": [],
+    // 这些文件将不会显示在工作空间中
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/*.js": {
+        "when": "$(basename).ts" //ts编译后生成的js文件将不会显示在工作空中
+      },
+      "**/node_modules": true
+    },
+    // 在使用搜索功能时，将这些文件夹/文件排除在外
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/target": true,
+      "**/logs": true,
+    },
+    // 让vue中的js按"prettier"格式进行格式化
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatterOptions": {
+      "js-beautify-html": {
+        // #vue组件中html代码格式化样式
+        "wrap_attributes": "force-aligned", //也可以设置为“auto”，效果会不一样
+        "wrap_line_length": 200,
+        "end_with_newline": false,
+        "semi": false,
+        "singleQuote": true
+      },
+      "prettier": {
+        "semi": false,
+        "singleQuote": true
+      }
     },
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 5,
-    "editor.fontFamily": "CaskaydiaCove Nerd Font",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
     "editor.fontWeight": "300",
-    "editor.formatOnSave": true,
     "editor.inlineSuggest.enabled": true,
     "editor.lineNumbers": "relative",
     "editor.linkedEditing": true,
@@ -40,38 +91,35 @@
     "explorer.confirmDragAndDrop": false,
     "extensions.autoUpdate": "onlyEnabledExtensions",
     "extensions.ignoreRecommendations": false,
-    "files.exclude": {
-        "**/node_modules": true
-    },
     "prettier.semi": false,
     "prettier.singleAttributePerLine": true,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "projectManager.git.baseFolders": [
-        "$home/workspace"
+      "$home/workspace"
     ],
     "projectManager.sortList": "Recent",
     "sortJSON.orderOverride": [
-        "name",
-        "version",
-        "main",
-        "module",
-        "types",
-        "typings",
-        "files",
-        "publishConfig",
-        "repository",
-        "scripts",
-        "prefix",
-        "description",
-        "body"
+      "name",
+      "version",
+      "main",
+      "module",
+      "types",
+      "typings",
+      "files",
+      "publishConfig",
+      "repository",
+      "scripts",
+      "prefix",
+      "description",
+      "body"
     ],
     "sortJSON.orderUnderride": [
-        "resolutions",
-        "dependencies",
-        "devDependencies",
-        "peerDependencies",
-        "cSpell.userWords"
+      "resolutions",
+      "dependencies",
+      "devDependencies",
+      "peerDependencies",
+      "cSpell.userWords"
     ],
     "typescript.preferences.importModuleSpecifier": "relative",
     "typescript.updateImportsOnFileMove.enabled": "always",
@@ -83,124 +131,126 @@
     "vim.hlsearch": true,
     "vim.lead er": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "leader",
-                "r"
-            ],
-            "commands": [
-                "editor.action.rename"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "commands": [
-                ":w!"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "q"
-            ],
-            "commands": [
-                ":q!"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "x"
-            ],
-            "commands": [
-                ":x!"
-            ]
-        },
-        {
-            "after": [
-                "g",
-                "g",
-                "V",
-                "G"
-            ],
-            "before": [
-                "<c-a>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "k"
-            ],
-            "commands": [
-                "editor.action.showHover"
-            ]
-        },
-        {
-            "before": [
-                "[",
-                "d"
-            ],
-            "commands": [
-                "editor.action.marker.prev"
-            ]
-        },
-        {
-            "before": [
-                "]",
-                "d"
-            ],
-            "commands": [
-                "editor.action.marker.next"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c",
-                "a"
-            ],
-            "commands": [
-                "editor.action.quickFix"
-            ]
-        },
-        {
-            "after": [
-                "^"
-            ],
-            "before": [
-                "H"
-            ]
-        },
-        {
-            "after": [
-                "$"
-            ],
-            "before": [
-                "L"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "i"
-            ],
-            "commands": [
-                "extension.toggleBool"
-            ]
-        }
+      {
+        "before": [
+          "leader",
+          "r"
+        ],
+        "commands": [
+          "editor.action.rename"
+        ]
+      },
+      {
+        "before": [
+          "leader",
+          "w"
+        ],
+        "commands": [
+          ":w!"
+        ]
+      },
+      {
+        "before": [
+          "leader",
+          "q"
+        ],
+        "commands": [
+          ":q!"
+        ]
+      },
+      {
+        "before": [
+          "leader",
+          "x"
+        ],
+        "commands": [
+          ":x!"
+        ]
+      },
+      {
+        "after": [
+          "g",
+          "g",
+          "V",
+          "G"
+        ],
+        "before": [
+          "<c-a>"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "k"
+        ],
+        "commands": [
+          "editor.action.showHover"
+        ]
+      },
+      {
+        "before": [
+          "[",
+          "d"
+        ],
+        "commands": [
+          "editor.action.marker.prev"
+        ]
+      },
+      {
+        "before": [
+          "]",
+          "d"
+        ],
+        "commands": [
+          "editor.action.marker.next"
+        ]
+      },
+      {
+        "before": [
+          "<leader>",
+          "c",
+          "a"
+        ],
+        "commands": [
+          "editor.action.quickFix"
+        ]
+      },
+      {
+        "after": [
+          "^"
+        ],
+        "before": [
+          "H"
+        ]
+      },
+      {
+        "after": [
+          "$"
+        ],
+        "before": [
+          "L"
+        ]
+      },
+      {
+        "before": [
+          "leader",
+          "i"
+        ],
+        "commands": [
+          "extension.toggleBool"
+        ]
+      }
     ],
     "vim.useSystemClipboard": true,
-    "window.zoomLevel": 1,
     "workbench.colorTheme": "Everforest Dark",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.editor": "json",
-    "workbench.startupEditor": "readme",
     "zenMode.hideLineNumbers": false,
     "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
-    }
-}
+      "FIG_NEW_SESSION": "1"
+    },
+    "workbench.startupEditor": "none",
+    "editor.accessibilitySupport": "on",
+    "window.zoomLevel": 1,
+    "terminal.external.osxExec": "iTerm.app"
+  }
