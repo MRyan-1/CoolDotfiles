@@ -195,42 +195,6 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "leader",
-        "r"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "w"
-      ],
-      "commands": [
-        ":w!"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "q"
-      ],
-      "commands": [
-        ":q!"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "x"
-      ],
-      "commands": [
-        ":x!"
-      ]
-    },
-    {
       "after": [
         "g",
         "g",
@@ -269,16 +233,6 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "c",
-        "a"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ]
-    },
-    {
       "after": [
         "^"
       ],
@@ -292,15 +246,6 @@
       ],
       "before": [
         "L"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "i"
-      ],
-      "commands": [
-        "extension.toggleBool"
       ]
     },
     // 转到定义
@@ -341,17 +286,6 @@
       ],
       "commands": [
         "workbench.action.navigateBack"
-      ]
-    },
-    // 变量符号重命名
-    {
-      "before": [
-        "<leader>",
-        "l",
-        "r"
-      ],
-      "commands": [
-        "editor.action.rename"
       ]
     },
     // 定义速览
@@ -506,6 +440,28 @@
       ]
     },
     // " c: Code ⭐️
+    // 变量符号重命名
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    // 快速修复
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
     // 触发帮助提示
     {
       "before": [
@@ -598,5 +554,6 @@
   "leetcode.hint.configWebviewMarkdown": false,
   "leetcode.hint.commentDescription": false,
   "terminal.integrated.inheritEnv": false,
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false
 }
