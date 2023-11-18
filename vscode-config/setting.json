@@ -169,12 +169,32 @@
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": true,
+  "easymotionMarkerBackgroundColor": "green",
   "vim.easymotion": true,
   // s<char><char> 跳转到下面第一次出现指定两个字符的地方
   "vim.sneak": true,
   // 使用系统剪贴板
   "vim.useSystemClipboard": true,
   "vim.leader": ",", // leader键
+  // 快速翻页
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "shift+k"
+      ],
+      "commands": [
+        "cursorPageUp"
+      ]
+    },
+    {
+      "before": [
+        "shift+j"
+      ],
+      "commands": [
+        "cursorPageDown"
+      ]
+    }
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -576,5 +596,6 @@
   },
   "leetcode.hint.configWebviewMarkdown": false,
   "leetcode.hint.commentDescription": false,
-  "terminal.integrated.inheritEnv": false
+  "terminal.integrated.inheritEnv": false,
+  "git.enableSmartCommit": true
 }
