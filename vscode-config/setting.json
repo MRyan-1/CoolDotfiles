@@ -50,7 +50,7 @@
   "terminal.integrated.shellArgs.windows": [
     "/K chcp 65001 >nul"
   ],
-  "terminal.integrated.fontFamily": "Lucida Console",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   // 失去焦点后自动保存
   "files.autoSave": "onFocusChange",
   // 粘贴自动格式化
@@ -575,5 +575,6 @@
     "editor.defaultFormatter": "mwpb.java-prettier-formatter"
   },
   "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.hint.commentDescription": false
+  "leetcode.hint.commentDescription": false,
+  "terminal.integrated.inheritEnv": false
 }
