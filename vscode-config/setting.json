@@ -95,7 +95,7 @@
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
       // #vue组件中html代码格式化样式
-      "wrap_attributes": "force-aligned", //也可以设置为“auto”，效果会不一样
+      "wrap_attributes": "farce-aligned", //也可以设置为“auto”，效果会不一样
       "wrap_line_length": 200,
       "end_with_newline": false,
       "semi": false,
@@ -171,8 +171,6 @@
   "vim.hlsearch": true,
   "easymotionMarkerBackgroundColor": "green",
   "vim.easymotion": true,
-  // s<char><char> 跳转到下面第一次出现指定两个字符的地方
-  "vim.sneak": true,
   // 使用系统剪贴板
   "vim.useSystemClipboard": true,
   "vim.leader": ",", // leader键
