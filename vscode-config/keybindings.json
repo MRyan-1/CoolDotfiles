@@ -30,6 +30,11 @@
     "key": "cmd+o c",
     "command": "workbench.action.showCommands"
   },
+  // gitliens
+  {
+    "key": "cmd+o g",
+    "command": "gitlens.graph.switchToPanelLayout"
+  },
   // 新建vscode实例
   {
     "key": "cmd+o n",
