@@ -1,5 +1,10 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
+  // 切换窗口
+  {
+    "command": "workbench.action.switchWindow",
+    "key": "cmd+o u"
+  },
   // 快速打开文件
   {
     "key": "cmd+o n",

@@ -1,559 +1,520 @@
-{
-  // 配置文件关联
-  "files.associations": {
-    // 比如小程序中的 .wxss 这种文件，会把它作为css文件来处理，提供对应的css的语法提示，css的格式化等。
-    "*.wxss": "css",
-    "*.cjson": "jsonc",
-    "*.wxs": "javascript",
-    "*.ts": "typescript",
-    "*.vue": "vue",
-    "*.dart": "dart"
+// 将键绑定放在此文件中以覆盖默认值
+[
+  // 切换窗口
+  {
+    "command": "workbench.action.switchWindow",
+    "key": "cmd+o u"
   },
-  // 使能每一种语言默认格式化规则
-  "[json]": {
-    // 对json文件，使用 JSON语言功能 进行格式化
-    "editor.defaultFormatter": "vscode.json-language-features"
+  // 快速打开文件
+  {
+    "key": "cmd+o n",
+    "command": "workbench.action.quickOpen"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 打开设置
+  {
+    "key": "cmd+o s",
+    "command": "workbench.action.openSettings"
   },
-  "[html]": {
-    // 对html文件，使用 vscode.html-language-features(vscode内置规则) 进行格式化,不要使用 prettier
-    "editor.defaultFormatter": "vscode.html-language-features"
+  // 打开热键映射
+  {
+    "key": "cmd+o k",
+    "command": "workbench.action.openGlobalKeybindings"
   },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 打开一个目录
+  {
+    "key": "cmd+o m",
+    "command": "workbench.action.files.openFolder"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 打开一个文件
+  {
+    "key": "cmd+o f",
+    "command": "workbench.action.files.openFile"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 打开最近记录
+  {
+    "key": "cmd+o h",
+    "command": "workbench.action.openRecent"
   },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 显示命令面板
+  {
+    "key": "cmd+o p",
+    "command": "workbench.action.showCommands"
   },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // gitliens
+  {
+    "key": "cmd+o g",
+    "command": "gitlens.graph.switchToPanelLayout"
   },
-  "[vue]": {
-    // 可选值： eslint ："dbaeumer.vscode-eslint"  vetur: "octref.vetur"   prettier: "esbenp.prettier-vscode"
-    // 对 vue 文件，使用 prettier（格式化规则） + eslint（校验） 进行格式化，也可以选择 vetur 插件，或者单独选择prettier不加eslint
-    "editor.defaultFormatter": "octref.vetur"
+  // 新建vscode实例
+  {
+    "key": "cmd+o w",
+    "command": "workbench.action.newWindow"
   },
-  "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.organizeImports": true
+  // 关闭vscode实例
+  {
+    "key": "cmd+o q",
+    "command": "workbench.action.closeWindow"
   },
-  //黄色波浪线
-  "eslint.enable": false,
-  "terminal.integrated.shellArgs.windows": [
-    "/K chcp 65001 >nul"
-  ],
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  // 失去焦点后自动保存
-  "files.autoSave": "onFocusChange",
-  // 粘贴自动格式化
-  "editor.formatOnPaste": true,
-  // 值设置为true时，每次保存的时候自动格式化；
-  "editor.formatOnSave": true,
-  // 每120行就显示一条线
-  "editor.rulers": [],
-  // 这些文件将不会显示在工作空间中
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/*.js": {
-      "when": "$(basename).ts" //ts编译后生成的js文件将不会显示在工作空中
-    },
-    "**/node_modules": true
+  // 打开终端
+  {
+    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "ctrl+\\",
+    "when": "terminal.active"
   },
-  // 在使用搜索功能时，将这些文件夹/文件排除在外
-  "search.exclude": {
-    // VScode进行文件搜索时，不搜索这些区域。
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/*.code-search": true,
-    "**/.DS_Store": true,
-    "**/.git": true,
-    "**/.gitignore": true,
-    "**/.idea": true,
-    "**/.svn": true,
-    "**/.vscode": true,
-    "**/build": true,
-    "**/dist": true,
-    "**/tmp": true,
-    "**/yarn.lock": true,
-    "**/assets": true
+  {
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "key": "ctrl+`",
+    "when": "terminal.active"
   },
-  // 让vue中的js按"prettier"格式进行格式化
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.format.defaultFormatter.js": "prettier",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      // #vue组件中html代码格式化样式
-      "wrap_attributes": "force-aligned", //也可以设置为“auto”，效果会不一样
-      "wrap_line_length": 200,
-      "end_with_newline": false,
-      "semi": false,
-      "singleQuote": true
-    },
-    "prettier": {
-      "semi": false,
-      "singleQuote": true
-    }
+  // 快速修复
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   },
-  /*  prettier的配置 */
-  "prettier.printWidth": 100, // 超过最大值换行
-  "prettier.tabWidth": 2, // 缩进字节数
-  "prettier.useTabs": false, // 缩进不使用tab，使用空格
-  "prettier.semi": true, // 句尾添加分号
-  "prettier.singleQuote": false, // 使用单引号代替双引号
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorSurroundingLines": 5,
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 15,
-  "editor.fontWeight": "300",
-  "editor.inlineSuggest.enabled": true,
-  "editor.lineNumbers": "relative",
-  "editor.linkedEditing": true,
-  "editor.minimap.enabled": false,
-  "editor.smoothScrolling": true,
-  "editor.stickyScroll.enabled": true,
-  "editor.suggest.insertMode": "replace",
-  "editor.suggestFontSize": 14,
-  "editor.wordWrap": "on",
-  "errorLens.fontStyleItalic": true,
-  "everforest.italicKeywords": true,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "extensions.autoUpdate": "onlyEnabledExtensions",
-  "extensions.ignoreRecommendations": false,
-  "prettier.singleAttributePerLine": true,
-  "prettier.trailingComma": "all",
-  "projectManager.git.baseFolders": [
-    "$home/workspace"
-  ],
-  "projectManager.sortList": "Recent",
-  "sortJSON.orderOverride": [
-    "name",
-    "version",
-    "main",
-    "module",
-    "types",
-    "typings",
-    "files",
-    "publishConfig",
-    "repository",
-    "scripts",
-    "prefix",
-    "description",
-    "body"
-  ],
-  "sortJSON.orderUnderride": [
-    "resolutions",
-    "dependencies",
-    "devDependencies",
-    "peerDependencies",
-    "cSpell.userWords"
-  ],
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "update.showReleaseNotes": false,
-  "vim.foldfix": true,
-  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
-  "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.textColor": "white",
-  "vim.hlsearch": true,
-  "easymotionMarkerBackgroundColor": "green",
-  "vim.easymotion": true,
-  // 使用系统剪贴板
-  "vim.useSystemClipboard": true,
-  "vim.leader": ",", // leader键
-  // 快速翻页
-  "vim.normalModeKeyBindings": [
-    {
-      "before": [
-        "shift+k"
-      ],
-      "commands": [
-        "cursorPageUp"
-      ]
-    },
-    {
-      "before": [
-        "shift+j"
-      ],
-      "commands": [
-        "cursorPageDown"
-      ]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
+  // -- 侧边栏命令
+  // 切换侧边栏显示状态
+  {
+    "key": "ctrl+n [",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  // 显示文件资源管理器
+  {
+    "key": "ctrl+n 1",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  // 显示TODO Tree
+  {
+    "key": "ctrl+n 2",
+    "command": "todo-tree-view.focus"
+  },
+  // 显示全局搜索
+  {
+    "key": "ctrl+n 3",
+    "command": "workbench.action.replaceInFiles"
+  },
+  // 显示debug
+  {
+    "key": "ctrl+n 4",
+    "command": "workbench.view.debug",
+    "when": "viewContainer.workbench.view.debug.enabled"
+  },
+  // 显示版本控制
+  {
+    "key": "ctrl+n 5",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  // 显示SQL Tools
+  {
+    "key": "ctrl+n 6",
+    "command": "workbench.view.extension.sqltoolsActivityBarContainer"
+  },
+  // 显示Docker
+  {
+    "key": "ctrl+n 7",
+    "command": "workbench.view.extension.dockerView"
+  },
+  // 显示测试
+  {
+    "key": "ctrl+n 8",
+    "command": "workbench.view.testing.focus"
+  },
+  // 显示插件商店
+  {
+    "key": "ctrl+n 9",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  // --- 面板命令
+  // 切换面板显示状态
+  {
+    "key": "ctrl+p [",
+    "command": "workbench.action.togglePanel"
+  },
+  // 显示问题
+  {
+    "key": "ctrl+p 1",
+    "command": "workbench.panel.markers.view.focus"
+  },
+  // 显示输出
+  {
+    "key": "ctrl+p 2",
+    "command": "workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  // 显示调试控制台
+  {
+    "key": "ctrl+p 4",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+  // 显示SQL CONSOLE
+  {
+    "key": "ctrl+p 5",
+    "command": "workbench.view.extension.sqltoolsPanelContainer"
+  },
+  // --- 取消一些vim插件的额外功能
+  {
+    "key": "ctrl+a",
+    "command": "-extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<D-a> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "alt+ctrl+down",
+    "command": "-extension.vim_ctrl+alt+down",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "alt+ctrl+up",
+    "command": "-extension.vim_ctrl+alt+up",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-extension.vim_ctrl+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "-extension.vim_ctrl+v",
+    "when": "editorTextFocus && vim.active && vim.use<D-v> && vim.mode == ''CommandlineInProgress' !inDebugRepl' || editorTextFocus && vim.active && vim.use<D-v> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-extension.vim_ctrl+left",
+    "when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-extension.vim_ctrl+right",
+    "when": "editorTextFocus && vim.active && vim.use<D-right> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "expand_region",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "undo_expand_region",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+e",
+    "when": "editorTextFocus"
+  },
+  // 文件操作
+  // 重命名
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 新建文件
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 新建文件夹
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 删除
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 复制
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 剪切
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 粘贴
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // 打开文件
+  {
+    "key": "o",
+    "command": "explorer.openAndPassFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  },
+  // 全局搜索后，在输入框按回车，即可聚焦到搜索结果列表
+  {
+    "key": "enter",
+    "command": "search.action.focusSearchList",
+    "when": "inSearchEditor && inputBoxFocus && hasSearchResult || inputBoxFocus && searchViewletVisible && hasSearchResult"
+  },
+  // 在搜索结果列表，只需按 esc，就可回到搜索输入框
+  {
+    "key": "escape",
+    "command": "workbench.action.findInFiles",
+    "when": "searchViewletVisible && hasSearchResult && searchViewletFocus"
+  },
+  // 在搜索输入框，只需按 esc，就可回到编辑器
+  {
+    "key": "escape",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "inSearchEditor && inputBoxFocus|| inputBoxFocus && searchViewletVisible"
+  },
+  // 在文件浏览界面，只需按 esc，就可回到编辑器
+  {
+    "key": "escape",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "-workbench.action.files.save",
+    "key": "cmd+s"
+  },
+  {
+    "command": "saveAll",
+    "key": "cmd+s"
+  },
+  {
+    "command": "-workbench.action.splitEditor",
+    "key": "cmd+\\"
+  },
+  {
+    "command": "turboConsoleLog.displayLogMessage",
+    "key": "cmd+i"
+  },
+  {
+    "command": "-turboConsoleLog.displayLogMessage",
+    "key": "ctrl+alt+l"
+  },
+  {
+    "command": "workbench.action.toggleZenMode",
+    "key": "cmd+-"
+  },
+  {
+    "command": "-editor.action.selectAll",
+    "key": "cmd+a"
+  },
+  {
+    "command": "editor.action.selectAll",
+    "key": "cmd+a"
+  },
+  // 刷新文件浏览器
+  {
+    "key": "shift+r",
+    "command": "workbench.files.action.refreshFilesExplorer",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "editor.action.inlineSuggest.undo",
+    "when": "canUndoInlineSuggestion && !editorReadonly"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-editor.action.inlineSuggest.undo",
+    "when": "canUndoInlineSuggestion && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-rerunSearchEditorSearch",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  // 问题界面
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.problems.focus"
+  },
+  // 资源管理器界面
+  {
+    "key": "ctrl+r",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+    "when": "inQuickOpen && inRecentFilesPicker"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-extension.vim_ctrl+r",
+    "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-python.refreshTensorBoard",
+    "when": "python.hasActiveTensorBoardSession"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-workbench.action.terminal.runRecentCommand",
+    "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+  },
+  // 窗口聚焦
+  {
+    "key": "shift+left",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
       "after": [
-        "g",
-        "g",
-        "V",
-        "G"
-      ],
-      "before": [
-        "<c-a>"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "k"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
-    },
-    {
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prev"
-      ]
-    },
-    {
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.next"
-      ]
-    },
-    {
-      "after": [
-        "^"
-      ],
-      "before": [
-        "H"
-      ]
-    },
-    {
-      "after": [
-        "$"
-      ],
-      "before": [
-        "L"
-      ]
-    },
-    // 转到定义
-    {
-      "before": [
-        "g",
-        "d"
-      ],
-      "commands": [
-        "editor.action.revealDefinition"
-      ]
-    },
-    // 转到引用
-    {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.goToReferences"
-      ]
-    },
-    // 转到实现
-    {
-      "before": [
-        "g",
-        "i"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ]
-    },
-    // 回退到上一个位置
-    {
-      "before": [
-        "g",
-        "b"
-      ],
-      "commands": [
-        "workbench.action.navigateBack"
-      ]
-    },
-    // 定义速览
-    {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
-    },
-    // 打开文件浏览器
-    {
-      "before": [
-        "<leader>",
-        "e"
-      ],
-      "commands": [
-        "workbench.view.explorer"
-      ]
-    },
-    // gh 到行头
-    {
-      "before": [
-        "g",
+        "<c-w>",
         "h"
-      ],
-      "commands": [
-        "cursorHome"
       ]
-    },
-    // gl 到行尾
-    {
-      "before": [
-        "g",
+    }
+  },
+  {
+    "key": "shift+right",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": [
+        "<c-w>",
         "l"
-      ],
-      "commands": [
-        "cursorEnd"
-      ]
-    },
-    // ge 到文件尾
-    {
-      "before": [
-        "g",
-        "e"
-      ],
-      "commands": [
-        "cursorBottom"
-      ]
-    },
-    // ******************leader键位******************8
-    // " z: zip(fold) ⭐️
-    // 全部折叠
-    {
-      "before": [
-        "<leader>",
-        "z",
-        "c"
-      ],
-      "commands": [
-        "editor.foldAll"
-      ]
-    },
-    // 全部展开
-    {
-      "before": [
-        "<leader>",
-        "z",
-        "o"
-      ],
-      "commands": [
-        "editor.unfoldAll"
-      ]
-    },
-    // " w: Window ⭐️
-    // 关闭当前选项卡或分屏
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "c"
-      ],
-      "commands": [
-        "workbench.action.closeActiveEditor"
-      ]
-    },
-    // 拆分一个上下分屏
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "d"
-      ],
-      "commands": [
-        "workbench.action.splitEditorDown"
-      ]
-    },
-    // 拆分一个左右分屏
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "r"
-      ],
-      "commands": [
-        "workbench.action.splitEditor"
-      ]
-    },
-    // 将光标向上动1屏
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "k"
-      ],
-      "commands": [
-        "workbench.action.focusAboveGroup"
-      ]
-    },
-    // 将光标向下动1屏
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "j"
-      ],
-      "commands": [
-        "workbench.action.focusBelowGroup"
-      ]
-    },
-    // 将光标向左移动1屏
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.focusLeftGroup"
-      ]
-    },
-    // 将光标向右移动1屏
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.focusRightGroup"
-      ]
-    },
-    // " c: Code ⭐️
-    // 变量符号重命名
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "r"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
-    },
-    // 快速修复
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "a"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ]
-    },
-    // 触发帮助提示
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "h"
-      ],
-      "commands": [
-        "editor.action.focusRightGroup"
-      ]
-    },
-    // 触发参数提示
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "n"
-      ],
-      "commands": [
-        "editor.action.triggerParameterHints",
-        "editor.action.closeParameterHints"
-      ]
-    },
-    // 触发建议提示
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "p"
-      ],
-      "commands": [
-        "editor.action.triggerSuggest",
-        "hideSuggestWidget"
-      ]
-    },
-    // 移动到下一个建议
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "j"
-      ],
-      "commands": [
-        "selectNextSuggestion"
-      ]
-    },
-    // 移动到上一个建议
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "k"
-      ],
-      "commands": [
-        "selectPrevSuggestion"
       ]
     }
-  ],
-  // 在push代码时，是否先自动从远端拉取代码
-  "git.autofetch": true,
-  "workbench.colorTheme": "Everforest Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.settings.editor": "json",
-  "zenMode.hideLineNumbers": false,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
   },
-  "workbench.startupEditor": "none",
-  "editor.accessibilitySupport": "on",
-  "window.zoomLevel": 1,
-  "terminal.external.osxExec": "iTerm.app",
-  "leetcode.endpoint": "leetcode-cn",
-  "leetcode.workspaceFolder": "/Users/ryan/ProgramData/Leetcode",
-  "leetcode.defaultLanguage": "java",
-  "leetcode.filePath": {
-    "default": {
-      "folder": "/Users/ryan/ProgramData/Leetcode",
-      "filename": "${id}.${kebab-case-name}.${ext}"
+  {
+    "key": "shift+up",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": [
+        "<c-w>",
+        "k"
+      ]
     }
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  {
+    "key": "shift+down",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": [
+        "<c-w>",
+        "j"
+      ]
+    }
   },
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
+  // 聚焦到侧边的资源管理器
+  {
+    "key": "ctrl+;",
+    "command": "workbench.view.explorer"
   },
-  "[java]": {
-    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+  // 聚焦编辑窗
+  {
+    "key": "ctrl+'",
+    "command": "workbench.action.focusFirstEditorGroup"
   },
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.hint.commentDescription": false,
-  "terminal.integrated.inheritEnv": false,
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false
-}
+  {
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-extension.vim_ctrl+j",
+    "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+  },
+  // 打开git界面
+  {
+    "key": "ctrl+k ctrl+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+right",
+    "command": "-workbench.action.moveEditorToNextGroup"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-extension.vim_ctrl+k",
+    "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+  }
+]
