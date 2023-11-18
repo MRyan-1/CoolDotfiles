@@ -504,6 +504,64 @@
       "commands": [
         "workbench.action.focusRightGroup"
       ]
+    },
+    // " c: Code ⭐️
+    // 触发帮助提示
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "h"
+      ],
+      "commands": [
+        "editor.action.focusRightGroup"
+      ]
+    },
+    // 触发参数提示
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "n"
+      ],
+      "commands": [
+        "editor.action.triggerParameterHints",
+        "editor.action.closeParameterHints"
+      ]
+    },
+    // 触发建议提示
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "p"
+      ],
+      "commands": [
+        "editor.action.triggerSuggest",
+        "hideSuggestWidget"
+      ]
+    },
+    // 移动到下一个建议
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "j"
+      ],
+      "commands": [
+        "selectNextSuggestion"
+      ]
+    },
+    // 移动到上一个建议
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "k"
+      ],
+      "commands": [
+        "selectPrevSuggestion"
+      ]
     }
   ],
   // 在push代码时，是否先自动从远端拉取代码

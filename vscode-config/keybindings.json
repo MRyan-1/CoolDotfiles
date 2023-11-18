@@ -1,5 +1,10 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
+  // 快速打开文件
+  {
+    "key": "cmd+o n",
+    "command": "workbench.action.quickOpen"
+  },
   // 打开设置
   {
     "key": "cmd+o s",
@@ -27,7 +32,7 @@
   },
   // 显示命令面板
   {
-    "key": "cmd+o c",
+    "key": "cmd+o p",
     "command": "workbench.action.showCommands"
   },
   // gitliens
@@ -37,13 +42,24 @@
   },
   // 新建vscode实例
   {
-    "key": "cmd+o n",
+    "key": "cmd+o w",
     "command": "workbench.action.newWindow"
   },
   // 关闭vscode实例
   {
     "key": "cmd+o q",
     "command": "workbench.action.closeWindow"
+  },
+  // 打开终端
+  {
+    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "ctrl+\\",
+    "when": "terminal.active"
+  },
+  {
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "key": "ctrl+`",
+    "when": "terminal.active"
   },
   // 快速修复
   {
@@ -104,47 +120,6 @@
     "key": "ctrl+n 9",
     "command": "workbench.view.extensions",
     "when": "viewContainer.workbench.view.extensions.enabled"
-  },
-  // --- 代码编辑命令
-  // 触发帮助提示
-  {
-    "key": "ctrl+h",
-    "command": "editor.action.showHover",
-    "when": "editorTextFocus"
-  },
-  // 触发参数提示
-  {
-    "key": "ctrl+j",
-    "command": "editor.action.triggerParameterHints",
-    "when": "editorHasSignatureHelpProvider && editorTextFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "closeParameterHints",
-    "when": "editorFocus && parameterHintsVisible"
-  },
-  // 触发建议提示
-  {
-    "key": "ctrl+k",
-    "command": "editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "hideSuggestWidget",
-    "when": "suggestWidgetVisible && textInputFocus"
-  },
-  // 移动到下一个建议
-  {
-    "key": "ctrl+n",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  // 移动到上一个建议
-  {
-    "key": "ctrl+p",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   // --- 面板命令
   // 切换面板显示状态
@@ -339,16 +314,7 @@
     "command": "editor.action.selectAll",
     "key": "cmd+a"
   },
-  {
-    "command": "workbench.action.terminal.toggleTerminal",
-    "key": "ctrl+\\",
-    "when": "terminal.active"
-  },
-  {
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "key": "ctrl+`",
-    "when": "terminal.active"
-  },
+
   // 刷新文件浏览器
   {
     "key": "shift+r",
@@ -396,7 +362,7 @@
     "when": "canUndoInlineSuggestion && !editorReadonly"
   },
   {
-    "key": "ctrl+shift+g",
+    "key": "ctrl+k",
     "command": "workbench.view.scm",
     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
   },
@@ -432,31 +398,15 @@
     "key": "shift+cmd+r",
     "command": "workbench.action.replaceInFiles"
   },
-  {
-    "key": "shift+cmd+h",
-    "command": "-workbench.action.replaceInFiles"
-  },
+  // 问题界面
   {
     "key": "ctrl+o",
     "command": "workbench.action.problems.focus"
   },
-  {
-    "key": "cmd+e",
-    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
-    "when": "accessibilityHelpIsShown"
-  },
-  {
-    "key": "cmd+e",
-    "command": "-actions.findWithSelection"
-  },
+  // 资源管理器界面
   {
     "key": "ctrl+r",
     "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "key": "shift+cmd+e",
-    "command": "-workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
@@ -478,19 +428,6 @@
     "key": "cmd+r",
     "command": "-workbench.action.terminal.runRecentCommand",
     "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
-  },
-  {
-    "key": "cmd+r",
-    "command": "-workbench.action.reloadWindow",
-    "when": "isDevelopment"
-  },
-  {
-    "key": "ctrl+cmd+p",
-    "command": "workbench.action.showCommands"
-  },
-  {
-    "key": "shift+cmd+p",
-    "command": "-workbench.action.showCommands"
   },
   // 窗口聚焦
   {
@@ -525,17 +462,6 @@
       "after": ["<c-w>", "j"]
     }
   },
-  // 打开终端
-  {
-    "key": "cmd+\\",
-    "command": "-workbench.action.terminal.split",
-    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
-  },
-  {
-    "key": "cmd+\\",
-    "command": "-workbench.action.terminal.splitActiveTab",
-    "when": "terminalProcessSupported && terminalTabsFocus"
-  },
   // 聚焦到侧边的资源管理器
   {
     "key": "ctrl+;",
@@ -555,5 +481,24 @@
     "key": "ctrl+j",
     "command": "-extension.vim_ctrl+j",
     "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+  },
+  // 打开git界面
+  {
+    "key": "ctrl+k ctrl+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+right",
+    "command": "-workbench.action.moveEditorToNextGroup"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-extension.vim_ctrl+k",
+    "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
   }
 ]
