@@ -1,18 +1,28 @@
 {
+  // 配置文件关联
   "files.associations": {
+    // 比如小程序中的 .wxss 这种文件，会把它作为css文件来处理，提供对应的css的语法提示，css的格式化等。
+    "*.wxss": "css",
+    "*.cjson": "jsonc",
+    "*.wxs": "javascript",
+    "*.ts": "typescript",
     "*.vue": "vue",
-    "*.wpy": "vue",
-    "*.wxml": "html",
-    "*.wxss": "css"
+    "*.dart": "dart"
+  },
+  // 使能每一种语言默认格式化规则
+  "[json]": {
+    // 对json文件，使用 JSON语言功能 进行格式化
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    // 对html文件，使用 vscode.html-language-features(vscode内置规则) 进行格式化,不要使用 prettier
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -20,16 +30,33 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    // 可选值： eslint ："dbaeumer.vscode-eslint"  vetur: "octref.vetur"   prettier: "esbenp.prettier-vscode"
+    // 对 vue 文件，使用 prettier（格式化规则） + eslint（校验） 进行格式化，也可以选择 vetur 插件，或者单独选择prettier不加eslint
+    "editor.defaultFormatter": "octref.vetur"
+  },
   "editor.codeActionsOnSave": {
     "source.addMissingImports": true,
     "source.organizeImports": true
   },
-  "terminal.integrated.shellArgs.windows": ["/K chcp 65001 >nul"],
+  //黄色波浪线
+  "eslint.enable": false,
+  "terminal.integrated.shellArgs.windows": [
+    "/K chcp 65001 >nul"
+  ],
   "terminal.integrated.fontFamily": "Lucida Console",
   // 失去焦点后自动保存
   "files.autoSave": "onFocusChange",
+  // 粘贴自动格式化
+  "editor.formatOnPaste": true,
   // 值设置为true时，每次保存的时候自动格式化；
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   // 每120行就显示一条线
   "editor.rulers": [],
   // 这些文件将不会显示在工作空间中
@@ -46,10 +73,21 @@
   },
   // 在使用搜索功能时，将这些文件夹/文件排除在外
   "search.exclude": {
+    // VScode进行文件搜索时，不搜索这些区域。
     "**/node_modules": true,
     "**/bower_components": true,
-    "**/target": true,
-    "**/logs": true
+    "**/*.code-search": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.idea": true,
+    "**/.svn": true,
+    "**/.vscode": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/tmp": true,
+    "**/yarn.lock": true,
+    "**/assets": true
   },
   // 让vue中的js按"prettier"格式进行格式化
   "vetur.format.defaultFormatter.html": "js-beautify-html",
@@ -68,6 +106,12 @@
       "singleQuote": true
     }
   },
+  /*  prettier的配置 */
+  "prettier.printWidth": 100, // 超过最大值换行
+  "prettier.tabWidth": 2, // 缩进字节数
+  "prettier.useTabs": false, // 缩进不使用tab，使用空格
+  "prettier.semi": true, // 句尾添加分号
+  "prettier.singleQuote": false, // 使用单引号代替双引号
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorSurroundingLines": 5,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -89,11 +133,11 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": false,
-  "prettier.semi": false,
   "prettier.singleAttributePerLine": true,
-  "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
-  "projectManager.git.baseFolders": ["$home/workspace"],
+  "projectManager.git.baseFolders": [
+    "$home/workspace"
+  ],
   "projectManager.sortList": "Recent",
   "sortJSON.orderOverride": [
     "name",
@@ -133,164 +177,342 @@
   "vim.leader": ",", // leader键
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["leader", "r"],
-      "commands": ["editor.action.rename"]
+      "before": [
+        "leader",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
     },
     {
-      "before": ["leader", "w"],
-      "commands": [":w!"]
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        ":w!"
+      ]
     },
     {
-      "before": ["leader", "q"],
-      "commands": [":q!"]
+      "before": [
+        "leader",
+        "q"
+      ],
+      "commands": [
+        ":q!"
+      ]
     },
     {
-      "before": ["leader", "x"],
-      "commands": [":x!"]
+      "before": [
+        "leader",
+        "x"
+      ],
+      "commands": [
+        ":x!"
+      ]
     },
     {
-      "after": ["g", "g", "V", "G"],
-      "before": ["<c-a>"]
+      "after": [
+        "g",
+        "g",
+        "V",
+        "G"
+      ],
+      "before": [
+        "<c-a>"
+      ]
     },
     {
-      "before": ["<leader>", "k"],
-      "commands": ["editor.action.showHover"]
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
     },
     {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
     },
     {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
     },
     {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
     },
     {
-      "after": ["^"],
-      "before": ["H"]
+      "after": [
+        "^"
+      ],
+      "before": [
+        "H"
+      ]
     },
     {
-      "after": ["$"],
-      "before": ["L"]
+      "after": [
+        "$"
+      ],
+      "before": [
+        "L"
+      ]
     },
     {
-      "before": ["leader", "i"],
-      "commands": ["extension.toggleBool"]
+      "before": [
+        "leader",
+        "i"
+      ],
+      "commands": [
+        "extension.toggleBool"
+      ]
     },
     // 格式化代码
     {
-      "before": ["<leader>", "l", "f"],
-      "commands": ["editor.action.formatDocument"]
+      "before": [
+        "<leader>",
+        "l",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
     },
     // 转到定义
     {
-      "before": ["g", "d"],
-      "commands": ["editor.action.revealDefinition"]
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
     },
     // 转到引用
     {
-      "before": ["g", "r"],
-      "commands": ["editor.action.goToReferences"]
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
     },
     // 转到实现
     {
-      "before": ["g", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
     },
     // 回退到上一个位置
     {
-      "before": ["g", "b"],
-      "commands": ["workbench.action.navigateBack"]
+      "before": [
+        "g",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.navigateBack"
+      ]
     },
     // 变量符号重命名
     {
-      "before": ["<leader>", "l", "r"],
-      "commands": ["editor.action.rename"]
+      "before": [
+        "<leader>",
+        "l",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
     },
     // 定义速览
     {
-      "before": ["K"],
-      "commands": ["editor.action.showHover"]
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
     },
     // 全局搜索文件名
     {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
     },
     // 全局搜索文字
     {
-      "before": ["<leader>", "f", "w"],
-      "commands": ["workbench.action.findInFiles"]
+      "before": [
+        "<leader>",
+        "f",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
     },
     // 切换最左侧图标面板可见性
     {
-      "before": ["<leader>", "s", "a"],
-      "commands": ["workbench.action.toggleActivityBarVisibility"]
+      "before": [
+        "<leader>",
+        "s",
+        "a"
+      ],
+      "commands": [
+        "workbench.action.toggleActivityBarVisibility"
+      ]
     },
     // 打开文件浏览器
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
     },
     // 关闭当前标签页
     {
-      "before": ["<leader>", "w","c"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<leader>",
+        "w",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
     // 组中上一个标签页
     {
-      "before": ["H"],
-      "commands": ["workbench.action.previousEditorInGroup"]
+      "before": [
+        "H"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup"
+      ]
     },
     // 组中下一个标签页
     {
-      "before": ["L"],
-      "commands": ["workbench.action.nextEditorInGroup"]
+      "before": [
+        "L"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
+      ]
     },
     // 关闭标签组
     {
-      "before": ["<leader>", "g", "c"],
-      "commands": ["workbench.action.closeEditorsInGroup"]
+      "before": [
+        "<leader>",
+        "g",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsInGroup"
+      ]
     },
     // 移动到上一个标签组
     {
-      "before": ["<leader>", "H"],
-      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+      "before": [
+        "<leader>",
+        "H"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToPreviousGroup"
+      ]
     },
     // 移动到下一个标签组
     {
-      "before": ["<leader>", "L"],
-      "commands": ["workbench.action.moveEditorToNextGroup"]
+      "before": [
+        "<leader>",
+        "L"
+      ],
+      "commands": [
+        "workbench.action.moveEditorToNextGroup"
+      ]
     },
     // 全部折叠
     {
-      "before": ["<leader>", "z", "c"],
-      "commands": ["editor.foldAll"]
+      "before": [
+        "<leader>",
+        "z",
+        "c"
+      ],
+      "commands": [
+        "editor.foldAll"
+      ]
     },
     // 全部展开
     {
-      "before": ["<leader>", "z", "o"],
-      "commands": ["editor.unfoldAll"]
+      "before": [
+        "<leader>",
+        "z",
+        "o"
+      ],
+      "commands": [
+        "editor.unfoldAll"
+      ]
     },
     // gh 到行头
     {
-      "before": ["g", "h"],
-      "commands": ["cursorHome"]
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "cursorHome"
+      ]
     },
     // gl 到行尾
     {
-      "before": ["g", "l"],
-      "commands": ["cursorEnd"]
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        "cursorEnd"
+      ]
     },
     // ge 到文件尾
     {
-      "before": ["g", "e"],
-      "commands": ["cursorBottom"]
+      "before": [
+        "g",
+        "e"
+      ],
+      "commands": [
+        "cursorBottom"
+      ]
     }
   ],
+  "git.autofetch": true, // 在push代码时，是否先自动从远端拉取代码
   "workbench.colorTheme": "Everforest Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.editor": "json",
@@ -313,5 +535,11 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
   }
 }
