@@ -411,7 +411,7 @@
     "command": "-workbench.action.replaceInFiles"
   },
   {
-    "key": "g o",
+    "key": "ctrl+o",
     "command": "workbench.action.problems.focus"
   },
   {
