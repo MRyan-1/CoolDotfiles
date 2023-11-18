@@ -1,14 +1,193 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
+  // 显示命令面板
+  {
+    "key": "ctrl+g c",
+    "command": "workbench.action.showCommands"
+  },
+  // 新建vscode实例
+  {
+    "key": "ctrl+g n",
+    "command": "workbench.action.newWindow"
+  },
+  // 关闭vscode实例
+  {
+    "key": "ctrl+g q",
+    "command": "workbench.action.closeWindow"
+  },
   {
     "command": "projectManager.listGitProjects#sideBarGit",
     "key": "cmd+o"
   },
-
+  // 快速修复
   {
     "key": "alt+enter",
     "command": "editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  // -- 侧边栏命令
+  // 切换侧边栏显示状态
+  {
+    "key": "ctrl+n [",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  // 显示文件资源管理器
+  {
+    "key": "ctrl+n 1",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  // 显示TODO Tree
+  {
+    "key": "ctrl+n 2",
+    "command": "todo-tree-view.focus"
+  },
+  // 显示全局搜索
+  {
+    "key": "ctrl+n 3",
+    "command": "workbench.action.replaceInFiles"
+  },
+  // 显示debug
+  {
+    "key": "ctrl+n 4",
+    "command": "workbench.view.debug",
+    "when": "viewContainer.workbench.view.debug.enabled"
+  },
+  // 显示版本控制
+  {
+    "key": "ctrl+n 5",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  // 显示SQL Tools
+  {
+    "key": "ctrl+n 6",
+    "command": "workbench.view.extension.sqltoolsActivityBarContainer"
+  },
+  // 显示Docker
+  {
+    "key": "ctrl+n 7",
+    "command": "workbench.view.extension.dockerView"
+  },
+  // 显示测试
+  {
+    "key": "ctrl+n 8",
+    "command": "workbench.view.testing.focus"
+  },
+  // 显示插件商店
+  {
+    "key": "ctrl+n 9",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  // --- 代码编辑命令
+  // 触发帮助提示
+  {
+    "key": "ctrl+h",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  // 触发参数提示
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "closeParameterHints",
+    "when": "editorFocus && parameterHintsVisible"
+  },
+  // 触发建议提示
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "hideSuggestWidget",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  // 移动到下一个建议
+  {
+    "key": "ctrl+n",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  // 移动到上一个建议
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  // --- 面板命令
+  // 切换面板显示状态
+  {
+    "key": "ctrl+p [",
+    "command": "workbench.action.togglePanel"
+  },
+  // 显示问题
+  {
+    "key": "ctrl+p 1",
+    "command": "workbench.panel.markers.view.focus"
+  },
+  // 显示输出
+  {
+    "key": "ctrl+p 2",
+    "command": "workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  // 显示调试控制台
+  {
+    "key": "ctrl+p 4",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+  // 显示SQL CONSOLE
+  {
+    "key": "ctrl+p 5",
+    "command": "workbench.view.extension.sqltoolsPanelContainer"
+  },
+  // --- 取消一些vim插件的额外功能
+  {
+    "key": "ctrl+a",
+    "command": "-extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<D-a> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "alt+ctrl+down",
+    "command": "-extension.vim_ctrl+alt+down",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "alt+ctrl+up",
+    "command": "-extension.vim_ctrl+alt+up",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-extension.vim_ctrl+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "-extension.vim_ctrl+v",
+    "when": "editorTextFocus && vim.active && vim.use<D-v> && vim.mode == ''CommandlineInProgress' !inDebugRepl' || editorTextFocus && vim.active && vim.use<D-v> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-extension.vim_ctrl+left",
+    "when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-extension.vim_ctrl+right",
+    "when": "editorTextFocus && vim.active && vim.use<D-right> && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+w",
@@ -29,6 +208,7 @@
     "key": "ctrl+e",
     "when": "editorTextFocus"
   },
+  // 文件操作
   // 重命名
   {
     "key": "r",
@@ -77,12 +257,6 @@
     "command": "explorer.openAndPassFocus",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
-  // 在新标签组打开文件
-  {
-    "key": "shift+o",
-    "command": "explorer.openToSide",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  },
   // 全局搜索后，在输入框按回车，即可聚焦到搜索结果列表
   {
     "key": "enter",
@@ -107,26 +281,6 @@
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
-  // 缩小
-  {
-    "key": "ctrl+left",
-    "command": "workbench.action.decreaseViewSize"
-  },
-  // 扩大
-  {
-    "key": "ctrl+right",
-    "command": "workbench.action.increaseViewSize"
-  },
-  {
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl+n",
-    "when": "editorFocus"
-  },
-  {
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl+n",
-    "when": "editorFocus"
-  },
   {
     "command": "-workbench.action.files.save",
     "key": "cmd+s"
@@ -134,20 +288,6 @@
   {
     "command": "saveAll",
     "key": "cmd+s"
-  },
-  {
-    "command": "-editor.action.addSelectionToNextFindMatch",
-    "key": "cmd+d",
-    "when": "editorFocus"
-  },
-  {
-    "command": "-extension.vim_cmd+d",
-    "key": "cmd+d",
-    "when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
-  },
-  {
-    "command": "workbench.action.splitEditor",
-    "key": "cmd+d"
   },
   {
     "command": "-workbench.action.splitEditor",
@@ -240,7 +380,7 @@
     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
   },
   {
-    "key": "ctrl+r",
+    "key": "cmd+r",
     "command": "editor.action.startFindReplaceAction",
     "when": "editorFocus || editorIsOpen"
   },
@@ -256,5 +396,138 @@
   {
     "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-rerunSearchEditorSearch",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "g o",
+    "command": "workbench.action.problems.focus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown"
+  },
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+    "when": "inQuickOpen && inRecentFilesPicker"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-extension.vim_ctrl+r",
+    "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-python.refreshTensorBoard",
+    "when": "python.hasActiveTensorBoardSession"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-workbench.action.terminal.runRecentCommand",
+    "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "ctrl+cmd+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "shift+cmd+p",
+    "command": "-workbench.action.showCommands"
+  },
+  // 窗口聚焦
+  {
+    "key": "shift+left",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": ["<c-w>", "h"]
+    }
+  },
+  {
+    "key": "shift+right",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": ["<c-w>", "l"]
+    }
+  },
+  {
+    "key": "shift+up",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": ["<c-w>", "k"]
+    }
+  },
+  {
+    "key": "shift+down",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": ["<c-w>", "j"]
+    }
+  },
+  // 打开终端
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.terminal.splitActiveTab",
+    "when": "terminalProcessSupported && terminalTabsFocus"
+  },
+  // 聚焦到侧边的资源管理器
+  {
+    "key": "ctrl+;",
+    "command": "workbench.view.explorer"
+  },
+  // 聚焦编辑窗
+  {
+    "key": "ctrl+'",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-extension.vim_ctrl+j",
+    "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
   }
 ]

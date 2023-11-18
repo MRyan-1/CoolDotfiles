@@ -285,17 +285,6 @@
         "extension.toggleBool"
       ]
     },
-    // 格式化代码
-    {
-      "before": [
-        "<leader>",
-        "l",
-        "f"
-      ],
-      "commands": [
-        "editor.action.formatDocument"
-      ]
-    },
     // 转到定义
     {
       "before": [
@@ -356,39 +345,6 @@
         "editor.action.showHover"
       ]
     },
-    // 全局搜索文件名
-    {
-      "before": [
-        "<leader>",
-        "f",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
-    },
-    // 全局搜索文字
-    {
-      "before": [
-        "<leader>",
-        "f",
-        "w"
-      ],
-      "commands": [
-        "workbench.action.findInFiles"
-      ]
-    },
-    // 切换最左侧图标面板可见性
-    {
-      "before": [
-        "<leader>",
-        "s",
-        "a"
-      ],
-      "commands": [
-        "workbench.action.toggleActivityBarVisibility"
-      ]
-    },
     // 打开文件浏览器
     {
       "before": [
@@ -397,88 +353,6 @@
       ],
       "commands": [
         "workbench.view.explorer"
-      ]
-    },
-    // 关闭当前标签页
-    {
-      "before": [
-        "<leader>",
-        "w",
-        "c"
-      ],
-      "commands": [
-        "workbench.action.closeActiveEditor"
-      ]
-    },
-    // 组中上一个标签页
-    {
-      "before": [
-        "H"
-      ],
-      "commands": [
-        "workbench.action.previousEditorInGroup"
-      ]
-    },
-    // 组中下一个标签页
-    {
-      "before": [
-        "L"
-      ],
-      "commands": [
-        "workbench.action.nextEditorInGroup"
-      ]
-    },
-    // 关闭标签组
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "c"
-      ],
-      "commands": [
-        "workbench.action.closeEditorsInGroup"
-      ]
-    },
-    // 移动到上一个标签组
-    {
-      "before": [
-        "<leader>",
-        "H"
-      ],
-      "commands": [
-        "workbench.action.moveEditorToPreviousGroup"
-      ]
-    },
-    // 移动到下一个标签组
-    {
-      "before": [
-        "<leader>",
-        "L"
-      ],
-      "commands": [
-        "workbench.action.moveEditorToNextGroup"
-      ]
-    },
-    // 全部折叠
-    {
-      "before": [
-        "<leader>",
-        "z",
-        "c"
-      ],
-      "commands": [
-        "editor.foldAll"
-      ]
-    },
-    // 全部展开
-    {
-      "before": [
-        "<leader>",
-        "z",
-        "o"
-      ],
-      "commands": [
-        "editor.unfoldAll"
       ]
     },
     // gh 到行头
@@ -510,9 +384,167 @@
       "commands": [
         "cursorBottom"
       ]
+    },
+    // ******************leader键位******************8
+    // " z: zip(fold) ⭐️
+    // 全部折叠
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "c"
+      ],
+      "commands": [
+        "editor.foldAll"
+      ]
+    },
+    // 全部展开
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "o"
+      ],
+      "commands": [
+        "editor.unfoldAll"
+      ]
+    },
+    // " w: Window ⭐️
+    // 关闭当前选项卡或分屏
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    // 拆分一个上下分屏
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
+    },
+    // 拆分一个左右分屏
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    // 将光标向上动1屏
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
+    },
+    // 将光标向下动1屏
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
+    },
+    // 将光标向左移动1屏
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    // 将光标向右移动1屏
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    // " o: Open ⭐️
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.openSettings"
+      ]
+    },
+    // 打开热键映射
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.openGlobalKeybindings"
+      ]
+    },
+    // 打开一个目录
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "m"
+      ],
+      "commands": [
+        "workbench.action.files.openFolder"
+      ]
+    },
+    // 打开一个文件
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.files.openFile"
+      ]
+    },
+    // 打开最近记录
+    {
+      "before": [
+        "<leader>",
+        "o",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.openRecent"
+      ]
     }
   ],
-  "git.autofetch": true, // 在push代码时，是否先自动从远端拉取代码
+  // 在push代码时，是否先自动从远端拉取代码
+  "git.autofetch": true,
   "workbench.colorTheme": "Everforest Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.editor": "json",
@@ -541,5 +573,7 @@
   },
   "[java]": {
     "editor.defaultFormatter": "mwpb.java-prettier-formatter"
-  }
+  },
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.hint.commentDescription": false
 }
