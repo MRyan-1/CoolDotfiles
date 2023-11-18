@@ -1,23 +1,44 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
+  // 打开设置
+  {
+    "key": "cmd+o s",
+    "command": "workbench.action.openSettings"
+  },
+  // 打开热键映射
+  {
+    "key": "cmd+o k",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  // 打开一个目录
+  {
+    "key": "cmd+o m",
+    "command": "workbench.action.files.openFolder"
+  },
+  // 打开一个文件
+  {
+    "key": "cmd+o f",
+    "command": "workbench.action.files.openFile"
+  },
+  // 打开最近记录
+  {
+    "key": "cmd+o h",
+    "command": "workbench.action.openRecent"
+  },
   // 显示命令面板
   {
-    "key": "ctrl+g c",
+    "key": "cmd+o c",
     "command": "workbench.action.showCommands"
   },
   // 新建vscode实例
   {
-    "key": "ctrl+g n",
+    "key": "cmd+o n",
     "command": "workbench.action.newWindow"
   },
   // 关闭vscode实例
   {
-    "key": "ctrl+g q",
+    "key": "cmd+o q",
     "command": "workbench.action.closeWindow"
-  },
-  {
-    "command": "projectManager.listGitProjects#sideBarGit",
-    "key": "cmd+o"
   },
   // 快速修复
   {
@@ -529,5 +550,16 @@
     "key": "ctrl+j",
     "command": "-extension.vim_ctrl+j",
     "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+  },
+  // jumpy
+  {
+    "key": "cmd+;",
+    "command": "extension.jumpy-word",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "Escape",
+    "command": "extension.jumpy-exit",
+    "when": "editorTextFocus && jumpy.isJumpyMode"
   }
 ]
