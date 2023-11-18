@@ -555,16 +555,5 @@
     "key": "ctrl+j",
     "command": "-extension.vim_ctrl+j",
     "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
-  },
-  // jumpy
-  {
-    "key": "cmd+;",
-    "command": "extension.jumpy-word",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "Escape",
-    "command": "extension.jumpy-exit",
-    "when": "editorTextFocus && jumpy.isJumpyMode"
   }
 ]
