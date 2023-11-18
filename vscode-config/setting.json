@@ -504,61 +504,6 @@
       "commands": [
         "workbench.action.focusRightGroup"
       ]
-    },
-    // " o: Open ⭐️
-    {
-      "before": [
-        "<leader>",
-        "o",
-        "s"
-      ],
-      "commands": [
-        "workbench.action.openSettings"
-      ]
-    },
-    // 打开热键映射
-    {
-      "before": [
-        "<leader>",
-        "o",
-        "k"
-      ],
-      "commands": [
-        "workbench.action.openGlobalKeybindings"
-      ]
-    },
-    // 打开一个目录
-    {
-      "before": [
-        "<leader>",
-        "o",
-        "m"
-      ],
-      "commands": [
-        "workbench.action.files.openFolder"
-      ]
-    },
-    // 打开一个文件
-    {
-      "before": [
-        "<leader>",
-        "o",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.files.openFile"
-      ]
-    },
-    // 打开最近记录
-    {
-      "before": [
-        "<leader>",
-        "o",
-        "h"
-      ],
-      "commands": [
-        "workbench.action.openRecent"
-      ]
     }
   ],
   // 在push代码时，是否先自动从远端拉取代码
