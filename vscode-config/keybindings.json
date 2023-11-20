@@ -15,6 +15,12 @@
     "key": "cmd+o s",
     "command": "workbench.action.openSettings"
   },
+  // 打开终端
+  {
+    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "cmd+o t",
+    "when": "terminal.active"
+  },
   // 打开热键映射
   {
     "key": "cmd+o k",
@@ -55,17 +61,7 @@
     "key": "cmd+o q",
     "command": "workbench.action.closeWindow"
   },
-  // 打开终端
-  {
-    "command": "workbench.action.terminal.toggleTerminal",
-    "key": "ctrl+\\",
-    "when": "terminal.active"
-  },
-  {
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "key": "ctrl+`",
-    "when": "terminal.active"
-  },
+
   // 快速修复
   {
     "key": "alt+enter",
