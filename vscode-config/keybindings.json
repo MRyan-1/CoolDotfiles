@@ -501,5 +501,22 @@
     "key": "ctrl+k",
     "command": "-extension.vim_ctrl+k",
     "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+  },
+  // leetcode插件
+  {
+    "key": "cmd+l o",
+    "command": "leetCodeExplorer.focus"
+  },
+  {
+    "key": "cmd+l s",
+    "command": "leetcode.searchProblem"
+  },
+  {
+    "key": "cmd+l p",
+    "command": "leetcode.submitSolution"
+  },
+  {
+    "key": "cmd+l t",
+    "command": "leetcode.testSolution"
   }
 ]
