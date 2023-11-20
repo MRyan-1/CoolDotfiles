@@ -67,8 +67,8 @@ nmap gp <action>(MethodUp)
 "下一个方法
 nmap gn <action>(MethodDown)
 " Move half page faster (上下翻页)
-nmap gj <C-d>
-nmap gk <C-u>
+nmap J <C-d>
+nmap K <C-u>
 
 
 
