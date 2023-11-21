@@ -95,7 +95,7 @@
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
       // #vue组件中html代码格式化样式
-      "wrap_attributes": "farce-aligned", //也可以设置为“auto”，效果会不一样
+      "wrap_attributes": "force-aligned", //也可以设置为“auto”，效果会不一样
       "wrap_line_length": 200,
       "end_with_newline": false,
       "semi": false,
@@ -194,40 +194,14 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // 进入块可视化模式，blockwise visual mode
     {
       "before": [
-        "leader",
-        "r"
+        "<leader>",
+        "v"
       ],
-      "commands": [
-        "editor.action.rename"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "w"
-      ],
-      "commands": [
-        ":w!"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "q"
-      ],
-      "commands": [
-        ":q!"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "x"
-      ],
-      "commands": [
-        ":x!"
+      "after": [
+        "<C-v>"
       ]
     },
     {
@@ -269,16 +243,6 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "c",
-        "a"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ]
-    },
-    {
       "after": [
         "^"
       ],
@@ -292,15 +256,6 @@
       ],
       "before": [
         "L"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "i"
-      ],
-      "commands": [
-        "extension.toggleBool"
       ]
     },
     // 转到定义
@@ -343,15 +298,22 @@
         "workbench.action.navigateBack"
       ]
     },
-    // 变量符号重命名
+    // 组中上一个标签页
     {
       "before": [
-        "<leader>",
-        "l",
-        "r"
+        "H"
       ],
       "commands": [
-        "editor.action.rename"
+        "workbench.action.previousEditorInGroup"
+      ]
+    },
+    // 组中下一个标签页
+    {
+      "before": [
+        "L"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
       ]
     },
     // 定义速览
@@ -505,59 +467,84 @@
         "workbench.action.focusRightGroup"
       ]
     },
-    // " o: Open ⭐️
+    // " c: Code ⭐️
+    // 变量符号重命名
     {
       "before": [
         "<leader>",
-        "o",
-        "s"
+        "c",
+        "r"
       ],
       "commands": [
-        "workbench.action.openSettings"
+        "editor.action.rename"
       ]
     },
-    // 打开热键映射
+    // 快速修复
     {
       "before": [
         "<leader>",
-        "o",
-        "k"
+        "c",
+        "a"
       ],
       "commands": [
-        "workbench.action.openGlobalKeybindings"
+        "editor.action.quickFix"
       ]
     },
-    // 打开一个目录
+    // 触发帮助提示
     {
       "before": [
         "<leader>",
-        "o",
-        "m"
-      ],
-      "commands": [
-        "workbench.action.files.openFolder"
-      ]
-    },
-    // 打开一个文件
-    {
-      "before": [
-        "<leader>",
-        "o",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.files.openFile"
-      ]
-    },
-    // 打开最近记录
-    {
-      "before": [
-        "<leader>",
-        "o",
+        "c",
         "h"
       ],
       "commands": [
-        "workbench.action.openRecent"
+        "editor.action.focusRightGroup"
+      ]
+    },
+    // 触发参数提示
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "n"
+      ],
+      "commands": [
+        "editor.action.triggerParameterHints",
+        "editor.action.closeParameterHints"
+      ]
+    },
+    // 触发建议提示
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "p"
+      ],
+      "commands": [
+        "editor.action.triggerSuggest",
+        "hideSuggestWidget"
+      ]
+    },
+    // 移动到下一个建议
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "j"
+      ],
+      "commands": [
+        "selectNextSuggestion"
+      ]
+    },
+    // 移动到上一个建议
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "k"
+      ],
+      "commands": [
+        "selectPrevSuggestion"
       ]
     }
   ],
@@ -595,5 +582,7 @@
   "leetcode.hint.configWebviewMarkdown": false,
   "leetcode.hint.commentDescription": false,
   "terminal.integrated.inheritEnv": false,
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "terminal.integrated.cursorBlinking": true
 }
