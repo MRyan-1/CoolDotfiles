@@ -1,5 +1,8 @@
 // 将键绑定放在此文件中以覆盖默认值
 [
+  // 显示/隐藏左侧目录栏 cmd+b
+  // 标签页之间切换 ctrl+tab
+
   // 切换窗口
   {
     "command": "workbench.action.switchWindow",
@@ -60,6 +63,22 @@
   {
     "key": "cmd+o q",
     "command": "workbench.action.closeWindow"
+  },
+  // --- 编辑区命令
+  // 关闭当前选项卡或分屏
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  // 切换到上一个选项卡
+  {
+    "key": "cmd+,",
+    "command": "workbench.action.previousEditor"
+  },
+  // 切换到下一个选项卡
+  {
+    "key": "cmd+.",
+    "command": "workbench.action.nextEditor"
   },
 
   // 快速修复
@@ -150,6 +169,7 @@
     "key": "ctrl+p 5",
     "command": "workbench.view.extension.sqltoolsPanelContainer"
   },
+
   // --- 取消一些vim插件的额外功能
   {
     "key": "ctrl+a",
