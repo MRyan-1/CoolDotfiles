@@ -3,6 +3,12 @@
   // 显示/隐藏左侧目录栏 cmd+b
   // 标签页之间切换 ctrl+tab
 
+  // 查看: 切换最大化编辑器组
+  {
+    "key": "ctrl+z x",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+  },
   // 切换窗口
   {
     "command": "workbench.action.switchWindow",
@@ -569,5 +575,10 @@
     "key": "shift+alt+f",
     "command": "-editor.action.formatDocument.none",
     "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+m",
+    "command": "-workbench.action.toggleMaximizeEditorGroup",
+    "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
   }
 ]
