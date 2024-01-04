@@ -5,7 +5,7 @@
 
   // 查看: 切换最大化编辑器组
   {
-    "key": "ctrl+z x",
+    "key": "ctrl+shift+z",
     "command": "workbench.action.toggleMaximizeEditorGroup",
     "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
   },
