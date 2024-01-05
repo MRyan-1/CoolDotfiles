@@ -638,5 +638,9 @@
     "key": "ctrl+shift+-",
     "command": "-workbench.action.navigateForward",
     "when": "canNavigateForward"
+  },
+  {
+    "key": "cmd+l p",
+    "command": "leetcode.pickOne"
   }
 ]
