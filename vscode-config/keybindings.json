@@ -545,6 +545,10 @@
     "key": "cmd+l t",
     "command": "leetcode.testSolution"
   },
+  {
+    "key": "cmd+l p",
+    "command": "leetcode.pickOne"
+  },
   // 格式化
   {
     "key": "alt+cmd+l",
@@ -638,9 +642,5 @@
     "key": "ctrl+shift+-",
     "command": "-workbench.action.navigateForward",
     "when": "canNavigateForward"
-  },
-  {
-    "key": "cmd+l p",
-    "command": "leetcode.pickOne"
   }
 ]
