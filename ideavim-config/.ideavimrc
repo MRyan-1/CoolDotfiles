@@ -392,7 +392,17 @@ nmap <leader>lc <action>(leetcode.editor.OpenContentAction)
 let g:WhichKeyDesc_Lt_OpenSolutionAction = "<leader>ls 展示题解"
 nmap <leader>ls <action>(leetcode.editor.OpenSolutionAction)
 " menu
-let g:WhichKeyDesc_Lt_OpenSolutionAction = "<leader>lm 打开菜单"
+let g:WhichKeyDesc_Lt_OpenMenu = "<leader>lm 打开菜单"
 nmap <leader>lm <action>(leetcode.editor.menu)
+" 查找工具栏
+let g:WhichKeyDesc_Lt_findToolbar = "<leader>lf 查找工具栏"
+nmap <leader>lf <action>(leetcode.all.find.Toolbar)
+" 从Web打开
+let g:WhichKeyDesc_Lt_OpenInWebAction = "<leader>lw 从Web打开"
+nmap <leader>lw <action>(leetcode.editor.OpenInWebAction)
+" 快速选择
+let g:WhichKeyDesc_Lt_PickAction = "<leader>lp 快速选择"
+nmap <leader>lp <action>(leetcode.PickAction)
+
 
 
