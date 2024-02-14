@@ -30,7 +30,8 @@ ime_switcher.app2Ime = {{'/Applications/iTerm.app', 'English'}, {'/Applications/
                         {'/Applications/starfish.app', 'Chinese'}, {'/Applications/Microsoft Edge.app', 'Chinese'},
                         {'/Applications/Postman.app', 'English'}, {'/Applications/Safari.app', 'Chinese'},
                         {'/Applications/Obsidian.app', 'English'}, {'/Applications/Navicat Premium.app', 'English'},
-                        {'/Applications/Lark.app', 'Chinese'}, {'/Applications/wechatwebdevtools.app', 'English'}}
+                        {'/Applications/Lark.app', 'Chinese'}, {'/Applications/wechatwebdevtools.app', 'English'},
+                        {'/System/Applications/Reminders.app', 'Chinese'}}
 -- 没有在app2IM中指定切换的APP的默认输入法语言
 ime_switcher.excludingDefaultIme = 'English'
 
