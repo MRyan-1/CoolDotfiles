@@ -1,20 +1,10 @@
 ## XML format
 
-
-
 ## Vim
-
-
-
-
 
 ## Turbo Console Log
 
-
-
 ## Template String Converter
-
-
 
 ## SQL Formatter
 
@@ -26,15 +16,13 @@
 
 ## EsLint
 
-## open in browser 
+## open in browser
 
-在浏览器里预览网页必备。运行html文件
+在浏览器里预览网页必备。运行 html 文件
 
-## Auto Rename Tag  
+## Auto Rename Tag
 
 自动修改匹配的 HTML 标签
-
-
 
 ## Path Intellisense
 
@@ -52,32 +40,23 @@ CSS / SCSS / Less 语法检查
 
 引入包大小计算,对于项目打包后体积掌握很有帮助
 
-
-
 ## Prettier
 
-比Beautify更好用的代码格式化插件
+比 Beautify 更好用的代码格式化插件
 
-可以配置.prettierc.js文件,配合eslint、git hooks 一起使用，提升项目代码的规范性
-
-
+可以配置.prettierc.js 文件,配合 eslint、git hooks 一起使用，提升项目代码的规范性
 
 ## code runner
 
-直接运行.js等文件，在控制台输出结果
-
+直接运行.js 等文件，在控制台输出结果
 
 ## vetur
 
-语法高亮、智能感知、Emmet等
-
-
+语法高亮、智能感知、Emmet 等
 
 ## VueHelper
 
-snippet代码片段
-
-
+snippet 代码片段
 
 ## **GitLens**
 
@@ -85,10 +64,12 @@ snippet代码片段
 
 Git 重度使用者必备，尤其是多人协作时：哪一行代码，何时、何人提交都有记录。
 
-
-
 ## change-case
 
+## Image preview
 
+在编辑器的间隙中和鼠标悬停在图片上可预览图像
 
-## 
+## Svg Preview
+
+VSCode 的 Svg 预览。
