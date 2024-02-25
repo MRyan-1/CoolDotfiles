@@ -134,15 +134,17 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "command-palette:Open command palette": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false
     }
   },
   "active": "2f5e37caf92a8841",
   "lastOpenFiles": [
+    "分布式队列.md",
+    "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
     "Learning Database/Tutorial/数据结构与算法之美/37 | 贪心算法：如何用贪心算法实现Huffman压缩编码？.md",
     "Learning Database/Tutorial/数据结构与算法之美/36 | AC自动机：如何用多模式串匹配实现敏感词过滤功能？.md",
     "Learning Database/Tutorial/数据结构与算法之美/31 | 深度和广度优先搜索：如何找出社交网络中的三度好友关系？.md",
@@ -169,8 +171,6 @@
     "Learning Database/Tutorial/ETCD实战课/02 | 基础架构：etcd一个读请求是如何执行的？.md",
     "Learning Database/Company/Other/陈驰 评审.pptx",
     "Learning Database/Company/Other/汇报材料-任亚健-20230728V2.pptx",
-    "media/02/f9/02f4e777265a24e2a9a3f20d1192c7f9.gif.md",
-    "Learning Database/Tutorial/ETCD实战课/01 | etcd的前世今生：为什么Kubernetes使用etcd？.md",
     "media",
     "media/02",
     "media/02/f9",

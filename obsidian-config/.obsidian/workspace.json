@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "03b7c4a59449a522",
+        "id": "644d1b557c3953be",
         "type": "tabs",
         "children": [
           {
-            "id": "2838bf58ddce3616",
+            "id": "4ff690497128abd1",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "拜占庭容错",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 430.50390243530273,
-    "collapsed": true
+    "width": 422.5
   },
   "right": {
     "id": "c0f3f24ead45e8bd",
@@ -74,6 +73,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Learning Database/Learning materials/后端/面经/主流企业高频题库.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -95,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Learning Database/Learning materials/后端/面经/主流企业高频题库.pdf"
+              }
             }
           },
           {
@@ -104,6 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Learning Database/Learning materials/后端/面经/主流企业高频题库.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +123,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -133,61 +138,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "2838bf58ddce3616",
+  "active": "4ff690497128abd1",
   "lastOpenFiles": [
-    "Learning Database/Tutorial/从0开始学架构/23 | 想成为架构师，你必须掌握的CAP细节.md",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/11 | 分布式调度架构之单体调度：物质文明、精神文明一手抓.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/开篇词 | 四纵四横，带你透彻理解分布式技术.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/结束语 | 为什么说提升职业竞争力要从尊重、诚实开始？.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/26 | 分布式数据复制技术：分身有术.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/30 | 分布式高可用之故障隔离：当断不断，反受其乱.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/29 | 分布式高可靠之流量控制：大禹治水，在疏不在堵.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/28 | 分布式高可靠之负载均衡：不患寡，而患不均.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/15 | 分布式计算模式之MR：一门同流合污的艺术.pdf",
-    "Learning Database/Tutorial/分布式技术原理与算法解析/特别放送 | 分布式下的一致性杂谈.pdf",
-    "Learning Database/Tutorial/分布式协议与算法实战/加餐  | 拜占庭将军问题：如何基于签名消息实现作战计划的一致性？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/16 | InfluxDB企业版一致性实现剖析：他山之石，可以攻玉.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/学习路径 | 分布式协议与算法你应该这么学.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/12/13/122bdf34957c6277352ea51c43552213.png",
-    "Learning Database/Tutorial/分布式协议与算法实战/结束语 | 静下心来，享受技术的乐趣.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/20 | 基于Raft的分布式KV系统开发实战（二）：如何实现代码？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/19 | 基于Raft的分布式KV系统开发实战（一）：如何设计架构？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/17  | Hashicorp Raft（一）：如何跨过理论和代码之间的鸿沟？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（三）：如何处理读写请求？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（二）：如何从故障中恢复？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | ZAB协议（一）：主节点崩溃了，怎么办？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/15 | ZAB协议：如何实现操作的顺序性？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/14 | PoW算法：有办法黑比特币吗？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/13 | PBFT算法：有人作恶，如何达成共识？.md",
-    "Learning Database/Tutorial/左耳听风/081-81程序员练级攻略分布式架构入门.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/01 | 拜占庭将军问题：有叛徒的情况下，如何才能达成共识？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/加餐 | PBFT算法：如何替换作恶的领导者？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/12 | Quorum NWR算法：想要灵活地自定义一致性，没问题！.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/11 | Gossip协议：流言蜚语，原来也可以实现一致性.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/10 | 一致哈希算法：如何分群，突破集群的“领导者”限制？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/09 | Raft算法（三）：如何解决成员变更的问题？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/4a/27/4a00b7e1b89922cd9f785c6f153aca27.jpg",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/5f/b8/5fe7c8d90857737d7314263eae2166b8.jpg",
-    "Learning Database/Tutorial/分布式协议与算法实战/08 | Raft算法（二）：如何复制日志？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/07 | Raft算法（一）：如何选举领导者？.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/99/6d/9932935b415e37c2ca758ab99b34f66d.jpg",
-    "Learning Database/Tutorial/分布式协议与算法实战/03 | ACID理论：CAP的酸，追求一致性.md",
-    "Learning Database/Tutorial/分布式协议与算法实战/06 | Paxos算法（二）：Multi-Paxos不是一个算法，而是统称.md",
-    "media/7e/2c",
-    "Learning Database/Tutorial/从0开始学架构/media/51/1e/512e0154b67af3ede568667940a2a61e.png",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/67/48/67aa4a0e56dcc8ad34bf1b0232f12748.jpg",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/a6/65/a61a426bccbe27e48ca75db909ae8265.jpg",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/b2/a4/b27f4ff771fa8e9b671f5864c96d9aa4.jpg",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/9b/c2/9bf9c133ad815219791f87799bee5cc2.jpg",
-    "Learning Database/Tutorial/分布式协议与算法实战/media/89/51/890b9890584a4f17306da88fedea3451.jpg",
+    "Learning Database/Learning materials/后端/面经/50w字程序员面试宝典.pdf",
+    "Learning Database/Learning materials/后端/面经/30万字大厂面试真题深度解析.pdf",
+    "Learning Database/Physical training/书籍/肌骨重建.pdf",
+    "Learning Database/Physical training/书籍/NSCA-CPT美国私人教练认证指南 第2版.pdf",
+    "Learning Database/Physical training/书籍/NASM-CES美国国家运动医学会纠正性训练指南.pdf",
+    "Learning Database/Physical training/书籍/周期训练理论与方法 第6版.pdf",
+    "Learning Database/Physical training/书籍/VBT基于速度的力量训练 【美】农西奥·西尼奥雷 （Nunzio Signore） 著 2023年_9.pdf",
+    "Learning Database/Physical training/书籍/NSCA-CSCS美国国家体能协会体能教练认证指南第4版.pdf",
+    "Learning Database/Physical training/书籍/调控力量.pdf",
+    "Learning Database/Physical training/书籍/NASM-PES美国国家运动医学会运动表现训练指南 第2版.pdf",
+    "Learning Database/Physical training/书籍/NASM-CPT美国国家运动医学学会 私人教练认证指南 第6版 by 迈克尔 .pdf",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/05 - HTTP调用：你考虑到超时、重试、并发了吗？.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/加餐2 - 带你吃透课程中Java 8的那些重要知识点（下）.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/08 - 判等问题：程序里如何确定你就是你？.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/07 - 数据库索引：索引并不是万能药.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/03 - 线程池：业务代码最常用也最容易犯错的组件.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/06 - 20%的业务代码的Spring声明式事务，可能都没处理正确.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/01 - 使用了并发工具类库，线程安全就高枕无忧了吗？.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/开篇词 - 业务代码真的会有这么多坑？.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/04 - 连接池：别让连接池帮了倒忙.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/02 - 代码加锁：不要让“锁”事成为烦心事.md",
+    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/加餐1 - 带你吃透课程中Java 8的那些重要知识点（上）.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/13 | 设计量化会把创意扼杀在摇篮里吗？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/fd/69/fd61f77cce98bc987cd3ae1037501269.jpg",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f8/98/f800a8dd1cd96bf96a032d0e0a3c6b98.png",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f8/59/f8d0ec4a9b35ab1c4193ffed5c921159.png",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f6/c4/f6daf703070b8eb46d59a00e54297ec4.png",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f1/50/f1d495b5702ce2f9e8f3f5dfc2c46d50.jpg",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f6/11/f6ac27f648f657fcfd629255afc69511.png",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f2/0d/f2fd785faebc490241a59360cd6df30d.jpg",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f5/0c/f5f147cbaf96b146a826487efdbf410c.jpg",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f4/6f/f4a6536cde4b16681c4e7b59f36ef36f.jpg",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f4/da/f4d5677ce974e9b7224806c2fb15f4da.jpg",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/11 | 设计师的能力水平可以量化吗？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/16 |  产品体验的评估也可以量化吗？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/14 | 如何用量化的方式讲清设计价值？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/春节加餐2 | 用户故事：设计也要学以致用.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/15 | 如何建立设计方案的验证模型？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/06 | 如何给你的体验地图加一个设计导航？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/开篇词 | 不解决实际问题的体验设计都是耍流氓.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/12 | 如何用量化手段判断需求的优先级？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/03 | 你画像中的用户是真的还是假的？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/21 | 如何打破设计师的成长天花板？.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/春节加餐3 | 书单分享：阅读是一种人生的体验.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/加餐 | 大厂的围城：你想进去，我想逃离.md",
+    "Learning Database/Tutorial/体验设计案例课（更新中）/19 | 什么样的设计流程是最高效的？.md",
     "未命名.canvas"
   ]
 }
