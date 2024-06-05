@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "644d1b557c3953be",
+        "id": "31ff9303aa9ace87",
         "type": "tabs",
         "children": [
           {
-            "id": "4ff690497128abd1",
+            "id": "fb89968de4ed2f11",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "24年/6月/用车监控与报警 - 配置调整建议.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -46,9 +51,9 @@
               "state": {
                 "query": "",
                 "matchingCase": false,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               }
             }
@@ -57,7 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 422.5
+    "width": 225.5
   },
   "right": {
     "id": "c0f3f24ead45e8bd",
@@ -73,7 +78,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning Database/Learning materials/后端/面经/主流企业高频题库.pdf",
+                "file": "24年/6月/用车监控与报警 - 配置调整建议.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -96,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Learning Database/Learning materials/后端/面经/主流企业高频题库.pdf"
+                "file": "24年/6月/用车监控与报警 - 配置调整建议.md"
               }
             }
           },
@@ -106,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning Database/Learning materials/后端/面经/主流企业高频题库.pdf",
+                "file": "24年/6月/用车监控与报警 - 配置调整建议.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,62 +143,63 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "command-palette:打开命令面板": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4ff690497128abd1",
+  "active": "fb89968de4ed2f11",
   "lastOpenFiles": [
+    "24年/6月/media/Pasted image 20240605100211.png",
+    "24年/6月/media",
+    "24年/6月/Pasted image 20240605100131.png",
+    "24年/6月/用车监控与报警 - 配置调整建议.md",
+    "24年/5月/计价规则接口.md",
+    "24年/5月/530上线.md",
+    "24年/5月/530疑问.md",
+    "24年/5月/包冲突排查.md",
+    "24年/6月",
+    "24年/5月",
+    "5月",
+    "未命名文件夹",
+    "530上线.md",
+    "24年",
+    "未命名 1.md",
+    "包冲突排查.md",
+    "24年/5月/media/Pasted image 20240529112451.png",
+    "24年/5月/media/Pasted image 20240529112227.png",
+    "24年/5月/media/Pasted image 20240529112215.png",
+    "24年/5月/media/Pasted image 20240529111920.png",
+    "24年/5月/media/Pasted image 20240529111231.png",
+    "24年/5月/media/Pasted image 20240529110246.png",
+    "530疑问.md",
+    "计价规则接口.md",
+    "24年/5月/media/Pasted image 20240529100844.png",
+    "24年/5月/media/Pasted image 20240529100809.png",
+    "24年/5月/media",
+    "Pasted image 20240529100509.png",
+    "Welcome.md",
+    "Learning Database/Tutorial/ETCD实战课/02 | 基础架构：etcd一个读请求是如何执行的？.md",
+    "Learning Database/Tutorial/ETCD实战课/01 | etcd的前世今生：为什么Kubernetes使用etcd？.md",
+    "Learning Database/Tutorial/ETCD实战课/03 | 基础架构：etcd一个写请求是如何执行的？.md",
+    "Learning Database/Tutorial/大厂晋升指南/加餐二 | 提名词：怎么夸自己才最加分？.md",
+    "Learning Database/Tutorial/大厂晋升指南/30 | 四线复盘法：怎么避免成为背锅侠？.md",
+    "Learning Database/Tutorial/大厂晋升指南/28 | 4D总结法：怎么展示你的工作亮点？.md",
+    "Learning Database/Tutorial/大厂晋升指南/25 | PDCA执行法：怎么推动落地才能“步步为赢”？.md",
+    "Learning Database/Tutorial/大厂晋升指南/24 | 3C方案设计法：怎么让你的方案有理有据？.md",
+    "Learning Database/Tutorial/大厂晋升指南/23 | OKR规划法：Team Leader 怎么做团队规划？.md",
+    "Learning Database/Tutorial/大厂晋升指南/22 | OKR的优势：为什么要用OKR来取代KPI做团队规划？.md",
+    "Learning Database/Tutorial/大厂晋升指南/20 | Play & Teach：怎么摆脱“从入门到忘记”的学习困境？.md",
+    "Learning Database/Tutorial/大厂晋升指南/17 | 海绵学习法：怎么找到你的10000小时？.md",
+    "Learning Database/Tutorial/大厂晋升指南/16 | 导学：你应该掌握哪些学习方法？.md",
+    "Learning Database/Tutorial/大厂晋升指南/14 | PPT讲解：怎么讲才能让评委印象深刻？.md",
     "Learning Database/Learning materials/后端/面经/50w字程序员面试宝典.pdf",
     "Learning Database/Learning materials/后端/面经/30万字大厂面试真题深度解析.pdf",
-    "Learning Database/Physical training/书籍/肌骨重建.pdf",
-    "Learning Database/Physical training/书籍/NSCA-CPT美国私人教练认证指南 第2版.pdf",
-    "Learning Database/Physical training/书籍/NASM-CES美国国家运动医学会纠正性训练指南.pdf",
-    "Learning Database/Physical training/书籍/周期训练理论与方法 第6版.pdf",
-    "Learning Database/Physical training/书籍/VBT基于速度的力量训练 【美】农西奥·西尼奥雷 （Nunzio Signore） 著 2023年_9.pdf",
-    "Learning Database/Physical training/书籍/NSCA-CSCS美国国家体能协会体能教练认证指南第4版.pdf",
-    "Learning Database/Physical training/书籍/调控力量.pdf",
-    "Learning Database/Physical training/书籍/NASM-PES美国国家运动医学会运动表现训练指南 第2版.pdf",
-    "Learning Database/Physical training/书籍/NASM-CPT美国国家运动医学学会 私人教练认证指南 第6版 by 迈克尔 .pdf",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/05 - HTTP调用：你考虑到超时、重试、并发了吗？.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/加餐2 - 带你吃透课程中Java 8的那些重要知识点（下）.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/08 - 判等问题：程序里如何确定你就是你？.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/07 - 数据库索引：索引并不是万能药.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/03 - 线程池：业务代码最常用也最容易犯错的组件.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/06 - 20%的业务代码的Spring声明式事务，可能都没处理正确.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/01 - 使用了并发工具类库，线程安全就高枕无忧了吗？.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/开篇词 - 业务代码真的会有这么多坑？.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/04 - 连接池：别让连接池帮了倒忙.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/02 - 代码加锁：不要让“锁”事成为烦心事.md",
-    "Learning Database/Tutorial/Java 业务开发常见错误 100 例/加餐1 - 带你吃透课程中Java 8的那些重要知识点（上）.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/13 | 设计量化会把创意扼杀在摇篮里吗？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/fd/69/fd61f77cce98bc987cd3ae1037501269.jpg",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f8/98/f800a8dd1cd96bf96a032d0e0a3c6b98.png",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f8/59/f8d0ec4a9b35ab1c4193ffed5c921159.png",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f6/c4/f6daf703070b8eb46d59a00e54297ec4.png",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f1/50/f1d495b5702ce2f9e8f3f5dfc2c46d50.jpg",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f6/11/f6ac27f648f657fcfd629255afc69511.png",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f2/0d/f2fd785faebc490241a59360cd6df30d.jpg",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f5/0c/f5f147cbaf96b146a826487efdbf410c.jpg",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f4/6f/f4a6536cde4b16681c4e7b59f36ef36f.jpg",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/media/f4/da/f4d5677ce974e9b7224806c2fb15f4da.jpg",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/11 | 设计师的能力水平可以量化吗？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/16 |  产品体验的评估也可以量化吗？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/14 | 如何用量化的方式讲清设计价值？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/春节加餐2 | 用户故事：设计也要学以致用.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/15 | 如何建立设计方案的验证模型？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/06 | 如何给你的体验地图加一个设计导航？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/开篇词 | 不解决实际问题的体验设计都是耍流氓.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/12 | 如何用量化手段判断需求的优先级？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/03 | 你画像中的用户是真的还是假的？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/21 | 如何打破设计师的成长天花板？.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/春节加餐3 | 书单分享：阅读是一种人生的体验.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/加餐 | 大厂的围城：你想进去，我想逃离.md",
-    "Learning Database/Tutorial/体验设计案例课（更新中）/19 | 什么样的设计流程是最高效的？.md",
+    "Learning Database/Learning materials/算法/P8大佬的算法解题笔记.pdf",
     "未命名.canvas"
   ]
 }

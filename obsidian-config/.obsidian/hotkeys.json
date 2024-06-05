@@ -64,8 +64,8 @@
   "editor:focus-right": [
     {
       "modifiers": [
-        "Ctrl",
-        "Mod"
+        "Mod",
+        "Ctrl"
       ],
       "key": "ArrowRight"
     }
@@ -196,10 +196,37 @@
   "editor:focus-left": [
     {
       "modifiers": [
-        "Ctrl",
-        "Mod"
+        "Mod",
+        "Ctrl"
       ],
       "key": "ArrowLeft"
+    }
+  ],
+  "workspace:split-vertical": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "PageDown"
+    }
+  ],
+  "workspace:split-horizontal": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "PageUp"
+    }
+  ],
+  "editor:focus": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "ArrowRight"
     }
   ]
 }

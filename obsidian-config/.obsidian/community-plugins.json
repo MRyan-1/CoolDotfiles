@@ -10,5 +10,8 @@
   "easy-typing-obsidian",
   "obsidian-code-block-enhancer",
   "obsidian-image-toolkit",
-  "obsidian-emoji-toolbar"
+  "obsidian-emoji-toolbar",
+  "editing-toolbar",
+  "table-editor-obsidian",
+  "obsidian-linter"
 ]
