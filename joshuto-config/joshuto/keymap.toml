@@ -133,7 +133,7 @@ keymap = [
 
 	{ keys = [ "g", "f", "e" ],		command = "cd ~/environment" },
 	{ keys = [ "g", "f", "l" ],		command = "cd ~/learnSpace" },
-	{ keys = [ "g", "f", "g" ],		command = "cd ~/learnSpace/geektime/doc" },
+	{ keys = [ "g", "f", "g" ],		command = "cd ~/ProgramData/CodeFarmersTurn/OpenSource" },
 	{ keys = [ "g", "f", "t" ],		command = "cd ~/ProgramData/CodeFarmersTurn" },
 	{ keys = [ "g", "f", "a" ],		command = "cd ~/ProgramData/CodeFarmersTurn/Example" },
 	{ keys = [ "g", "f", "s" ],		command = "cd ~/ProgramData/CodeFarmersTurn/Analysis" },

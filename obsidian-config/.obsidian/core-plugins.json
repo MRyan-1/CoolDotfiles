@@ -8,7 +8,9 @@
   "tag-pane",
   "properties",
   "command-palette",
+  "slash-command",
   "editor-status",
+  "markdown-importer",
   "outline",
   "word-count",
   "file-recovery"

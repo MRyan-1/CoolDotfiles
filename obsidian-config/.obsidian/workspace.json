@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "31ff9303aa9ace87",
+        "id": "29f280a40f145809",
         "type": "tabs",
         "children": [
           {
-            "id": "fb89968de4ed2f11",
+            "id": "cdad584bd35ffce1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24年/6月/用车监控与报警 - 配置调整建议.md",
+                "file": "24年/6月/汽车票梳理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "阅读源码",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -62,7 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 295.504789352417
   },
   "right": {
     "id": "c0f3f24ead45e8bd",
@@ -78,7 +78,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "24年/6月/用车监控与报警 - 配置调整建议.md",
+                "file": "24年/6月/汽车票梳理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "24年/6月/用车监控与报警 - 配置调整建议.md"
+                "file": "24年/6月/汽车票梳理.md"
               }
             }
           },
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "24年/6月/用车监控与报警 - 配置调整建议.md",
+                "file": "24年/6月/汽车票梳理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,17 +143,39 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "fb89968de4ed2f11",
+  "active": "cdad584bd35ffce1",
   "lastOpenFiles": [
+    "24年/6月/620 任务以及上线清单.md",
+    "24年/6月/0610巡检报告.md",
+    "24年/5月/包冲突排查.md",
+    "24年/6月/汽车票梳理.md",
+    "Learning Database/Tutorial/097 手机摄影【完结】/03｜你的照片里是否有内容？.pdf",
+    "Learning Database/Company/Mine/~$1_马文博月度复盘.pptx",
+    "Learning Database/Tutorial/097 手机摄影【完结】/01｜拍摄前，我们需要做什么？.mp3",
+    "Learning Database/Tutorial/Kafka核心技术与实战/用户故事 | 黄云：行百里者半九十.md",
+    "Learning Database/Tutorial/架构实战案例解析/结束语 | 和你聊聊我的架构心路历程.md",
+    "Learning Database/Tutorial/分布式协议与算法实战/17  | Hashicorp Raft（一）：如何跨过理论和代码之间的鸿沟？.md",
+    "Learning Database/Tutorial/深入拆解Tomcat & Jetty/13 | 热点问题答疑（1）：如何学习源码？.md",
+    "Learning Database/Tutorial/消息队列高手课/09 | 学习开源代码该如何入手？.md",
+    "Learning Database/Tutorial/Kafka核心源码解读/[4]开篇词 |  阅读源码，逐渐成了职业进阶道路上的“必选项”.md",
+    "Learning Database/Tutorial/Kafka核心源码解读/[4]结束语 | 源码学习，我们才刚上路呢.md",
+    "Learning Database/Tutorial/Kafka核心源码解读/[3]重磅加餐 | 带你快速入门Scala语言.md",
+    "Learning Database/Tutorial/Kafka核心技术与实战/加餐 | 搭建开发环境、阅读源码方法、经典学习资料大揭秘.md",
+    "Learning Database/Tutorial/MySQL是怎样运行的：从根儿上理解MySQL.pdf",
+    "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
+    "Learning Database/Tutorial/ETCD实战课/16 | 性能及稳定性（上）：如何优化及扩展etcd性能？.md",
+    "Learning Database/Tutorial/ETCD实战课/17 | 性能及稳定性（下）：如何优化及扩展etcd性能?.md",
+    "Learning Database/Tutorial/ETCD实战课/开篇词｜为什么你要学习etcd?.md",
     "24年/6月/media/Pasted image 20240605100211.png",
     "24年/6月/media",
     "24年/6月/Pasted image 20240605100131.png",
@@ -161,7 +183,6 @@
     "24年/5月/计价规则接口.md",
     "24年/5月/530上线.md",
     "24年/5月/530疑问.md",
-    "24年/5月/包冲突排查.md",
     "24年/6月",
     "24年/5月",
     "5月",
@@ -180,26 +201,6 @@
     "计价规则接口.md",
     "24年/5月/media/Pasted image 20240529100844.png",
     "24年/5月/media/Pasted image 20240529100809.png",
-    "24年/5月/media",
-    "Pasted image 20240529100509.png",
-    "Welcome.md",
-    "Learning Database/Tutorial/ETCD实战课/02 | 基础架构：etcd一个读请求是如何执行的？.md",
-    "Learning Database/Tutorial/ETCD实战课/01 | etcd的前世今生：为什么Kubernetes使用etcd？.md",
-    "Learning Database/Tutorial/ETCD实战课/03 | 基础架构：etcd一个写请求是如何执行的？.md",
-    "Learning Database/Tutorial/大厂晋升指南/加餐二 | 提名词：怎么夸自己才最加分？.md",
-    "Learning Database/Tutorial/大厂晋升指南/30 | 四线复盘法：怎么避免成为背锅侠？.md",
-    "Learning Database/Tutorial/大厂晋升指南/28 | 4D总结法：怎么展示你的工作亮点？.md",
-    "Learning Database/Tutorial/大厂晋升指南/25 | PDCA执行法：怎么推动落地才能“步步为赢”？.md",
-    "Learning Database/Tutorial/大厂晋升指南/24 | 3C方案设计法：怎么让你的方案有理有据？.md",
-    "Learning Database/Tutorial/大厂晋升指南/23 | OKR规划法：Team Leader 怎么做团队规划？.md",
-    "Learning Database/Tutorial/大厂晋升指南/22 | OKR的优势：为什么要用OKR来取代KPI做团队规划？.md",
-    "Learning Database/Tutorial/大厂晋升指南/20 | Play & Teach：怎么摆脱“从入门到忘记”的学习困境？.md",
-    "Learning Database/Tutorial/大厂晋升指南/17 | 海绵学习法：怎么找到你的10000小时？.md",
-    "Learning Database/Tutorial/大厂晋升指南/16 | 导学：你应该掌握哪些学习方法？.md",
-    "Learning Database/Tutorial/大厂晋升指南/14 | PPT讲解：怎么讲才能让评委印象深刻？.md",
-    "Learning Database/Learning materials/后端/面经/50w字程序员面试宝典.pdf",
-    "Learning Database/Learning materials/后端/面经/30万字大厂面试真题深度解析.pdf",
-    "Learning Database/Learning materials/算法/P8大佬的算法解题笔记.pdf",
     "未命名.canvas"
   ]
 }

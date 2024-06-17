@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "onOpenPreferNewTab": true,
   "alwaysNewTabForSymbols": false,
   "useActiveTabForSymbolsOnMobile": false,
@@ -64,14 +64,34 @@
   "fileExtAllowList": [
     "canvas"
   ],
-  "enableMatchPriorityAdjustments": false,
   "matchPriorityAdjustments": {
-    "isOpenInEditor": 0,
-    "isBookmarked": 0,
-    "isRecent": 0,
-    "file": 0,
-    "alias": 0,
-    "h1": 0
+    "isEnabled": false,
+    "adjustments": {
+      "isOpenInEditor": {
+        "value": 0,
+        "label": "Open items"
+      },
+      "isBookmarked": {
+        "value": 0,
+        "label": "Bookmarked items"
+      },
+      "isRecent": {
+        "value": 0,
+        "label": "Recent items"
+      },
+      "file": {
+        "value": 0,
+        "label": "Filenames"
+      },
+      "alias": {
+        "value": 0,
+        "label": "Aliases"
+      },
+      "h1": {
+        "value": 0,
+        "label": "H₁ headings"
+      }
+    }
   },
   "quickFilters": {
     "resetKey": "0",
@@ -90,113 +110,113 @@
       "Ctrl",
       "Alt"
     ],
-    "facetList": [
-      {
+    "facetList": {
+      "Heading": {
         "id": "Heading",
         "mode": 4,
         "label": "headings",
         "isActive": true,
         "isAvailable": true
       },
-      {
+      "Tag": {
         "id": "Tag",
         "mode": 4,
         "label": "tags",
         "isActive": true,
         "isAvailable": true
       },
-      {
+      "Callout": {
         "id": "Callout",
         "mode": 4,
         "label": "callouts",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "Link": {
         "id": "Link",
         "mode": 4,
         "label": "links",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "Embed": {
         "id": "Embed",
         "mode": 4,
         "label": "embeds",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "canvas-node-file": {
         "id": "canvas-node-file",
         "mode": 4,
         "label": "file cards",
         "isActive": false,
         "isAvailable": false
       },
-      {
+      "canvas-node-text": {
         "id": "canvas-node-text",
         "mode": 4,
         "label": "text cards",
         "isActive": false,
         "isAvailable": false
       },
-      {
+      "canvas-node-link": {
         "id": "canvas-node-link",
         "mode": 4,
         "label": "link cards",
         "isActive": false,
         "isAvailable": false
       },
-      {
+      "canvas-node-group": {
         "id": "canvas-node-group",
         "mode": 4,
         "label": "groups",
         "isActive": false,
         "isAvailable": false
       },
-      {
+      "backlink": {
         "id": "backlink",
         "mode": 128,
         "label": "backlinks",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "outgoing-link": {
         "id": "outgoing-link",
         "mode": 128,
         "label": "outgoing links",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "disk-location": {
         "id": "disk-location",
         "mode": 128,
         "label": "disk location",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "bookmarks-file": {
         "id": "bookmarks-file",
         "mode": 32,
         "label": "files",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "bookmarks-folder": {
         "id": "bookmarks-folder",
         "mode": 32,
         "label": "folders",
         "isActive": false,
         "isAvailable": true
       },
-      {
+      "bookmarks-search": {
         "id": "bookmarks-search",
         "mode": 32,
         "label": "searches",
         "isActive": false,
         "isAvailable": true
       }
-    ],
+    },
     "shouldResetActiveFacets": false,
     "shouldShowFacetInstructions": true
   },

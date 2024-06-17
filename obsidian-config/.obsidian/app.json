@@ -16,5 +16,8 @@
     "downscalePercent": 100
   },
   "newFileLocation": "current",
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "rightToLeft": false
 }

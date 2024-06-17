@@ -1,7 +1,11 @@
 {
   "accentColor": "#102bf4",
   "theme": "system",
-  "cssTheme": "Blue Topaz",
+  "cssTheme": "Border",
   "translucency": true,
-  "baseFontSize": 19
+  "baseFontSize": 19,
+  "textFontFamily": "霞鹜文楷等宽",
+  "interfaceFontFamily": "JetBrainsMono Nerd Font",
+  "monospaceFontFamily": "霞鹜文楷等宽",
+  "baseFontSizeAction": true
 }
