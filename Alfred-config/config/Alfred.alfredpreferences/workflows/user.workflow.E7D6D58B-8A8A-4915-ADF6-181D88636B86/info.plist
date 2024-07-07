@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.mpco.recentDocuments</string>
+	<key>connections</key>
+	<dict>
+		<key>53BF5810-7308-4550-A1C3-92DC01964658</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B6340DCC-2D0D-4367-BAC9-C1D922545CB0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B6340DCC-2D0D-4367-BAC9-C1D922545CB0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9F8BAD89-AA36-49E3-AC08-2F634A88C595</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Charles Ma</string>
+	<key>description</key>
+	<string>Open recent documents or apps</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Recent Documents / Apps</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>9F8BAD89-AA36-49E3-AC08-2F634A88C595</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>53BF5810-7308-4550-A1C3-92DC01964658</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>rf</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>macOSVersion=$(sw_vers -productVersion | cut -d '.' -f 1,2)
+function version { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
+
+if [ $(version $macOSVersion) -lt $(version "12.3") ]; then
+    /usr/bin/python -O main.py "${HOME}/Library/Preferences/com.apple.finder.plist"
+else
+    /usr/bin/python3 -O main.py "${HOME}/Library/Preferences/com.apple.finder.plist"
+fi
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Tap "rff" to show</string>
+				<key>title</key>
+				<string>Recent folder</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B6340DCC-2D0D-4367-BAC9-C1D922545CB0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Website: https://github.com/mpco/AlfredWorkflow-Recent-Documents</string>
+	<key>uidata</key>
+	<dict>
+		<key>53BF5810-7308-4550-A1C3-92DC01964658</key>
+		<dict>
+			<key>xpos</key>
+			<real>100</real>
+			<key>ypos</key>
+			<real>540</real>
+		</dict>
+		<key>9F8BAD89-AA36-49E3-AC08-2F634A88C595</key>
+		<dict>
+			<key>xpos</key>
+			<real>700</real>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>B6340DCC-2D0D-4367-BAC9-C1D922545CB0</key>
+		<dict>
+			<key>note</key>
+			<string>Recent Folders</string>
+			<key>xpos</key>
+			<real>270</real>
+			<key>ypos</key>
+			<real>540</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variables</key>
+	<dict>
+		<key>ExcludedFiles</key>
+		<string></string>
+		<key>ExcludedFolders</key>
+		<string></string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>ExcludedFiles</string>
+		<string>ExcludedFolders</string>
+	</array>
+	<key>version</key>
+	<string>2.19</string>
+	<key>webaddress</key>
+	<string>https://github.com/mpco/AlfredWorkflow-Recent-Documents</string>
+</dict>
+</plist>
