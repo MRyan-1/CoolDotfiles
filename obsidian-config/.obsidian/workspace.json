@@ -94,8 +94,20 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "ece09b61d3a0c399",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "60d24f49d52e98c6",
@@ -149,7 +161,7 @@
   },
   "active": "2d51632aa1195957",
   "lastOpenFiles": [
-    "未命名.md",
+    "asda.md",
     "'asd.md",
     "未命名 1.md",
     "未命名 2.md",
