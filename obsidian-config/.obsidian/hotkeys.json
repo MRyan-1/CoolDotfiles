@@ -25,15 +25,7 @@
     }
   ],
   "editor:open-link-in-new-window": [],
-  "editor:open-link-in-new-split": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "R"
-    }
-  ],
+  "editor:open-link-in-new-split": [],
   "editor:toggle-code": [
     {
       "modifiers": [
@@ -102,14 +94,6 @@
       "key": "R"
     }
   ],
-  "app:delete-file": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Delete"
-    }
-  ],
   "keyboard-analyzer:show-shortcuts-analyzer-view": [
     {
       "modifiers": [
@@ -117,15 +101,6 @@
         "Shift"
       ],
       "key": "K"
-    }
-  ],
-  "workspace:copy-path": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "G"
     }
   ],
   "file-explorer:open": [
@@ -189,51 +164,6 @@
       "key": "M"
     }
   ],
-  "darlal-switcher-plus:switcher-plus:open-symbols-active": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "F"
-    }
-  ],
-  "open-with-default-app:show": [
-    {
-      "modifiers": [
-        "Mod",
-        "Ctrl"
-      ],
-      "key": "O"
-    }
-  ],
-  "editor:focus": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "E"
-    }
-  ],
-  "workspace:split-horizontal": [
-    {
-      "modifiers": [
-        "Ctrl",
-        "Mod",
-        "Shift"
-      ],
-      "key": "ArrowDown"
-    }
-  ],
-  "workspace:split-vertical": [
-    {
-      "modifiers": [
-        "Ctrl",
-        "Mod",
-        "Shift"
-      ],
-      "key": "ArrowRight"
-    }
-  ],
   "editor:focus-top": [
     {
       "modifiers": [
@@ -248,6 +178,153 @@
         "Ctrl"
       ],
       "key": "J"
+    }
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Backspace"
+    }
+  ],
+  "workspace:previous-tab": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "H"
+    }
+  ],
+  "workspace:next-tab": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "L"
+    }
+  ],
+  "easy-typing-obsidian:easy-typing-format-selection": [],
+  "tag-pane:open": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": ";"
+    }
+  ],
+  "outgoing-links:open": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "]"
+    }
+  ],
+  "backlink:open": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "["
+    }
+  ],
+  "app:open-vault": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "O"
+    }
+  ],
+  "easy-typing-obsidian:easy-typing-insert-codeblock": [
+    {
+      "modifiers": [
+        "Mod",
+        "Ctrl"
+      ],
+      "key": "J"
+    }
+  ],
+  "workspace:copy-path": [
+    {
+      "modifiers": [
+        "Mod",
+        "Ctrl"
+      ],
+      "key": "G"
+    }
+  ],
+  "workspace:close-window": [],
+  "file-explorer:move-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
+  ],
+  "darlal-switcher-plus:switcher-plus:open-symbols-active": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "F"
+    }
+  ],
+  "workspace:split-horizontal": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "\\"
+    }
+  ],
+  "workspace:split-vertical": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "-"
+    }
+  ],
+  "editor:focus": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "E"
+    }
+  ],
+  "file-explorer:new-folder": [
+    {
+      "modifiers": [
+        "Mod",
+        "Alt"
+      ],
+      "key": "`"
+    }
+  ],
+  "open-with-default-app:show": [
+    {
+      "modifiers": [
+        "Mod",
+        "Ctrl"
+      ],
+      "key": "F"
+    }
+  ],
+  "outline:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "H"
     }
   ]
 }

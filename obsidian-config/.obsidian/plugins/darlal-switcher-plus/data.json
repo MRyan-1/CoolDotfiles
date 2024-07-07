@@ -356,5 +356,6 @@
   "allowCreateNewFileInModeNames": [
     "Standard",
     "HeadingsList"
-  ]
+  ],
+  "showModeTriggerInstructions": true
 }

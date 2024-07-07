@@ -17,7 +17,7 @@
   "bookmarks": false,
   "markdown-importer": true,
   "zk-prefixer": false,
-  "random-note": false,
+  "random-note": true,
   "outline": true,
   "word-count": true,
   "slides": false,

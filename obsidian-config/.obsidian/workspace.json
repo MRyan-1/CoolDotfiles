@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7cf4620c4a7f3688",
+        "id": "53f8efea842f961b",
         "type": "tabs",
         "children": [
           {
-            "id": "f5db6e17c470566f",
+            "id": "2d51632aa1195957",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -43,9 +43,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "B.md"
-              }
+              "state": {}
             }
           },
           {
@@ -94,17 +92,6 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
-            }
-          },
-          {
-            "id": "9005fe491cbe7a2c",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
               }
             }
           }
@@ -156,12 +143,25 @@
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "random-note:开始漫游笔记": false
     }
   },
-  "active": "c8a892473b609f1e",
+  "active": "2d51632aa1195957",
   "lastOpenFiles": [
     "未命名.md",
+    "'asd.md",
+    "未命名 1.md",
+    "未命名 2.md",
+    "安全.md",
+    "+ 创新与探索.md",
+    "未命名 3.md",
+    "sdad.md",
+    "' s.md",
+    " sa.md",
+    "未命名.html",
+    "未命名 5.md",
+    "未命名 4.md",
     "B.md",
     "黑科技",
     "未命名文件夹",
@@ -172,7 +172,6 @@
     "理论与学习/未命名文件夹",
     "运维与监控/链路追踪",
     "运维与监控/未命名文件夹",
-    "创新与探索/内网穿透",
     "24年/6月/620 任务以及上线清单.md",
     "24年/6月/0610巡检报告.md",
     "24年/5月/包冲突排查.md",
@@ -186,25 +185,14 @@
     "Learning Database/Tutorial/Kafka核心源码解读/[4]结束语 | 源码学习，我们才刚上路呢.md",
     "Learning Database/Tutorial/Kafka核心源码解读/[3]重磅加餐 | 带你快速入门Scala语言.md",
     "Learning Database/Tutorial/Kafka核心技术与实战/加餐 | 搭建开发环境、阅读源码方法、经典学习资料大揭秘.md",
-    "Learning Database/Tutorial/ETCD实战课/15 | 内存：为什么你的etcd内存占用那么高？.md",
-    "Learning Database/Tutorial/ETCD实战课/16 | 性能及稳定性（上）：如何优化及扩展etcd性能？.md",
-    "Learning Database/Tutorial/ETCD实战课/17 | 性能及稳定性（下）：如何优化及扩展etcd性能?.md",
-    "Learning Database/Tutorial/ETCD实战课/开篇词｜为什么你要学习etcd?.md",
     "24年/6月/media/Pasted image 20240605100211.png",
     "24年/6月/Pasted image 20240605100131.png",
-    "24年/6月/用车监控与报警 - 配置调整建议.md",
-    "24年/5月/计价规则接口.md",
-    "24年/5月/530上线.md",
-    "24年/5月/530疑问.md",
-    "530上线.md",
-    "包冲突排查.md",
     "24年/5月/media/Pasted image 20240529112451.png",
     "24年/5月/media/Pasted image 20240529112227.png",
     "24年/5月/media/Pasted image 20240529112215.png",
     "24年/5月/media/Pasted image 20240529111920.png",
     "24年/5月/media/Pasted image 20240529111231.png",
     "24年/5月/media/Pasted image 20240529110246.png",
-    "530疑问.md",
     "24年/5月/media/Pasted image 20240529100844.png",
     "24年/5月/media/Pasted image 20240529100809.png",
     "未命名.canvas"
