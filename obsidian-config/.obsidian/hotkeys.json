@@ -326,5 +326,15 @@
       ],
       "key": "H"
     }
+  ],
+  "workspace:export-pdf": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
   ]
 }
