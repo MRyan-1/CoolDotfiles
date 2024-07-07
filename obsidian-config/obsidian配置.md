@@ -18,11 +18,9 @@
 
 `<command-o>` open quick switcher
 
-`<command-shift-i>` Navigate forward
+`<ctrl+i>` Navigate forward
 
-`<command-shift-o>` Navigate back
-
-`<command-option-F>` Quick Switcher++: Open Symbols for the active editor
+`<ctrl+o>` Navigate back
 
 ## Pane navigation
 
@@ -30,13 +28,13 @@
 
 `<command-shift-r>` Open link under cursor to the right
 
-`<command-option-left>` Focus on tab group to the left
+`<ctrl+h>` Focus on tab group to the left
 
-`<command-option-right>` Focus on tab group to the right
+`<ctrl+l>` Focus on tab group to the right
 
-`<option-Tab>` Go to next tab
+`<command+shift+]>` Go to next tab
 
-`<option-shift-Tab>` Go to previous tab
+`<command+shift+[>` Go to previous tab
 
 ## Editor
 
@@ -59,10 +57,10 @@
 ## 插件
 
 Footnote Shortcut  文件内跳转
-- `<command-m>` Footnote Shortcut: Insert Navigate Named Footnote
+- `<ctrl-m>` Footnote Shortcut: Insert Navigate Named Footnote
 
 Quick switcher++ 文件内跳转
-- `<command-option-f>` 跳转到header 关闭除了show header的其他show
+- `<option-F>` Quick Switcher++: Open Symbols for the active editor
 
 Advanced Slides 达到PPT展示效果
 - `<command-option-r>` Advanced Slides: Reload Slide Preview

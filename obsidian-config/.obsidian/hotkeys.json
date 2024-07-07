@@ -16,20 +16,10 @@
       "key": "Enter"
     }
   ],
-  "app:go-forward": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "I"
-    }
-  ],
   "app:go-back": [
     {
       "modifiers": [
-        "Mod",
-        "Shift"
+        "Ctrl"
       ],
       "key": "O"
     }
@@ -61,32 +51,6 @@
     }
   ],
   "editor:insert-link": [],
-  "editor:focus-right": [
-    {
-      "modifiers": [
-        "Mod",
-        "Ctrl"
-      ],
-      "key": "ArrowRight"
-    }
-  ],
-  "obsidian-footnotes:insert-named-footnote": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "M"
-    }
-  ],
-  "darlal-switcher-plus:switcher-plus:open-symbols-active": [
-    {
-      "modifiers": [
-        "Mod",
-        "Ctrl"
-      ],
-      "key": "F"
-    }
-  ],
   "app:toggle-left-sidebar": [
     {
       "modifiers": [
@@ -193,40 +157,97 @@
       "key": "L"
     }
   ],
+  "app:go-forward": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "I"
+    }
+  ],
   "editor:focus-left": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "H"
+    }
+  ],
+  "editor:focus-right": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "L"
+    }
+  ],
+  "obsidian-footnotes:insert-named-footnote": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "M"
+    }
+  ],
+  "darlal-switcher-plus:switcher-plus:open-symbols-active": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F"
+    }
+  ],
+  "open-with-default-app:show": [
     {
       "modifiers": [
         "Mod",
         "Ctrl"
       ],
-      "key": "ArrowLeft"
-    }
-  ],
-  "workspace:split-vertical": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "PageDown"
-    }
-  ],
-  "workspace:split-horizontal": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "PageUp"
+      "key": "O"
     }
   ],
   "editor:focus": [
     {
       "modifiers": [
+        "Alt"
+      ],
+      "key": "E"
+    }
+  ],
+  "workspace:split-horizontal": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod",
+        "Shift"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "workspace:split-vertical": [
+    {
+      "modifiers": [
+        "Ctrl",
         "Mod",
         "Shift"
       ],
       "key": "ArrowRight"
+    }
+  ],
+  "editor:focus-top": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "K"
+    }
+  ],
+  "editor:focus-bottom": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "J"
     }
   ]
 }

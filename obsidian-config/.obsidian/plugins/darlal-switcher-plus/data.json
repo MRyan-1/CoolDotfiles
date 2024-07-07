@@ -11,8 +11,10 @@
   "headingsListCommand": "#",
   "bookmarksListCommand": "'",
   "commandListCommand": ">",
+  "vaultListCommand": "vault ",
   "relatedItemsListCommand": "~",
   "relatedItemsListActiveEditorCommand": "^ ",
+  "shouldSearchHeadings": true,
   "strictHeadingsOnly": false,
   "searchAllHeadings": true,
   "headingsSearchDebounceMilli": 250,
@@ -48,6 +50,8 @@
   "excludeOpenRelatedFiles": false,
   "excludeObsidianIgnoredFiles": false,
   "shouldSearchFilenames": false,
+  "shouldSearchBookmarks": false,
+  "shouldSearchRecentFiles": true,
   "pathDisplayFormat": 3,
   "hidePathIfRoot": true,
   "enabledRelatedItems": [
@@ -79,6 +83,10 @@
         "value": 0,
         "label": "Recent items"
       },
+      "isAttachment": {
+        "value": 0,
+        "label": "Attachment file types"
+      },
       "file": {
         "value": 0,
         "label": "Filenames"
@@ -87,9 +95,19 @@
         "value": 0,
         "label": "Aliases"
       },
+      "unresolved": {
+        "value": 0,
+        "label": "Unresolved filenames"
+      },
       "h1": {
         "value": 0,
         "label": "H₁ headings"
+      }
+    },
+    "fileExtAdjustments": {
+      "canvas": {
+        "value": 0,
+        "label": "Canvas files"
       }
     }
   },
@@ -215,6 +233,55 @@
         "label": "searches",
         "isActive": false,
         "isAvailable": true
+      },
+      "pinnedCommands": {
+        "id": "pinnedCommands",
+        "mode": 64,
+        "label": "pinned",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "recentCommands": {
+        "id": "recentCommands",
+        "mode": 64,
+        "label": "recent",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "recentFilesSearch": {
+        "id": "recentFilesSearch",
+        "mode": 16,
+        "label": "recent files",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "bookmarksSearch": {
+        "id": "bookmarksSearch",
+        "mode": 16,
+        "label": "bookmarks",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "filenamesSearch": {
+        "id": "filenamesSearch",
+        "mode": 16,
+        "label": "filenames",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "headingsSearch": {
+        "id": "headingsSearch",
+        "mode": 16,
+        "label": "headings",
+        "isActive": false,
+        "isAvailable": true
+      },
+      "externalFilesSearch": {
+        "id": "externalFilesSearch",
+        "mode": 16,
+        "label": "external files",
+        "isActive": false,
+        "isAvailable": true
       }
     },
     "shouldResetActiveFacets": false,
@@ -224,5 +291,70 @@
   "preserveQuickSwitcherLastInput": false,
   "shouldCloseModalOnBackspace": false,
   "maxRecentFileSuggestionsOnInit": 25,
-  "orderEditorListByAccessTime": true
+  "orderEditorListByAccessTime": true,
+  "insertLinkInEditor": {
+    "isEnabled": true,
+    "keymap": {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "i",
+      "purpose": "insert in editor"
+    },
+    "insertableEditorTypes": [
+      "markdown"
+    ],
+    "useBasenameAsAlias": true,
+    "useHeadingAsAlias": true
+  },
+  "removeDefaultTabBinding": true,
+  "navigationKeys": {
+    "nextKeys": [
+      {
+        "modifiers": [
+          "Ctrl"
+        ],
+        "key": "n"
+      },
+      {
+        "modifiers": [
+          "Ctrl"
+        ],
+        "key": "j"
+      }
+    ],
+    "prevKeys": [
+      {
+        "modifiers": [
+          "Ctrl"
+        ],
+        "key": "p"
+      },
+      {
+        "modifiers": [
+          "Ctrl"
+        ],
+        "key": "k"
+      }
+    ]
+  },
+  "preferredSourceForTitle": "H1",
+  "closeWhenEmptyKeys": [
+    {
+      "modifiers": null,
+      "key": "Backspace"
+    }
+  ],
+  "escapeCmdChar": "!",
+  "mobileLauncher": {
+    "isEnabled": false,
+    "modeString": "HeadingsList",
+    "iconName": "",
+    "coreLauncherButtonIconSelector": "span.clickable-icon",
+    "coreLauncherButtonSelector": ".mobile-navbar-action:has(span.clickable-icon svg.svg-icon.lucide-plus-circle)"
+  },
+  "allowCreateNewFileInModeNames": [
+    "Standard",
+    "HeadingsList"
+  ]
 }
