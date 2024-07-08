@@ -11,13 +11,8 @@
             "id": "2f5e37caf92a8841",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -79,7 +74,9 @@
         "state": {
           "type": "all-properties",
           "state": {
-            "sortOrder": "frequency"
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
           }
         }
       }
@@ -96,7 +93,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -113,7 +109,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -124,9 +119,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "Learning Database/Tutorial/程序员的数学基础课/01 | 二进制：不了解计算机的源头，你学什么编程.md"
-          }
+          "state": {}
         }
       }
     ],
@@ -134,11 +127,11 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Open format converter": false,
+      "random-note:Open random note": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
-      "command-palette:Open command palette": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "2f5e37caf92a8841",
