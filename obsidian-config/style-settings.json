@@ -8,7 +8,7 @@
   "Components@@folder-font-bold": false,
   "Components@@file-icon-remove": false,
   "Components@@colorful-folder": true,
-  "Components@@outline-enhanced": false,
+  "Components@@outline-enhanced": true,
   "Components@@new-tab-btn-select": "new-tab-text-btn-restore",
   "Components@@new-tab-image-select": "new-tab-image-default",
   "Components@@extra-anim-remove": false,
@@ -35,5 +35,9 @@
   "Appearance-light@@workspace-divider-transparent-light": true,
   "Appearance-light@@color-to-tab-icon-light": false,
   "Appearance-light@@accent-color-override-light": false,
-  "Editor@@line-hover-indicator": true
+  "Editor@@line-hover-indicator": true,
+  "Editor@@codeblock-style-select": "codeblock-style-dracula",
+  "Editor@@border-focus-mode": false,
+  "Editor@@img-center-align": true,
+  "Editor@@callout-style-select": "callout-style-customize"
 }
