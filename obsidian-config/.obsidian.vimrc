@@ -2,12 +2,22 @@
 
 " 就是在 normal 模式下，将 ; 映射成 : ，这样进入 Vim 命令模式的时候就可以按相同的按键而不用按下 Shift 了
 nmap ; :
+
+
+" 按行跳转光标
 " 将 j 映射成 gj，k 映射成 gk ，可以让 j/k 移动的时候按照视觉上的行数，而不是文本真实的换行，尤其是在笔记中可能有大量的段落的情况下非常有用
 nmap j gj
 nmap k gk
 " 将 H 映射成跳转到行首，L 映射成跳转到行尾
 nmap H ^
 nmap L $
+nmap J 5j
+nmap K 5k
+
+" 按段落跳转光标
+" Moving to next/prev paragraph
+nmap [ {
+nmap ] }
 
 
 unmap <Space>
