@@ -58,3 +58,10 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
 export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
 export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
+
+# FIDDLER_EVERYWHERE_SCRIPT_START
+if [ -n "$FE_STARTED" ] && [ -s '/Applications/Fiddler Everywhere.app/Contents/Resources/app/out/assets/scripts/startup-mac.sh' ] && [ "$STARTUP_SOURCED" != "true" ] ; then
+    source '/Applications/Fiddler Everywhere.app/Contents/Resources/app/out/assets/scripts/startup-mac.sh'
+    STARTUP_SOURCED="true"
+fi
+# FIDDLER_EVERYWHERE_SCRIPT_END

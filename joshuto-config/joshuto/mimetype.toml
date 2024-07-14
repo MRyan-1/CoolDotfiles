@@ -17,6 +17,7 @@ video_default	= [
 
 text_default	= [
 	{ command = "code" },
+	{command="open -a obsidian"},
     { command = "open -a typora" },		
 	{ command = "bat", args = [ "--paging=always" ] },
 ]
