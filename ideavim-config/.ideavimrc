@@ -99,6 +99,9 @@ nmap gf <action>(Forward)
 nmap gp <action>(MethodUp)
 "下一个方法
 nmap gn <action>(MethodDown)
+" Move half page faster (上下翻页)
+nmap J <C-d>
+nmap K <C-u>
 
 " 上一个 tab
 nmap H :action PreviousTab<CR>
