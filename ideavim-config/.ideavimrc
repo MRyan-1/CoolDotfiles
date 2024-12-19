@@ -1,13 +1,15 @@
 " ideaplugins->ideaVim.ideaVim-EasyMotion.ideaVimExtension,Whick-Key
-" ================================================================================================
-" = Extensions =====================================
-" ================================================================================================
+" ===========================================
+" = 插件 =====================================
+" ===========================================
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 
 " ================================================================================================
-" = Basic settings =====================================
+" = 基础配置 =====================================
 " ================================================================================================
+" 显示当前模式
+set showmode
 " 启动easymotion
 set easymotion
 " 设置ctrl-d和ctrl-u的行数
@@ -21,7 +23,6 @@ set clipboard+=unnamed
 set clipboard+=ideaput
 " 设置ideavim和idea之间的书签通用，但是通用的A-Z标签
 set ideamarks
-
 " 开启语法高亮功能
 syntax enable
 " 允许用指定语法高亮配色方案替换默认方案
@@ -38,58 +39,80 @@ set history=200
 set ruler
 " 高亮显示当前行/列
 set cursorline
-
+ " 显示行号
 set number
 set relativenumber
-
+" 高亮当前搜索
 set incsearch
 set hlsearch
-
 " 设置tab键和自动缩进
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-
 " paste之后不会把yank的内容替换掉
 vmap p "_dp
 
 
 " ================================================================================================
+" = ide与vim的快捷键持久化 =====================================
+" ================================================================================================
+sethandler <C-H> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-l> a:vim
+
+
+
+" ================================================================================================
 " = No Leader Keymaps =====================================
 " ================================================================================================
-
 "快速选择一个单词
 noremap <space> viw
+" 粘贴后不替换 yank 内容
+vmap p _dp
 
-
-"上一个方法
-nmap gp <action>(MethodUp)
-"下一个方法
-nmap gn <action>(MethodDown)
-" Move half page faster (上下翻页)
-nmap J <C-d>
-nmap K <C-u>
-
-
+" 插入模式下的映射
+" Ctrl + h 左移光标
+imap <C-h> <Left>
+" Ctrl + j 下移光标
+imap <C-j> <Down>
+" Ctrl + k 上移光标
+imap <C-k> <Up>
+" Ctrl + l 右移光标
+imap <C-l> <Right>
 
 " go to somewhere (g in normal mode for goto somewhere)
-" 下一个error
+" 跳转到下一个错误
 nmap go <action>(GotoNextError)
 nmap gl <action>(JumpToLastChange)
 nmap gc <action>(JumpToNextChange)
 nmap gr <action>(RecentFiles)
 nmap gd <action>(GotoDeclaration)
 nmap gs <action>(GotoSuperMethod)
+" 跳转到测试
+nmap gt <action>(GotoTest)
 nmap gi <action>(GotoImplementation)
 nmap gu <action>(ShowUsages)
 nmap gb <action>(Back)
 nmap gf <action>(Forward)
-
+"上一个方法
+nmap gp <action>(MethodUp)
+"下一个方法
+nmap gn <action>(MethodDown)
 
 " 上一个 tab
 nmap H :action PreviousTab<CR>
 " 下一个 tab
 nmap L :action NextTab<CR>
+
+" 删除相关
+ " 删除到行尾
+nmap df d$
+" 删除到行首
+nmap dl d^
+" 删除方法
+nmap dam <action>(MethodUp)v0Of{%d
+
 
 " ================================================================================================
 " = Plugins =====================================
@@ -97,18 +120,15 @@ nmap L :action NextTab<CR>
 "普通模式强制以英文模式
 set keep-english-in-normal-and-restore-in-insert
 
+" ⭐️⭐️⭐️ Which-Key ⭐️⭐️⭐️
+set which-key
+set notimeout
 
 " ================================================================================================
 " = Leader Keymaps =====================================
 " ================================================================================================
 " leaderkey
 let mapleader=","
-
-" ================================================================================================
-" ⭐️⭐️⭐️ Which-Key ⭐️⭐️⭐️
-" ================================================================================================
-set which-key
-set notimeout
 
 
 " a add ⭐️
@@ -183,8 +203,8 @@ nmap <leader>fc <action>(GotoClass)
 " 相当于IDEA的两次shift按钮
 let g:WhichKeyDesc_Find_SearchEverywhere = "<leader>fe SearchEverywhere"
 nnoremap <Leader>fe :action SearchEverywhere<CR>
-
-
+" 定位当前文件在项目中的位置
+nmap <leader>fl <action>(SelectInProjectView)
 
 
 " g: Git ⭐️
@@ -333,9 +353,6 @@ nmap <leader>ws <action>(UnsplitAll)
 " 关闭当前窗口
 let g:WhichKeyDesc_Windows_CloseBuffer = "<leader>wc 关闭当前窗口"
 nmap <leader>wc :q!<CR>
-" 在项目目录中定位改文件
-let g:WhichKeyDesc_Windows_SelectInProjectView = "<leader>wz 在项目目录中定位改文件"
-nmap <leader>wz <action>(SelectInProjectView)
 " 改变视图
 let g:WhichKeyDesc_Windows_ChangeView = "<leader>wv 改变视图"
 nmap <leader>wv <action>(ChangeView)
@@ -356,14 +373,14 @@ let g:WhichKeyDesc_Windows_CloseProject = "<leader>wx 关闭当前项目"
 nnoremap <leader>wx :action CloseProject<CR>
 
 
-
 " z: zip(fold) ⭐️
 let g:WhichKeyDesc_Zip = "<leader>z Zip"
 let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo 解压缩所有方法"
 nmap <leader>zo <action>(ExpandAllRegions)
 let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc 压缩所有方法"
 nmap <leader>zc <action>(CollapseAllRegions)
-
+let g:WhichKeyDesc_Zip_Zip = "<leader>zo 解压缩当前方法"
+nmap <leader>zn <action>(ExpandCollapseToggleAction)
 
 
 " d: del ⭐️
@@ -403,6 +420,3 @@ nmap <leader>lw <action>(leetcode.editor.OpenInWebAction)
 " 快速选择
 let g:WhichKeyDesc_Lt_PickAction = "<leader>lp 快速选择"
 nmap <leader>lp <action>(leetcode.PickAction)
-
-
-
