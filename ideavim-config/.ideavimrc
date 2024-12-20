@@ -382,7 +382,7 @@ let g:WhichKeyDesc_Zip_unZipAll = "<leader>zo 解压缩所有方法"
 nmap <leader>zo <action>(ExpandAllRegions)
 let g:WhichKeyDesc_Zip_ZipAll = "<leader>zc 压缩所有方法"
 nmap <leader>zc <action>(CollapseAllRegions)
-let g:WhichKeyDesc_Zip_Zip = "<leader>zo 解压缩当前方法"
+let g:WhichKeyDesc_Zip_Zip = "<leader>zn 解压缩当前方法"
 nmap <leader>zn <action>(ExpandCollapseToggleAction)
 
 
