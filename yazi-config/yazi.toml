@@ -74,7 +74,7 @@ rules = [
 	{ mime = "application/{json,ndjson}", use = ["edit", "code", "reveal"] },
 	{ mime = "*/javascript", use = ["edit", "code", "reveal"] },
 	# Empty file
-	{ mime = "inode/empty", use = ["edit", "code", "reveal"] },
+	{ mime = "inode/empty", use = ["edit", "reveal"] },
 	# Fallback
 	{ name = "*", use = ["edit", "open", "reveal"] },
 ]
