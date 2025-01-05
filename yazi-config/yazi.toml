@@ -30,13 +30,16 @@ ueberzug_offset = [0, 0, 0, 0]
 [opener]
 edit = [
 	{ run = '${EDITOR:-vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
-	{ run = 'code', orphan = true, desc = "code", for = "macos" },
+	{ run = 'code %*', orphan = true, desc = "code", for = "windows" },
 	{ run = 'code -w %*', block = true, desc = "code (block)", for = "windows" },
 ]
 open = [
 	{ run = 'xdg-open "$1"', desc = "Open", for = "linux" },
 	{ run = 'open "$@"', desc = "Open", for = "macos" },
 	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+]
+code = [
+	{ run = 'code', orphan = true, desc = "code", for = "macos" }
 ]
 reveal = [
 	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },
@@ -59,7 +62,7 @@ rules = [
 	# Folder
 	{ name = "*/", use = ["edit", "open", "reveal"] },
 	# Text
-	{ mime = "text/*", use = ["edit", "reveal"] },
+	{ mime = "text/*", use = ["edit", "code", "reveal"] },
 	# Image
 	{ mime = "image/*", use = ["open", "reveal"] },
 	# Media
@@ -68,10 +71,10 @@ rules = [
 	{ mime = "application/{,g}zip", use = ["extract", "reveal"] },
 	{ mime = "application/{tar,bzip*,7z*,xz,rar}", use = ["extract", "reveal"] },
 	# JSON
-	{ mime = "application/{json,ndjson}", use = ["edit", "reveal"] },
-	{ mime = "*/javascript", use = ["edit", "reveal"] },
+	{ mime = "application/{json,ndjson}", use = ["edit", "code", "reveal"] },
+	{ mime = "*/javascript", use = ["edit", "code", "reveal"] },
 	# Empty file
-	{ mime = "inode/empty", use = ["edit", "reveal"] },
+	{ mime = "inode/empty", use = ["edit", "code", "reveal"] },
 	# Fallback
 	{ name = "*", use = ["edit", "open", "reveal"] },
 ]
