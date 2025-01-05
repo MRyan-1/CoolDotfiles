@@ -17,7 +17,8 @@ alias word="open -a 'Microsoft word'"
 alias lc="leetcode"
 alias jos="joshuto"
 source /Users/ryan/.config/broot/launcher/bash/br
-alias ya="/Users/ryan/.config/yazi/yazi"
+alias ya="/Users/ryan/.config/yazi/ya"
+alias yazi="/Users/ryan/.config/yazi/yazi"
 
 # FIDDLER_EVERYWHERE_SCRIPT_START
 if [ -n "$FE_STARTED" ] && [ -s '/Applications/Fiddler Everywhere.app/Contents/Resources/app/out/assets/scripts/startup-mac.sh' ] && [ "$STARTUP_SOURCED" != "true" ] ; then
