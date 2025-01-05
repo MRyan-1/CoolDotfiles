@@ -113,8 +113,8 @@ keymap = [
 
 	# Operation: D
 	{ on = ["d", "d"], run = "yank --cut", desc = "Yank selected files (cut)" },
-	# { on = ["d"], run = "remove", desc = "Trash selected files" },
-	{ on = ["d", "D"], run = "remove --permanently", desc = "Permanently delete selected files" },
+	{ on = ["d", "D"], run = "remove", desc = "delete selected files" },
+	# { on = ["d", "D"], run = "remove --permanently", desc = "Permanently delete selected files" },
 
 	# Operation: Y
 	{ on = ["y", "y"], run = "yank", desc = "Yank selected files (copy)" },
