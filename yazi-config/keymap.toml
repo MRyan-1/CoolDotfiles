@@ -4,6 +4,7 @@
 
 [manager]
 prepend_keymap = [
+	{ on = "W", run = "plugin max-preview", desc = "Maximize or restore preview" },
 	{ on = "i", run = 'plugin smart-enter' },
 	{ on = "<Enter>", run = 'plugin smart-enter' },
 	{ on = "S", run = 'shell "$SHELL" --block --confirm' },
