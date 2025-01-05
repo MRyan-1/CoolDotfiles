@@ -156,30 +156,37 @@ keymap = [
 	# Goto
 	{ on = ["g", "r"], run = "cd /", desc = "Go to the root directory" },
 	{ on = ["g", "h"], run = "cd ~", desc = "Go to the home directory" },
-	{ on = ["g", "d"], run = "cd ~/Downloads", desc = "cd ~/Downloads" },
-	{ on = ["g", "D"], run = "cd ~/Desktop", desc = "cd ~/Desktop" },
+	{ on = ["g", "d"], run = "cd ~/Downloads", desc = "cd /Downloads" },
+	{ on = ["g", "D"], run = "cd ~/Desktop", desc = "cd /Desktop" },
+    { on = ["g", "e"], run = "cd ~/environment", desc = "cd /environment" },
 
-  { on = ["g", "f", "e"], run = "cd ~/environment", desc = "cd ~/environment" },
-	{ on = ["g", "f", "l"], run = "cd ~/learnSpace", desc = "cd ~/learnSpace" },
-    { on = ["g", "f", "t"], run = "cd ~/ProgramData/CodeFarmersTurn", desc = "cd /CodeFarmersTurn" },
-	{ on = ["g", "f", "g"], run = "cd ~/ProgramData/CodeFarmersTurn/OpenSource", desc = "cd /OpenSource" },
-	{ on = ["g", "f", "e"], run = "cd ~/ProgramData/CodeFarmersTurn/Example", desc = "cd /Example" },
-	{ on = ["g", "f", "a"], run = "cd ~/ProgramData/CodeFarmersTurn/Analysis", desc = "cd /Analysis" },
-	{ on = ["g", "f", "w"], run = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/wormhole", desc = "cd /WormholeStack/wormhole" },
-	{ on = ["g", "f", "c"], run = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/CoolDotfiles", desc = "cd /WormholeStack/CoolDotfiles" },
-	{ on = ["g", "f", "o"], run = "cd ~/Library/Mobile Documents/com~apple~CloudDocs", desc = "cd /Mobile Documents/com~apple~CloudDocs" },
-	{ on = ["g", "f", "s"], run = "cd ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Starlink", desc = "cd /iCloud~md~obsidian/Documents/Starlink" },
+	{ on = ["g", "l", "l"], run = "cd ~/learnSpace", desc = "cd /learnSpace" },
+    { on = ["g", "l", "k"], run = "cd ~/learnSpace/KnowledgePlanet", desc = "cd /learnSpace/KnowledgePlanet" },
+	{ on = ["g", "l", "m"], run = "cd ~/learnSpace/Learning\\ materials", desc = "cd /learnSpace/Learning materials" },
 
-{ on = ["g", "t", "t"], run = "cd ~/ProgramData/tcgw", desc = "cd ~/ProgramData/tcgw" },
-{ on = ["g", "t", "g"], run = "cd ~/ProgramData/tcgw/gitlab", desc = "cd ~/ProgramData/tcgw/gitlab" },
+	{ on = ["g", "s", "c"], run = "cd ~/ProgramData/CodeFarmersTurn", desc = "cd /CodeFarmersTurn" },
+	{ on = ["g", "s", "o"], run = "cd ~/ProgramData/CodeFarmersTurn/OpenSource", desc = "cd /CodeFarmersTurn/OpenSource" },
+	{ on = ["g", "s", "e"], run = "cd ~/ProgramData/CodeFarmersTurn/Example", desc = "cd /CodeFarmersTurn/Example" },
+	{ on = ["g", "s", "a"], run = "cd ~/ProgramData/CodeFarmersTurn/Analysis", desc = "cd /CodeFarmersTurn/Analysis" },
 
-{ on = ["g", "c", "g"], run = "cd ~/.config", desc = "cd ~/.config" },
-{ on = ["g", "c", "n"], run = "cd ~/.nvm", desc = "cd ~/.nvm" },
-{ on = ["g", "c", "j"], run = "cd ~/.config/joshuto", desc = "cd ~/.config/joshuto" },
-{ on = ["g", "c", "e"], run = "cd /etc", desc = "cd /etc" },
-{ on = ["g", "c", "m"], run = "cd /.m2", desc = "cd /.m2" },
-{ on = ["g", "c", "o"], run = "cd /opt", desc = "cd /opt" },
+	{ on = ["g", "w", "w"], run = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/", desc = "cd /WormholeStack" },
+	{ on = ["g", "w", "e"], run = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/wormhole", desc = "cd /WormholeStack/wormhole" },
+	{ on = ["g", "w", "c"], run = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/CoolDotfiles", desc = "cd /WormholeStack/CoolDotfiles" },
 
+	{ on = ["g", "f", "o"], run = "cd ~/Library/Mobile\\ Documents/com~apple~CloudDocs", desc = "cd /com~apple~CloudDocs" },
+	{ on = ["g", "f", "s"], run = "cd ~/Library/Mobile\\ Documents/iCloud~md~obsidian/Documents/Starlink", desc = "cd /Starlink" },
+
+	{ on = ["g", "t", "t"], run = "cd ~/ProgramData/tcgw", desc = "cd /tcgw" },
+	{ on = ["g", "t", "g"], run = "cd ~/ProgramData/tcgw/gitlab", desc = "cd /tcgw/gitlab" },
+	{ on = ["g", "t", "w"], run = "cd ~/ProgramData/tcgw/WorkNotes", desc = "cd /tcgw/WorkNotes" },
+
+	{ on = ["g", "c", "g"], run = "cd ~/.config", desc = "cd .config" },
+	{ on = ["g", "c", "n"], run = "cd ~/.nvm", desc = "cd .nvm" },
+	{ on = ["g", "c", "j"], run = "cd ~/.config/joshuto", desc = "cd .config/joshuto" },
+	{ on = ["g", "c", "y"], run = "cd ~/.config/yazi", desc = "cd .config/yazi" },
+	{ on = ["g", "c", "e"], run = "cd /etc", desc = "cd /etc" },
+	{ on = ["g", "c", "m"], run = "cd /.m2", desc = "cd .m2" },
+	{ on = ["g", "c", "o"], run = "cd /opt", desc = "cd /opt" },
 
 	# Tabs
 	{ on = ["t", "u"], run = "tab_create --current", desc = "Create a new tab with CWD" },
@@ -370,3 +377,4 @@ keymap = [
 	# Filtering
 	{ on = "f", run = "filter", desc = "Apply a filter for the help items" },
 ]
+
