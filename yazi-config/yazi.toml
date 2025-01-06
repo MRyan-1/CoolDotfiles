@@ -39,7 +39,7 @@ open = [
 	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
 ]
 code = [
-	{ run = 'code', orphan = true, desc = "code", for = "macos" }
+	{ run = 'code "$1"', desc = "code", for = "macos" }
 ]
 reveal = [
 	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },

@@ -1,16 +1,14 @@
 {
-  "Non-ASCII Anti Aliased" : true,
+  "Close Sessions On End" : true,
   "Ansi 15 Color (Dark)" : {
     "Green Component" : 1,
     "Red Component" : 1,
     "Blue Component" : 1
   },
-  "Foreground Color (Dark)" : {
-    "Red Component" : 1,
-    "Color Space" : "sRGB",
-    "Blue Component" : 1,
-    "Alpha Component" : 1,
-    "Green Component" : 1
+  "Ansi 12 Color (Light)" : {
+    "Green Component" : 0.3333333432674408,
+    "Red Component" : 0.3333333432674408,
+    "Blue Component" : 1
   },
   "Cursor Text Color" : {
     "Red Component" : 1,
@@ -159,7 +157,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.82585467148611635
   },
-  "Only The Default BG Color Uses Transparency" : true,
+  "Only The Default BG Color Uses Transparency" : false,
   "Scrollback Lines" : 1000,
   "Badge Color (Dark)" : {
     "Red Component" : 1,
@@ -173,7 +171,7 @@
     "Red Component" : 0,
     "Blue Component" : 0
   },
-  "Transparency" : 0.053000332446808539,
+  "Transparency" : 0,
   "Tab Color (Dark)" : {
     "Red Component" : 0.254791259765625,
     "Color Space" : "sRGB",
@@ -252,7 +250,7 @@
   "Vertical Spacing" : 1,
   "Use Tab Color (Light)" : true,
   "Cursor Type" : 2,
-  "Columns" : 160,
+  "Columns" : 170,
   "Ansi 2 Color (Light)" : {
     "Green Component" : 0.73333334922790527,
     "Red Component" : 0,
@@ -368,7 +366,7 @@
     "Red Component" : 0.3333333432674408,
     "Blue Component" : 1
   },
-  "Blur Radius" : 4.9647273936170215,
+  "Blur Radius" : 9.9495340401785715,
   "Rows" : 50,
   "Background Color (Light)" : {
     "Red Component" : 0,
@@ -431,7 +429,7 @@
   },
   "Command" : "jos",
   "Minimum Contrast (Light)" : 0.78007624337668591,
-  "Blend" : 0.27994678442028992,
+  "Blend" : 0.35035926094890502,
   "Character Encoding" : 4,
   "Minimum Contrast" : 0.78007624337668591,
   "Cursor Boost (Light)" : 0,
@@ -453,7 +451,7 @@
   "Window Type" : 12,
   "Icon" : 1,
   "Brighten Bold Text" : true,
-  "Background Image Location" : "\/Users\/ryan\/Pictures\/wallhaven-jxdj9p.jpg",
+  "Background Image Location" : "\/Users\/ryan\/Pictures\/wallpaper- boy.jpg",
   "Allow Title Setting" : true,
   "ASCII Anti Aliased" : true,
   "Use Tab Color (Dark)" : true,
@@ -516,6 +514,7 @@
     "Red Component" : 0.3333333432674408,
     "Blue Component" : 0.3333333432674408
   },
+  "Load Shell Integration Automatically" : false,
   "Ansi 0 Color (Light)" : {
     "Green Component" : 0,
     "Red Component" : 0,
@@ -542,49 +541,11 @@
     "Blue Component" : 0.73333334922790527
   },
   "Keyboard Map" : {
-    "0xf700-0x260000" : {
-      "Text" : "[1;6A",
-      "Action" : 10
-    },
-    "0x37-0x40000" : {
-      "Text" : "0x1f",
-      "Action" : 11
-    },
-    "0x32-0x40000" : {
-      "Text" : "0x00",
-      "Action" : 11
-    },
-    "0xf709-0x20000" : {
-      "Text" : "[17;2~",
-      "Action" : 10
-    },
-    "0xf70c-0x20000" : {
-      "Text" : "[20;2~",
-      "Action" : 10
-    },
-    "0xf729-0x20000" : {
-      "Text" : "[1;2H",
-      "Action" : 10
-    },
-    "0xf72b-0x40000" : {
-      "Text" : "[1;5F",
-      "Action" : 10
-    },
-    "0xf705-0x20000" : {
-      "Text" : "[1;2Q",
-      "Action" : 10
-    },
-    "0xf703-0x260000" : {
-      "Text" : "[1;6C",
-      "Action" : 10
-    },
-    "0xf700-0x220000" : {
-      "Text" : "[1;2A",
-      "Action" : 10
-    },
-    "0xf701-0x280000" : {
-      "Text" : "0x1b 0x1b 0x5b 0x42",
-      "Action" : 11
+    "0xf702-0x280000-0x0" : {
+      "Version" : 2,
+      "Action" : 10,
+      "Text" : "w",
+      "Escaping" : 1
     },
     "0xf703-0x220000-0x0" : {
       "Version" : 2,
@@ -592,121 +553,11 @@
       "Text" : "",
       "Escaping" : 1
     },
-    "0x38-0x40000" : {
-      "Text" : "0x7f",
-      "Action" : 11
-    },
-    "0x33-0x40000" : {
-      "Text" : "0x1b",
-      "Action" : 11
-    },
-    "0xf701-0x240000" : {
-      "Text" : "[1;5B",
-      "Action" : 10
-    },
     "0xf703-0x280000-0x0" : {
       "Version" : 2,
       "Action" : 10,
       "Text" : "b",
       "Escaping" : 1
-    },
-    "0xf70d-0x20000" : {
-      "Text" : "[21;2~",
-      "Action" : 10
-    },
-    "0xf702-0x260000" : {
-      "Text" : "[1;6D",
-      "Action" : 10
-    },
-    "0xf729-0x40000" : {
-      "Text" : "[1;5H",
-      "Action" : 10
-    },
-    "0xf706-0x20000" : {
-      "Text" : "[1;2R",
-      "Action" : 10
-    },
-    "0x34-0x40000" : {
-      "Text" : "0x1c",
-      "Action" : 11
-    },
-    "0xf700-0x280000" : {
-      "Text" : "0x1b 0x1b 0x5b 0x41",
-      "Action" : 11
-    },
-    "0x2d-0x40000" : {
-      "Text" : "0x1f",
-      "Action" : 11
-    },
-    "0xf70e-0x20000" : {
-      "Text" : "[23;2~",
-      "Action" : 10
-    },
-    "0xf702-0x220000" : {
-      "Text" : "[1;2D",
-      "Action" : 10
-    },
-    "0xf707-0x20000" : {
-      "Text" : "[1;2S",
-      "Action" : 10
-    },
-    "0xf700-0x240000" : {
-      "Text" : "[1;5A",
-      "Action" : 10
-    },
-    "0xf70a-0x20000" : {
-      "Text" : "[18;2~",
-      "Action" : 10
-    },
-    "0x35-0x40000" : {
-      "Text" : "0x1d",
-      "Action" : 11
-    },
-    "0xf70f-0x20000" : {
-      "Text" : "[24;2~",
-      "Action" : 10
-    },
-    "0xf703-0x240000" : {
-      "Text" : "[1;5C",
-      "Action" : 10
-    },
-    "0xf701-0x260000" : {
-      "Text" : "[1;6B",
-      "Action" : 10
-    },
-    "0xf72b-0x20000" : {
-      "Text" : "[1;2F",
-      "Action" : 10
-    },
-    "0x36-0x40000" : {
-      "Text" : "0x1e",
-      "Action" : 11
-    },
-    "0xf708-0x20000" : {
-      "Text" : "[15;2~",
-      "Action" : 10
-    },
-    "0xf701-0x220000" : {
-      "Text" : "[1;2B",
-      "Action" : 10
-    },
-    "0xf70b-0x20000" : {
-      "Text" : "[19;2~",
-      "Action" : 10
-    },
-    "0xf702-0x280000-0x0" : {
-      "Version" : 2,
-      "Action" : 10,
-      "Text" : "w",
-      "Escaping" : 1
-    },
-    "0xf702-0x240000" : {
-      "Text" : "[1;5D",
-      "Action" : 10
-    },
-    "0xf704-0x20000" : {
-      "Text" : "[1;2P",
-      "Action" : 10
     }
   },
   "Bold Color (Dark)" : {
@@ -820,15 +671,17 @@
     "Alpha Component" : 1,
     "Green Component" : 0.33751838281750679
   },
-  "Ansi 12 Color (Light)" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 0.3333333432674408,
-    "Blue Component" : 1
-  },
-  "Close Sessions On End" : true,
   "Ansi 0 Color" : {
     "Green Component" : 0,
     "Red Component" : 0,
     "Blue Component" : 0
+  },
+  "Non-ASCII Anti Aliased" : true,
+  "Foreground Color (Dark)" : {
+    "Red Component" : 1,
+    "Color Space" : "sRGB",
+    "Blue Component" : 1,
+    "Alpha Component" : 1,
+    "Green Component" : 1
   }
 }
