@@ -366,7 +366,7 @@
     "Red Component" : 0.3333333432674408,
     "Blue Component" : 1
   },
-  "Blur Radius" : 9.9495340401785715,
+  "Blur Radius" : 0.10000000000000001,
   "Rows" : 50,
   "Background Color (Light)" : {
     "Red Component" : 0,
@@ -429,7 +429,7 @@
   },
   "Command" : "jos",
   "Minimum Contrast (Light)" : 0.78007624337668591,
-  "Blend" : 0.35035926094890502,
+  "Blend" : 0.3013822992700731,
   "Character Encoding" : 4,
   "Minimum Contrast" : 0.78007624337668591,
   "Cursor Boost (Light)" : 0,
