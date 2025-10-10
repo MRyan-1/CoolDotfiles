@@ -163,12 +163,13 @@ keymap = [
 
 	{ on = ["g", "l", "l"], run = "cd ~/learnSpace", desc = "cd /learnSpace" },
     { on = ["g", "l", "k"], run = "cd ~/learnSpace/KnowledgePlanet", desc = "cd /learnSpace/KnowledgePlanet" },
-	{ on = ["g", "l", "m"], run = "cd ~/learnSpace/Learning\\ materials", desc = "cd /learnSpace/Learning materials" },
+	{ on = ["g", "l", "m"], run = "cd ~/learnSpace/Learning\\ Database", desc = "cd /learnSpace/Learning Database" },
 
 	{ on = ["g", "s", "c"], run = "cd ~/ProgramData/CodeFarmersTurn", desc = "cd /CodeFarmersTurn" },
 	{ on = ["g", "s", "o"], run = "cd ~/ProgramData/CodeFarmersTurn/OpenSource", desc = "cd /CodeFarmersTurn/OpenSource" },
 	{ on = ["g", "s", "e"], run = "cd ~/ProgramData/CodeFarmersTurn/Example", desc = "cd /CodeFarmersTurn/Example" },
 	{ on = ["g", "s", "a"], run = "cd ~/ProgramData/CodeFarmersTurn/Analysis", desc = "cd /CodeFarmersTurn/Analysis" },
+	{ on = ["g", "s", "w"], run = "cd ~/ProgramData/CodeFarmersTurn/Wheel", desc = "cd /CodeFarmersTurn/Wheel" },
 
 	{ on = ["g", "w", "w"], run = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/", desc = "cd /WormholeStack" },
 	{ on = ["g", "w", "e"], run = "cd ~/ProgramData/CodeFarmersTurn/WormholeStack/wormhole", desc = "cd /WormholeStack/wormhole" },
@@ -183,7 +184,6 @@ keymap = [
 
 	{ on = ["g", "c", "g"], run = "cd ~/.config", desc = "cd .config" },
 	{ on = ["g", "c", "n"], run = "cd ~/.nvm", desc = "cd .nvm" },
-	{ on = ["g", "c", "j"], run = "cd ~/.config/joshuto", desc = "cd .config/joshuto" },
 	{ on = ["g", "c", "y"], run = "cd ~/.config/yazi", desc = "cd .config/yazi" },
 	{ on = ["g", "c", "e"], run = "cd /etc", desc = "cd /etc" },
 	{ on = ["g", "c", "m"], run = "cd /.m2", desc = "cd .m2" },

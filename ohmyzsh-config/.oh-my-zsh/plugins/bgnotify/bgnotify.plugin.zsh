@@ -60,9 +60,11 @@ function bgnotify_formatted {
 }
 
 function bgnotify_appid {
-  if (( ${+commands[osascript]} )); then
-    osascript -e "tell application id \"$(bgnotify_programid)\"  to get the {id, frontmost, id of front window, visible of front window}" 2>/dev/null
-  elif [[ -n $WAYLAND_DISPLAY ]] && (( ${+commands[swaymsg]} )); then # wayland+sway
+  if (( ${+commands[lsappinfo]} )); then
+    lsappinfo info -only bundleid "$(lsappinfo front)" | awk -F= '{print $2}' | tr -d '"' 2>/dev/null
+  elif (( ${+commands[osascript]} )); then
+    osascript -e "tell application id \"$(bgnotify_programid)\" to get the {id, frontmost, id of front window, visible of front window}" 2>/dev/null
+  elif [[ -n $WAYLAND_DISPLAY ]] && ([[ -n $SWAYSOCK ]] || [[ -n $I3SOCK ]]) && (( ${+commands[swaymsg]} )); then # wayland+sway
     local app_id=$(bgnotify_find_sway_appid)
     [[ -n "$app_id" ]] && echo "$app_id" || echo $EPOCHSECONDS
   elif [[ -z $WAYLAND_DISPLAY ]] && [[ -n $DISPLAY ]] && (( ${+commands[xprop]} )); then
@@ -108,6 +110,7 @@ function bgnotify_programid {
   case "$TERM_PROGRAM" in
     iTerm.app) echo 'com.googlecode.iterm2' ;;
     Apple_Terminal) echo 'com.apple.terminal' ;;
+    ghostty) echo 'com.mitchellh.ghostty' ;;
   esac
 }
 
@@ -117,15 +120,15 @@ function bgnotify {
   local icon="$3"
   if (( ${+commands[terminal-notifier]} )); then # macOS
     local term_id=$(bgnotify_programid)
-    terminal-notifier -message "$message" -title "$title" ${=icon:+-appIcon "$icon"} ${=term_id:+-activate "$term_id"} &>/dev/null
+    terminal-notifier -message "$message" -title "$title" ${=icon:+-appIcon "$icon"} ${=term_id:+-activate "$term_id"} ${=bgnotify_extraargs:-} &>/dev/null
   elif (( ${+commands[growlnotify]} )); then # macOS growl
-    growlnotify -m "$title" "$message"
+    growlnotify -m "$title" "$message" ${=bgnotify_extraargs:-}
   elif (( ${+commands[notify-send]} )); then
-    notify-send "$title" "$message" ${=icon:+--icon "$icon"}
+    notify-send "$title" "$message" ${=icon:+--icon "$icon"} ${=bgnotify_extraargs:-}
   elif (( ${+commands[kdialog]} )); then # KDE
-    kdialog --title "$title" --passivepopup  "$message" 5
+    kdialog --title "$title" --passivepopup  "$message" 5 ${=bgnotify_extraargs:-}
   elif (( ${+commands[notifu]} )); then # cygwin
-    notifu /m "$message" /p "$title" ${=icon:+/i "$icon"}
+    notifu /m "$message" /p "$title" ${=icon:+/i "$icon"} ${=bgnotify_extraargs:-}
   fi
 }
 
