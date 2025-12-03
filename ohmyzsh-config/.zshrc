@@ -49,6 +49,7 @@ export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+export PATH="/Users/ryan/environment/apache-maven-3.6.3/bin:$PATH"
 
 # broot
 source ~/.config/broot/launcher/bash/br
