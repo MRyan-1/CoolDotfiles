@@ -65,6 +65,29 @@ If `yes`, sets the `--icons` option of `eza`, adding icons for files and folders
 
 Default: `no`
 
+### `color-scale`
+
+```zsh
+zstyle ':omz:plugins:eza' 'color-scale' all|age|size
+```
+
+Highlight levels of field(s) distinctly. Use comma(,) separated list of `all`, `age`, `size`
+
+Default: `none`
+
+### `color-scale-mode`
+
+```zsh
+zstyle ':omz:plugins:eza' 'color-scale-mode' gradient|fixed
+```
+
+Choose the mode for highlighting:
+
+- `gradient` (default) -- gradient coloring
+- `fixed` -- fixed coloring
+
+Default: `gradient`
+
 ### `size-prefix`
 
 ```zsh
@@ -89,6 +112,16 @@ zstyle ':omz:plugins:eza' 'time-style' $TIME_STYLE
 Sets the `--time-style` option of `eza`. (See `man eza` for the options)
 
 Default: Not set, which means the default behavior of `eza` will take place.
+
+### `hyperlink`
+
+```zsh
+zstyle ':omz:plugins:eza' 'hyperlink' yes|no
+```
+
+If `yes`, always add `--hyperlink` flag to create hyperlink with escape codes.
+
+Default: `no`
 
 ## Aliases
 

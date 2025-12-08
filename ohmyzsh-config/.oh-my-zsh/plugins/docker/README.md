@@ -39,6 +39,10 @@ following setting. See https://github.com/ohmyzsh/ohmyzsh/issues/11789 for more 
 zstyle ':omz:plugins:docker' legacy-completion yes
 ```
 
+### For Podman's Docker wrapper users
+
+If you use Podman's Docker wrapper, you need to enable legacy completion. See above section.
+
 ## Aliases
 
 | Alias   | Command                       | Description                                                                              |
@@ -51,6 +55,7 @@ zstyle ':omz:plugins:docker' legacy-completion yes
 | dii     | `docker image inspect`        | Display detailed information on one or more images                                       |
 | dils    | `docker image ls`             | List docker images                                                                       |
 | dipu    | `docker image push`           | Push an image or repository to a remote registry                                         |
+| dipru   | `docker image prune -a`       | Remove all images not referenced by any container                                        |
 | dirm    | `docker image rm`             | Remove one or more images                                                                |
 | dit     | `docker image tag`            | Add a name and tag to a particular image                                                 |
 | dlo     | `docker container logs`       | Fetch the logs of a docker container                                                     |
@@ -72,6 +77,7 @@ zstyle ':omz:plugins:docker' legacy-completion yes
 | drs     | `docker container restart`    | Restart one or more containers                                                           |
 | dsta    | `docker stop $(docker ps -q)` | Stop all running containers                                                              |
 | dstp    | `docker container stop`       | Stop one or more running containers                                                      |
+| dsts    | `docker stats`                | Display real-time streaming statistics for containers                                                    |
 | dtop    | `docker top`                  | Display the running processes of a container                                             |
 | dvi     | `docker volume inspect`       | Display detailed information about one or more volumes                                   |
 | dvls    | `docker volume ls`            | List all the volumes known to docker                                                     |
