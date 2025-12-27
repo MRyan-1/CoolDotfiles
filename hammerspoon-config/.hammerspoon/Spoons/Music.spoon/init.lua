@@ -44,8 +44,23 @@ end
 
 -- Media Controls
 function obj:playpause() 
-    self:showFeedback("播放 / 暂停")
-    self:as("playpause")
+    local _, isRunning = hs.osascript.applescript('application "Music" is running')
+    if isRunning then
+        local _, hasTrack = hs.osascript.applescript('tell application "Music" to exists current track')
+        if hasTrack then
+            self:showFeedback("播放 / 暂停")
+            self:as("playpause")
+        else
+            self:showFeedback("播放资料库")
+            hs.osascript.applescript('tell application "Music" to play playlist "资料库"')
+        end
+    else
+        self:showFeedback("启动音乐app")
+        hs.application.launchOrFocusByBundleID("com.apple.Music")
+        hs.timer.doAfter(3, function()
+            hs.osascript.applescript('tell application "Music" to play playlist "资料库"')
+        end)
+    end
 end
 function obj:next() self:showFeedback("下一首"); self:as("next track") end
 function obj:previous() self:showFeedback("上一首"); self:as("previous track") end
