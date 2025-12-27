@@ -5,11 +5,6 @@ hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
--- 鼠标选取区域打开Iterm模块
-local yourPath = '/Users/ryan/.hammerspoon/BradensPoon/'
-package.path = yourPath .. '?.lua;' .. package.path;
-require('init')
-
 -- 输入法切换模块
 ime_switcher = require("ime_switcher")
 -- 锁屏自动断开蓝牙耳机模块
@@ -63,13 +58,41 @@ hs.loadSpoon("ModalMgr")
 -- 定义默认加载的 Spoons
 if not hspoon_list then
     hspoon_list = {"WinWin", -- 窗口管理
-    "AClock" -- 一个钟
+    "AClock", -- 一个钟
+    "Cheatsheet" -- 快捷键面板
     }
 end
 
 -- 加载 Spoons
 for _, v in pairs(hspoon_list) do
     hs.loadSpoon(v)
+end
+
+----------------------------------------------------------------------------------------------------
+-- 音乐控制 (Apple Music)
+----------------------------------------------------------------------------------------------------
+if spoon.Music then
+    local music_keys = {
+        [{{ "cmd", "alt" }, "left"}] = "previous",
+        [{{ "cmd", "alt" }, "right"}] = "next",
+        [{{ "cmd", "alt" }, "return"}] = "playpause",
+    }
+    spoon.Music:bindHotkeys(music_keys)
+    -- [REMOVED] 音乐信息轮询已停止
+end
+
+----------------------------------------------------------------------------------------------------
+-- 快捷键面板 (Cheatsheet)
+----------------------------------------------------------------------------------------------------
+if spoon.Cheatsheet then
+    hs.hotkey.bind({"ctrl", "shift", "cmd"}, "/", function()
+        -- 从 private/config.lua 中读取的 app_toggle_keys
+        if app_toggle_keys then
+            spoon.Cheatsheet:show(app_toggle_keys)
+        else
+            hs.alert.show("未找到 app_toggle_keys 配置")
+        end
+    end)
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -266,10 +289,16 @@ if spoon.WinWin then
     -- 定义窗口管理模式快捷键
     hsresizeM_keys = hsresizeM_keys or {"alt", "R"}
     if string.len(hsresizeM_keys[2]) > 0 then
-        spoon.ModalMgr.supervisor:bind(hsresizeM_keys[1], hsresizeM_keys[2], "进入窗口管理模式", function()
-            spoon.ModalMgr:deactivateAll()
-            -- 显示状态指示器，方便查看所处模式
-            spoon.ModalMgr:activate({"resizeM"}, "#f1c40f")
+        spoon.ModalMgr.supervisor:bind(hsresizeM_keys[1], hsresizeM_keys[2], "切换窗口管理模式", function()
+            -- 检查 resizeM 是否已经在 active_list 中
+            if spoon.ModalMgr.active_list["resizeM"] then
+                -- 如果已激活，则退出
+                spoon.ModalMgr:deactivate({"resizeM"})
+            else
+                -- 如果未激活，则进入
+                spoon.ModalMgr:deactivateAll()
+                spoon.ModalMgr:activate({"resizeM"}, "#f1c40f")
+            end
         end)
     end
 end
@@ -308,7 +337,7 @@ function changeVolume(diff)
             hs.audiodevice.defaultOutputDevice():setMuted(false)
         end
         hs.alert.closeAll(0.0)
-        hs.alert.show("Volume " .. new .. "%", {}, 0.5)
+        hs.alert.show("音量 " .. new .. "%", {}, 0.5) -- [FIX] Revert to hs.alert
         hs.audiodevice.defaultOutputDevice():setVolume(new)
     end
 end
@@ -336,6 +365,48 @@ hsImSwitcherAlert_keys = hsImSwitcherAlert_keys or {{"ctrl", "cmd"}, "."}
 if string.len(hsImSwitcherAlert_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hsImSwitcherAlert_keys[1], hsImSwitcherAlert_keys[2], "输入法自动切换定位",
         imSwitcherAlert)
+end
+
+----------------------------------------------------------------------------------------------------
+-- 音乐控制 (Apple Music)
+----------------------------------------------------------------------------------------------------
+function toggleApp(appIdOrName)
+    -- 先尝试作为 Bundle ID 查找
+    local app = hs.application.get(appIdOrName)
+    
+    if not app then
+        -- 如果没找到，且看起来不像 Bundle ID，尝试 launch
+        hs.application.launchOrFocus(appIdOrName)
+        return
+    end
+
+    -- 优先判断是否为最前端应用
+    if app:isFrontmost() then
+        app:hide()
+    else
+        -- 尝试激活
+        if not app:activate() then
+            hs.application.launchOrFocus(appIdOrName)
+        end
+        local mainWin = app:mainWindow()
+        if mainWin then
+            mainWin:focus()
+        end
+    end
+end
+
+if app_toggle_keys then
+    for _, mapping in ipairs(app_toggle_keys) do
+        local mods = mapping[1]
+        local key = mapping[2]
+        local appName = mapping[3]
+        
+        if string.len(key) > 0 then
+            hs.hotkey.bind(mods, key, "切换 " .. appName, function()
+                toggleApp(appName)
+            end)
+        end
+    end
 end
 
 ----------------------------------------------------------------------------------------------------

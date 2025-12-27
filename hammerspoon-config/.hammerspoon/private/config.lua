@@ -1,5 +1,5 @@
 -- 指定要启用的模块
-hspoon_list = {"WinWin", "AClock"}
+hspoon_list = {"WinWin", "AClock", "Cheatsheet", "Music"}
 
 -- 锁定电脑快捷键绑定
 hslock_keys = {"alt", "L"}
@@ -34,6 +34,16 @@ ime_switcher.app2Ime = {{'/Applications/iTerm.app', 'English'}, {'/Applications/
 -- 没有在app2IM中指定切换的APP的默认输入法语言
 ime_switcher.excludingDefaultIme = 'English'
 
--- 划定区域打开APP的名称
--- 目前已知支持iTerm和Calculator
-dragAppName = 'iTerm'
+-- 应用一键开关快捷键 (打开/隐藏)
+-- 格式: {{修饰键}, "按键", "应用名称"}
+-- 统一使用 Hyper Key: Ctrl + Shift + Command
+app_toggle_keys = {
+    {{"ctrl", "shift", "cmd"}, "Q", "iTerm"},
+    {{"ctrl", "shift", "cmd"}, "W", "Unreal"},
+    {{"ctrl", "shift", "cmd"}, "A", "IntelliJ IDEA"},
+    {{"ctrl", "shift", "cmd"}, "S", "GoLand"},
+    {{"ctrl", "shift", "cmd"}, "D", "PyCharm"},
+    {{"ctrl", "shift", "cmd"}, "Z", "Google Chrome"},
+    {{"ctrl", "shift", "cmd"}, "X", "Obsidian"},
+    {{"ctrl", "shift", "cmd"}, "C", "Notion"},
+}

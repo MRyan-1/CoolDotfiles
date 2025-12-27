@@ -95,15 +95,6 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # -------------------------------
-# Fiddler
-# -------------------------------
-if [ -n "$FE_STARTED" ] && [ -s '/Applications/Fiddler Everywhere.app/Contents/Resources/app/out/assets/scripts/startup-mac.sh' ] && [ "$STARTUP_SOURCED" != "true" ] ; then
-    source '/Applications/Fiddler Everywhere.app/Contents/Resources/app/out/assets/scripts/startup-mac.sh'
-    STARTUP_SOURCED="true"
-fi
-
-
-# -------------------------------
 # Conda 放最后（避免污染 Node/Go）
 # -------------------------------
 __conda_setup="$('/Users/ryan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
