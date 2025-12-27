@@ -12,7 +12,6 @@ hsreload_keys = {{"cmd", "shift", "ctrl"}, "R"}
 
 -- 音量降低
 hsVolumeDown_keys = {{"cmd", "alt"}, "Down"}
-
 -- 音量升高
 hsVolumeUp_keys = {{"cmd", "alt"}, "Up"}
 
@@ -37,13 +36,7 @@ ime_switcher.excludingDefaultIme = 'English'
 -- 应用一键开关快捷键 (打开/隐藏)
 -- 格式: {{修饰键}, "按键", "应用名称"}
 -- 统一使用 Hyper Key: Ctrl + Shift + Command
-app_toggle_keys = {
-    {{"ctrl", "shift", "cmd"}, "Q", "iTerm"},
-    {{"ctrl", "shift", "cmd"}, "W", "Unreal"},
-    {{"ctrl", "shift", "cmd"}, "A", "IntelliJ IDEA"},
-    {{"ctrl", "shift", "cmd"}, "S", "GoLand"},
-    {{"ctrl", "shift", "cmd"}, "D", "PyCharm"},
-    {{"ctrl", "shift", "cmd"}, "Z", "Google Chrome"},
-    {{"ctrl", "shift", "cmd"}, "X", "Obsidian"},
-    {{"ctrl", "shift", "cmd"}, "C", "Notion"},
-}
+app_toggle_keys = {{{"ctrl", "shift", "cmd"}, "Q", "iTerm"}, {{"ctrl", "shift", "cmd"}, "W", "Unreal"},
+                   {{"ctrl", "shift", "cmd"}, "A", "IntelliJ IDEA"}, {{"ctrl", "shift", "cmd"}, "S", "GoLand"},
+                   {{"ctrl", "shift", "cmd"}, "D", "PyCharm"}, {{"ctrl", "shift", "cmd"}, "Z", "Google Chrome"},
+                   {{"ctrl", "shift", "cmd"}, "X", "Obsidian"}, {{"ctrl", "shift", "cmd"}, "C", "Notion"}}

@@ -9,6 +9,8 @@ hs.window.animationDuration = 0
 ime_switcher = require("ime_switcher")
 -- 锁屏自动断开蓝牙耳机模块
 headphone = require("headphone")
+-- 公共反馈提示模块
+local feedback = require("feedback")
 
 ----------------------------------------------------------------------------------------------------
 ------------------------------------------ 配置设置 -------------------------------------------------
@@ -45,7 +47,7 @@ if string.len(hsreload_keys[2]) > 0 then
     hs.hotkey.bind(hsreload_keys[1], hsreload_keys[2], "重新加载配置!", function()
         hs.reload()
     end)
-    hs.alert.show("配置文件已经重新加载！ ")
+    feedback.show("配置文件已重载")
 end
 
 ----------------------------------------------------------------------------------------------------
@@ -336,8 +338,7 @@ function changeVolume(diff)
         if new > 0 then
             hs.audiodevice.defaultOutputDevice():setMuted(false)
         end
-        hs.alert.closeAll(0.0)
-        hs.alert.show("音量 " .. new .. "%", {}, 0.5) -- [FIX] Revert to hs.alert
+        feedback.show("音量 " .. new .. "%")
         hs.audiodevice.defaultOutputDevice():setVolume(new)
     end
 end
