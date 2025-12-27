@@ -4,6 +4,7 @@
 --- Cyberpunk Style Enhanced V2.1
 ---
 
+local feedback = require("feedback")
 local obj = {}
 obj.__index = obj
 
@@ -14,7 +15,6 @@ obj.homepage = "https://github.com/Hammerspoon/Spoons"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
 obj.modal_tray = nil
-obj.which_key = nil
 obj.modal_list = {}
 obj.active_list = {}
 obj.supervisor = nil
@@ -30,7 +30,7 @@ local c = {
 
 function obj:init()
     hsupervisor_keys = hsupervisor_keys or {{"cmd", "shift", "ctrl"}, "Q"}
-    obj.supervisor = hs.hotkey.modal.new(hsupervisor_keys[1], hsupervisor_keys[2], 'Initialize Modal Environment')
+    obj.supervisor = hs.hotkey.modal.new(hsupervisor_keys[1], hsupervisor_keys[2], nil)
     
     -- 1. 右下角状态托盘
     obj.modal_tray = hs.canvas.new({x = 0, y = 0, w = 0, h = 0})
@@ -57,10 +57,6 @@ function obj:init()
         textAlignment = "center",
         frame = { x = "0%", y = "15%", w = "100%", h = "85%" }
     }
-
-    -- 2. 快捷键面板
-    obj.which_key = hs.canvas.new({x = 0, y = 0, w = 0, h = 0})
-    obj.which_key:level(hs.canvas.windowLevels.tornOffMenu)
 end
 
 function obj:new(id)
@@ -68,12 +64,9 @@ function obj:new(id)
 end
 
 function obj:toggleCheatsheet(iterList, force)
-    if obj.which_key:isShowing() and not force then
-        obj.which_key:hide()
+    if feedback.is_palette_visible() and not force then
+        feedback.hide_palette()
     else
-        local cscreen = hs.screen.mainScreen()
-        local cres = cscreen:fullFrame()
-        
         local keys_pool = {}
         local tmplist = iterList or obj.active_list
         for i, v in pairs(tmplist) do
@@ -85,83 +78,7 @@ function obj:toggleCheatsheet(iterList, force)
         end
         if #keys_pool == 0 then return end
 
-        local cols = 2
-        local rows = math.ceil(#keys_pool / cols)
-        local itemH = 35 -- 更紧凑
-        local headerH = 50
-        local w = 550
-        local h = headerH + (rows * itemH) + 15
-        
-        obj.which_key:frame({
-            x = cres.x + (cres.w - w) / 2,
-            y = cres.y + (cres.h - h) / 2,
-            w = w,
-            h = h
-        })
-
-        -- 清空
-        while #obj.which_key > 0 do obj.which_key[#obj.which_key] = nil end
-
-        -- [1] 背景
-        obj.which_key[#obj.which_key+1] = {
-            type = "rectangle", action = "fill", fillColor = c.bg,
-            roundedRectRadii = { xRadius = 6, yRadius = 6 },
-            strokeColor = c.border, strokeWidth = 1,
-            shadow = { blurRadius = 20, color = {hex="#000000", alpha=0.8}, offset = {h=10, w=0} }
-        }
-
-        -- [2] 标题栏背景 (Header BG)
-        obj.which_key[#obj.which_key+1] = {
-            type = "rectangle", action = "fill", fillColor = c.header_bg,
-            frame = { x = 0, y = 0, w = w, h = headerH },
-            roundedRectRadii = { xRadius = 6, yRadius = 6 } -- 仅顶部圆角效果需复杂路径，这里简单处理
-        }
-        
-        -- [3] 标题文字
-        obj.which_key[#obj.which_key+1] = {
-            type = "text",
-            text = "COMMANDS // 指令",
-            textFont = "PingFang SC",
-            textStyle = { weight = "bold" },
-            textSize = 15,
-            textColor = c.yellow,
-            textAlignment = "center",
-            frame = { x = 0, y = 15, w = w, h = 30 }
-        }
-        
-        -- [4] 装饰线
-        obj.which_key[#obj.which_key+1] = {
-            type = "segments", action = "stroke", strokeColor = c.yellow, strokeWidth = 2,
-            coordinates = { { x = 0, y = headerH }, { x = w, y = headerH } }
-        }
-
-        -- [5] 列表内容
-        for idx, val in ipairs(keys_pool) do
-            local col = (idx - 1) % cols
-            local row = math.floor((idx - 1) / cols)
-            local x = col * (w / 2)
-            local y = headerH + row * itemH + 8
-            
-            -- 指示点
-            obj.which_key[#obj.which_key+1] = {
-                type = "rectangle", action = "fill", fillColor = c.yellow,
-                frame = { x = x + 30, y = y + 8, w = 4, h = 4 },
-                rotation = 45 -- 菱形点
-            }
-            
-            -- 文字
-            obj.which_key[#obj.which_key+1] = {
-                type = "text",
-                text = val,
-                textFont = "Menlo",
-                textSize = 13,
-                textColor = c.text,
-                textAlignment = "left",
-                frame = { x = x + 45, y = y, w = (w/2) - 50, h = 30 }
-            }
-        end
-
-        obj.which_key:show()
+        feedback.show_palette("COMMANDS // 指令", keys_pool)
     end
 end
 
@@ -200,7 +117,7 @@ function obj:deactivate(idList)
         obj.active_list[val] = nil
     end
     obj.modal_tray:hide()
-    obj.which_key:hide()
+    feedback.hide_palette()
 end
 
 function obj:deactivateAll()

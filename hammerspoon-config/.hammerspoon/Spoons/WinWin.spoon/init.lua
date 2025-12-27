@@ -4,6 +4,7 @@
 ---
 --- Download: [https://github.com/Hammerspoon/Spoons/raw/master/Spoons/WinWin.spoon.zip](https://github.com/Hammerspoon/Spoons/raw/master/Spoons/WinWin.spoon.zip)
 
+local feedback = require("feedback")
 local obj={}
 obj.__index = obj
 
@@ -46,7 +47,7 @@ function obj:stepMove(direction)
             cwin:setTopLeft({x=wtopleft.x, y=wtopleft.y+steph})
         end
     else
-        hs.alert.show("No focused window!")
+        feedback.show("No focused window!")
     end
 end
 
@@ -74,7 +75,7 @@ function obj:stepResize(direction)
             cwin:setSize({w=wsize.w, h=wsize.h+steph})
         end
     else
-        hs.alert.show("No focused window!")
+        feedback.show("No focused window!")
     end
 end
 
@@ -199,7 +200,7 @@ function obj:moveAndResize(option)
             cwin:setFrame({x=wf.x+stepw, y=wf.y+steph, w=wf.w-(stepw*2), h=wf.h-(steph*2)})
         end
     else
-        hs.alert.show("No focused window!")
+        feedback.show("No focused window!")
     end
 end
 
@@ -225,7 +226,7 @@ function obj:moveToScreen(direction)
             cwin:moveToScreen(cscreen:next())
         end
     else
-        hs.alert.show("No focused window!")
+        feedback.show("No focused window!")
     end
 end
 
