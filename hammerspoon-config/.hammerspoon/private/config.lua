@@ -17,6 +17,10 @@ hsVolumeUp_keys = {{"cmd", "alt"}, "Up"}
 
 -- 根据APP自动切换输入法，辅助工具定位
 hsImSwitcherAlert_keys = {{"ctrl", "cmd"}, "."}
+
+-- 屏幕切换并聚焦
+hsscreen_focus_keys = {"alt", "tab"}
+
 -- 包含指定切换的APP及语言
 ime_switcher.app2Ime = {{'/Applications/iTerm.app', 'English'}, {'/Applications/Visual Studio Code.app', 'English'},
                         {'/Applications/Google Chrome.app', 'Chinese'}, {'/Applications/WeChat.app', 'Chinese'},

@@ -6,7 +6,7 @@ local style = {
     yellow = { hex = "#fcee0a" }
 }
 
-function feedback.show(text)
+function feedback.show(text, screen)
     if not canvas then
         canvas = hs.canvas.new({x=0, y=0, w=0, h=0})
         -- 1. 背景板 (带阴影)
@@ -35,8 +35,8 @@ function feedback.show(text)
 
     if timer then timer:stop() end
 
-    local mainScreen = hs.screen.mainScreen()
-    local cres = mainScreen:fullFrame()
+    local targetScreen = screen or hs.screen.mainScreen()
+    local cres = targetScreen:fullFrame()
     local w, h = 200, 80
     canvas:frame({ x = cres.x + (cres.w - w)/2, y = cres.y + (cres.h - h)/2, w = w, h = h })
     canvas[6].text = text

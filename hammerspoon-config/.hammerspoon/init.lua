@@ -9,6 +9,8 @@ hs.window.animationDuration = 0
 ime_switcher = require("ime_switcher")
 -- 锁屏自动断开蓝牙耳机模块
 headphone = require("headphone")
+-- 屏幕切换模块
+screen_focus = require("screen_focus")
 -- 公共反馈提示模块
 local feedback = require("feedback")
 
@@ -366,6 +368,16 @@ hsImSwitcherAlert_keys = hsImSwitcherAlert_keys or {{"ctrl", "cmd"}, "."}
 if string.len(hsImSwitcherAlert_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hsImSwitcherAlert_keys[1], hsImSwitcherAlert_keys[2], "输入法自动切换定位",
         imSwitcherAlert)
+end
+
+----------------------------------------------------------------------------------------------------
+-- 屏幕切换 (Screen Focus)
+----------------------------------------------------------------------------------------------------
+hsscreen_focus_keys = hsscreen_focus_keys or {"alt", "tab"}
+if string.len(hsscreen_focus_keys[2]) > 0 then
+    hs.hotkey.bind(hsscreen_focus_keys[1], hsscreen_focus_keys[2], "切换屏幕并聚焦", function()
+        screen_focus.focusNextScreen()
+    end)
 end
 
 ----------------------------------------------------------------------------------------------------
