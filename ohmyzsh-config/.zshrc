@@ -82,6 +82,10 @@ alias lc="leetcode"
 alias jos="joshuto"
 alias ya="$HOME/.config/yazi/ya"
 alias yazi="$HOME/.config/yazi/yazi"
+alias goland='open -na "GoLand.app" --args "$@"'
+alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
+alias idea='open -na "PyCharm.app" --args "$@"'
+
 
 # 自定义 env
 [ -f "$HOME/.local/bin/env" ] && source "$HOME/.local/bin/env"
