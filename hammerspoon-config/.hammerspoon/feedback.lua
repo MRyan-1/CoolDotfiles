@@ -1,3 +1,4 @@
+-- author = "Ryan.ma"
 local feedback = {}
 local canvas = nil
 local palette = nil
@@ -32,7 +33,7 @@ function feedback.show(text, screen)
             canvas[1 + i] = { type = "segments", action = "stroke", strokeColor = style.yellow, strokeWidth = armorWidth, coordinates = coord }
         end
         
-        -- 3. 文字内容 (索引后移)
+        -- 3. 文字内容
         canvas[6] = { type = "text", text = "", textFont = "PingFangSC-Semibold", textSize = 24, textColor = style.yellow, textAlignment = "center" }
     end
 
@@ -40,7 +41,13 @@ function feedback.show(text, screen)
 
     local targetScreen = screen or hs.screen.mainScreen()
     local cres = targetScreen:fullFrame()
-    local w, h = 200, 80
+    
+    -- 动态计算宽度
+    local textStyle = { font = "PingFangSC-Semibold", size = 24 }
+    local textSizeInfo = hs.drawing.getTextDrawingSize(text, textStyle)
+    local w = math.max(200, textSizeInfo.w + 80)
+    local h = 80
+    
     canvas:frame({ x = cres.x + (cres.w - w)/2, y = cres.y + (cres.h - h)/2, w = w, h = h })
     canvas[6].text = text
     canvas[6].frame = { x=0, y=25, w=w, h=h }
@@ -48,7 +55,7 @@ function feedback.show(text, screen)
     timer = hs.timer.doAfter(0.8, function() canvas:hide() end)
 end
 
-function feedback.show_palette(title, items, screen)
+function feedback.show_palette(title, items, screen, selectedIndex, columns)
     if not palette then
         palette = hs.canvas.new({x=0, y=0, w=0, h=0})
         palette:level(hs.canvas.windowLevels.tornOffMenu)
@@ -62,12 +69,12 @@ function feedback.show_palette(title, items, screen)
     local targetScreen = screen or hs.screen.mainScreen()
     local cres = targetScreen:fullFrame()
 
-    local cols = 2
+    local cols = columns or 1
     local rows = math.ceil(#items / cols)
-    local itemH = 35
+    local itemH = 40
     local headerH = 50
-    local w = 550
-    local h = headerH + (rows * itemH) + 15
+    local w = (cols == 1) and 550 or 700
+    local h = headerH + (rows * itemH) + 20
 
     palette:frame({
         x = cres.x + (cres.w - w) / 2,
@@ -76,65 +83,77 @@ function feedback.show_palette(title, items, screen)
         h = h
     })
 
-    -- 清空画布内容
+    -- 清空
     while #palette > 0 do palette[#palette] = nil end
 
-    -- [1] 背景
-    palette[#palette+1] = {
+    -- [1] 背景板
+    palette[1] = {
         type = "rectangle", action = "fill", fillColor = style.bg,
-        roundedRectRadii = { xRadius = 6, yRadius = 6 },
+        roundedRectRadii = { xRadius = 0, yRadius = 0 },
         strokeColor = style.yellow, strokeWidth = 1,
-        shadow = { blurRadius = 20, color = {hex="#000000", alpha=0.8}, offset = {h=10, w=0} }
-    }
-
-    -- [2] 标题栏背景
-    palette[#palette+1] = {
-        type = "rectangle", action = "fill", fillColor = style.header_bg,
-        frame = { x = 0, y = 0, w = w, h = headerH },
-        roundedRectRadii = { xRadius = 6, yRadius = 6 }
+        shadow = { blurRadius = 20, color = style.yellow, alpha = 0.15, offset = {h=0, w=0} }
     }
     
-    -- [3] 标题文字
-    palette[#palette+1] = {
+    -- 四角装饰
+    local armorWidth = 4
+    local armorCoords = {
+        {{x="0%", y="15%"}, {x="0%", y="0%"}, {x="10%", y="0%"}},
+        {{x="90%", y="0%"}, {x="100%", y="0%"}, {x="100%", y="15%"}},
+        {{x="100%", y="85%"}, {x="100%", y="100%"}, {x="90%", y="100%"}},
+        {{x="10%", y="100%"}, {x="0%", y="100%"}, {x="0%", y="85%"}}
+    }
+    for i, coord in ipairs(armorCoords) do
+        palette[1 + i] = { type = "segments", action = "stroke", strokeColor = style.yellow, strokeWidth = armorWidth, coordinates = coord }
+    end
+
+    -- [2] 标题栏
+    palette[6] = {
+        type = "rectangle", action = "fill", fillColor = style.header_bg,
+        frame = { x = 0, y = 0, w = w, h = headerH }
+    }
+    
+    palette[7] = {
         type = "text",
         text = title,
         textFont = "PingFang SC",
         textStyle = { weight = "bold" },
-        textSize = 15,
+        textSize = 16,
         textColor = style.yellow,
         textAlignment = "center",
         frame = { x = 0, y = 15, w = w, h = 30 }
     }
-    
-    -- [4] 装饰线
-    palette[#palette+1] = {
-        type = "segments", action = "stroke", strokeColor = style.yellow, strokeWidth = 2,
-        coordinates = { { x = 0, y = headerH }, { x = w, y = headerH } }
-    }
 
-    -- [5] 列表内容
+    -- [3] 列表项
     for idx, val in ipairs(items) do
         local col = (idx - 1) % cols
         local row = math.floor((idx - 1) / cols)
-        local x = col * (w / 2)
-        local y = headerH + row * itemH + 8
+        local cellW = w / cols
+        local x = col * cellW
+        local y = headerH + row * itemH + 10
         
-        -- 指示点
-        palette[#palette+1] = {
-            type = "rectangle", action = "fill", fillColor = style.yellow,
-            frame = { x = x + 30, y = y + 8, w = 4, h = 4 },
-            rotation = 45
-        }
+        local isSelected = (selectedIndex and idx == selectedIndex)
         
-        -- 文字
+        if isSelected then
+            palette[#palette+1] = {
+                type = "rectangle", action = "fill",
+                fillColor = { hex = style.yellow.hex, alpha = 0.2 },
+                frame = { x = x + 5, y = y, w = cellW - 10, h = itemH - 4 }
+            }
+            palette[#palette+1] = {
+                type = "rectangle", action = "fill",
+                fillColor = style.yellow,
+                frame = { x = x + 5, y = y, w = 4, h = itemH - 4 }
+            }
+        end
+        
         palette[#palette+1] = {
             type = "text",
             text = val,
-            textFont = "Menlo",
-            textSize = 13,
-            textColor = style.text,
+            textFont = (cols == 1) and "PingFangSC-Regular" or "Menlo",
+            textSize = (cols == 1) and 14 or 12,
+            textColor = isSelected and style.yellow or style.text,
             textAlignment = "left",
-            frame = { x = x + 45, y = y, w = (w/2) - 50, h = 30 }
+            frame = { x = x + 25, y = y + 10, w = cellW - 40, h = 30 }
         }
     end
 

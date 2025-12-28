@@ -26,14 +26,15 @@ ime_switcher.app2Ime = {{'/Applications/iTerm.app', 'English'}, {'/Applications/
                         {'/Applications/Google Chrome.app', 'Chinese'}, {'/Applications/WeChat.app', 'Chinese'},
                         {'/Applications/System Preferences.app', 'English'}, {'/Applications/TickTick.app', 'Chinese'},
                         {'/Applications/企业微信.app', 'Chinese'}, {'/Applications/语雀.app', 'Chinese'},
-                        {'/Applications/印象笔记.app', 'Chinese'}, {'/Applications/Dash.app', 'English'},
                         {'/Applications/Android Studio.app', 'English'}, {'/Applications/Bob.app', 'Chinese'},
-                        {'/Applications/IntelliJ IDEA.app', 'English'}, {'/Applications/QQ.app', 'Chinese'},
-                        {'/Applications/Typora.app', 'Chinese'}, {'/Applications/Alfred 5.app', 'English'},
+                        {'/Applications/IntelliJ IDEA.app', 'English'}, {'/Applications/GoLand.app', 'English'},
+                        {'/Applications/PyCharm.app', 'English'}, {'/Applications/DataGrip.app', 'English'},
+                        {'/Applications/QQ.app', 'Chinese'}, {'/Applications/Typora.app', 'Chinese'},
+                        {'/Applications/Notion.app', 'Chinese'}, {'/Applications/Alfred 5.app', 'English'},
                         {'/Applications/starfish.app', 'Chinese'}, {'/Applications/Microsoft Edge.app', 'Chinese'},
                         {'/Applications/Postman.app', 'English'}, {'/Applications/Safari.app', 'Chinese'},
                         {'/Applications/Obsidian.app', 'English'}, {'/Applications/Navicat Premium.app', 'English'},
-                        {'/Applications/Arc.app', 'Chinese'}, {'/System/Applications/Reminders.app', 'Chinese'}}
+                        {'/System/Applications/Reminders.app', 'Chinese'}}
 -- 没有在app2IM中指定切换的APP的默认输入法语言
 ime_switcher.excludingDefaultIme = 'English'
 

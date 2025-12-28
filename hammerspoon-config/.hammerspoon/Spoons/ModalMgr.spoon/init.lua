@@ -70,15 +70,24 @@ function obj:toggleCheatsheet(iterList, force)
         local keys_pool = {}
         local tmplist = iterList or obj.active_list
         for i, v in pairs(tmplist) do
-            if type(v) == "string" then
-                for _, m in ipairs(obj.modal_list[v].keys) do table.insert(keys_pool, m.msg) end
-            elseif type(i) == "string" then
-                for _, m in pairs(v.keys) do table.insert(keys_pool, m.msg) end
+            local modal = obj.modal_list[v] or v
+            if modal and modal.keys then
+                for _, m in pairs(modal.keys) do
+                    if m.msg then
+                        -- 构造 "[按键] 描述"
+                        local modStr = ""
+                        if m.mods and #m.mods > 0 then
+                            modStr = table.concat(m.mods, "+") .. "+"
+                        end
+                        local keyLine = string.format("[%s%s] %s", string.upper(modStr), string.upper(m.key or ""), m.msg)
+                        table.insert(keys_pool, keyLine)
+                    end
+                end
             end
         end
         if #keys_pool == 0 then return end
 
-        feedback.show_palette("COMMANDS // 指令", keys_pool)
+        feedback.show_palette("COMMANDS // 指令", keys_pool, nil, nil, 2)
     end
 end
 

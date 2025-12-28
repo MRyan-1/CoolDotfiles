@@ -1,3 +1,4 @@
+-- author = "Ryan.ma"
 ----------------------------------------------------------------------------------------------------
 -------------------------------------------- Begin ---------------------------------------------------
 ----------------------------------------------------------------------------------------------------
@@ -11,6 +12,8 @@ ime_switcher = require("ime_switcher")
 headphone = require("headphone")
 -- 屏幕切换模块
 screen_focus = require("screen_focus")
+-- 窗口循环切换模块
+window_cycler = require("window_cycler")
 -- 公共反馈提示模块
 local feedback = require("feedback")
 
@@ -77,9 +80,9 @@ end
 ----------------------------------------------------------------------------------------------------
 if spoon.Music then
     local music_keys = {
-        [{{ "cmd", "alt" }, "left"}] = "previous",
-        [{{ "cmd", "alt" }, "right"}] = "next",
-        [{{ "cmd", "alt" }, "return"}] = "playpause",
+        [{{"cmd", "alt"}, "left"}] = "previous",
+        [{{"cmd", "alt"}, "right"}] = "next",
+        [{{"cmd", "alt"}, "return"}] = "playpause"
     }
     spoon.Music:bindHotkeys(music_keys)
     -- [REMOVED] 音乐信息轮询已停止
@@ -115,178 +118,178 @@ end
 if spoon.WinWin then
     spoon.ModalMgr:new("resizeM")
     local cmodal = spoon.ModalMgr.modal_list["resizeM"]
-    cmodal:bind('', 'escape', nil, function()
+    cmodal:bind('', 'escape', '退出模式', function()
         spoon.ModalMgr:deactivate({"resizeM"})
     end)
-    cmodal:bind('', 'Q', nil, function()
+    cmodal:bind('', 'Q', '退出模式', function()
         spoon.ModalMgr:deactivate({"resizeM"})
     end)
-    cmodal:bind('', 'tab', nil, function()
+    cmodal:bind('', 'tab', '显示帮助', function()
         spoon.ModalMgr:toggleCheatsheet()
     end)
 
-    cmodal:bind('', 'A', nil, function()
+    cmodal:bind('', 'A', '左移窗口', function()
         spoon.WinWin:stepMove("left")
     end, nil, function()
         spoon.WinWin:stepMove("left")
     end)
-    cmodal:bind('', 'D', nil, function()
+    cmodal:bind('', 'D', '右移窗口', function()
         spoon.WinWin:stepMove("right")
     end, nil, function()
         spoon.WinWin:stepMove("right")
     end)
-    cmodal:bind('', 'W', nil, function()
+    cmodal:bind('', 'W', '上移窗口', function()
         spoon.WinWin:stepMove("up")
     end, nil, function()
         spoon.WinWin:stepMove("up")
     end)
-    cmodal:bind('', 'S', nil, function()
+    cmodal:bind('', 'S', '下移窗口', function()
         spoon.WinWin:stepMove("down")
     end, nil, function()
         spoon.WinWin:stepMove("down")
     end)
 
-    cmodal:bind('', 'H', nil, function()
+    cmodal:bind('', 'H', '左半屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("halfleft")
     end)
-    cmodal:bind('', 'L', nil, function()
+    cmodal:bind('', 'L', '右半屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("halfright")
     end)
-    cmodal:bind('', 'K', nil, function()
+    cmodal:bind('', 'K', '上半屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("halfup")
     end)
-    cmodal:bind('', 'J', nil, function()
+    cmodal:bind('', 'J', '下半屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("halfdown")
     end)
 
-    cmodal:bind('', 'Y', nil, function()
+    cmodal:bind('', 'Y', '左上角', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("cornerNW")
     end)
-    cmodal:bind('', 'O', nil, function()
+    cmodal:bind('', 'O', '右上角', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("cornerNE")
     end)
-    cmodal:bind('', 'U', nil, function()
+    cmodal:bind('', 'U', '左下角', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("cornerSW")
     end)
-    cmodal:bind('', 'I', nil, function()
+    cmodal:bind('', 'I', '右下角', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("cornerSE")
     end)
 
-    cmodal:bind('', 'F', nil, function()
+    cmodal:bind('', 'F', '全屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("fullscreen")
     end)
-    cmodal:bind('', 'C', nil, function()
+    cmodal:bind('', 'C', '居中', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("center")
     end)
-    cmodal:bind('', 'G', nil, function()
+    cmodal:bind('', 'G', '屏幕中央', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("centermost")
     end)
-    cmodal:bind('', 'Z', nil, function()
+    cmodal:bind('', 'Z', '展开窗口', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("show")
     end)
-    cmodal:bind('', 'V', nil, function()
+    cmodal:bind('', 'V', '收起窗口', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("shows")
     end)
 
-    cmodal:bind('', 'X', nil, function()
+    cmodal:bind('', 'X', '居中缩小', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("center-2")
     end)
 
-    cmodal:bind('', '=', nil, function()
+    cmodal:bind('', '=', '放大', function()
         spoon.WinWin:moveAndResize("expand")
     end, nil, function()
         spoon.WinWin:moveAndResize("expand")
     end)
-    cmodal:bind('', '-', nil, function()
+    cmodal:bind('', '-', '缩小', function()
         spoon.WinWin:moveAndResize("shrink")
     end, nil, function()
         spoon.WinWin:moveAndResize("shrink")
     end)
 
-    cmodal:bind('ctrl', 'H', nil, function()
+    cmodal:bind('ctrl', 'H', '向左缩放', function()
         spoon.WinWin:stepResize("left")
     end, nil, function()
         spoon.WinWin:stepResize("left")
     end)
-    cmodal:bind('ctrl', 'L', nil, function()
+    cmodal:bind('ctrl', 'L', '向右缩放', function()
         spoon.WinWin:stepResize("right")
     end, nil, function()
         spoon.WinWin:stepResize("right")
     end)
-    cmodal:bind('ctrl', 'K', nil, function()
+    cmodal:bind('ctrl', 'K', '向上缩放', function()
         spoon.WinWin:stepResize("up")
     end, nil, function()
         spoon.WinWin:stepResize("up")
     end)
-    cmodal:bind('ctrl', 'J', nil, function()
+    cmodal:bind('ctrl', 'J', '向下缩放', function()
         spoon.WinWin:stepResize("down")
     end, nil, function()
         spoon.WinWin:stepResize("down")
     end)
 
-    cmodal:bind('', 'left', nil, function()
+    cmodal:bind('', 'left', '移至左屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveToScreen("left")
     end)
-    cmodal:bind('', 'right', nil, function()
+    cmodal:bind('', 'right', '移至右屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveToScreen("right")
     end)
-    cmodal:bind('', 'up', nil, function()
+    cmodal:bind('', 'up', '移至上屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveToScreen("up")
     end)
-    cmodal:bind('', 'down', nil, function()
+    cmodal:bind('', 'down', '移至下屏', function()
         spoon.WinWin:stash()
-        spoon.WinWin:moveToScreen("down")
+        spoon.WinWin:moveAndResize("down")
     end)
-    cmodal:bind('', 'space', nil, function()
+    cmodal:bind('', 'space', '移至下个屏幕', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveToScreen("next")
     end)
-    cmodal:bind('', 'B', nil, function()
+    cmodal:bind('', 'B', '撤销', function()
         spoon.WinWin:undo()
     end)
-    cmodal:bind('', 'R', nil, function()
+    cmodal:bind('', 'R', '重做', function()
         spoon.WinWin:redo()
     end)
 
-    cmodal:bind('', '[', nil, function()
+    cmodal:bind('', '[', '左侧最大化', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("mostleft")
     end)
-    cmodal:bind('', ']', nil, function()
+    cmodal:bind('', ']', '右侧最大化', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("mostright")
     end)
-    cmodal:bind('', ',', nil, function()
+    cmodal:bind('', ',', '窄左屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("lesshalfleft")
     end)
-    cmodal:bind('', '.', nil, function()
+    cmodal:bind('', '.', '1/3屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("onethird")
     end)
-    cmodal:bind('', '/', nil, function()
+    cmodal:bind('', '/', '窄右屏', function()
         spoon.WinWin:stash()
         spoon.WinWin:moveAndResize("lesshalfright")
     end)
 
-    cmodal:bind('', 't', nil, function()
+    cmodal:bind('', 't', '光标居中', function()
         spoon.WinWin:centerCursor()
     end)
 
@@ -380,12 +383,22 @@ if string.len(hsscreen_focus_keys[2]) > 0 then
 end
 
 ----------------------------------------------------------------------------------------------------
+-- 窗口循环切换 (Window Cycler)
+----------------------------------------------------------------------------------------------------
+hswindow_cycler_keys = hswindow_cycler_keys or {{"alt", "shift"}, "tab"}
+if string.len(hswindow_cycler_keys[2]) > 0 then
+    hs.hotkey.bind(hswindow_cycler_keys[1], hswindow_cycler_keys[2], nil, function()
+        window_cycler.start()
+    end)
+end
+
+----------------------------------------------------------------------------------------------------
 -- 音乐控制 (Apple Music)
 ----------------------------------------------------------------------------------------------------
 function toggleApp(appIdOrName)
     -- 先尝试作为 Bundle ID 查找
     local app = hs.application.get(appIdOrName)
-    
+
     if not app then
         -- 如果没找到，且看起来不像 Bundle ID，尝试 launch
         hs.application.launchOrFocus(appIdOrName)
@@ -412,7 +425,7 @@ if app_toggle_keys then
         local mods = mapping[1]
         local key = mapping[2]
         local appName = mapping[3]
-        
+
         if string.len(key) > 0 then
             hs.hotkey.bind(mods, key, nil, function()
                 toggleApp(appName)

@@ -1,3 +1,4 @@
+-- author = "Ryan.ma"
 local feedback = require("feedback")
 local M = {}
 
@@ -7,10 +8,10 @@ function M.focusNextScreen()
     -- next() returns the next screen in the layout, wrapping around
     local nextScreen = currentScreen:next()
 
-    if not nextScreen or nextScreen:id() == currentScreen:id() then 
+    if not nextScreen or nextScreen:id() == currentScreen:id() then
         -- If only one screen, do nothing or maybe just ensure focus?
         -- User request implies multi-monitor setup.
-        return 
+        return
     end
 
     -- Move mouse to center of next screen
@@ -30,7 +31,7 @@ function M.focusNextScreen()
             break
         end
     end
-    
+
     if not focused then
         feedback.show("屏幕已切换", nextScreen)
     end
