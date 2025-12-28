@@ -73,6 +73,24 @@ export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOROOT/bin:$GOBIN"
 
 
+# FZF 配置
+export FZF_COMPLETION_TRIGGER='\'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS="
+--height 40% 
+--layout=reverse 
+--border
+--preview '
+    if [[ \$(file --mime {}) =~ binary ]]; then
+        echo {} is a binary file
+    else
+        (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500
+    fi
+'
+"
+source $HOME/.oh-my-zsh/completion.zsh
+
+
 # -------------------------------
 # Aliases
 # -------------------------------
@@ -84,7 +102,8 @@ alias ya="$HOME/.config/yazi/ya"
 alias yazi="$HOME/.config/yazi/yazi"
 alias goland='open -na "GoLand.app" --args "$@"'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
-alias idea='open -na "PyCharm.app" --args "$@"'
+alias pycharm='open -na "PyCharm.app" --args "$@"'
+alias lg="lazygit"
 
 
 # 自定义 env
