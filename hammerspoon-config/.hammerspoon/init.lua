@@ -417,20 +417,20 @@ end
 -- 音乐控制 (Apple Music)
 ----------------------------------------------------------------------------------------------------
 function toggleApp(appIdOrName)
-    -- 先尝试作为 Bundle ID 查找
     local app = hs.application.get(appIdOrName)
 
     if not app then
-        -- 如果没找到，且看起来不像 Bundle ID，尝试 launch
+        -- 如果没找到，启动并展示
         hs.application.launchOrFocus(appIdOrName)
         return
     end
 
-    -- 优先判断是否为最前端应用
+    -- 如果应用已经在前台，则隐藏（最小化）
     if app:isFrontmost() then
         app:hide()
     else
-        -- 尝试激活
+        -- 否则展示并激活
+        app:unhide()
         if not app:activate() then
             hs.application.launchOrFocus(appIdOrName)
         end
