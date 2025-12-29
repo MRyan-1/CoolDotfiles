@@ -1,5 +1,4 @@
 -- author = "Ryan.ma"
--- optimized for Option+Shift+Tab usage
 local feedback = require("feedback")
 local M = {}
 

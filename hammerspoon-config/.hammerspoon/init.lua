@@ -79,10 +79,14 @@ end
 -- 音乐控制 (Apple Music)
 ----------------------------------------------------------------------------------------------------
 if spoon.Music then
+    hsmusic_prev_keys = hsmusic_prev_keys or {{"cmd", "alt"}, "left"}
+    hsmusic_next_keys = hsmusic_next_keys or {{"cmd", "alt"}, "right"}
+    hsmusic_playpause_keys = hsmusic_playpause_keys or {{"cmd", "alt"}, "return"}
+
     local music_keys = {
-        [{{"cmd", "alt"}, "left"}] = "previous",
-        [{{"cmd", "alt"}, "right"}] = "next",
-        [{{"cmd", "alt"}, "return"}] = "playpause"
+        [hsmusic_prev_keys] = "previous",
+        [hsmusic_next_keys] = "next",
+        [hsmusic_playpause_keys] = "playpause"
     }
     spoon.Music:bindHotkeys(music_keys)
     -- [REMOVED] 音乐信息轮询已停止
@@ -92,14 +96,17 @@ end
 -- 快捷键面板 (Cheatsheet)
 ----------------------------------------------------------------------------------------------------
 if spoon.Cheatsheet then
-    hs.hotkey.bind({"ctrl", "shift", "cmd"}, "/", function()
-        -- 从 private/config.lua 中读取的 app_toggle_keys
-        if app_toggle_keys then
-            spoon.Cheatsheet:show(app_toggle_keys)
-        else
-            hs.alert.show("未找到 app_toggle_keys 配置")
-        end
-    end)
+    hscheatsheet_keys = hscheatsheet_keys or {{"ctrl", "shift", "cmd"}, "/"}
+    if string.len(hscheatsheet_keys[2]) > 0 then
+        hs.hotkey.bind(hscheatsheet_keys[1], hscheatsheet_keys[2], function()
+            -- 从 private/config.lua 中读取的 app_toggle_keys
+            if app_toggle_keys then
+                spoon.Cheatsheet:show(app_toggle_keys)
+            else
+                hs.alert.show("未找到 app_toggle_keys 配置")
+            end
+        end)
+    end
 end
 
 ----------------------------------------------------------------------------------------------------

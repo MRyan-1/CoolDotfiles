@@ -11,9 +11,25 @@ hsresizeM_keys = {"alt", "R"}
 hsreload_keys = {{"cmd", "shift", "ctrl"}, "R"}
 
 -- 音量降低
-hsVolumeDown_keys = {{"cmd", "alt"}, "Down"}
+hsVolumeDown_keys = {{"cmd", "shift", "ctrl"}, "Down"}
 -- 音量升高
-hsVolumeUp_keys = {{"cmd", "alt"}, "Up"}
+hsVolumeUp_keys = {{"cmd", "shift", "ctrl"}, "Up"}
+-- 音乐控制
+hsmusic_prev_keys = {{"cmd", "shift", "ctrl"}, "left"}
+hsmusic_next_keys = {{"cmd", "shift", "ctrl"}, "right"}
+hsmusic_playpause_keys = {{"cmd", "shift", "ctrl"}, "return"}
+
+-- 窗口循环切换 (Window Cycler)
+hswindow_cycler_keys = {{"alt", "shift"}, "tab"}
+
+-- 快捷显示时钟 (AClock)
+hsaclock_keys = {"alt", "T"}
+
+-- 快捷显示 Hammerspoon 控制台
+hsconsole_keys = {"alt", "Z"}
+
+-- 快捷键面板 (Cheatsheet)
+hscheatsheet_keys = {{"cmd", "shift", "ctrl"}, "/"}
 
 -- 根据APP自动切换输入法，辅助工具定位
 hsImSwitcherAlert_keys = {{"ctrl", "cmd"}, "."}
