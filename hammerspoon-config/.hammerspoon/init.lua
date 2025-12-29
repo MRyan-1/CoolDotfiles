@@ -118,12 +118,22 @@ end
 if spoon.WinWin then
     spoon.ModalMgr:new("resizeM")
     local cmodal = spoon.ModalMgr.modal_list["resizeM"]
-    cmodal:bind('', 'escape', '退出模式', function()
+
+    local function exitResizeM()
         spoon.ModalMgr:deactivate({"resizeM"})
-    end)
-    cmodal:bind('', 'Q', '退出模式', function()
-        spoon.ModalMgr:deactivate({"resizeM"})
-    end)
+        spoon.WinWin.persistentBorder = false
+        spoon.WinWin:removeBorder()
+    end
+
+    local function enterResizeM()
+        spoon.ModalMgr:deactivateAll()
+        spoon.ModalMgr:activate({"resizeM"}, "#f1c40f")
+        spoon.WinWin.persistentBorder = true
+        spoon.WinWin:drawBorder()
+    end
+
+    cmodal:bind('', 'escape', '退出模式', exitResizeM)
+    cmodal:bind('', 'Q', '退出模式', exitResizeM)
     cmodal:bind('', 'tab', '显示帮助', function()
         spoon.ModalMgr:toggleCheatsheet()
     end)
@@ -301,10 +311,14 @@ if spoon.WinWin then
             if spoon.ModalMgr.active_list["resizeM"] then
                 -- 如果已激活，则退出
                 spoon.ModalMgr:deactivate({"resizeM"})
+                spoon.WinWin.persistentBorder = false
+                spoon.WinWin:removeBorder()
             else
                 -- 如果未激活，则进入
                 spoon.ModalMgr:deactivateAll()
                 spoon.ModalMgr:activate({"resizeM"}, "#f1c40f")
+                spoon.WinWin.persistentBorder = true
+                spoon.WinWin:drawBorder()
             end
         end)
     end

@@ -23,6 +23,61 @@ obj.history = {}
 --- An integer specifying how many gridparts the screen should be divided into. Defaults to 30.
 obj.gridparts = 30
 
+--- WinWin:drawBorder()
+--- Method
+--- Draw a border around the focused window to indicate operation.
+---
+obj.persistentBorder = false
+
+function obj:removeBorder()
+    if obj.borderCanvas then
+        obj.borderCanvas:delete()
+        obj.borderCanvas = nil
+    end
+    if obj.borderTimer then
+        obj.borderTimer:stop()
+        obj.borderTimer = nil
+    end
+end
+
+function obj:drawBorder()
+    local cwin = hs.window.focusedWindow()
+    if not cwin then return end
+    
+    -- Remove existing border
+    if obj.borderCanvas then
+        obj.borderCanvas:delete()
+        obj.borderCanvas = nil
+    end
+    if obj.borderTimer then
+        obj.borderTimer:stop()
+        obj.borderTimer = nil
+    end
+
+    local f = cwin:frame()
+    obj.borderCanvas = hs.canvas.new(f)
+    obj.borderCanvas:level(hs.canvas.windowLevels.floating)
+    obj.borderCanvas:appendElements({
+        {
+            type = "rectangle",
+            action = "stroke",
+            strokeWidth = 5,
+            strokeColor = { hex = "#fcee0a", alpha = 1 },
+            roundedRectRadii = { xRadius = 5, yRadius = 5 },
+        }
+    })
+    obj.borderCanvas:show()
+
+    if not obj.persistentBorder then
+        obj.borderTimer = hs.timer.doAfter(1.0, function()
+            if obj.borderCanvas then
+                obj.borderCanvas:delete()
+                obj.borderCanvas = nil
+            end
+        end)
+    end
+end
+
 --- WinWin:stepMove(direction)
 --- Method
 --- Move the focused window in the `direction` by on step. The step scale equals to the width/height of one gridpart.
@@ -46,6 +101,7 @@ function obj:stepMove(direction)
         elseif direction == "down" then
             cwin:setTopLeft({x=wtopleft.x, y=wtopleft.y+steph})
         end
+        obj:drawBorder()
     else
         feedback.show("No focused window!")
     end
@@ -74,6 +130,7 @@ function obj:stepResize(direction)
         elseif direction == "down" then
             cwin:setSize({w=wsize.w, h=wsize.h+steph})
         end
+        obj:drawBorder()
     else
         feedback.show("No focused window!")
     end
@@ -199,6 +256,7 @@ function obj:moveAndResize(option)
         elseif option == "shrink" then
             cwin:setFrame({x=wf.x+stepw, y=wf.y+steph, w=wf.w-(stepw*2), h=wf.h-(steph*2)})
         end
+        obj:drawBorder()
     else
         feedback.show("No focused window!")
     end
@@ -225,6 +283,7 @@ function obj:moveToScreen(direction)
         elseif direction == "next" then
             cwin:moveToScreen(cscreen:next())
         end
+        obj:drawBorder()
     else
         feedback.show("No focused window!")
     end
@@ -259,6 +318,7 @@ function obj:undo()
             table.remove(id_history, 1)
             table.insert(id_history, tmpframe)
         end
+        obj:drawBorder()
     end
 end
 
@@ -291,6 +351,7 @@ function obj:redo()
             table.remove(id_history)
             table.insert(id_history, 1, tmpframe)
         end
+        obj:drawBorder()
     end
 end
 
