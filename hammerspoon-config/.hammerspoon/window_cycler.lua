@@ -1,69 +1,70 @@
 -- author = "Ryan.ma"
+-- optimized for Option+Shift+Tab usage
 local feedback = require("feedback")
 local M = {}
 
-local cycler = {
+local state = {
     windows = {},
     names = {},
     index = 1,
     screen = nil,
-    tap = nil
+    tap = nil,
+    active = false
 }
 
--- 辅助函数：获取当前屏幕的所有可见窗口，并按从上到下排序
-local function getSortedWindows(screen)
-    local screenId = screen:id()
-    local allWins = hs.window.filter.new():setFilters({
-        visible = true,
-        currentSpace = true
-    }):getWindows()
-    local screenWins = {}
+-- 严格几何排序 (Top -> Bottom)
+local function strictGeometricSort(a, b)
+    local f1 = a:frame()
+    local f2 = b:frame()
+
+    if math.abs(f1.y - f2.y) > 5 then
+        return f1.y < f2.y -- Y 越小越在上面，排在前面
+    end
+
+    if math.abs(f1.x - f2.x) > 5 then
+        return f1.x < f2.x
+    end
+
+    return a:id() < b:id()
+end
+
+local function getWindowsSnapshot(targetScreen)
+    local screenId = targetScreen:id()
+    local allWins = hs.window.visibleWindows()
+    local candidates = {}
 
     for _, win in ipairs(allWins) do
-        if win:screen():id() == screenId and win:isStandard() then
+        if win:screen():id() == screenId and win:isStandard() and win:isVisible() then
             if win:application():bundleID() ~= "org.hammerspoon.Hammerspoon" then
-                table.insert(screenWins, win)
+                table.insert(candidates, win)
             end
         end
     end
 
-    -- 严格排序：从上到下 (Top -> Bottom)
-    -- Y 坐标小 (Top) 的排在前面
-    table.sort(screenWins, function(a, b)
-        local f1 = a:frame()
-        local f2 = b:frame()
-        -- 严格比较 Y，移除模糊阈值以免干扰
-        if f1.y ~= f2.y then
-            return f1.y < f2.y
-        end
-        return f1.x < f2.x
-    end)
-
-    -- Debug: 打印排序结果
-    print("=== Window Sort Order (Top to Bottom) ===")
-    for i, w in ipairs(screenWins) do
-        print(string.format("%d. %s (y=%.0f)", i, w:title(), w:frame().y))
-    end
-    print("========================================")
-
-    return screenWins
+    table.sort(candidates, strictGeometricSort)
+    return candidates
 end
 
-local function buildNames(windows)
+local function buildDisplayNames(windows)
     local names = {}
     for _, win in ipairs(windows) do
         local app = win:application()
         local appName = app and app:name() or "?"
         local title = win:title() or ""
-        if #title > 60 then
-            title = string.sub(title, 1, 57) .. "..."
+        if #title > 50 then
+            title = string.sub(title, 1, 48) .. "..."
         end
         table.insert(names, string.format("[%s] %s", appName, title))
     end
     return names
 end
 
-cycler.tap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged, hs.eventtap.event.types.keyDown}, function(event)
+-- 【关键修改】：适配 Option + Shift + Tab 的按键逻辑
+state.tap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged, hs.eventtap.event.types.keyDown}, function(event)
+    if not state.active then
+        return false
+    end
+
     local type = event:getType()
     local flags = event:getFlags()
 
@@ -73,53 +74,64 @@ cycler.tap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged, hs.eventtap.
             return false
         end
         return true
-    elseif type == hs.eventtap.event.types.keyDown then
+    end
+
+    if type == hs.eventtap.event.types.keyDown then
         local keyCode = event:getKeyCode()
+        local isTab = (keyCode == hs.keycodes.map["tab"])
+        local isEsc = (keyCode == hs.keycodes.map["escape"])
 
-        if keyCode == hs.keycodes.map["tab"] then
-            if flags.shift then
-                cycler.index = cycler.index + 1
-                if cycler.index > #cycler.windows then
-                    cycler.index = 1
+        if isTab then
+            local count = #state.windows
+            if count > 1 then
+                -- 【逻辑反转区域】
+                -- 因为你的快捷键自带 Shift，所以 flags.shift 为 true。
+                -- 我们让 Shift + Tab 执行 "向下/下一个" (index + 1)
+
+                if flags.shift then
+                    -- 按住 Shift：从上到下 (Next)
+                    state.index = state.index + 1
+                    if state.index > count then
+                        state.index = 1
+                    end
+                else
+                    -- 松开 Shift (只按 Option + Tab)：从下到上 (Prev)
+                    -- 这样你如果不小心切过头了，松开 Shift 按一下 Tab 就能退回去
+                    state.index = state.index - 1
+                    if state.index < 1 then
+                        state.index = count
+                    end
                 end
-            else
-                cycler.index = cycler.index - 1
-                if cycler.index < 1 then
-                    cycler.index = #cycler.windows
-                end
+
+                feedback.show_palette("切换窗口 - " .. state.screen:name(), state.names, state.screen, state.index,
+                    1)
             end
-
-            feedback.show_palette("窗口切换 - " .. cycler.screen:name(), cycler.names, cycler.screen, cycler.index,
-                1)
             return true
-        elseif keyCode == hs.keycodes.map["escape"] then
+
+        elseif isEsc then
             M.stop(false)
             return true
         end
     end
-    return false
+
+    return true
 end)
 
 function M.start()
-    if cycler.tap:isEnabled() then
-        M.stop(false)
+    if state.active then
+        return
     end
 
     local fw = hs.window.focusedWindow()
-    local screen = fw and fw:screen() or hs.mouse.getCurrentScreen()
-    if not screen then
+    local currentScreen = fw and fw:screen() or hs.mouse.getCurrentScreen()
+    if not currentScreen then
         return
     end
 
-    local wins = getSortedWindows(screen)
+    local wins = getWindowsSnapshot(currentScreen)
 
     if #wins == 0 then
-        feedback.show("当前屏幕没有窗口", screen)
-        return
-    end
-
-    if #wins == 1 then
-        feedback.show("仅有一个窗口: " .. (wins[1]:title() or ""), screen)
+        hs.alert.show("当前屏幕无窗口", currentScreen)
         return
     end
 
@@ -133,18 +145,20 @@ function M.start()
         end
     end
 
-    cycler.windows = wins
-    cycler.names = buildNames(wins)
-    cycler.screen = screen
-    -- 初始选中：当前窗口的下一个
-    cycler.index = initialIndex + 1
-    if cycler.index > #wins then
-        cycler.index = 1
+    state.windows = wins
+    state.names = buildDisplayNames(wins)
+    state.screen = currentScreen
+    state.active = true
+
+    -- 初始动作：选中下一个 (从上到下)
+    state.index = initialIndex + 1
+    if state.index > #wins then
+        state.index = 1
     end
 
-    feedback.show_palette("窗口切换 - " .. screen:name(), cycler.names, screen, cycler.index, 1)
+    feedback.show_palette("切换窗口 - " .. currentScreen:name(), state.names, state.screen, state.index, 1)
 
-    cycler.tap:start()
+    state.tap:start()
 
     if not hs.eventtap.checkKeyboardModifiers().alt then
         M.stop(true)
@@ -152,19 +166,24 @@ function M.start()
 end
 
 function M.stop(commit)
-    if cycler.tap:isEnabled() then
-        cycler.tap:stop()
+    if not state.active then
+        return
     end
+
+    state.tap:stop()
+    state.active = false
     feedback.hide_palette()
 
-    if commit and cycler.windows and cycler.index and cycler.windows[cycler.index] then
-        local target = cycler.windows[cycler.index]
-        target:focus()
+    if commit then
+        local targetWin = state.windows[state.index]
+        if targetWin then
+            targetWin:focus()
+        end
     end
 
-    cycler.windows = {}
-    cycler.names = {}
-    cycler.screen = nil
+    state.windows = {}
+    state.names = {}
+    state.screen = nil
 end
 
 return M
