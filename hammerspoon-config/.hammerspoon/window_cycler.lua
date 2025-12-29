@@ -18,7 +18,7 @@ local function strictGeometricSort(a, b)
     local f2 = b:frame()
 
     if math.abs(f1.y - f2.y) > 5 then
-        return f1.y < f2.y -- Y 越小越在上面，排在前面
+        return f1.y < f2.y
     end
 
     if math.abs(f1.x - f2.x) > 5 then
@@ -59,7 +59,6 @@ local function buildDisplayNames(windows)
     return names
 end
 
--- 【关键修改】：适配 Option + Shift + Tab 的按键逻辑
 state.tap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged, hs.eventtap.event.types.keyDown}, function(event)
     if not state.active then
         return false
@@ -83,20 +82,15 @@ state.tap = hs.eventtap.new({hs.eventtap.event.types.flagsChanged, hs.eventtap.e
 
         if isTab then
             local count = #state.windows
+            -- 只有当真实的窗口数量大于1时，才允许切换
+            -- 如果是“无窗口”状态（count 为 0），按 Tab 键什么都不做，只是保持面板显示
             if count > 1 then
-                -- 【逻辑反转区域】
-                -- 因为你的快捷键自带 Shift，所以 flags.shift 为 true。
-                -- 我们让 Shift + Tab 执行 "向下/下一个" (index + 1)
-
                 if flags.shift then
-                    -- 按住 Shift：从上到下 (Next)
                     state.index = state.index + 1
                     if state.index > count then
                         state.index = 1
                     end
                 else
-                    -- 松开 Shift (只按 Option + Tab)：从下到上 (Prev)
-                    -- 这样你如果不小心切过头了，松开 Shift 按一下 Tab 就能退回去
                     state.index = state.index - 1
                     if state.index < 1 then
                         state.index = count
@@ -122,21 +116,41 @@ function M.start()
         return
     end
 
-    local fw = hs.window.focusedWindow()
-    local currentScreen = fw and fw:screen() or hs.mouse.getCurrentScreen()
+    -- 强制使用鼠标所在的屏幕
+    local currentScreen = hs.mouse.getCurrentScreen()
     if not currentScreen then
         return
     end
 
     local wins = getWindowsSnapshot(currentScreen)
+    local initialIndex = 1
 
+    -- 【关键修改】：处理无窗口情况，构建“伪状态”
     if #wins == 0 then
-        hs.alert.show("当前屏幕无窗口", currentScreen)
+        -- 设置为空数组，这样 state.tap 里的 count 为 0，Tab 键就不会轮询
+        state.windows = {}
+        -- 设置显示名称，让 feedback 有内容展示
+        state.names = {"(当前屏幕无窗口)"}
+        state.screen = currentScreen
+        state.index = 1
+        state.active = true
+
+        -- 展示面板
+        feedback.show_palette("切换窗口 - " .. currentScreen:name(), state.names, state.screen, 1, 1)
+
+        -- 启动按键监听（为了检测 Option 松开以关闭面板）
+        state.tap:start()
+
+        -- 防止手速过快，启动时 Option 已经松开了
+        if not hs.eventtap.checkKeyboardModifiers().alt then
+            M.stop(false)
+        end
         return
     end
 
-    local initialIndex = 1
-    if fw then
+    -- 下面是有窗口时的正常逻辑
+    local fw = hs.window.focusedWindow()
+    if fw and fw:screen():id() == currentScreen:id() then
         for i, w in ipairs(wins) do
             if w:id() == fw:id() then
                 initialIndex = i
@@ -150,7 +164,6 @@ function M.start()
     state.screen = currentScreen
     state.active = true
 
-    -- 初始动作：选中下一个 (从上到下)
     state.index = initialIndex + 1
     if state.index > #wins then
         state.index = 1
@@ -175,6 +188,7 @@ function M.stop(commit)
     feedback.hide_palette()
 
     if commit then
+        -- 如果是“无窗口”状态，state.windows 为空，这里取出来是 nil，不会报错，也不会执行 focus
         local targetWin = state.windows[state.index]
         if targetWin then
             targetWin:focus()
