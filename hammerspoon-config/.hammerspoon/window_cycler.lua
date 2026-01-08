@@ -11,6 +11,32 @@ local state = {
     active = false
 }
 
+-- 记录每个屏幕的窗口历史 { [screenId] = { winId, ... } }
+local history = {}
+
+local function updateHistory(screenId, winId)
+    if not screenId or not winId then
+        return
+    end
+    local list = history[screenId] or {}
+    history[screenId] = list
+
+    -- 移除已存在的记录
+    for i = #list, 1, -1 do
+        if list[i] == winId then
+            table.remove(list, i)
+        end
+    end
+
+    -- 插入到队首
+    table.insert(list, 1, winId)
+
+    -- 限制历史记录长度
+    if #list > 100 then
+        table.remove(list)
+    end
+end
+
 -- 严格几何排序 (Top -> Bottom)
 local function strictGeometricSort(a, b)
     local f1 = a:frame()
@@ -40,7 +66,27 @@ local function getWindowsSnapshot(targetScreen)
         end
     end
 
-    table.sort(candidates, strictGeometricSort)
+    -- 结合历史记录进行排序
+    local list = history[screenId] or {}
+    local rank = {}
+    for i, id in ipairs(list) do
+        rank[id] = i
+    end
+
+    table.sort(candidates, function(a, b)
+        local ra = rank[a:id()]
+        local rb = rank[b:id()]
+
+        if ra and rb then
+            return ra < rb
+        elseif ra then
+            return true
+        elseif rb then
+            return false
+        else
+            return strictGeometricSort(a, b)
+        end
+    end)
     return candidates
 end
 
@@ -121,6 +167,12 @@ function M.start()
         return
     end
 
+    -- 将当前焦点窗口加入历史（如果它在当前屏幕）
+    local fw = hs.window.focusedWindow()
+    if fw and fw:screen():id() == currentScreen:id() then
+        updateHistory(currentScreen:id(), fw:id())
+    end
+
     local wins = getWindowsSnapshot(currentScreen)
     local initialIndex = 1
 
@@ -148,7 +200,8 @@ function M.start()
     end
 
     -- 下面是有窗口时的正常逻辑
-    local fw = hs.window.focusedWindow()
+    -- 由于我们已经在 getWindowsSnapshot 前把 fw 加入了历史，
+    -- 如果 fw 存在，它应该在 wins[1] 的位置（除非有什么过滤逻辑把它剔除了）
     if fw and fw:screen():id() == currentScreen:id() then
         for i, w in ipairs(wins) do
             if w:id() == fw:id() then
@@ -191,6 +244,10 @@ function M.stop(commit)
         local targetWin = state.windows[state.index]
         if targetWin then
             targetWin:focus()
+            -- 切换成功后，更新历史记录，将目标窗口置顶
+            if state.screen then
+                updateHistory(state.screen:id(), targetWin:id())
+            end
         end
     end
 
