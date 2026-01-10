@@ -59,5 +59,5 @@ ime_switcher.excludingDefaultIme = 'English'
 -- 统一使用 Hyper Key: Ctrl + Shift + Command
 app_toggle_keys = {{{"ctrl", "shift", "cmd"}, "Q", "iTerm"}, {{"ctrl", "shift", "cmd"}, "W", "Unreal"},
                    {{"ctrl", "shift", "cmd"}, "A", "IntelliJ IDEA"}, {{"ctrl", "shift", "cmd"}, "S", "GoLand"},
-                   {{"ctrl", "shift", "cmd"}, "D", "PyCharm"}, {{"ctrl", "shift", "cmd"}, "Z", "Google Chrome"},
+                   {{"ctrl", "shift", "cmd"}, "F", "PyCharm"}, {{"ctrl", "shift", "cmd"}, "Z", "Google Chrome"},
                    {{"ctrl", "shift", "cmd"}, "X", "Obsidian"}, {{"ctrl", "shift", "cmd"}, "C", "Notion"}}
