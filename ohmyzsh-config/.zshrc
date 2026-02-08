@@ -154,3 +154,9 @@ function unproxy() {
   unset http_proxy https_proxy all_proxy
   echo "⚪ Proxy disabled"
 }
+
+
+# -------------------------------
+# 🚀 Auto-start Proxy
+# -------------------------------
+proxy
