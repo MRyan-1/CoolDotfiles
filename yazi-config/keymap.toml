@@ -154,6 +154,14 @@ keymap = [
 	{ on = ["o", "s"], run = ["sort size --reverse=no", "linemode size"], desc = "Sort by size" },
 	{ on = ["o", "S"], run = ["sort size --reverse", "linemode size"], desc = "Sort by size (reverse)" },
 
+
+	# Global Clipboard (System) - Ctrl+c / Ctrl+v / c c / c v
+	{ on = "<C-c>", run = 'shell "printf \"%s\n\" \"$@\" | pbcopy"', desc = "Copy paths to system clipboard" },
+	{ on = "<C-v>", run = 'shell "pbpaste | while read -r file; do cp -r \"$file\" .; done"', desc = "Paste files from clipboard" },
+	{ on = ["c", "c"], run = 'shell "printf \"%s\n\" \"$@\" | pbcopy"', desc = "Copy paths to system clipboard" },
+	{ on = ["c", "v"], run = 'shell "pbpaste | while read -r file; do cp -r \"$file\" .; done"', desc = "Paste files from clipboard" },
+
+
 	# Goto
 	{ on = ["g", "r"], run = "cd /", desc = "Go to the root directory" },
 	{ on = ["g", "h"], run = "cd ~", desc = "Go to the home directory" },

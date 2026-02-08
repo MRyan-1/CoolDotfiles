@@ -1,3 +1,5 @@
+version=
+
 <div align="center">
   <img src="assets/logo.png" alt="Yazi logo" width="20%">
 </div>

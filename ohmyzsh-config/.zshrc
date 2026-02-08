@@ -50,14 +50,16 @@ export JAVA_HOME="/Users/ryan/Library/Java/JavaVirtualMachines/tcjdk/Contents/Ho
 export MAVEN_HOME="/Users/ryan/environment/apache-maven-3.6.3"
 export PATH="$PATH:$MAVEN_HOME/bin"
 
+# yazi
+export PATH="$HOME/.config/yazi:$PATH"
+
 # Lua / npm-global / Antigravity / Docker
 export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
-# yazi
-export PATH="$HOME/.config/yazi:$PATH"
+
 
 # Rust
 [ -s "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
@@ -98,8 +100,10 @@ alias o="open -a"
 alias typora="open -a typora"
 alias lc="leetcode"
 alias jos="joshuto"
+
 alias ya="$HOME/.config/yazi/ya"
 alias yazi="$HOME/.config/yazi/yazi"
+
 alias goland='open -na "GoLand.app" --args "$@"'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias pycharm='open -na "PyCharm.app" --args "$@"'
@@ -160,3 +164,11 @@ function unproxy() {
 # 🚀 Auto-start Proxy
 # -------------------------------
 proxy
+
+# -------------------------------
+# 🖥️ Auto-start Tmux
+# -------------------------------
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    # 直接创建新会话
+    tmux new-session
+fi
