@@ -20,15 +20,25 @@ fi
             exit 0
         fi
     fi
-    
+
     touch "$LOCK"
-    
-    VAL=$($MACMON pipe -i 100 2>/dev/null | head -n 1 | $JQ -r '.gpu_usage[1] * 100 | floor' 2>/dev/null)
-    
-    if [ -n "$VAL" ]; then
+
+    VAL=""
+    if [ -x "$MACMON" ] && [ -x "$JQ" ]; then
+        RAW=$($MACMON pipe -i 100 2>/dev/null | head -n 1)
+        if [ -n "$RAW" ]; then
+            VAL=$(printf '%s' "$RAW" | $JQ -r '
+                .gpu_usage[1] // 0 | . * 100 | floor
+            ' 2>/dev/null)
+        fi
+    fi
+
+    if [ -n "$VAL" ] && [ "$VAL" != "null" ]; then
         echo "$VAL" > "${CACHE}.tmp"
         mv "${CACHE}.tmp" "$CACHE"
+    elif [ ! -f "$CACHE" ]; then
+        echo "N/A" > "$CACHE"
     fi
-    
+
     rm -f "$LOCK"
 ) >/dev/null 2>&1 &

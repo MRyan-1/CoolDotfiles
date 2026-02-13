@@ -38,7 +38,7 @@ tmux_conf_new_session_retain_current_path=false
 #   - true
 #   - false (default)
 #   - disabled (do not modify new-window bindings)
-tmux_conf_new_window_retain_current_path=false
+tmux_conf_new_window_retain_current_path=true                            # [CUSTOM] changed: false -> true, 新窗口保留当前路径
 
 # new window tries to reconnect ssh sessions, possible values are:
 #   - true
@@ -85,24 +85,24 @@ tmux_conf_24b_colour=auto
 #   - tmux_conf_theme_synchronized
 tmux_conf_theme=enabled
 
-# default theme
-tmux_conf_theme_colour_1="#080808"    # dark gray
-tmux_conf_theme_colour_2="#303030"    # gray
-tmux_conf_theme_colour_3="#8a8a8a"    # light gray
-tmux_conf_theme_colour_4="#00afff"    # light blue
-tmux_conf_theme_colour_5="#ffff00"    # yellow
-tmux_conf_theme_colour_6="#080808"    # dark gray
-tmux_conf_theme_colour_7="#e4e4e4"    # white
-tmux_conf_theme_colour_8="#080808"    # dark gray
-tmux_conf_theme_colour_9="#ffff00"    # yellow
-tmux_conf_theme_colour_10="#ff00af"   # pink
-tmux_conf_theme_colour_11="#5fff00"   # green
-tmux_conf_theme_colour_12="#8a8a8a"   # light gray
-tmux_conf_theme_colour_13="#e4e4e4"   # white
-tmux_conf_theme_colour_14="#080808"   # dark gray
-tmux_conf_theme_colour_15="#080808"   # dark gray
-tmux_conf_theme_colour_16="#d70000"   # red
-tmux_conf_theme_colour_17="#e4e4e4"   # white
+# [CUSTOM] Tokyo Night 调色板 (替换默认主题)
+tmux_conf_theme_colour_1="#1a1b26"    # 状态栏主背景
+tmux_conf_theme_colour_2="#24283b"    # 非活跃窗口/pane边框
+tmux_conf_theme_colour_3="#565f89"    # 暗淡文字
+tmux_conf_theme_colour_4="#7aa2f7"    # 蓝色高亮(活跃窗口/pane边框)
+tmux_conf_theme_colour_5="#e0af68"    # 黄色强调(消息/前缀)
+tmux_conf_theme_colour_6="#1a1b26"    # 左1前景(暗底)
+tmux_conf_theme_colour_7="#c0caf5"    # 左2前景(亮字)
+tmux_conf_theme_colour_8="#1a1b26"    # 左3前景(暗底)
+tmux_conf_theme_colour_9="#e0af68"    # 左1背景(黄) — session名
+tmux_conf_theme_colour_10="#bb9af7"   # 左2背景(紫)
+tmux_conf_theme_colour_11="#9ece6a"   # 左3背景(绿)
+tmux_conf_theme_colour_12="#9ece6a"   # 右1前景(绿) — git标签
+tmux_conf_theme_colour_13="#7dcfff"   # 右2前景(青) — 系统监控
+tmux_conf_theme_colour_14="#1a1b26"   # 右3前景(暗) — 日期时间
+tmux_conf_theme_colour_15="#292e42"   # 右1背景(暗灰蓝) — git标签区
+tmux_conf_theme_colour_16="#3b4261"   # 右2背景(灰蓝) — 系统监控区
+tmux_conf_theme_colour_17="#7aa2f7"   # 右3背景(蓝) — 日期时间
 
 # default theme (ansi)
 #tmux_conf_theme_colour_1="colour0"
@@ -125,7 +125,7 @@ tmux_conf_theme_colour_17="#e4e4e4"   # white
 
 # window style
 tmux_conf_theme_window_fg="default"
-tmux_conf_theme_window_bg="default"
+#tmux_conf_theme_window_bg="default"
 
 # highlight focused pane, possible values are:
 #   - true
@@ -133,7 +133,7 @@ tmux_conf_theme_window_bg="default"
 tmux_conf_theme_highlight_focused_pane=false
 
 # focused pane colours:
-tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_2"
+tmux_conf_theme_focused_pane_bg="default"
 
 # pane border style, possible values are:
 #   - thin (default)
@@ -267,7 +267,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" ❐ #{session_label} "
 #tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{pretty_pane_current_path} "
-tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized} | CPU: #($HOME/.tmux/scripts/cpu_usage.sh) | GPU: #($HOME/.tmux/scripts/macmon_gpu.sh)%% | %Y-%m-%d %R "
+tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized}|| #(printf '\356\202\240 ')#{git_branch} || MEM: #($HOME/.tmux/scripts/memory_usage.sh) || CPU: #($HOME/.tmux/scripts/cpu_usage.sh) || GPU: #($HOME/.tmux/scripts/macmon_gpu.sh) || %Y-%m-%d %R "  # [CUSTOM] 11段: git前加图标,日期前加图标
 #tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
 # status left style
@@ -275,10 +275,10 @@ tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colou
 tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
 tmux_conf_theme_status_left_attr="bold,none,none"
 
-# status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
-tmux_conf_theme_status_right_attr="none,none,bold"
+# status right style                                                      # [CUSTOM] 11段: 指示器|间隙|git|间隙|MEM|间隙|CPU|间隙|GPU|间隙|日期
+tmux_conf_theme_status_right_fg="#565f89,#1a1b26,#e0af68,#1a1b26,#7dcfff,#1a1b26,#7dcfff,#1a1b26,#7dcfff,#1a1b26,#1a1b26"
+tmux_conf_theme_status_right_bg="#1a1b26,#1a1b26,#e0af68,#1a1b26,#343b58,#1a1b26,#343b58,#1a1b26,#343b58,#1a1b26,#7aa2f7"
+tmux_conf_theme_status_right_attr="none,none,bold,none,none,none,none,none,none,none,bold"
 
 # pairing indicator
 tmux_conf_theme_pairing="⚇"                 # U+2687
@@ -288,7 +288,7 @@ tmux_conf_theme_pairing_attr="none"
 
 # prefix indicator
 tmux_conf_theme_prefix="⚡"                  # U+26A1
-tmux_conf_theme_prefix_fg="#ffff00"
+tmux_conf_theme_prefix_fg="#e0af68"                                      # [CUSTOM] Tokyo Night 黄色
 tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="bold"
 
@@ -367,7 +367,7 @@ tmux_conf_theme_clock_style="24"
 #   - false (default)
 #   - disabled
 # on Linux, this requires xsel, xclip or wl-copy
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true                                      # [CUSTOM] changed: false -> true, 复制自动进系统剪贴板
 
 
 # -- urlscan -------------------------------------------------------------------
@@ -381,7 +381,11 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 50000                                               # [CUSTOM] changed: 5000 -> 50000
+
+# modern terminal capabilities                                          # [CUSTOM] 启用 tmux-256color + truecolor
+set -g default-terminal "tmux-256color"  #!important
+set -as terminal-overrides ",*:Tc"       #!important
 
 # start with mouse mode enabled
 set -g mouse on
@@ -413,6 +417,11 @@ bind -n MouseDown1Status if-shell -F "#{==:#{mouse_status_range},sessions}" "cho
 
 # move status line to top
 #set -g status-position top
+
+# [CUSTOM] popup 浮动窗口 (tmux 3.2+): prefix+f 终端, prefix+g lazygit, prefix+T htop
+bind f display-popup -E -w 80% -h 80%
+bind g display-popup -E -w 90% -h 90% "lazygit"
+bind T display-popup -E -w 80% -h 80% "htop"
 
 
 # -- tpm -----------------------------------------------------------------------
@@ -455,7 +464,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @continuum-restore 'on'
+set -g @continuum-restore 'off'
 set -g @plugin 'tmux-plugins/tmux-open'
 
 
@@ -471,10 +480,22 @@ set -g @plugin 'tmux-plugins/tmux-open'
 
 # ------------------------------------------------------------------------------
 
-# # /!\ do not remove the following line
+# # /!\\ do not remove the following line
 # EOF
 #
-# # /!\ do not "uncomment" the functions: the leading "# " characters are needed
+# # /!\\ do not "uncomment" the functions: the leading "# " characters are needed
+#
+# # [CUSTOM] 状态栏显示当前 pane 所在 git 分支, detached HEAD 时显示短 hash
+# # usage: #{git_branch}
+# git_branch() {
+#   pane_path=$(tmux display -p '#{pane_current_path}' 2>/dev/null)
+#   if [ -n "$pane_path" ] && [ -d "$pane_path" ]; then
+#     branch=$(cd "$pane_path" && git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
+#     if [ -n "$branch" ]; then
+#       printf '%s ' "$branch"
+#     fi
+#   fi
+# }
 #
 # # usage: #{weather}
 # weather() {                                         # see https://github.com/chubin/wttr.in#one-line-output
