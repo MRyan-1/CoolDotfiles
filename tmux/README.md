@@ -1,1 +1,1 @@
-放到用户根目录，目录中文件直接替换oh-my-tmux配置即可
+复制/.tmux目录下的 .tmux.conf和.tmux.conf.local到根目录，后执行 tmux source ~/.tmux.conf

@@ -233,14 +233,10 @@ tmux_conf_theme_window_status_last_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_last_attr="none"
 
 # status left/right sections separators
-tmux_conf_theme_left_separator_main=""
-tmux_conf_theme_left_separator_sub="|"
-tmux_conf_theme_right_separator_main=""
-tmux_conf_theme_right_separator_sub="|"
-#tmux_conf_theme_left_separator_main='\uE0B0'  # /!\ you don't need to install Powerline
-#tmux_conf_theme_left_separator_sub='\uE0B1'   #   you only need fonts patched with
-#tmux_conf_theme_right_separator_main='\uE0B2' #   Powerline symbols or the standalone
-#tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see README.md
+tmux_conf_theme_left_separator_main='\uE0B0'  # /!\ you don't need to install Powerline
+tmux_conf_theme_left_separator_sub='\uE0B1'   #   you only need fonts patched with
+tmux_conf_theme_right_separator_main='\uE0B2' #   Powerline symbols or the standalone
+tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see README.md
 
 # status left/right content:
 #   - separate main sections with "|"
@@ -269,9 +265,10 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
+tmux_conf_theme_status_left=" ❐ #{session_label} "
 #tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{pretty_pane_current_path} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized} | CPU: #($HOME/.tmux/scripts/cpu_usage.sh) | GPU: #($HOME/.tmux/scripts/macmon_gpu.sh)%% | %Y-%m-%d %R "
+#tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -290,10 +287,10 @@ tmux_conf_theme_pairing_bg="none"
 tmux_conf_theme_pairing_attr="none"
 
 # prefix indicator
-tmux_conf_theme_prefix="⌨"                  # U+2328
-tmux_conf_theme_prefix_fg="none"
+tmux_conf_theme_prefix="⚡"                  # U+26A1
+tmux_conf_theme_prefix_fg="#ffff00"
 tmux_conf_theme_prefix_bg="none"
-tmux_conf_theme_prefix_attr="none"
+tmux_conf_theme_prefix_attr="bold"
 
 # mouse indicator
 tmux_conf_theme_mouse="↗"                   # U+2197
@@ -389,8 +386,9 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # start with mouse mode enabled
 set -g mouse on
 
+
 # bind 'i' to show shortcuts cheat sheet (split window)
-bind i split-window -h -l 50% "cat /Users/ryan/.tmux/tmux_shortcuts.md | less"
+bind i split-window -h -l 40% -c "#{pane_current_path}" "less '$HOME/.tmux/tmux_shortcuts.md'"
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -410,8 +408,8 @@ bind i split-window -h -l 50% "cat /Users/ryan/.tmux/tmux_shortcuts.md | less"
 # display a message after toggling mouse support
 bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'
 
-# show shortcuts cheat sheet (split window)
-bind i split-window -h -l 40% -c "#{pane_current_path}" "less '/Users/ryan/.tmux/tmux_shortcuts.md'"
+# Click on session name to show session list
+bind -n MouseDown1Status if-shell -F "#{==:#{mouse_status_range},sessions}" "choose-tree -s" "switch-client -t="
 
 # move status line to top
 #set -g status-position top
@@ -510,7 +508,12 @@ set -g @plugin 'tmux-plugins/tmux-open'
 #   curl -s "$url" | perl -MJSON::PP=decode_json -CO -0777 -E '$response = decode_json(readline *STDIN); say ($response->{stargazers_count})'
 #   sleep 300                                         # sleep for 5 minutes, throttle network requests whatever the value of status-interval
 # }
-#
+
+# # usage: #{session_label}
+# session_label() {
+#   printf '#[range=user|sessions] #S #[norange]'
+# }
+
 # "$@"
 # # /!\ do not remove the previous line
 # #     do not write below this line
