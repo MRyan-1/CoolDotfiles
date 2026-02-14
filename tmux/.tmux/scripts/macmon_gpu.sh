@@ -34,7 +34,7 @@ fi
     fi
 
     if [ -n "$VAL" ] && [ "$VAL" != "null" ]; then
-        echo "$VAL" > "${CACHE}.tmp"
+        echo "${VAL}%" > "${CACHE}.tmp"
         mv "${CACHE}.tmp" "$CACHE"
     elif [ ! -f "$CACHE" ]; then
         echo "N/A" > "$CACHE"

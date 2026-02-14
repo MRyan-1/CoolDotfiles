@@ -40,7 +40,7 @@ fi
         USED_GB=$(awk "BEGIN { printf \"%.1f\", $USED_BYTES / 1073741824 }")
         PCT=$(awk "BEGIN { printf \"%.0f\", $USED_BYTES / $TOTAL_MEM * 100 }")
 
-        echo "${USED_GB}/${TOTAL_GB}G(${PCT}%%)" > "${CACHE}.tmp"
+        echo "${USED_GB}/${TOTAL_GB}G(${PCT}%)" > "${CACHE}.tmp"
         mv "${CACHE}.tmp" "$CACHE"
     fi
 
