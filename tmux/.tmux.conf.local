@@ -117,16 +117,16 @@ tmux_conf_theme_right_separator_sub='\uE0B3'
 # [CUSTOM] Status Left
 tmux_conf_theme_status_left=" #(tmux list-sessions 2>/dev/null | wc -l | tr -d ' ') ❐ #S "
 
-# [CUSTOM] Status Right
-# 3段布局: Indicators | 系统信息(git自绘箭头内嵌在段头) | 日期时间
-# Git 由脚本自带 powerline 箭头+黄底色，无分支时完全不输出
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized} |#(/Users/ryan/.tmux/scripts/git_branch.sh) MEM:#(/Users/ryan/.tmux/scripts/memory_usage.sh) · CPU:#(/Users/ryan/.tmux/scripts/cpu_usage.sh) · GPU:#(/Users/ryan/.tmux/scripts/macmon_gpu.sh) |  %Y-%m-%d %R "
+# [CUSTOM] Status Right — 4段布局 (Indicators+Git | System | gap | DateTime)
+# Git 放在 Indicators 段末尾，脚本自绘黄色块+箭头，无分支时完全不输出
+# gap 段背景与状态栏一致，形成模块间空隙
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#(/Users/ryan/.tmux/scripts/git_branch.sh)| MEM:#(/Users/ryan/.tmux/scripts/memory_usage.sh) · CPU:#(/Users/ryan/.tmux/scripts/cpu_usage.sh) · GPU:#(/Users/ryan/.tmux/scripts/macmon_gpu.sh) || %Y-%m-%d %R "
 
-# [Apple Design Update] Right Side Styling
-# 对应3段: Indicators | System(雾霾蓝) | DateTime(深灰)
-tmux_conf_theme_status_right_fg="#565f89,#787c99,#565f89"
-tmux_conf_theme_status_right_bg="#1a1b26,#1f2335,#16161e"
-tmux_conf_theme_status_right_attr="none,none,none"
+# Right Side Styling — 4段配色
+# Indicators(透明) | System(深蓝灰) | gap(透明) | DateTime(暗蓝灰+蓝字)
+tmux_conf_theme_status_right_fg="#565f89,#c0caf5,#1a1b26,#7aa2f7"
+tmux_conf_theme_status_right_bg="#1a1b26,#364a82,#1a1b26,#232433"
+tmux_conf_theme_status_right_attr="none,none,none,none"
 
 # indicators
 tmux_conf_theme_pairing="⚇"
