@@ -4,202 +4,307 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
-# -- bindings ------------------------------------------------------------------
-tmux_conf_preserve_stock_bindings=false
+# =============================================================================
+# 基础行为
+# =============================================================================
 
-# -- session creation ----------------------------------------------------------
-tmux_conf_new_session_prompt=false
-tmux_conf_new_session_retain_current_path=false
+# -- 快捷键 -------------------------------------------------------------------
+tmux_conf_preserve_stock_bindings=false       # 不保留 tmux 默认快捷键
 
-# -- windows & pane creation ---------------------------------------------------
-tmux_conf_new_window_retain_current_path=true
-tmux_conf_new_window_reconnect_ssh=false
-tmux_conf_new_pane_retain_current_path=true
-tmux_conf_new_pane_reconnect_ssh=false
+# -- 会话创建 -----------------------------------------------------------------
+tmux_conf_new_session_prompt=false             # 新建会话时不弹出命名提示
+tmux_conf_new_session_retain_current_path=false # 新会话不继承当前路径
 
-# -- display -------------------------------------------------------------------
-tmux_conf_24b_colour=auto
+# -- 窗口与窗格创建 -----------------------------------------------------------
+tmux_conf_new_window_retain_current_path=true  # 新窗口继承当前路径
+tmux_conf_new_window_reconnect_ssh=false       # 新窗口不自动重连 SSH
+tmux_conf_new_pane_retain_current_path=true    # 新窗格继承当前路径
+tmux_conf_new_pane_reconnect_ssh=false         # 新窗格不自动重连 SSH
 
-# -- theming -------------------------------------------------------------------
+# -- 显示 ---------------------------------------------------------------------
+tmux_conf_24b_colour=auto                      # 自动检测 24 位真彩色支持
+
+# =============================================================================
+# 主题 — Tokyo Night 配色方案
+# =============================================================================
 tmux_conf_theme=enabled
 
-# [CUSTOM] Tokyo Night 调色板
-tmux_conf_theme_colour_1="#1a1b26"    # 状态栏主背景
-tmux_conf_theme_colour_2="#24283b"    # 边框
-tmux_conf_theme_colour_3="#565f89"    # 暗淡文字
-tmux_conf_theme_colour_4="#7aa2f7"    # 蓝色高亮
-tmux_conf_theme_colour_5="#e0af68"    # 黄色强调
-tmux_conf_theme_colour_6="#1a1b26"    # 左1前景
-tmux_conf_theme_colour_7="#c0caf5"    # 左2前景
-tmux_conf_theme_colour_8="#ffffff"    # 左3前景
-tmux_conf_theme_colour_9="#e0af68"    # 左1背景
-tmux_conf_theme_colour_10="#bb9af7"   # 左2背景
-tmux_conf_theme_colour_11="#4a7c59"   # 左3背景
+# 基础调色板
+tmux_conf_theme_colour_1="#1a1b26"    # 深夜蓝 — 状态栏主背景
+tmux_conf_theme_colour_2="#24283b"    # 暗蓝灰 — 窗格边框
+tmux_conf_theme_colour_3="#565f89"    # 灰紫   — 暗淡文字
+tmux_conf_theme_colour_4="#7aa2f7"    # 天蓝   — 高亮/活跃标识
+tmux_conf_theme_colour_5="#e0af68"    # 琥珀黄 — 强调色
 
-# [Apple Design Update] Right Side Palette (变量定义供参考)
-# Git(黄) | Sys(雾霾蓝) | Time(深岩灰)
-tmux_conf_theme_colour_12="#e0af68"
-tmux_conf_theme_colour_13="#787c99"
-tmux_conf_theme_colour_14="#444b6a"
-tmux_conf_theme_colour_15="#292e42"
-tmux_conf_theme_colour_16="#1f2335"
-tmux_conf_theme_colour_17="#16161e"
+# 状态栏左侧三段配色 (前景/背景)
+tmux_conf_theme_colour_6="#1a1b26"    # 左段1 前景 (深色字)
+tmux_conf_theme_colour_7="#c0caf5"    # 左段2 前景 (浅蓝白字)
+tmux_conf_theme_colour_8="#ffffff"    # 左段3 前景 (白字)
+tmux_conf_theme_colour_9="#e0af68"    # 左段1 背景 (琥珀黄)
+tmux_conf_theme_colour_10="#bb9af7"   # 左段2 背景 (薰衣草紫)
+tmux_conf_theme_colour_11="#4a7c59"   # 左段3 背景 (松绿)
 
-# window style
+# 状态栏右侧配色
+# 段布局: Indicators(透明) | System(深蓝灰) | gap(透明) | DateTime(暗蓝)
+tmux_conf_theme_colour_12="#e0af68"   # 右侧辅助色1 — Git 黄
+tmux_conf_theme_colour_13="#787c99"   # 右侧辅助色2 — 雾霾蓝
+tmux_conf_theme_colour_14="#444b6a"   # 右侧辅助色3
+tmux_conf_theme_colour_15="#292e42"   # 右侧背景色1
+tmux_conf_theme_colour_16="#1f2335"   # 右侧背景色2
+tmux_conf_theme_colour_17="#16161e"   # 右侧背景色3 — 最深
+
+# =============================================================================
+# 窗口与窗格样式
+# =============================================================================
+
+# 窗口前景/背景
 tmux_conf_theme_window_fg="default"
 tmux_conf_theme_window_bg="default"
 
-# highlight focused pane
+# 聚焦窗格高亮 (关闭 — 不改变聚焦窗格的背景色)
 tmux_conf_theme_highlight_focused_pane=false
 tmux_conf_theme_focused_pane_bg="default"
 
-# pane border style
-tmux_conf_theme_pane_border_style=thin
-tmux_conf_theme_pane_border="$tmux_conf_theme_colour_2"
-tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_4"
+# 窗格边框
+tmux_conf_theme_pane_border_style=thin                           # 细边框
+tmux_conf_theme_pane_border="$tmux_conf_theme_colour_2"          # 非活跃边框: 暗蓝灰
+tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_4"   # 活跃边框: 天蓝
 %if #{>=:#{version},3.2}
+# tmux 3.2+ 活跃边框动态变色: 复制模式=黄, 同步模式=深色, 正常=蓝
 tmux_conf_theme_pane_active_border="#{?pane_in_mode,$tmux_conf_theme_colour_9,#{?synchronize-panes,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_4}}"
 %endif
 
-# pane indicator
-tmux_conf_theme_pane_indicator="$tmux_conf_theme_colour_4"
-tmux_conf_theme_pane_active_indicator="$tmux_conf_theme_colour_4"
+# 窗格边框标签 (多窗格时自动显示，单窗格时完全隐藏)
+# 显示: 窗格编号 + 运行命令
+set -g pane-border-status off
+set -g pane-border-format " #[fg=#565f89]#{pane_index} #[fg=#7aa2f7]#{pane_current_command} #[fg=#565f89]#{pane_current_path} "
+# hook: 窗格数量变化时自动切换边框标签的显示/隐藏
+set-hook -g window-layout-changed "if-shell -F '#{==:#{window_panes},1}' 'set -w pane-border-status off' 'set -w pane-border-status top'"
+set-hook -g session-window-changed "if-shell -F '#{==:#{window_panes},1}' 'set -w pane-border-status off' 'set -w pane-border-status top'"
 
-# status line style
+# 窗格编号指示器颜色 (Prefix + q 显示)
+tmux_conf_theme_pane_indicator="$tmux_conf_theme_colour_3"       # 非活跃窗格: 灰紫 (低调)
+tmux_conf_theme_pane_active_indicator="$tmux_conf_theme_colour_5" # 活跃窗格: 琥珀黄 (醒目)
+
+# =============================================================================
+# 消息与模式样式
+# =============================================================================
+
+# 命令提示消息 (黄底黑字)
 tmux_conf_theme_message_fg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_message_bg="$tmux_conf_theme_colour_5"
 tmux_conf_theme_message_attr="bold"
 
+# 命令模式消息 (黑底黄字 — 反色)
 tmux_conf_theme_message_command_fg="$tmux_conf_theme_colour_5"
 tmux_conf_theme_message_command_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_message_command_attr="bold"
 
+# 复制模式高亮 (黄底黑字)
 tmux_conf_theme_mode_fg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_mode_bg="$tmux_conf_theme_colour_5"
 tmux_conf_theme_mode_attr="bold"
 
+# =============================================================================
+# 状态栏
+# =============================================================================
+
+# 状态栏全局样式 (灰字 + 深夜蓝底)
 tmux_conf_theme_status_fg="$tmux_conf_theme_colour_3"
 tmux_conf_theme_status_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_status_attr="none"
 
-# terminal title
+# 终端标题格式: 主机名 ❐ 会话名 ● 窗口序号 窗口名
 tmux_conf_theme_terminal_title="#h ❐ #S ● #I #W"
 
-# window status style
+# -- 窗口标签样式 -------------------------------------------------------------
+
+# 普通窗口标签 (灰字)
 tmux_conf_theme_window_status_fg="$tmux_conf_theme_colour_3"
 tmux_conf_theme_window_status_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_attr="none"
 tmux_conf_theme_window_status_format="#I #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
 
+# 当前活跃窗口标签 (蓝底黑字加粗)
 tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_current_bg="$tmux_conf_theme_colour_4"
 tmux_conf_theme_window_status_current_attr="bold"
 tmux_conf_theme_window_status_current_format="#I #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
 
+# 有活动的窗口标签 (下划线提示)
 tmux_conf_theme_window_status_activity_fg="default"
 tmux_conf_theme_window_status_activity_bg="default"
 tmux_conf_theme_window_status_activity_attr="underscore"
 
+# 有铃声的窗口标签 (黄字 + 闪烁加粗)
 tmux_conf_theme_window_status_bell_fg="$tmux_conf_theme_colour_5"
 tmux_conf_theme_window_status_bell_bg="default"
 tmux_conf_theme_window_status_bell_attr="blink,bold"
 
+# 上一个活跃窗口标签 (蓝字 + 暗蓝灰底)
 tmux_conf_theme_window_status_last_fg="$tmux_conf_theme_colour_4"
 tmux_conf_theme_window_status_last_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_last_attr="none"
 
-# separators
-tmux_conf_theme_left_separator_main='\uE0B0'
-tmux_conf_theme_left_separator_sub='\uE0B1'
-tmux_conf_theme_right_separator_main='\uE0B2'
-tmux_conf_theme_right_separator_sub='\uE0B3'
+# -- Powerline 分隔符 (需要 Nerd Font) ----------------------------------------
+tmux_conf_theme_left_separator_main='\uE0B0'   # 左侧主分隔符 
+tmux_conf_theme_left_separator_sub='\uE0B1'    # 左侧子分隔符 
+tmux_conf_theme_right_separator_main='\uE0B2'  # 右侧主分隔符 
+tmux_conf_theme_right_separator_sub='\uE0B3'   # 右侧子分隔符 
 
-# [CUSTOM] Status Left
+# -- 状态栏左侧 ---------------------------------------------------------------
+# 显示: 会话总数 ❐ 当前会话名
 tmux_conf_theme_status_left=" #(tmux list-sessions 2>/dev/null | wc -l | tr -d ' ') ❐ #S "
 
-# [CUSTOM] Status Right — 4段布局 (Indicators+Git | System | gap | DateTime)
-# Git 放在 Indicators 段末尾，脚本自绘黄色块+箭头，无分支时完全不输出
-# gap 段背景与状态栏一致，形成模块间空隙
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#(/Users/ryan/.tmux/scripts/git_branch.sh)| MEM:#(/Users/ryan/.tmux/scripts/memory_usage.sh) · CPU:#(/Users/ryan/.tmux/scripts/cpu_usage.sh) · GPU:#(/Users/ryan/.tmux/scripts/macmon_gpu.sh) || %Y-%m-%d %R "
+# -- 状态栏右侧 ---------------------------------------------------------------
+# 4段布局: Indicators+Git | System(MEM/CPU/GPU) | gap(空隙) | DateTime
+# Git 脚本自绘黄色色块+箭头，无 git 仓库时完全隐藏
+# gap 段背景与状态栏一致，形成模块间视觉间距
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#($HOME/.tmux/scripts/git_branch.sh)| MEM:#($HOME/.tmux/scripts/memory_usage.sh) · CPU:#($HOME/.tmux/scripts/cpu_usage.sh) · GPU:#($HOME/.tmux/scripts/macmon_gpu.sh) || %Y-%m-%d %R "
 
-# Right Side Styling — 4段配色
-# Indicators(透明) | System(深蓝灰) | gap(透明) | DateTime(暗蓝灰+蓝字)
+# 右侧4段配色: fg / bg
 tmux_conf_theme_status_right_fg="#565f89,#c0caf5,#1a1b26,#7aa2f7"
 tmux_conf_theme_status_right_bg="#1a1b26,#364a82,#1a1b26,#232433"
 tmux_conf_theme_status_right_attr="none,none,none,none"
 
-# indicators
+# =============================================================================
+# 状态指示器图标
+# =============================================================================
+
+# 多客户端连接指示器
 tmux_conf_theme_pairing="⚇"
 tmux_conf_theme_pairing_fg="none"
 tmux_conf_theme_pairing_bg="none"
 tmux_conf_theme_pairing_attr="none"
 
+# 前缀键按下指示器 (黄色闪电)
 tmux_conf_theme_prefix="⚡"
 tmux_conf_theme_prefix_fg="#e0af68"
 tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="bold"
 
+# 鼠标模式指示器
 tmux_conf_theme_mouse="↗"
 tmux_conf_theme_mouse_fg="none"
 tmux_conf_theme_mouse_bg="none"
 tmux_conf_theme_mouse_attr="none"
 
+# root 用户警告
 tmux_conf_theme_root="!"
 tmux_conf_theme_root_fg="none"
 tmux_conf_theme_root_bg="none"
 tmux_conf_theme_root_attr="bold,blink"
 
+# 窗格同步指示器
 tmux_conf_theme_synchronized="⚏"
 tmux_conf_theme_synchronized_fg="none"
 tmux_conf_theme_synchronized_bg="none"
 tmux_conf_theme_synchronized_attr="none"
 
-# battery
+# =============================================================================
+# 电池与时钟
+# =============================================================================
+
 tmux_conf_battery_bar_symbol_full="◼"
 tmux_conf_battery_bar_symbol_empty="◻"
 tmux_conf_battery_bar_length="auto"
 tmux_conf_battery_bar_palette="gradient"
 tmux_conf_battery_hbar_palette="gradient"
 tmux_conf_battery_vbar_palette="gradient"
-tmux_conf_battery_status_charging="↑"
-tmux_conf_battery_status_discharging="↓"
+tmux_conf_battery_status_charging="↑"          # 充电中
+tmux_conf_battery_status_discharging="↓"       # 放电中
 
-# clock
-tmux_conf_theme_clock_colour="$tmux_conf_theme_colour_4"
-tmux_conf_theme_clock_style="24"
+tmux_conf_theme_clock_colour="$tmux_conf_theme_colour_4"  # 时钟颜色: 天蓝
+tmux_conf_theme_clock_style="24"                           # 24 小时制
 
-# -- clipboard -----------------------------------------------------------------
-tmux_conf_copy_to_os_clipboard=true
+# =============================================================================
+# 剪贴板与工具
+# =============================================================================
 
-# -- urlscan -------------------------------------------------------------------
-tmux_conf_urlscan_options="--compact --dedupe"
+tmux_conf_copy_to_os_clipboard=true            # 复制时同步到系统剪贴板
+tmux_conf_urlscan_options="--compact --dedupe"  # urlscan 选项: 紧凑+去重
 
-# -- user customizations -------------------------------------------------------
-set -g history-limit 50000
+# =============================================================================
+# 用户自定义设置
+# =============================================================================
 
-set -g default-terminal "xterm-256color"
-set -as terminal-overrides ",xterm-256color:Tc"
+# -- 终端能力 -----------------------------------------------------------------
+set -g history-limit 50000                     # 回滚缓冲区 50000 行
+set -sg escape-time 0                          # Esc 零延迟 (vim 模式切换更快)
+set -g display-panes-time 2000                 # 窗格编号显示 2 秒 (默认 800ms 太短)
+set -g status-interval 5                       # 状态栏每 5 秒刷新 (默认 10 秒)
 
-set -g mouse on
-bind -n MouseDown1StatusLeft run -b "tmux choose-tree -s"
-bind -n MouseDown1Status if-shell -F "#{==:#{mouse_status_range},sessions}" "choose-tree -s" "switch-client -t="
+set -g default-terminal "tmux-256color"        # 终端类型 (比 xterm-256color 更准确)
+set -as terminal-overrides ",tmux-256color:Tc"  # 启用 24 位真彩色
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # 启用 undercurl (波浪下划线)
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # undercurl 颜色支持
 
-bind i split-window -h -l 40% -c "#{pane_current_path}" "less '$HOME/.tmux/tmux_shortcuts.md'"
-bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'
+# -- 鼠标 ---------------------------------------------------------------------
+set -g mouse on                                # 启用鼠标支持
+bind -n MouseDown1StatusLeft run -b "tmux choose-tree -s"  # 点击左侧状态栏: 会话树
+bind -n MouseDown1Status if-shell -F "#{==:#{mouse_status_range},sessions}" "choose-tree -s" "switch-client -t="  # 点击窗口标签: 切换
 
-bind f display-popup -E -w 80% -h 80%
-bind g display-popup -E -w 90% -h 90% "lazygit"
-bind T display-popup -E -w 80% -h 80% "htop"
+# -- 自定义快捷键 -------------------------------------------------------------
+bind i split-window -h -l 40% -c "#{pane_current_path}" "less '$HOME/.tmux/tmux_shortcuts.md'"  # 分屏查看快捷键手册
+bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'  # 切换鼠标开关
 
-# -- tpm -----------------------------------------------------------------------
-tmux_conf_update_plugins_on_launch=true
-tmux_conf_update_plugins_on_reload=true
-tmux_conf_uninstall_plugins_on_reload=true
+# -- 弹窗工具 -----------------------------------------------------------------
+bind f display-popup -E -w 80% -h 80%                                                          # 弹窗子 shell
+bind g display-popup -E -w 90% -h 90% "lazygit"                                                # 弹窗 lazygit
+bind T display-popup -E -w 80% -h 80% "htop"                                                   # 弹窗 htop
+bind / display-popup -E -w 80% -h 80% "fd --type f --hidden --follow --exclude .git | fzf --preview 'cat {}'"  # 弹窗 fzf 文件查找
+bind ? display-popup -E -w 80% -h 80% "less '$HOME/.tmux/tmux_shortcuts.md'"                   # 弹窗快捷键速查
 
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @continuum-restore 'off'
-set -g @plugin 'tmux-plugins/tmux-open'
+# =============================================================================
+# TPM 插件管理
+# =============================================================================
+
+tmux_conf_update_plugins_on_launch=true        # 启动时自动更新插件
+tmux_conf_update_plugins_on_reload=true        # 重载时自动更新插件
+tmux_conf_uninstall_plugins_on_reload=true     # 重载时卸载未声明的插件
+
+# -- 插件列表 -----------------------------------------------------------------
+set -g @plugin 'tmux-plugins/tmux-resurrect'   # 手动保存/恢复 tmux 会话
+set -g @resurrect-strategy-nvim 'session'      # 恢复时同时恢复 neovim 会话
+set -g @resurrect-capture-pane-contents 'on'   # 恢复时保留窗格内容
+set -g @plugin 'tmux-plugins/tmux-continuum'   # 自动定时保存会话
+set -g @continuum-restore 'off'                # 不自动恢复 (需手动 Prefix+Ctrl-r)
+set -g @plugin 'tmux-plugins/tmux-open'        # 复制模式中打开 URL/文件
+set -g @plugin 'sainnhe/tmux-fzf'              # fzf 模糊搜索 session/window/pane
+set -g @plugin 'christoomey/vim-tmux-navigator' # Ctrl-h/j/k/l vim/tmux 无缝导航
+set -g @plugin 'joshmedeski/tmux-nerd-font-window-name'  # 窗口名自动显示 Nerd Font 图标
+
+# -- tmux-thumbs 快速复制 (Prefix + Space) ------------------------------------
+set -g @plugin 'fcsonline/tmux-thumbs'         # 屏幕可见文本快速复制 (类 Vimium)
+set -g @thumbs-key Space                       # 触发键: Prefix + Space
+set -g @thumbs-contrast 1                      # 方括号包围 hint，更醒目
+set -g @thumbs-hint-fg-color "#1a1b26"         # hint 前景: 深色
+set -g @thumbs-hint-bg-color "#e0af68"         # hint 背景: 琥珀黄
+set -g @thumbs-select-fg-color "#1a1b26"       # 选中前景: 深色
+set -g @thumbs-select-bg-color "#7aa2f7"       # 选中背景: 天蓝
+set -g @thumbs-regexp-1 '[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'  # 额外匹配: 邮箱
+set -g @thumbs-regexp-2 '[a-f0-9]{7,40}'       # 额外匹配: git 短/长 hash
+set -g @thumbs-command 'echo -n {} | pbcopy && tmux display-message "Copied: {}"'  # 小写: 复制到系统剪贴板
+set -g @thumbs-upcase-command 'echo -n {} | pbcopy && tmux set-buffer -- {} && tmux paste-buffer && tmux display-message "Pasted: {}"'  # 大写: 复制+粘贴
+
+# =============================================================================
+# #!important 覆盖 (Oh My Tmux 保证这些绑定在所有插件之后最终生效)
+# =============================================================================
+
+# tmux-fzf: 覆盖 Oh My Tmux 默认的 fpp 绑定
+bind F run-shell -b "$HOME/.tmux/plugins/tmux-fzf/main.sh" #!important
+
+# vim-tmux-navigator: Ctrl-h/j/k/l 在 vim/tmux 间无缝切换
+# 检测当前窗格是否在运行 vim/neovim/fzf，是则转发按键，否则切换窗格
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|l?n?vim?x?|fzf)(diff)?(-wrapped)?$'"
+bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L" #!important
+bind -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -D" #!important
+bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U" #!important
+bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R" #!important
+bind -n 'C-\' if-shell "$is_vim" "send-keys 'C-\\'" "select-pane -l" #!important
+
+# tmux-thumbs: 快速复制屏幕可见文本 (Prefix + Space)
+bind Space run-shell -b "$HOME/.tmux/plugins/tmux-thumbs/tmux-thumbs.sh" #!important
 
 # ------------------------------------------------------------------------------
 # EOF
