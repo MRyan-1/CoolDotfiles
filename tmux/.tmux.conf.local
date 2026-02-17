@@ -270,7 +270,11 @@ set -g @resurrect-capture-pane-contents 'on'   # 恢复时保留窗格内容
 set -g @plugin 'tmux-plugins/tmux-continuum'   # 自动定时保存会话
 set -g @continuum-restore 'off'                # 不自动恢复 (需手动 Prefix+Ctrl-r)
 set -g @plugin 'tmux-plugins/tmux-open'        # 复制模式中打开 URL/文件
-set -g @plugin 'sainnhe/tmux-fzf'              # fzf 模糊搜索 session/window/pane
+set -g @plugin 'sainnhe/tmux-fzf'              # fzf 模糊搜索 pane/命令/快捷键等
+set -g @plugin 'omerxx/tmux-sessionx'          # session 切换器 (带实时预览)
+set -g @sessionx-bind 'o'                      # 触发键: Prefix + o
+set -g @sessionx-preview-enabled 'true'        # 开启实时预览
+set -g @sessionx-window-mode 'on'              # 同时显示 window 列表
 set -g @plugin 'christoomey/vim-tmux-navigator' # Ctrl-h/j/k/l vim/tmux 无缝导航
 set -g @plugin 'joshmedeski/tmux-nerd-font-window-name'  # 窗口名自动显示 Nerd Font 图标
 
@@ -305,6 +309,9 @@ bind -n 'C-\' if-shell "$is_vim" "send-keys 'C-\\'" "select-pane -l" #!important
 
 # tmux-thumbs: 快速复制屏幕可见文本 (Prefix + Space)
 bind Space run-shell -b "$HOME/.tmux/plugins/tmux-thumbs/tmux-thumbs.sh" #!important
+
+# tmux-sessionx: session 切换器 (Prefix + o)
+bind o run-shell "$HOME/.tmux/plugins/tmux-sessionx/scripts/sessionx.sh" #!important
 
 # ------------------------------------------------------------------------------
 # EOF

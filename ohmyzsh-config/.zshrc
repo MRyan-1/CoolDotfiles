@@ -45,9 +45,9 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # -------------------------------
 # PATH & 基础环境变量
 # -------------------------------
-export JAVA_HOME="/Users/ryan/Library/Java/JavaVirtualMachines/tcjdk/Contents/Home"
+export JAVA_HOME="$HOME/Library/Java/JavaVirtualMachines/tcjdk/Contents/Home"
 
-export MAVEN_HOME="/Users/ryan/environment/apache-maven-3.6.3"
+export MAVEN_HOME="$HOME/environment/apache-maven-3.6.3"
 export PATH="$PATH:$MAVEN_HOME/bin"
 
 # yazi
@@ -69,8 +69,8 @@ source ~/.config/broot/launcher/bash/br
 
 
 # Go 环境
-export GOROOT="/Users/ryan/environment/go/go1.23.6"
-export GOPATH="/Users/ryan/environment/go/go1.23.6"
+export GOROOT="$HOME/environment/go/go1.23.6"
+export GOPATH="$HOME/environment/go/go1.23.6"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOROOT/bin:$GOBIN"
 
@@ -100,6 +100,7 @@ alias o="open -a"
 alias typora="open -a typora"
 alias lc="leetcode"
 alias jos="joshuto"
+alias t="tmux"
 
 alias ya="$HOME/.config/yazi/ya"
 alias yazi="$HOME/.config/yazi/yazi"
@@ -124,14 +125,14 @@ export NVM_DIR="$HOME/.nvm"
 # -------------------------------
 # Conda 放最后（避免污染 Node/Go）
 # -------------------------------
-__conda_setup="$('/Users/ryan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+__conda_setup="$("$HOME/anaconda3/bin/conda" 'shell.zsh' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/ryan/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ryan/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/ryan/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -165,10 +166,14 @@ function unproxy() {
 # -------------------------------
 proxy
 
-# -------------------------------
-# 🖥️ Auto-start Tmux
-# -------------------------------
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    # 直接创建新会话
-    tmux new-session
+# -- tmux 自动启动 (2s 超时默认进入 tmux) --
+if [[ -z "$TMUX" && "$TERM_PROGRAM" == "iTerm.app" && -z "$INSIDE_EMACS" && -z "$VSCODE_PID" ]]; then
+  echo -n "🚀 按任意键跳过 tmux，2 秒后自动进入..."
+  if ! read -r -k 1 -t 2; then
+    echo ""
+    exec tmux new-session
+  fi
+  echo ""
 fi
+
+

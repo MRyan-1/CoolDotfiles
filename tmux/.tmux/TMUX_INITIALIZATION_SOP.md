@@ -14,9 +14,11 @@
 3. 复制 `.tmux.conf.local` → `~/.tmux.conf.local`
 4. 复制 `scripts/` 目录到 `~/.tmux/scripts/`
 5. 复制 `tmux_shortcuts.md` 到 `~/.tmux/tmux_shortcuts.md`
-6. 安装下方所有系统依赖：`brew install fzf fd yq jq htop lazygit macmon`
+6. 安装下方所有系统依赖：`brew install bash fzf fd yq jq htop lazygit macmon`
 7. 执行 `tmux source ~/.tmux.conf`，TPM 会自动克隆并安装所有插件
 8. 在 LunarVim `~/.config/nvim/config.lua` 中添加 `christoomey/vim-tmux-navigator` 插件
+
+> **⚠️ 重要**: macOS 自带 bash 3.2 不支持关联数组 (`declare -A`)，多个插件（如 `tmux-sessionx`）依赖此特性。必须通过 Homebrew 安装 bash 5.x，并确保 `/opt/homebrew/bin` 在 `$PATH` 中优先于 `/bin`。
 
 ## TPM 插件清单
 
@@ -25,7 +27,8 @@
 | `tmux-plugins/tmux-resurrect` | 手动保存/恢复 tmux 会话 | 无 |
 | `tmux-plugins/tmux-continuum` | 自动定时保存会话 | 无 |
 | `tmux-plugins/tmux-open` | 复制模式中打开 URL / 文件 | 无 |
-| `sainnhe/tmux-fzf` | 模糊搜索 session/window/pane/命令 | `fzf` |
+| `sainnhe/tmux-fzf` | 模糊搜索 pane/命令/快捷键等 | `fzf` |
+| `omerxx/tmux-sessionx` | 带实时预览的 session/window 切换器 | `fzf`、`bash` (5.0+, Homebrew) |
 | `christoomey/vim-tmux-navigator` | Ctrl-h/j/k/l 在 vim 和 tmux 间无缝导航 | neovim 端需装同名插件 |
 | `joshmedeski/tmux-nerd-font-window-name` | 根据运行程序自动显示 Nerd Font 图标 | `yq`、Nerd Font 字体 |
 | `fcsonline/tmux-thumbs` | 快速复制屏幕可见文本（URL/路径/哈希等） | Rust (`cargo`) 首次需编译 |
@@ -50,7 +53,7 @@
 ## 所有 Homebrew 依赖汇总
 
 ```bash
-brew install fzf fd yq jq htop lazygit macmon
+brew install bash fzf fd yq jq htop lazygit macmon
 ```
 
 > 终端需要安装 **Nerd Font** 字体（如 JetBrainsMono Nerd Font）以支持 Powerline 分隔符和窗口图标。

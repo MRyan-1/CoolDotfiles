@@ -1,19 +1,21 @@
 --[[
  THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
  `lvim` is the global options object
-]]
-
--- vim options
+]] -- vim options
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.relativenumber = true
 
+if vim.g.neovide then
+    vim.o.guifont = "TX-02:h15"
+end
+
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = {
-  enabled = true,
-  pattern = "*.lua",
-  timeout = 1000,
+    enabled = true,
+    pattern = "*.lua",
+    timeout = 1000
 }
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -23,12 +25,57 @@ lvim.leader = ","
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+-- 浮窗显示快捷键速查 (Leader + ?)
+local function show_cheatsheet()
+  local filepath = vim.fn.stdpath("config") .. "/nvim_shortcuts.md"
+  local lines = vim.fn.readfile(filepath)
+  local buf = vim.api.nvim_create_buf(false, true)
+  vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+  vim.bo[buf].modifiable = false
+  vim.bo[buf].bufhidden = "wipe"
+  vim.bo[buf].filetype = "markdown"
+  local width = math.min(80, vim.o.columns - 4)
+  local height = math.min(#lines + 2, vim.o.lines - 4)
+  local row = math.floor((vim.o.lines - height) / 2)
+  local col = math.floor((vim.o.columns - width) / 2)
+  vim.api.nvim_open_win(buf, true, {
+    relative = "editor",
+    width = width,
+    height = height,
+    row = row,
+    col = col,
+    style = "minimal",
+    border = "rounded",
+    title = " Neovim Shortcuts ",
+    title_pos = "center",
+  })
+  vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = buf, silent = true })
+  vim.keymap.set("n", "<Esc>", "<cmd>close<cr>", { buffer = buf, silent = true })
+end
+lvim.builtin.which_key.mappings["?"] = { show_cheatsheet, "Shortcuts Cheatsheet" }
 
--- -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+-- jk 快速退出 Insert 模式
+lvim.keys.insert_mode["jk"] = "<Esc>"
+
+-- Shift+H/L 快速切换 buffer
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+
+-- Ctrl+d / Ctrl+u 半页跳转后自动居中
+lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
+lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
+
+-- Visual 模式粘贴不覆盖寄存器
+lvim.keys.visual_mode["p"] = '"_dP'
+
+-- Visual 模式 J 合并行后光标不跳走
+lvim.keys.normal_mode["J"] = "mzJ`z"
+
+-- ,W 保存但不格式化
+lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
+
+-- ,bc 关闭所有 buffer 只留当前
+lvim.builtin.which_key.mappings["b"]["c"] = { "<cmd>BufferLineCloseOthers<cr>", "Close others" }
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
@@ -94,12 +141,12 @@ lvim.builtin.treesitter.auto_install = true
 -- }
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
--- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
+lvim.plugins = {
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+}
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
 -- vim.api.nvim_create_autocmd("FileType", {
