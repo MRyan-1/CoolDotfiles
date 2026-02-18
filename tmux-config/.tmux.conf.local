@@ -239,6 +239,14 @@ set -as terminal-overrides ",tmux-256color:Tc"  # 启用 24 位真彩色
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # 启用 undercurl (波浪下划线)
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # undercurl 颜色支持
 
+# -- 行为优化 -----------------------------------------------------------------
+set -g set-clipboard on                        # OSC 52 剪贴板 (iTerm2 原生集成，复制更丝滑)
+set -g allow-rename off                        # 防止程序 escape 序列覆盖手动设的窗口名
+
+# 复制模式: 鼠标滚轮半页滚动 (默认 5 行太慢)
+bind -T copy-mode-vi WheelUpPane send -X halfpage-up
+bind -T copy-mode-vi WheelDownPane send -X halfpage-down
+
 # -- 鼠标 ---------------------------------------------------------------------
 set -g mouse on                                # 启用鼠标支持
 bind -n MouseDown1StatusLeft run -b "tmux choose-tree -s"  # 点击左侧状态栏: 会话树
@@ -248,12 +256,22 @@ bind -n MouseDown1Status if-shell -F "#{==:#{mouse_status_range},sessions}" "cho
 bind i split-window -h -l 40% -c "#{pane_current_path}" "less '$HOME/.tmux/tmux_shortcuts.md'"  # 分屏查看快捷键手册
 bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'  # 切换鼠标开关
 
+# -- 快捷键增强 ---------------------------------------------------------------
+bind v split-window -h -c "#{pane_current_path}"    # Prefix + v  竖分 (vim 风格)
+bind s split-window -v -c "#{pane_current_path}"    # Prefix + s  横分 (vim 风格)
+bind -r "<" swap-window -d -t -1                     # Prefix + <  窗口左移
+bind -r ">" swap-window -d -t +1                     # Prefix + >  窗口右移
+bind x kill-pane                                     # Prefix + x  关闭窗格 (无确认)
+bind X kill-window                                   # Prefix + X  关闭窗口
+bind S setw synchronize-panes \; display "sync #{?synchronize-panes,ON,OFF}"  # Prefix + S  同步输入开关
+
 # -- 弹窗工具 -----------------------------------------------------------------
-bind f display-popup -E -w 80% -h 80%                                                          # 弹窗子 shell
-bind g display-popup -E -w 90% -h 90% "lazygit"                                                # 弹窗 lazygit
+bind f display-popup -E -w 80% -h 80% -d "#{pane_current_path}"                                 # 弹窗子 shell
+bind g display-popup -E -w 90% -h 90% -d "#{pane_current_path}" "lazygit"                        # 弹窗 lazygit
 bind T display-popup -E -w 80% -h 80% "htop"                                                   # 弹窗 htop
-bind / display-popup -E -w 80% -h 80% "fd --type f --hidden --follow --exclude .git | fzf --preview 'cat {}'"  # 弹窗 fzf 文件查找
+bind / display-popup -E -w 80% -h 80% -d "#{pane_current_path}" "fd --type f --hidden --follow --exclude .git | fzf --preview 'cat {}'"  # 弹窗 fzf 文件查找
 bind ? display-popup -E -w 80% -h 80% "less '$HOME/.tmux/tmux_shortcuts.md'"                   # 弹窗快捷键速查
+bind N run-shell 'tmux display-popup -E -w 70% -h 70% "mkdir -p \$HOME/notes && nvim \$HOME/notes/#{b:pane_current_path}-note.md"'  # 弹窗笔记本 ($HOME/notes/<目录名>-note.md)
 
 # =============================================================================
 # TPM 插件管理
