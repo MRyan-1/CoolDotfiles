@@ -323,6 +323,7 @@ bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L" #!important
 bind -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -D" #!important
 bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U" #!important
 bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R" #!important
+bind -r C-l next-window #!important
 bind -n 'C-\' if-shell "$is_vim" "send-keys 'C-\\'" "select-pane -l" #!important
 
 # tmux-thumbs: 快速复制屏幕可见文本 (Prefix + Space)
